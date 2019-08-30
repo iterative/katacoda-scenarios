@@ -5,15 +5,19 @@ maps a normal file onto a virtual block device. This allows for the
 file to be used as a "virtual file system".
 
 Create such a file:
+
 `dd if=/dev/zero of=disk.img bs=100M count=10`{{execute}}
 
 Check that its size is 1G:
+
 `du -hs disk.img`{{execute}}
 
 Now create a loop device with this file:
+
 `sudo losetup -f disk.img`{{execute}}
 
 The option `-f` finds an unused loop device.
 
 Find the name of the loop device that was created:
+
 `losetup -a`{{execute}}

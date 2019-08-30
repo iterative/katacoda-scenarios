@@ -1,18 +1,20 @@
 ## Clean up (optional)
 
-Unmount and delete the test directory `mnt/`:
-`
-cd ..
-umount mnt/
-rmdir mnt/
-`{{execute}}
+1. Unmount and delete the test directory `mnt/`:
 
-Delete the loop device:
+   `
+   cd ..
+   umount mnt/
+   rmdir mnt/
+   `{{execute}}
 
-`
-losetup -a
-sudo losetup -d /dev/loop0
-`{{execute}}
+2. Delete the loop device:
 
-Remove the file that was used to create the loop device:
-`rm disk.img`{{execute}}
+   `
+   losetup -a
+   sudo losetup -d /dev/loop0
+   `{{execute}}
+
+3. Remove the file that was used to create the loop device:
+
+   `rm disk.img`{{execute}}
