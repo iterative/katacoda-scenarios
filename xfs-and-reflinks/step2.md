@@ -1,23 +1,26 @@
 ## Create an XFS filesystem
 
-Create an XFS filesystem on the image file:
+1. Make sure that the package `xfsprogs` is installed:
 
-`mkfs.xfs -m reflink=1 -L test disk.img`{{execute}}
+   `apt install xfsprogs`{{execute}}
 
-The metadata `-m reflink=1` tells the command to enable reflinks, and
+2. Create an XFS filesystem on the image file:
 
-`-L test` sets the label of the filesystem.
+   `mkfs.xfs -m reflink=1 -L test disk.img`{{execute}}
 
-Create a directory:
+   The metadata `-m reflink=1` tells the command to enable reflinks,
+   and `-L test` sets the label of the filesystem.
 
-`mkdir mnt`{{execute}}
+3. Create a directory:
 
-Mount the loop device on it:
+   `mkdir mnt`{{execute}}
 
-`sudo mount /dev/loop0 mnt`{{execute}}
+4. Mount the loop device on it:
 
-Check the usage of the filesystem:
+   `sudo mount /dev/loop0 mnt`{{execute}}
 
-`df -h mnt/`{{execute}}
+5. Check the usage of the filesystem:
 
-Notice that only **40M** are used from it.
+   `df -h mnt/`{{execute}}
+
+   Notice that only **40M** are used from it.
