@@ -2,7 +2,7 @@
 
 1. Make sure that the package `xfsprogs` is installed:
 
-   `apt install xfsprogs`{{execute}}
+   `sudo apt install xfsprogs`{{execute}}
 
 2. Create an XFS filesystem on the image file:
 
