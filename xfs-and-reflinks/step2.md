@@ -6,7 +6,12 @@
 
 2. Create an XFS filesystem on the image file:
 
-   `mkfs.xfs -m reflink=1 -L test disk.img`{{execute}}
+   `
+   mkfs.xfs \
+       -m reflink=1 \
+       -L test \
+       disk.img
+   `{{execute}}
 
    The metadata `-m reflink=1` tells the command to enable reflinks,
    and `-L test` sets the label of the filesystem.
