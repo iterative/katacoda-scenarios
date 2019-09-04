@@ -6,7 +6,7 @@ file to be used as a "virtual file system".
 
 1. Create a file of size 1G:
 
-   `dd if=/dev/zero of=disk.img bs=100M count=10`{{execute}}
+   `fallocate -l 1G disk.img`{{execute}}
 
    `du -hs disk.img`{{execute}}
 
