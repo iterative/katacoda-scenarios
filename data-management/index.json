@@ -1,0 +1,42 @@
+{
+  "title": "Data Management With DVC",
+  "description": "The core function of DVC is data tracking and management. Let's see how to do it.",
+  "difficulty": "Beginner",
+  "time": "10-15 min",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu1804"
+  }
+}
