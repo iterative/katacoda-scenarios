@@ -40,7 +40,7 @@
    
    `dvc status`{{execute}}
    
-   `dvc checkout`{{execute}}
+   `dvc checkout file1.txt.dvc`{{execute}}
    
    `ls`{{execute}}
    
