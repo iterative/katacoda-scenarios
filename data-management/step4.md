@@ -25,10 +25,10 @@
    
    Let's try to fix this by correcting the field `path:`:
    
-   `
+   ```
    sed -i file2.txt.dvc \
        -e s/file1.txt/file2.txt/
-   `{{execute}}
+   ```{{execute}}
        
    `cat file2.txt.dvc`{{execute}}
    
@@ -141,10 +141,10 @@
    
    `dvc status`{{execute}}
    
-   `
+   ```
    sed -i dir1/file1.txt.dvc
        -e 's#path: file1.txt#path: ../file1.txt#'
-   `{{execute}}
+   ```{{execute}}
    
    `dvc status`{{execute}}
    
