@@ -142,7 +142,7 @@
    `dvc status`{{execute}}
    
    ```
-   sed -i dir1/file1.txt.dvc
+   sed -i dir1/file1.txt.dvc \
        -e 's#path: file1.txt#path: ../file1.txt#'
    ```{{execute}}
    
@@ -167,9 +167,9 @@
    
    `dvc status`{{execute}}
    
-   `dvc tree -a`{{execute}}
+   `tree -a`{{execute}}
    
-   The option `-f / --file` specifies the name (and path) of the
+   The option `-f, --file` specifies the name (and path) of the
    `.dvc` file that is create by `dvc add`. Without it, that name
    would have been `file1.txt.dvc`.
    
@@ -185,7 +185,7 @@
    
    `tree -a`{{execute}}
    
-   Without the option `-p / --purge` the command `dvc remove` would
+   Without the option `-p, --purge` the command `dvc remove` would
    have removed only the data file `file1.txt`. However this option
    tells it to remove as well the `.dvc` file itself.
 

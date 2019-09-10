@@ -4,7 +4,7 @@
 
    `rm -rf .dvc *`{{execute}}
    
-   `dvc init --no-scm`{{execute}}
+   `dvc init --no-scm --quiet`{{execute}}
    
    `mkdir dir1`{{execute}}
    
@@ -29,7 +29,7 @@
    
    `dvc destroy -f`{{execute}}
    
-   `dvc init --no-scm`{{execute}}
+   `dvc init --no-scm -q`{{execute}}
    
    `tree -a`{{execute}}
    
@@ -48,7 +48,7 @@
    
    `dvc destroy -f`{{execute}}
    
-   `dvc init --no-scm`{{execute}}
+   `dvc init --no-scm -q`{{execute}}
    
    `tree -a`{{execute}}
    
@@ -81,4 +81,4 @@
 
 4. Let's clean up everything:
 
-   `rm -rf .dvc *`
+   `rm -rf .dvc *`{{execute}}

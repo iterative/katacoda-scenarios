@@ -10,5 +10,5 @@ files, DVC keeps track of the data. However DVC can also work
 independently of GIT, and this is how we will use it in this scenario,
 (for the sake of simplicity, so that we can focus on the basic
 features of DVC). In later scenarios we will also see how DVC works
-together with GIT and how it takes advantage of GITs versioning
+together with GIT and how it takes advantage of GIT's versioning
 features to keep track of the data versions.

@@ -13,7 +13,7 @@
    `ls -al`{{execute}}
   
    With the option `--no-scm` we are telling it that we are not going
-   to use it togather with GIT.
+   to use it together with GIT.
   
 3. Check the `.dvc` directory that was created:
 
