@@ -74,7 +74,7 @@
    
    `dvc status`{{execute}}
    
-   For the case of relocating tracked files to another directory
+5. For the case of relocating tracked files to another directory
    (without changing their names), a plain `mv` command would work as
    well, as long as we keep the data file and the tracking file in the
    same directory:
@@ -92,7 +92,7 @@
    However it is better to always use `dvc move`, for being
    consistent.
    
-5. Note that `dvc move` renames or relocates both files because the
+6. Note that `dvc move` renames or relocates both files because the
    tracking file has the same name as the data file (with the
    extension `.dvc` appended to it). If this is not the case, then
    only the data file will be renamed:
@@ -102,9 +102,6 @@
    `ls`{{execute}}
    
    `dvc status`{{execute}}
-   
-   As a side note, renaming a tracking file doesn't break anything, as
-   long as it is not relocated to another directory.
    
    `dvc move file1.txt file2.txt`{{execute}}
    
@@ -130,3 +127,65 @@
    `dvc status`{{execute}}
    
    `tree -a`
+
+7. From the steps above we can see that renaming a tracking file is
+   OK, as long as it is not relocated to another directory. However,
+   if we want to move it to another directory, its `path:` field will
+   need to be corrected, and its checksum as well:
+   
+   `mkdir dir1`{{execute}}
+   
+   `mv file1.txt.dvc dir1/`{{execute}}
+   
+   `tree -a`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `
+   sed -i dir1/file1.txt.dvc
+       -e 's#path: file1.txt#path: ../file1.txt#'
+   `{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `dvc commit dir1/file1.txt.dvc`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+8. Another simpler way to relocate a tracking file is to just delete
+   it, and then recreate it with a different path/name. For example if
+   we want to move the file `dir1/file1.txt.dvc` to `file1.dvc`, we
+   can do it like this:
+   
+   `rm dir1/file1.txt.dvc`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `dvc add -f file1.dvc file1.txt`{{execute}}
+   
+   `rmdir dir1/`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `dvc tree -a`{{execute}}
+   
+   The option `-f / --file` specifies the name (and path) of the
+   `.dvc` file that is create by `dvc add`. Without it, that name
+   would have been `file1.txt.dvc`.
+   
+8. Let's remove both the data file and the tracking file:
+
+   `dvc remove -p file1.dvc`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `tree -a`{{execute}}
+   
+   `dvc gc`{{execute}}
+   
+   `tree -a`{{execute}}
+   
+   Without the option `-p / --purge` the command `dvc remove` would
+   have removed only the data file `file1.txt`. However this option
+   tells it to remove as well the `.dvc` file itself.
+
