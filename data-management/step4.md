@@ -126,7 +126,7 @@
    
    `dvc status`{{execute}}
    
-   `tree -a`
+   `tree -a`{{execute}}
 
 7. From the steps above we can see that renaming a tracking file is
    OK, as long as it is not relocated to another directory. However,
