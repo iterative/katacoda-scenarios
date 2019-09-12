@@ -1,11 +1,15 @@
-# Tracking data versions
+# Tracking data versions without GIT
 
 DVC allows us to cache different versions of a data file and to switch
 between them. Let's see how to do it.
 
 1. Initialize a DVC workspace and add a test file:
 
-   `rm -rf .dvc *`{{execute}}
+   `rm -rf proj1`{{execute}}
+   
+   `mkdir proj1`{{execute}}
+   
+   `cd proj1/`{{execute}}
 
    `dvc init --no-scm -q`{{execute}}
    
@@ -112,3 +116,6 @@ between them. Let's see how to do it.
 
 6. If you wish, try yourself to switch again to the third version of
    the data file.
+
+7. Think about it (or try it): What happens if we run `dvc gc`? Can we
+   switch to the other versions after doing that?
