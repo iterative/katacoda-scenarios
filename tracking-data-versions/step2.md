@@ -7,9 +7,9 @@ versions of `file.txt.dvc` connects `file.txt` to one of its versions
 that are stored on the cache (through the checksum of the cached
 version, which is stored on `file.txt.dvc`).
 
-The way that we used to keep track of the versions of `file1.txt.dvc`
+The way that we used to keep track of the versions of `file.txt.dvc`
 is kind of primitive, tedious, error-prone, and doesn't scale well.
-Since `file1.txt.dvc` is just a small text file, while not use GIT to
+Since `file.txt.dvc` is just a small text file, while not use GIT to
 keep track of its versions? GIT offers a lot of simplicity, comfort
 and flexibility
 
@@ -136,7 +136,7 @@ and flexibility
    `dvc checkout`{{execute}}
    
 5. If you wish, try yourself to get the previous version of
-   `file.txt`, and then back to the last version.
+   `file.txt`, and then go back to the last version.
    
 6. In a small git repo it may not be so difficult to go back to a
    certain version by counting the commits, or by using commit
@@ -158,7 +158,7 @@ and flexibility
    
    `dvc status`{{execute}}
    
-   `dvc checkout file.txt.dvc`{{execute
+   `dvc checkout file.txt.dvc`{{execute}}
    
    `dvc status`{{execute}}
    
