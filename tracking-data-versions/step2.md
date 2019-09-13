@@ -15,11 +15,16 @@ and flexibility
 
 1. First let's initialize a git repository and a DVC workspace:
 
-   `rm -rf .dvc *`{{execute}}
+   ```
+   cd
+   rm -rf proj1
+   mkdir proj1
+   cd proj1/
+   ```{{execute}}
    
    `git init`{{execute}}
 
-   `dvc init`{{execute}}
+   `dvc init -q`{{execute}}
    
    `tree -a -I .git`{{execute}}
    
