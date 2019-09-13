@@ -15,8 +15,7 @@
             },
             {
                 "title": "Step 3",
-                "text": "step3.md",
-                "code": "step3.sh"
+                "text": "step3.md"
             }
         ],
         "intro": {
@@ -25,7 +24,15 @@
         },
         "finish": {
             "text": "finish.md"
-        }
+        },
+        "assets": {
+            "host01": [
+                {
+                    "file": "step3-setup.sh",
+                    "target": "~/"
+                }
+            ]
+        }        
     },
     "environment": {
         "uilayout": "terminal"
