@@ -30,6 +30,9 @@ It is possible to automate this step by using GIT hooks. The command
    echo 'test 2' > file.txt
    dvc status
    dvc commit file.txt.dvc
+   ```{{execute}}
+   
+   ```
    git status
    git add file.txt.dvc
    git commit -m 'Change file.txt'
@@ -41,6 +44,9 @@ It is possible to automate this step by using GIT hooks. The command
    echo 'test 3' > file.txt
    dvc status
    dvc commit file.txt.dvc
+   ```{{execute}}
+   
+   ```
    git status
    git add file.txt.dvc
    git commit -m 'Change file.txt again'
