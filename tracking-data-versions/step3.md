@@ -9,50 +9,13 @@ It is possible to automate this step by using GIT hooks. The command
 
 1. First let's quickly create a workspace with several versions:
 
-   ```
-   rm -rf .dvc .git *
-   git init
-   dvc init -q
-   git status
-   git commit -m "Initialize DVC"
-   ```{{execute}}
+   `step3-setup.sh`{{execute}}
    
-   ```
-   echo 'test 1' > file.txt
-   dvc add file.txt
-   git add file.txt.dvc .gitignore
-   git commit -m 'Add file.txt to project'
-   ```{{execute}}
+   `cd`{{execute}}
    
-   `git tag v1`{{execute}}
-
-   ```
-   echo 'test 2' > file.txt
-   dvc status
-   dvc commit file.txt.dvc
-   ```{{execute}}
+   `ls`{{execute}}
    
-   ```
-   git status
-   git add file.txt.dvc
-   git commit -m 'Change file.txt'
-   ```{{execute}}
-   
-   `git tag v2`{{execute}}
-
-   ```
-   echo 'test 3' > file.txt
-   dvc status
-   dvc commit file.txt.dvc
-   ```{{execute}}
-   
-   ```
-   git status
-   git add file.txt.dvc
-   git commit -m 'Change file.txt again'
-   ```{{execute}}
-   
-   `git tag v3`{{execute}}
+   `cd proj1/`{{execute}}
    
    Currently we have three versions of `file.txt` on the DVC cache,
    and three versions of `file.txt.dvc` on GIT, each of them marked
