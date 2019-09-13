@@ -27,10 +27,7 @@
         },
         "assets": {
             "host01": [
-                {
-                    "file": "step3-setup.sh",
-                    "target": "~/"
-                }
+                { "file": "step3-setup.sh", "target": "/usr/local/bin/", "chmod": "+x" }
             ]
         }        
     },

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -o verbose
 
 # install dvc
 pip3 install dvc
