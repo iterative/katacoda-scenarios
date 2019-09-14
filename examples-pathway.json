@@ -1,0 +1,11 @@
+{
+  "title": "Command Examples",
+  "description": "Examples of using commands, which illustrate the commands-reference pages.",
+  "courses": [
+    {
+      "course_id": "fetch",
+      "title": "fetch",
+      "description": "Examples of using the fetch command."
+    }
+  ]
+}
