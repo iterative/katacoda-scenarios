@@ -4,8 +4,8 @@
   "courses": [
     {
       "course_id": "fetch",
-      "title": "fetch",
-      "description": "Examples of using the fetch command."
+      "title": "dvc fetch",
+      "description": "Examples of using the command `dvc fetch`."
     }
   ]
 }
