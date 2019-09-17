@@ -3,8 +3,8 @@
 # git
 git config --global user.email "guest@example.com"
 git config --global user.name "Guest User"
-git config color.status always
-git config color.ui always
+#git config color.status always
+#git config color.ui always
 
 # install highlight
 apt install --yes highlight
