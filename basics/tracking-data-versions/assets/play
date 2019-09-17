@@ -10,10 +10,14 @@ hl_wait() {
 }
 
 hl_cmd() {
-    echo -n "${PS1@P}"    # print the existing prompt
+    #echo -n "${PS1@P}"    # print the existing prompt
+    local ps1='\033[01;34m\w\033[00m$ '
+    echo -n "$ps1"
     local cmd=$(echo "$1" | cut -d';' -f2)
     hl_wait "$(echo $cmd)"
 }
+
+echo -e "\n========== Press [Enter] to continue ==========\n" | egrep '.*'
 
 "$@" 2>&1 |\
 while IFS='^$&' read line; do
