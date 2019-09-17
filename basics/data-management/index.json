@@ -27,7 +27,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "init.sh"
     },
     "finish": {
       "text": "finish.md"
