@@ -27,7 +27,8 @@
         },
         "assets": {
             "host01": [
-                { "file": "init-git-repo.sh", "target": "/usr/local/bin/", "chmod": "+x" }
+                { "file": "init-git-repo.sh", "target": "/usr/local/bin/", "chmod": "+x" },
+                { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" }
             ]
         }        
     },

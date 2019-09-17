@@ -1,0 +1,28 @@
+#!/bin/bash -i
+
+hl() {
+    echo "$1" | highlight -S bash -O xterm256
+}
+
+hl_wait() {
+    echo -n $(hl "$1")
+    read </dev/tty
+}
+
+hl_cmd() {
+    echo -n "${PS1@P}"    # print the existing prompt
+    local cmd=$(echo "$1" | cut -d';' -f2)
+    hl_wait "$(echo $cmd)"
+}
+
+"$@" 2>&1 |\
+while IFS='^$&' read line; do
+    case $line in
+        [#][#]*)    hl_wait "$line" ;;
+        [:]*\;*)    hl_cmd "$line"  ;;
+        [:]*|[#]*)  hl "$line"      ;;
+        *)          echo "$line"    ;;
+    esac
+done
+
+echo -e "\n========== PLAY: $@ : DONE ==========\n" | egrep '.*'

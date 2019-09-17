@@ -9,13 +9,15 @@ It is possible to automate this step by using GIT hooks. The command
 
 1. First let's quickly create a workspace with several versions:
 
-   `init-git-repo.sh`{{execute}}
-   
    `cd`{{execute}}
    
-   `ls`{{execute}}
+   `rm -rf proj1/`{{execute}}
    
-   `cd proj1/`{{execute}}
+   `cd proj1`{{execute}}
+   
+   `play init-git-repo.sh`{{execute}}
+   
+   `ls -al`{{execute}}
    
    Currently we have three versions of `file.txt` on the DVC cache,
    and three versions of `file.txt.dvc` on GIT, each of them marked
