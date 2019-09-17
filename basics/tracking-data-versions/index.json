@@ -27,7 +27,7 @@
         },
         "assets": {
             "host01": [
-                { "file": "step3-setup.sh", "target": "/usr/local/bin/", "chmod": "+x" }
+                { "file": "init-git-repo.sh", "target": "/usr/local/bin/", "chmod": "+x" }
             ]
         }        
     },

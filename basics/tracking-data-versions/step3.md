@@ -9,7 +9,7 @@ It is possible to automate this step by using GIT hooks. The command
 
 1. First let's quickly create a workspace with several versions:
 
-   `step3-setup.sh`{{execute}}
+   `init-git-repo.sh`{{execute}}
    
    `cd`{{execute}}
    
