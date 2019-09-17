@@ -161,6 +161,8 @@ and flexibility
    
    `git checkout v1`{{execute}}
    
+   `git status`{{execute}}
+   
    `dvc status`{{execute}}
    
    `dvc checkout file.txt.dvc`{{execute}}

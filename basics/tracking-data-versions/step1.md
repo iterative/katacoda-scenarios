@@ -5,8 +5,6 @@ between them. Let's see how to do it.
 
 1. Initialize a DVC workspace and add a test file:
 
-   `rm -rf proj1`{{execute}}
-   
    `mkdir proj1`{{execute}}
    
    `cd proj1/`{{execute}}
