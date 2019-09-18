@@ -1,4 +1,6 @@
 #!/bin/bash
+git config color.status always
+git config color.ui always
 set -o verbose
 
 ##### initialize git and dvc ###############################
