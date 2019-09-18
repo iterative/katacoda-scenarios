@@ -91,7 +91,7 @@ working from `workspace-b`. How can they share their code and data?
    
    `dvc pull file.txt.dvc`{{execute}}
    
-   `tree -a -I .git`
+   `tree -a -I .git`{{execute}}
    
    `dvc status file.txt.dvc`{{execute}}
    
@@ -109,8 +109,8 @@ working from `workspace-b`. How can they share their code and data?
    GIT, it is the same thing as doing a `dvc fetch` (first step),
    followed by a `dvc checkout` (second step).
 
-6. We can also use `dvc push` to upload data with from the local cache
-   to the remote one:
+6. We can also use `dvc push` to upload data from the local cache to
+   the remote one:
 
    `echo 'test 4' > file.txt`{{execute}}
    
@@ -129,4 +129,4 @@ working from `workspace-b`. How can they share their code and data?
    `dvc status -c`{{execute}}
    
    Note that `dvc push` is the oposite operation of `dvc fetch`, not
-   `dvc pull` (the same as in GIT).
+   the oposite of `dvc pull` (the same as in GIT).

@@ -1,7 +1,7 @@
 # Using a central data storage
 
 In the last example we saw that from `workspace-b` it is possible to
-pull/push data from/to `workspace-a`, but we cannot do these from
+pull/push data from/to `workspace-a`, but we cannot do the same from
 `workspace-a`. Actually, on `workspace-a` we can add the cache of
 `workspace-b` as a remote storage, and then we would be able to
 synchronize data from both sides.
@@ -66,9 +66,9 @@ workspaces.
    
    `rm -rf workspace-b/`{{execute}}
    
-   `git clone centra-repo.git workspace-b`{{execute}}
+   `git clone central-repo.git workspace-b`{{execute}}
    
-   `cd ../workspace-b`{{execute}}
+   `cd workspace-b/`{{execute}}
 
    `git remote -v`{{execute}}
 
@@ -143,14 +143,15 @@ Notice that:
 1. We used GIT to synchronize the configuration file `.dvc/config`
    between `workspace-a` and `workspace-b`, so the remote storage that
    we added on `workspace-a` became available automatically on
-   `workspace-b`.
+   `workspace-b`. This way we ensure that both workspaces use the same
+   remote storage.
 
 2. The commands `dvc push` and `dvc pull` (as well as `dvc fetch`) are
    conservative. By default they copy only the minimum amount of data
    that satisfies the requirements of the current state of the
-   workspace. To increase the range of the copied data we can use the
+   workspace. To increase the range of the copied data, we can use the
    options `-a, --all-branches` and `-T, --all-tags`.
    
-3. The command `dvc status --cloud` as well can use the options `-a,
-   --all-branches` and `-T, --all-tags` when comparing the local cache
-   with the remote cache.
+3. The command `dvc status --cloud` as well can use the options
+   `-a, --all-branches` and `-T, --all-tags` when comparing the local
+   cache with the remote cache.
