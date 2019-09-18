@@ -1,0 +1,41 @@
+{
+    "title": "Sharing Data",
+    "description": "DVC facilitates sharing of data between different people that work on the same project.",
+    "difficulty": "Beginner",
+    "time": "10-15 min",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3",
+                "text": "step3.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "init.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [
+                { "file": "init-git-repo.sh", "target": "/usr/local/bin/", "chmod": "+x" },
+                { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" }
+            ]
+        }        
+    },
+    "environment": {
+        "uilayout": "terminal"
+    },
+    "backend": {
+        "imageid": "ubuntu1804"
+    }
+}

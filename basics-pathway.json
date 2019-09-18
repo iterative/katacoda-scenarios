@@ -11,6 +11,11 @@
       "course_id": "tracking-data-versions",
       "title": "Tracking Data Versions",
       "description": "DVC takes advantage of GIT's versioning features to keep track of the data versions."
+    },
+    {
+      "course_id": "sharing-data",
+      "title": "Sharing Data",
+      "description": "DVC facilitates sharing of data between different people that work on the same project."
     }
   ]
 }
