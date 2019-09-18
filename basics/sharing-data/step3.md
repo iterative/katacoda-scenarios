@@ -128,3 +128,15 @@ easy to try. We will use the localhost as a SSH server.
    `dvc pull`{{execute}}
    
    `cat file.txt`{{execute}}
+
+
+In a real situation we would have had to provide some more settings
+about the SSH connection, like these:
+- `dvc remote modify ssh-cache user foo`
+- `dvc remote modify ssh-cache port 2222`
+- `dvc remote modify ssh-cache keyfile /path/to/ssh/keyfile`
+- `dvc remote modify ssh-cache password qwerty`
+- `dvc remote modify ssh-cache ask_password true`
+
+For the other types of data storage it works the same way, only the
+connection options are different.
