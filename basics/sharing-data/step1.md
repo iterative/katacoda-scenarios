@@ -10,7 +10,7 @@ working from `workspace-b`. How can they share their code and data?
    
    `cd workspace-a/`{{execute}}
    
-   `play init-git-repo.sh`{{execute}}
+   `DELAY=0.7 play init-git-repo.sh`{{execute}}
    
    `git status`{{execute}}
    

@@ -1,4 +1,17 @@
 #!/bin/bash -i
+#
+# Usage: [DELAY=<secs>] play <bash-script>
+#
+# Run the script and stop on comments that start with '##*' and on
+# commands that start with ':*;*'. Highlight these commands and
+# comments, as well as comments that start with '#*' or ':*'.
+#
+# The given <bash-script> has to set 'set -o verbose' on top of it.
+#
+# If it called with a delay, like this:
+#     DELAY=0.7 play bash-script.sh
+# Then it will stop that amount of time, instead of waiting for
+# [Enter] to continue.
 
 hl() {
     echo "$1" | highlight -S bash -O xterm256
@@ -6,7 +19,7 @@ hl() {
 
 hl_wait() {
     echo -n $(hl "$1")
-    read </dev/tty
+    [[ -z $DELAY ]] && read </dev/tty || { sleep $DELAY; echo; }
 }
 
 hl_cmd() {
