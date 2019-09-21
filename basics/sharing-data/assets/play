@@ -29,7 +29,7 @@ hl_cmd() {
     hl_wait "$(echo $cmd)"
 }
 
-echo -e "\n========== Press [Enter] to continue ==========\n" | egrep '.*'
+[[ -z $DELAY ]] && echo -e "\n========== Press [Enter] to continue ==========\n" | egrep '.*'
 
 "$@" 2>&1 |\
 while IFS='^$&' read line; do
@@ -41,4 +41,4 @@ while IFS='^$&' read line; do
     esac
 done
 
-echo -e "\n========== PLAY: $@ : DONE ==========\n" | egrep '.*'
+[[ -z $DELAY ]] && echo -e "\n========== PLAY: $@ : DONE ==========\n" | egrep '.*'
