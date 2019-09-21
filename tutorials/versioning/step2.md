@@ -90,10 +90,6 @@
    
    `cat model.h5.dvc`{{execute}}
    
-   `ls .dvc/cache/df/4b576e7f5e6490c76b506b7bda6f0b`{{execute}}
-   
-   `diff model.h5 .dvc/cache/df/4b576e7f5e6490c76b506b7bda6f0b`{{execute}}
-
    `cat .gitignore`{{execute}}
 
 4. Let's take a snapshot of the current state of the project with a
