@@ -16,5 +16,3 @@ produces a model file.
 that [François Chollet](https://twitter.com/fchollet) put together to
 show how to build a powerful image classifier, using only a small
 dataset.
-
-<img url="/dvc/courses/tutorials/versioning/assets/cats-and-dogs.jpg" />
