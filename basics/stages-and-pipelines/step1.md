@@ -77,7 +77,7 @@ same thing.
        -d sorted.txt \
        -o result.txt \
        'grep zip sorted.txt > result.txt'
-   ```{execute}}
+   ```{{execute}}
 
    `cat result.txt`{{execute}}
    
