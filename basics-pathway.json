@@ -16,6 +16,11 @@
       "course_id": "sharing-data",
       "title": "Sharing Data",
       "description": "DVC facilitates sharing of data between different people that work on the same project."
+    },
+    {
+      "course_id": "stages-and-pipelines",
+      "title": "Stages And Pipelines",
+      "description": "DVC has a built-in way to connect ML steps into a DAG and run the full pipeline end-to-end."
     }
   ]
 }
