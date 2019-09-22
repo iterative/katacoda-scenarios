@@ -49,7 +49,10 @@ working from `workspace-b`. How can they share their code and data?
    
    `dvc remote list`{{execute}}
    
-   `dvc remote add --default origin ../workspace-a/.dvc/cache`{{execute}}
+   ```
+   dvc remote add --default \
+       origin ../workspace-a/.dvc/cache
+   ```{{execute}}
    
    `dvc remote list`{{execute}}
    

@@ -44,13 +44,19 @@ workspaces.
    
    `git remote -v`{{execute}}
    
-   `git remote add origin ../central-repo.git`{{execute}}
+   ```
+   git remote add \
+       origin ../central-repo.git
+   ```{{execute}}
    
    `git remote -v`{{execute}}
    
    `git push origin --mirror`{{execute}}
    
-   `git branch --set-upstream-to=origin/master`{{execute}}
+   ```
+   git branch \
+       --set-upstream-to=origin/master
+   ```{{execute}}
    
    `git status`{{execute}}
    
@@ -66,7 +72,10 @@ workspaces.
    
    `rm -rf workspace-b/`{{execute}}
    
-   `git clone central-repo.git workspace-b`{{execute}}
+   ```
+   git clone \
+       central-repo.git workspace-b
+   ```{{execute}}
    
    `cd workspace-b/`{{execute}}
 
@@ -85,11 +94,17 @@ workspaces.
    
    `dvc remote list`{{execute}}
    
-   `dvc remote add --default data-storage ../central-cache.dvc`{{execute}}
+   ```
+   dvc remote add --default \
+       data-storage ../central-cache.dvc
+   ```{{execute}}
    
    `dvc remote list`{{execute}}
    
-   `dvc status --cloud --all-branches --all-tags`{{execute}}
+   ```
+   dvc status --cloud \
+       --all-branches --all-tags
+   ```{{execute}}
    
    `dvc push --all-branches --all-tags`{{execute}}
    

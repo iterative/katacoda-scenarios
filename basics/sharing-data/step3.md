@@ -63,7 +63,7 @@ easy to try. We will use the localhost as a SSH server.
    
    `git add .dvc/config`{{execute}}
    
-   `git commit -m 'Adding a SSH remote cache'`
+   `git commit -m 'Adding a SSH remote cache'`{{execute}}
    
    `git status`{{execute}}
    
@@ -132,11 +132,36 @@ easy to try. We will use the localhost as a SSH server.
 
 In a real situation we would have had to provide some more settings
 about the SSH connection, like these:
-- `dvc remote modify ssh-cache user foo`
-- `dvc remote modify ssh-cache port 2222`
-- `dvc remote modify ssh-cache keyfile /path/to/ssh/keyfile`
-- `dvc remote modify ssh-cache password qwerty`
-- `dvc remote modify ssh-cache ask_password true`
+
+- Set the user:
+  ```
+  dvc remote modify ssh-cache \
+      user foo
+  ```
+
+- Set the port:
+  ```
+  dvc remote modify ssh-cache \
+      port 2222
+  ```
+
+- Set a key file:
+  ```
+  dvc remote modify ssh-cache \
+      keyfile /path/to/ssh/keyfile
+  ```
+
+- Set a password:
+  ```
+  dvc remote modify ssh-cache \
+      password qwerty
+  ```
+
+- Ask for password interactively:
+  ```
+  dvc remote modify ssh-cache \
+      ask_password true
+  ```
 
 For the other types of data storage it works the same way, only the
 connection options are different.
