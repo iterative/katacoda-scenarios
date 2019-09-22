@@ -2,7 +2,7 @@
     "title": "Sharing Data",
     "description": "DVC facilitates sharing of data between different people that work on the same project.",
     "difficulty": "Beginner",
-    "time": "10-15 min",
+    "time": "20-30 min",
     "details": {
         "steps": [
             {
@@ -16,6 +16,10 @@
             {
                 "title": "Step 3",
                 "text": "step3.md"
+            },
+            {
+                "title": "Step 4",
+                "text": "step4.md"
             }
         ],
         "intro": {
