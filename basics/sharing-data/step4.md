@@ -112,8 +112,9 @@ accessing the SSH remote storage.
    
    `git diff`{{execute}}
    
-   It works, and the password is not in hands of GIT. The difference
-   was made by the option `--local`. But where is the password?
+   It works, and the password is not in the hands of GIT. The
+   difference was made by the option `--local`. But where is the
+   password?
    
    `ls -al .dvc/`{{execute}}
    

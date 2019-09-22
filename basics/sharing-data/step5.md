@@ -1,9 +1,9 @@
 # SSH connection best practice
 
-In the last step we used the account `user1` and a password for the
-SSH connection to the server of the remote storage. However the
-well-known best practice for SSH connections is to use SSH keys. It
-is easy, convenient and secure, so why not do it?
+In the last step we used the account `user1` and a password for
+connecting to the SSH server of the remote storage. However the
+well-known best practice for SSH connections is to use SSH keys. It is
+easy, convenient and secure, so why not do it?
 
 1. First let's generate a SSH key pair:
    
@@ -48,7 +48,9 @@ is easy, convenient and secure, so why not do it?
 
    `cd ~/workspace-a/`{{execute}}
    
-   `dvc remote list`{{execute}}
+   `dvc remote list --local`{{execute}}
+
+   `cat .dvc/config.local`{{execute}}
 
    ```
    dvc remote modify --local \
@@ -61,8 +63,11 @@ is easy, convenient and secure, so why not do it?
        /root/.ssh/user1_dvc
    ```{{execute}}
 
-   `git diff`{{execute}}
-   
    `cat .dvc/config.local`{{execute}}
 
    `dvc status -c`{{execute}}
+
+   `git diff`{{execute}}
+
+   It works without asking for password, and no password is stored
+   anywhere.
