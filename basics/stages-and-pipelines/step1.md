@@ -5,7 +5,7 @@ goes as input to another process, until a final result is produced. As
 an example, consider this Linux pipeline, which finds the commands
 that contain 'zip' in their name:
 
-`ls /bin /usr/bin | sort -u | grep zip`
+`ls /bin /usr/bin | sort -u | grep zip`{{execute}}
 
 For the sake of simplicity, let's build a DVC pipeline that does the
 same thing.
