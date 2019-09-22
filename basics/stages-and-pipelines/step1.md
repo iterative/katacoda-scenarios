@@ -100,23 +100,49 @@ same thing.
 
 4. Let's visualize the pipeline that we have constructed:
 
-   `dvc pipeline show grep.dvc --tree`{{execute}}
+   ```
+   dvc pipeline \
+       show grep.dvc --tree
+   ```{{execute}}
+   
+   `pip3 install pydot`{{execute}}
 
-   `dvc pipeline show grep.dvc --dot`{{execute}}
+   ```
+   dvc pipeline \
+       show grep.dvc --dot
+   ```{{execute}}
    
-   `dvc pipeline show grep.dvc --dot --commands`{{execute}}
+   ```
+   dvc pipeline \
+       show grep.dvc --dot --commands
+   ```{{execute}}
    
-   `dvc pipeline show grep.dvc --dot --outs`{{execute}}
+   ```
+   dvc pipeline \
+       show grep.dvc --dot --outs
+   ```{{execute}}
    
-   `dvc pipeline show grep.dvc --ascii`{{execute}}
+   ```
+   dvc pipeline \
+       show grep.dvc --ascii
+   ```{{execute}}
    
    (Press 'q' to quit.)
    
-   `dvc pipeline show grep.dvc --ascii -c`{{execute}}
+   ```
+   dvc pipeline \
+       show grep.dvc --ascii -c
+   ```{{execute}}
    
-   `dvc pipeline show grep.dvc --ascii -o`{{execute}}
+   ```
+   dvc pipeline \
+       show grep.dvc --ascii -o
+   ```{{execute}}
    
-   `dvc pipeline show grep.dvc --ascii | less`{{execute}}
+   ```
+   dvc pipeline \
+       show grep.dvc --ascii | less
+   ```{{execute}}
 
 5. With `dvc repro` we can run the stages (steps) of this pipeline
    again:
