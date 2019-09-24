@@ -8,22 +8,24 @@ practice in such cases is to record all the commands in a bash script,
 which can then be used to build the whole pipeline at once.
 
 Some of the benefits of this approach are these:
-    - Typing mistakes while building the pipeline are avoided.
-    - Modification of the pipeline becomes easier and consistent (for
-      example using find/replace).
-    - Building pipelines becomes flexible (for example bash variables
-      can be used).
-    - Pipelines become reusable (other projects can copy/paste and
-      customize them)
+  - Typing mistakes while building the pipeline are avoided.
+  - Modification of the pipeline becomes easier and consistent (for
+    example using find/replace).
+  - Building pipelines becomes flexible (for example bash variables
+    can be used).
+  - Pipelines become reusable (other projects can copy/paste and
+    customize them)
 
 
 1. Let's see an example script that contains the commands we have seen
    so far for building the pipeline:
+
+   `cp /usr/local/bin/build-pipeline.sh .`{{execute}}
    
-   `less /usr/local/bin/build-pipeline.sh`{{execute}}
+   `less build-pipeline.sh`{{execute}}
    
    ```
-   cat /usr/local/bin/build-pipeline.sh \
+   cat build-pipeline.sh \
      | highlight -S bash -O xterm256 \
      | less -r
    ```{{execute}}
@@ -34,7 +36,7 @@ Some of the benefits of this approach are these:
    as the given word. Let's try it.
    
    ```
-   build-pipeline.sh zip 2>&1 \
+   ./build-pipeline.sh zip 2>&1 \
      | highlight -S bash -O xterm256 \
      | less -r
    ```{{execute}}
@@ -61,7 +63,7 @@ Some of the benefits of this approach are these:
    `diff/`:
 
    ```
-   build-pipeline.sh diff 2>&1 \
+   ./build-pipeline.sh diff 2>&1 \
      | highlight -S bash -O xterm256 \
      | less -r
    ```{{execute}}
