@@ -79,7 +79,7 @@ We can rerun the stages of a pipeline with `dvc repro`.
    
    `dvc lock stage1.dvc`{{execute}}
    
-   `cat stage1.dvc`{{execute}}
+   `git diff stage1.dvc`{{execute}}
    
    Notice the field `locked: true`.
    
@@ -95,9 +95,11 @@ We can rerun the stages of a pipeline with `dvc repro`.
    
    `cat stage1.dvc`{{execute}}
    
+   `git diff stage1.dvc`{{execute}}
+   
    `dvc repro stage3.dvc`{{execute}}
 
-5. A locked stage will not be checked by `dvc status`:
+5. A locked stage will not be checked by `dvc status` either:
    
    `rm data2.txt`{{execute}}
    

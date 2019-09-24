@@ -25,7 +25,6 @@
    dvc pipeline \
        show stage3.dvc --commands
    ```{{execute}}
-   ```
    
    `dvc pipeline show stage2.dvc -c`{{execute}}
 
@@ -35,7 +34,7 @@
    
    `dvc pipeline show stage2.dvc -o`{{execute}}
    
-   `dvc pipeline show stage3.dvc -o`{{execute}}
+   `dvc pipeline show stage1.dvc -o`{{execute}}
    
 3. With the option `--dot` it can output a 
    [DOT graph](https://en.wikipedia.org/wiki/DOT_(graph_description_language)).
@@ -54,7 +53,6 @@
    dvc pipeline show \
        stage3.dvc --dot --outs
    ```{{execute}}
-   ```
    
 4. Finally, with the option `--ascii` the graph will be displayed in
    ascii format:
@@ -73,7 +71,7 @@
    
    ```
    dvc pipeline show \
-       stage3.dvc --ascii --outputs
+       stage3.dvc --ascii --outs
    ```{{execute}}
    
    ```

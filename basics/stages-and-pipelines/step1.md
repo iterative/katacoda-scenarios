@@ -78,13 +78,13 @@ same thing.
    
    `cat stage1.dvc`{{execute}}
    
-   `cat data1.txt.dvc`{{execute}} 
+   `cat data1.txt.dvc`{{execute}}
    
    As you see, the internal structure of a stage file (`stage1.dvc`)
    is very similar to that of a data-tracking file
    (`data1.txt.dvc`). They both have the field `outs:` that stores the
-   output meta-data, but a stage file also have a field `deps:` that
-   stores the meta-data of the dependencies, and a filed `cmd:` that
+   output meta-data, but a stage file also has a field `deps:` that
+   stores the meta-data of the dependencies, and a field `cmd:` that
    stores the command.
    
 4. Create a stage that sorts the list:
@@ -101,15 +101,15 @@ same thing.
    `dvc status`{{execute}}
    
    The option `--no-commit` tells the command not to store in cache
-   the resulting output just yet. We can store it later with `dvc
-   commit`.  This may be useful for example in case that we are not
-   sure that the command produces the right output, so we may have to
-   try it several times until we get it right. Meanwhile we don't want
-   to fill the cache with garbage (useless data).
+   the resulting output just yet. We can store it later with `dvc commit`.
+   This may be useful for example in case that we are not sure that
+   the command produces the right output, so we may have to try it
+   several times until we get it right. Meanwhile we don't want to fill
+   the cache with garbage (useless data).
    
-   In our example, we have actually forgotten the option `-u,
-   --unique` of `sort`, which does not output multiple identical
-   lines. Let's fix it by recreating this stage:
+   In our example, we have actually forgotten the option `-u, --unique`
+   of `sort`, which outputs a single line if there are multiple identical
+   ones. Let's fix it by recreating this stage:
    
    ```
    dvc run \
@@ -157,7 +157,7 @@ same thing.
    is reproduced).
    
    This option (`--no-exec`) may be useful in cases when we want to
-   build a pipeline first, and then run all at once.
+   build a pipeline first, and then run all the stages at once.
    
    The option `-O, --outs-no-cache` denotes an output file, same as
    `-o`, but this output file is not to be cached (neither when the
