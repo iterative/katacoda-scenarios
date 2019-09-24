@@ -131,7 +131,7 @@ also what are callback stages and how they are used.
    
    `dvc status`{{execute}}
    
-   `dvc repro`{{execute}}
+   `dvc repro stage3.dvc`{{execute}}
    
    `dvc status`{{execute}}
    
