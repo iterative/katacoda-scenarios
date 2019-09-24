@@ -18,13 +18,11 @@ also what are callback stages and how they are used.
    INSERT INTO files VALUES ('diff4');
    EOF
    ```{{execute}}
-   ```
    
    ```
    sqlite3 ~/data.sqlite \
        'SELECT name FROM files;'
    ```{{execute}}
-   ```
    
 2. Let's create a stage that reads data from this database and saves
    it to `data3.txt`:
@@ -37,7 +35,6 @@ also what are callback stages and how they are used.
            'SELECT name FROM files;' > \
            data3.txt"
    ```{{execute}}
-   ```
    
    `git status`{{execute}}
    
@@ -62,7 +59,6 @@ also what are callback stages and how they are used.
        --overwrite-dvcfile \
        'cat data*.txt > joint-list.txt'
    ```{{execute}} 
-   ```
    
    `git status`{{execute}}
    
@@ -82,7 +78,6 @@ also what are callback stages and how they are used.
    dvc pipeline show \
        stage3.dvc --ascii --outs
    ```{{execute}}
-   ```
    
    `dvc pipeline show stage3.dvc --tree`{{execute}}
    
@@ -104,7 +99,6 @@ also what are callback stages and how they are used.
            'SELECT COUNT(*) FROM files;' > \
            db_status.txt"
    ```{{execute}}
-   ```
 
    ```
    dvc run \
@@ -116,7 +110,6 @@ also what are callback stages and how they are used.
            'SELECT name FROM files;' > \
            data3.txt"
    ```{{execute}}
-   ```
 
    `git status`{{execute}}
    
@@ -132,13 +125,24 @@ also what are callback stages and how they are used.
    
    `dvc status`{{execute}}
    
+   `dvc lock db_status.dvc`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `dvc repro stage3.dvc`{{execute}}
+   
+   `dvc unlock db_status.dvc`{{execute}}
+   
+   `dvc repro stage3.dvc`{{execute}}
+   
+   `dvc status`{{execute}}
+   
    `dvc pipeline show stage3.dvc --ascii`{{execute}}
    
    ```
    dvc pipeline show \
        stage3.dvc --ascii --outs
    ```{{execute}}
-   ```
    
    `dvc pipeline show stage3.dvc --tree`{{execute}}
 
