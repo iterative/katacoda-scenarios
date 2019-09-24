@@ -32,7 +32,8 @@ also what are callback stages and how they are used.
        -f db.dvc \
        -o data3.txt \
        "sqlite3 ~/data.sqlite \
-           'SELECT name FROM files;' > \
+           'SELECT name \
+              FROM files;' > \
            data3.txt"
    ```{{execute}}
    
@@ -57,7 +58,8 @@ also what are callback stages and how they are used.
        -d data3.txt \
        -o joint-list.txt \
        --overwrite-dvcfile \
-       'cat data*.txt > joint-list.txt'
+       'cat data*.txt > \
+            joint-list.txt'
    ```{{execute}} 
    
    `git status`{{execute}}
@@ -72,14 +74,20 @@ also what are callback stages and how they are used.
 
    `dvc repro stage3.dvc`{{execute}}
    
-   `dvc pipeline show stage3.dvc --ascii`{{execute}}
+   ```
+   dvc pipeline show \
+       stage3.dvc --ascii
+   ```{{execute}}
    
    ```
    dvc pipeline show \
        stage3.dvc --ascii --outs
    ```{{execute}}
    
-   `dvc pipeline show stage3.dvc --tree`{{execute}}
+   ```
+   dvc pipeline show \
+       stage3.dvc --tree
+   ```{{execute}}
    
 4. So, the database query that downloads the data and saves them in
    our workspace is always executed when we reproduce the pipeline.
@@ -96,7 +104,8 @@ also what are callback stages and how they are used.
        -f db_status.dvc \
        -O db_status.txt \
        "sqlite3 ~/data.sqlite \
-           'SELECT COUNT(*) FROM files;' > \
+           'SELECT COUNT(*) \
+              FROM files;' > \
            db_status.txt"
    ```{{execute}}
 
@@ -107,7 +116,8 @@ also what are callback stages and how they are used.
        -o data3.txt \
        --overwrite-dvcfile \
        "sqlite3 ~/data.sqlite \
-           'SELECT name FROM files;' > \
+           'SELECT name \
+              FROM files;' > \
            data3.txt"
    ```{{execute}}
 
@@ -137,14 +147,20 @@ also what are callback stages and how they are used.
    
    `dvc status`{{execute}}
    
-   `dvc pipeline show stage3.dvc --ascii`{{execute}}
+   ```
+   dvc pipeline show \
+       stage3.dvc --ascii
+   ```{{execute}}
    
    ```
    dvc pipeline show \
        stage3.dvc --ascii --outs
    ```{{execute}}
    
-   `dvc pipeline show stage3.dvc --tree`{{execute}}
+   ```
+   dvc pipeline show \
+       stage3.dvc --tree
+   ```{{execute}}
 
 5. Let's save the current state of the project by committing
    everything to GIT:
