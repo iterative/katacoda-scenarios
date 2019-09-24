@@ -1,6 +1,16 @@
 #!/bin/bash
 set -o verbose
 
+##### get the search term and create a directory for it
+search_term=${1:-diff}
+rm -rf $search_term
+mkdir $search_term
+cd $search_term
+
+##### get the root directory of the workspace
+root=$(dvc root)
+
+##### don't execute any commands yet, just (re)define the pipeline
 extra_options="--no-exec --overwrite-dvcfile"
 
 ##### db_status.dvc: count the number of records in the database
@@ -24,12 +34,12 @@ dvc run \
 ##### stage1.dvc: concatenate the data files
 dvc run \
     -f stage1.dvc \
-    -d data1.txt \
-    -d data2.txt \
+    -d $root/data1.txt \
+    -d $root/data2.txt \
     -d data3.txt \
     -o joint-list.txt \
     $extra_options \
-    'cat data*.txt > joint-list.txt'
+    "cat $root/data1.txt $root/data2.txt data3.txt > joint-list.txt"
 
 ##### stage2.dvc: sort the data
 dvc run \
@@ -46,5 +56,5 @@ dvc run \
     -o result.txt \
     -M count.txt \
     $extra_options \
-    'grep diff sorted-list.txt > result.txt \
-     && cat result.txt | wc -l > count.txt'
+    "grep $search_term sorted-list.txt > result.txt \
+     && cat result.txt | wc -l > count.txt"
