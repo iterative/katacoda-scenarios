@@ -15,13 +15,13 @@ for both `workspace-a` and `workspace-b`, and on `workspace-a` and
 number of collaborating workspaces increases, this becomes quickly
 very complex.
 
-<img src="/dvc/courses/basics/sharing-data/assets/mesh-network.png" width="300"/>
+<img src="/dvc/courses/basics/sharing/assets/mesh-network.png" width="300"/>
 
 Even with GIT we don't use this _mesh_ topology. Instead we use a
 _star_ topology, with a central _bare_ repository used as a
 synchronization node for all the other repositories.
 
-<img src="/dvc/courses/basics/sharing-data/assets/star-network.png" width="300"/>
+<img src="/dvc/courses/basics/sharing/assets/star-network.png" width="300"/>
 
 We can do the same in DVC, with a central data storage that is used as
 a synchronization node for the caches of all the collaborating

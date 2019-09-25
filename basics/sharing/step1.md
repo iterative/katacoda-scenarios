@@ -131,5 +131,5 @@ working from `workspace-b`. How can they share their code and data?
    
    `dvc status -c`{{execute}}
    
-   Note that `dvc push` is the oposite operation of `dvc fetch`, not
+   Notice that `dvc push` is the oposite operation of `dvc fetch`, not
    the oposite of `dvc pull` (the same as in GIT).
