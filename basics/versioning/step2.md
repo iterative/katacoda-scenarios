@@ -9,7 +9,7 @@ version, which is stored on `file.txt.dvc`).
 
 The way that we used to keep track of the versions of `file.txt.dvc`
 is kind of primitive, tedious, error-prone, and doesn't scale well.
-Since `file.txt.dvc` is just a small text file, while not use GIT to
+Since `file.txt.dvc` is just a small text file, why not use GIT to
 keep track of its versions? GIT offers a lot of simplicity, comfort
 and flexibility
 
@@ -115,7 +115,7 @@ and flexibility
    
    `git log file.txt.dvc`{{execute}}
    
-4. Let's get the first version the data file (which was before the
+4. Let's get the first version of the data file (which was before the
    last 2 commits):
    
    `git checkout HEAD~2`{{execute}}
