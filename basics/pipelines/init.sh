@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# install bash competion for dvc
+wget -O /etc/bash_completion.d/dvc \
+    https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash
+source /etc/bash_completion
+
 # git
 git config --global user.email "guest@example.com"
 git config --global user.name "Guest User"
