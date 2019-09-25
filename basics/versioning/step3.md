@@ -82,6 +82,19 @@ for marking versions of interest is by using tags and branches.
    
    `tree -a -I .git`{{execute}}
    
-   As you see, only one version of the file has remained in the cache,
+   This time only one version of the file has remained in the cache,
    the one corresponding to the version that is present in the
    workspace, the others have been deleted.
+
+   If we try now to go back to a previous version of the file, it will
+   not be in cache:
+   
+   `git checkout v2`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `dvc checkout file.txt.dvc`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `cat file.txt`{{execute}}
