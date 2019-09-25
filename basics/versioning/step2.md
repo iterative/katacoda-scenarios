@@ -70,7 +70,7 @@ and flexibility
    
    `tree -a -I .git`{{execute}}
 
-3. Let's change `file.txt` and keep more versions:
+3. Let's change `file.txt` and commit another version:
 
    `echo 'test 2' > file.txt`{{execute}}
    
@@ -90,7 +90,7 @@ and flexibility
    
    `git status`{{execute}}
    
-   Do it once more:
+4. Do it once more:
    
    `echo 'test 3' > file.txt`{{execute}}
    
@@ -115,7 +115,7 @@ and flexibility
    
    `git log file.txt.dvc`{{execute}}
    
-4. Let's get the first version of the data file (which was before the
+5. Let's get the first version of the data file (which was before the
    last 2 commits):
    
    `git checkout HEAD~2`{{execute}}
@@ -140,71 +140,5 @@ and flexibility
    
    `dvc checkout`{{execute}}
    
-5. If you wish, try yourself to get the previous version of
+6. If you wish, try yourself to get the previous version of
    `file.txt`, and then go back to the last version.
-   
-6. In a small git repo it may not be so difficult to go back to a
-   certain version by counting the commits, or by using commit
-   id-s. But in a normal git repo this becomes quickly unmanageable.
-   The recommended way (both by GIT and DVC) for marking versions of
-   interest is by using tags and branches. Let's mark the versions of
-   `file.txt.dvc` with tags `v1`, `v2`, `v3`, and let's use these tags
-   to get a previous version of `file.txt`:
-   
-   `git tag v3`{{execute}}
-   
-   `git tag v2 HEAD~1`{{execute}}
-   
-   `git tag v1 HEAD~2`{{execute}}
-   
-   `git tag`{{execute}}
-   
-   `git checkout v1`{{execute}}
-   
-   `git status`{{execute}}
-   
-   `dvc status`{{execute}}
-   
-   `dvc checkout file.txt.dvc`{{execute}}
-   
-   `dvc status`{{execute}}
-   
-   `cat file.txt`{{execute}}
-   
-   Back to the latest version:
-   
-   `git status`{{execute}}
-   
-   `git checkout master`{{execute}}
-   
-   `git status`{{execute}}
-   
-   `dvc status`{{execute}}
-   
-   `dvc checkout file.txt.dvc`{{execute}}
-   
-   `dvc status`{{execute}}
-   
-   `cat file.txt`{{execute}}
- 
-7. If you run `dvc gc` now, it will leave only one copy of the data
-   file on the cache, the one that corresponds with the current data
-   file (which has the checksum stored on `file.txt.dvc`). The other
-   two will be deleted. If we want to be careful and not delete the
-   cached versions related to the tags and branches, we should use the
-   options `-a, --all-branches` and `-T, --all-tags`:
-   
-   `tree -a -I .git`{{execute}}
-   
-   `dvc gc -a -T`{{execute}}
-   
-   `tree -a -I .git`{{execute}}
-   
-   `dvc gc -T`{{execute}}
-   
-   `tree -a -I .git`{{execute}}
-   
-   `dvc gc`{{execute}}
-   
-   `tree -a -I .git`{{execute}}
-   
