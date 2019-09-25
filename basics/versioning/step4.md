@@ -11,6 +11,8 @@ It is possible to automate this step by using GIT hooks. The command
 
    `cd`{{execute}}
    
+   `rm -rf proj1/`{{execute}}
+   
    `mkdir proj1/`{{execute}}
    
    `cd proj1`{{execute}}
