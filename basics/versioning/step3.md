@@ -20,6 +20,8 @@ for marking versions of interest is by using tags and branches.
    
    `git tag`{{execute}}
    
+   `git log --oneline`{{execute}}
+   
 2. Let's use these tags to get a previous version of `file.txt`:
    
    `git checkout v1`{{execute}}

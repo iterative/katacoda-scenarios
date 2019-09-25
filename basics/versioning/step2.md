@@ -120,6 +120,8 @@ and flexibility
    
    `git checkout HEAD~2`{{execute}}
    
+   `git status`{{execute}}
+   
    `dvc status`{{execute}}
    
    `dvc checkout file.txt.dvc`{{execute}}
@@ -139,6 +141,8 @@ and flexibility
    `git checkout master`{{execute}}
    
    `dvc checkout`{{execute}}
+   
+   `cat file.txt`{{execute}}
    
 6. If you wish, try yourself to get the previous version of
    `file.txt`, and then go back to the last version.
