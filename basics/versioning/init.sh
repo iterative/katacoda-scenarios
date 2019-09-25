@@ -10,10 +10,9 @@ trap 'echo -ne "\033[00m"' DEBUG
 
 # dvc
 pip3 install dvc
-dvc version
-
-# install highlight
-apt install --yes highlight
 
 # clear the screen
 clear
+
+# show the version
+dvc version
