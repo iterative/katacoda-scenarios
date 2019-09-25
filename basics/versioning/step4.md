@@ -38,15 +38,27 @@ It is possible to automate this step by using GIT hooks. The command
    
    `cat file.txt`{{execute}}
    
+   Go to `v2`:
+   
    `git checkout v2`{{execute}}
    
+   `git status`{{execute}}
+   
    `cat file.txt`{{execute}}
+   
+   Go to `v1`:
    
    `git checkout v1`{{execute}}
    
+   `git status`{{execute}}
+   
    `cat file.txt`{{execute}}
    
+   Go to the latest version:
+   
    `git checkout master`{{execute}}
+   
+   `git status`{{execute}}
    
    `cat file.txt`{{execute}}
    
