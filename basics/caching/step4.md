@@ -36,7 +36,9 @@
    
    We see that still there is something not quite right. There is a
    second checksum on `file2.txt.dvc` (besides that of the data file
-   `file2.txt`), and that one is out of sync. Let's try this:
+   `file2.txt`), and that one is out of sync.
+   
+   Let's try this:
    
    `dvc commit file2.txt.dvc`{{execute}}
    
@@ -45,7 +47,7 @@
    `tree -a`{{execute}}
    
    The command `dvc commit` does two things: saves the latest version
-   of `file2.txt` to cache (which has not change, so nothing to save),
+   of `file2.txt` to cache (which has not changed, so nothing to save),
    and updates the file `file2.txt.dvc`. The second step fixes our
    discrepancy with the checksum.
 
