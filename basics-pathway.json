@@ -3,7 +3,7 @@
   "description": "Basic concepts and features of DVC.",
   "courses": [
     {
-      "course_id": "caching",
+      "course_id": "data",
       "title": "Data Management With DVC",
       "description": "The core function of DVC is data tracking and management. Let's see how to do it."
     },
