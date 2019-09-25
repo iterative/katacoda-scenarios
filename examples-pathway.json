@@ -1,6 +1,6 @@
 {
-  "title": "Command Examples",
-  "description": "Examples of using commands, which illustrate the commands-reference pages.",
+  "title": "Examples",
+  "description": "Examples that illustrate DVC commands and other features.",
   "courses": [
     {
       "course_id": "fetch",
