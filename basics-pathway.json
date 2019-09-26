@@ -4,8 +4,13 @@
   "courses": [
     {
       "course_id": "data",
-      "title": "Data Management With DVC",
+      "title": "Data Management with DVC",
       "description": "The core function of DVC is data tracking and management. Let's see how to do it."
+    },
+    {
+      "course_id": "performance",
+      "title": "Getting the Best Performance with DVC",
+      "description": "It is important to optimize the DVC setup for having the best performance with handling big data files."
     },
     {
       "course_id": "versioning",

@@ -1,6 +1,6 @@
 {
-    "title": "Data Management with DVC",
-    "description": "The core function of DVC is data tracking and management. Let's see how to do it.",
+    "title": "Getting the Best Performance with DVC",
+    "description": "It is important to optimize the DVC setup for having the best performance with handling big data files.",
     "difficulty": "Beginner",
     "time": "20-30 min",
     "details": {
@@ -16,14 +16,6 @@
             {
                 "title": "Step 3",
                 "text": "step3.md"
-            },
-            {
-                "title": "Step 4",
-                "text": "step4.md"
-            },
-            {
-                "title": "Step 5",
-                "text": "step5.md"
             }
         ],
         "intro": {
