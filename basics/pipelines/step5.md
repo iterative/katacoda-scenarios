@@ -16,9 +16,10 @@ Some of the benefits of this approach are these:
   - Pipelines become reusable (other projects can copy/paste and
     customize them)
 
+Let's see an example.
 
-1. Let's see an example script that contains the commands we have seen
-   so far for building the pipeline:
+1. There is a script that contains the commands we have seen so far
+   for building the pipeline:
 
    `cp /usr/local/bin/build-pipeline.sh .`{{execute}}
    

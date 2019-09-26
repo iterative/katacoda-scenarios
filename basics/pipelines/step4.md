@@ -96,7 +96,7 @@ also what are callback stages and how they are used.
    would be inefficient. We can make the process a bit more efficient
    by checking first if there are any changes in the database, before
    downloading the data. For example we can count the number of
-   records in a table. Let's modify out pipeline with this
+   records in a table. Let's modify our pipeline with this
    optimization.
 
    ```
