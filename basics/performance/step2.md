@@ -16,7 +16,7 @@ block device, and mount it on our project directory.
    Create the image file as big as you need or as big as you can, so
    that it can contain all the data of the project and the caches.
 
-2. Format it with XFS and mount on it on `proj1/`:
+2. Format it with XFS and mount it on `proj1/`:
 
    `apt install xfsprogs`{{execute}}
 
