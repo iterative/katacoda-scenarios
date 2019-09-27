@@ -1,4 +1,4 @@
-# Using symlink
+# Using symlinks
 
 The fast and efficient **reflink** copy works only inside the
 boundaries of a filesystem. If for some reason the data files and the
