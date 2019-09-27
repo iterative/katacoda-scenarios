@@ -41,7 +41,7 @@ the stage are changed, they are automatically saved to cache.
    cache.
    
    Metrics on the other hand are small outputs of the command, so they
-   are tracked with GIT, instead of storing them in cache.
+   are tracked with Git, instead of storing them in cache.
    
    The option `-f train.dvc` gives the name of the file where this
    stage is saved. It is created after the command is finished

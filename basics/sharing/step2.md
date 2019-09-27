@@ -17,7 +17,7 @@ very complex.
 
 <img src="/dvc/courses/basics/sharing/assets/mesh-network.png" width="300"/>
 
-Even with GIT we don't use this _mesh_ topology. Instead we use a
+Even with Git we don't use this _mesh_ topology. Instead we use a
 _star_ topology, with a central _bare_ repository used as a
 synchronization node for all the other repositories.
 
@@ -155,7 +155,7 @@ workspaces.
 
 Notice that:
 
-1. We used GIT to synchronize the configuration file `.dvc/config`
+1. We used Git to synchronize the configuration file `.dvc/config`
    between `workspace-a` and `workspace-b`, so the remote storage that
    we added on `workspace-a` became available automatically on
    `workspace-b`. This way we ensure that both workspaces use the same

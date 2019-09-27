@@ -93,7 +93,7 @@ accessing the SSH remote storage.
    
 4. Now it connects without asking for a password. But do you see any
    problems? Our plain text password has ended up on `.dvc/config`,
-   ready to be committed and pushed to the central GIT repository. If
+   ready to be committed and pushed to the central Git repository. If
    this is a public repository (which it often is, for example a GitHub repo)
    this is terribly bad. Let's fix this as soon as possible:
    
@@ -112,7 +112,7 @@ accessing the SSH remote storage.
    
    `git diff`{{execute}}
    
-   It works, and the password is not in the hands of GIT. The
+   It works, and the password is not in the hands of Git. The
    difference was made by the option `--local`. But where is the
    password?
    
@@ -124,6 +124,6 @@ accessing the SSH remote storage.
    
    So, with the option `--local`, the setting is not saved on
    `.dvc/config` but on `./dvc/config.local`, which is listed on
-   `.dvc/.gitignore` so that it is not committed to GIT by mistake.
+   `.dvc/.gitignore` so that it is not committed to Git by mistake.
    Besides this, the configurations stored on `.dvc/config.local` take
    precedence over (override) those on `.dvc/config`.

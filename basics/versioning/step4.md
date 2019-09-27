@@ -1,10 +1,10 @@
-# Automatic synchronization between DVC and GIT
+# Automatic synchronization between DVC and Git
 
 In the previous steps we saw that whenever we make a `git checkout`,
 we also need to make a `dvc checkout`, in order to get the correct
-version of the data that corresponds to the current GIT version.
+version of the data that corresponds to the current Git version.
 
-It is possible to automate this step by using GIT hooks. The command
+It is possible to automate this step by using Git hooks. The command
 `dvc install` installs such hooks. Let's give it a try.
 
 1. First let's quickly create a workspace with several versions:
@@ -22,7 +22,7 @@ It is possible to automate this step by using GIT hooks. The command
    `ls -al`{{execute}}
    
    Currently we have three versions of `file.txt` on the DVC cache,
-   and three versions of `file.txt.dvc` on GIT, each of them marked
+   and three versions of `file.txt.dvc` on Git, each of them marked
    with a tag:
    
    `tree -a -I .git`{{execute}}

@@ -1,4 +1,4 @@
-# Tracking data versions with GIT
+# Tracking data versions with Git
 
 As we saw in the previous step, in order to keep track of different
 versions of `file.txt` (which are stored on the cache), we have to
@@ -9,8 +9,8 @@ version, which is stored on `file.txt.dvc`).
 
 The way that we used to keep track of the versions of `file.txt.dvc`
 is kind of primitive, tedious, error-prone, and doesn't scale well.
-Since `file.txt.dvc` is just a small text file, why not use GIT to
-keep track of its versions? GIT offers a lot of simplicity, comfort
+Since `file.txt.dvc` is just a small text file, why not use Git to
+keep track of its versions? Git offers a lot of simplicity, comfort
 and flexibility
 
 1. First let's initialize a git repository and a DVC workspace:
@@ -54,11 +54,11 @@ and flexibility
    `cat .gitignore`{{execute}}
    
    The file that we are tracking with DVC is supposed to be a big file
-   that is not suitable for being tracked with GIT (that's why we are
+   that is not suitable for being tracked with Git (that's why we are
    using DVC in the first place). So, we want to make sure that we
-   don't ever add and commit it to GIT. That's why DVC adds it
+   don't ever add and commit it to Git. That's why DVC adds it
    automatically to `.gitignore`. It also suggests (or reminds) us to
-   track `file.txt.dvc` with GIT. Let's do it:
+   track `file.txt.dvc` with Git. Let's do it:
    
    `git add file.txt.dvc .gitignore`{{execute}}
    
@@ -109,7 +109,7 @@ and flexibility
    `git status`{{execute}}
    
    Currently we have three versions of `file.txt` on the DVC cache,
-   and three versions of `file.txt.dvc` on GIT:
+   and three versions of `file.txt.dvc` on Git:
    
    `tree -a -I .git`{{execute}}
    

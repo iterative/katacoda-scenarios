@@ -1,6 +1,6 @@
 {
     "title": "Tracking Data Versions",
-    "description": "DVC takes advantage of GIT's versioning features to keep track of the data versions.",
+    "description": "DVC takes advantage of Git's versioning features to keep track of the data versions.",
     "difficulty": "Beginner",
     "time": "10-15 min",
     "details": {

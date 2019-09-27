@@ -57,7 +57,7 @@ retrain the model with this larger set of images.
    training process.
    
    To record the state of the project after the second training, let's
-   commit these modifications to GIT. Let's also mark the second
+   commit these modifications to Git. Let's also mark the second
    version of the dataset, model and metrics with another tag:
 
    `git status`{{execute}}

@@ -163,7 +163,7 @@ also what are callback stages and how they are used.
    ```{{execute}}
 
 5. Let's save the current state of the project by committing
-   everything to GIT:
+   everything to Git:
 
    `git status`{{execute}}
    

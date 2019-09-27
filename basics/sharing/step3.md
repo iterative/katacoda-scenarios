@@ -77,7 +77,7 @@ easy to try. We will use the localhost as a SSH server.
    
    `cat .dvc/config`{{execute}}
    
-   So, we committed in GIT the configuration changes in the first
+   So, we committed in Git the configuration changes in the first
    workspace, and then pulled these changes from the other workspace.
    This way we can make sure that all of our workspaces use the same
    remote cache.

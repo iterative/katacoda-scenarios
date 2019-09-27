@@ -1,4 +1,4 @@
-# Tracking data versions without GIT
+# Tracking data versions without Git
 
 DVC allows us to cache different versions of a data file and to switch
 between them. Let's see how to do it.

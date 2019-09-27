@@ -20,7 +20,7 @@ working from `workspace-b`. How can they share their code and data?
    
    `tree -a -I .git`{{execute}}
 
-2. Since `workspace-a` is basically GIT repository, we can clone it on
+2. Since `workspace-a` is basically Git repository, we can clone it on
    `workspace-b` like this:
    
    `cd ..`{{execute}}
@@ -67,7 +67,7 @@ working from `workspace-b`. How can they share their code and data?
    `git commit -m 'Add a default remote cache'`{{execute}}
    
    Note that the remote data caches of DVC are similar to the remote
-   repositories of GIT. But be careful because in GIT it is the url
+   repositories of Git. But be careful because in Git it is the url
    (or path) of the remote repository that you add as a remote, in DVC
    it is the url (or path) of the *cache directory* of the remote
    repository. There are some other differences as well between them
@@ -109,7 +109,7 @@ working from `workspace-b`. How can they share their code and data?
    The command `dvc pull` does two things: it downloads first the
    relevant data files from the remote cache to the local cache, then
    it copies them from the local cache to the workspace. Similar to
-   GIT, it is the same thing as doing a `dvc fetch` (first step),
+   Git, it is the same thing as doing a `dvc fetch` (first step),
    followed by a `dvc checkout` (second step).
 
 6. We can also use `dvc push` to upload data from the local cache to
@@ -132,4 +132,4 @@ working from `workspace-b`. How can they share their code and data?
    `dvc status -c`{{execute}}
    
    Notice that `dvc push` is the oposite operation of `dvc fetch`, not
-   the oposite of `dvc pull` (the same as in GIT).
+   the oposite of `dvc pull` (the same as in Git).

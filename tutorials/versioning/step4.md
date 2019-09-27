@@ -1,10 +1,10 @@
 # Switching between versions
 
-In GIT we get a version of the code with `git checkout`. After that we
+In Git we get a version of the code with `git checkout`. After that we
 need to run `dvc checkout` as well, to get from the DVC cache the
 version of the data that corresponds to this version of the code.  The
 corresponding version of the data is recorded on `.dvc` files (which
-are tracked with GIT).
+are tracked with Git).
 
 <img url="/dvc/courses/tutorials/versioning/assets/versioning.png" />
 

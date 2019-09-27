@@ -165,7 +165,7 @@ same thing.
    field `cache: false` in the stage file `stage3.dvc`.
    
    Not caching outputs might be useful in cases when they are small
-   and suitable to be tracked by GIT, or if they are unpredictable or
+   and suitable to be tracked by Git, or if they are unpredictable or
    temporary and not worth to be stored or shared with other people.
    
    Let's create the stage again:
@@ -208,7 +208,7 @@ same thing.
    `cat result.txt | wc -l`{{execute}}
 
 6. Finally let's check the current state of the project and save it by
-   committing everything to GIT:
+   committing everything to Git:
    
    `ls -al`{{execute}}
    

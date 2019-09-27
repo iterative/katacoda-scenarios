@@ -64,7 +64,7 @@
    `cat .gitignore`{{execute}}
    
    Since `data/` is large and contains binary files, we use DVC to
-   track it, instead of GIT. The command `dvc add` saves a copy of it
+   track it, instead of Git. The command `dvc add` saves a copy of it
    into the DVC cache, creates the file `data.dvc` which may be
    considered as a pointer to the cached data, and tells git to ignore
    this directory.
@@ -93,7 +93,7 @@
    `cat .gitignore`{{execute}}
 
 4. Let's take a snapshot of the current state of the project with a
-   GIT commit and a tag:
+   Git commit and a tag:
    
    `git status`{{execute}}
    
@@ -114,8 +114,8 @@
 
 
 Storing the data files to the DVC cache, and committing `.dvc` files to
-GIT, provides us a full picture/snapshot of the current state. Later
+Git, provides us a full picture/snapshot of the current state. Later
 we can switch back to this state, if needed, by first restoring from
-GIT the tagged version of `.dvc` files, and these `.dvc` files will
+Git the tagged version of `.dvc` files, and these `.dvc` files will
 allow us to restore from DVC cache the correct versions of the data
 files.
