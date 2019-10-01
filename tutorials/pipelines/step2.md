@@ -1,5 +1,12 @@
 # Define stages
 
+The pipeline itself is a sequence of transformations we apply to the
+data file, which looks like this:
+
+<img url="/dvc/courses/tutorials/pipelines/assets/example-flow.png" width="300" />
+
+Let's create these stages.
+
 1. Extract XML from the archive:
 
    ```
@@ -9,7 +16,6 @@
        -o data/Posts.xml \
        'unzip data/Posts.xml.zip -d data'
    ```{{execute}}
-   ```
    
    `git status -s`{{execute}}
    
@@ -24,7 +30,6 @@
        data/Posts.xml \
        .dvc/cache/a3/04afb96060aad90176268345e10355
    ```{{execute}}
-   ```
    
    Notice that the given command is executed, the output file is saved
    to cache, and the stage file `extract.dvc` is created.
@@ -46,7 +51,6 @@
            data/Posts.xml \
            data/Posts.tsv
    ```{{execute}}
-   ```
    
    `git status -s`{{execute}}
    
@@ -77,7 +81,6 @@
            data/Posts-train.tsv \
            data/Posts-test.tsv
    ```{{execute}}
-   ```
 
    Here `0.2` is a test dataset split ratio, `20191001` is a seed for
    randomization.
@@ -107,7 +110,6 @@
            data/Posts-train.tsv data/Posts-test.tsv \
            data/matrix-train.pkl data/matrix-test.pkl
    ```{{execute}}
-   ```
    
    `git status -s`{{execute}}
    
@@ -133,7 +135,6 @@
            20191001 \
            data/model.pkl
    ```{{execute}}
-   ```
 
    Here `20191001` is a seed value.
 
@@ -162,7 +163,6 @@
            data/matrix-test.pkl \
            auc.metric
    ```{{execute}}
-   ```
    
    `git status -s`{{execute}}
    
