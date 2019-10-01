@@ -16,4 +16,4 @@ trap 'echo -ne "\033[00m"' DEBUG
 # install dvc
 pip3 install dvc
 clear
-dvc status
+dvc version
