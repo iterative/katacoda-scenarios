@@ -1,12 +1,6 @@
 # Preparation
 
-1. Install DVC:
-
-   `pip3 install dvc`{{execute}}
-   
-   `dvc version`{{execute}}
-   
-2. Get the code of the tutorial:
+1. Get the code of the tutorial:
 
    `git clone https://github.com/iterative/example-versioning`{{execute}}
   
@@ -24,7 +18,7 @@
    
    `git status`{{execute}}
   
-3. Install requirements:
+2. Install requirements:
 
    `cat requirements.txt`{{execute}}
    
