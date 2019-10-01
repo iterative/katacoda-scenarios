@@ -1,8 +1,8 @@
 # Continue building the pipeline
 
-The command of the last stage failed because there is not enough RAM
-to handle all the data. Let's try to fix it by reducing the size of
-input that is to be processed.
+The command of the last step failed because there is not enough RAM to
+handle all the data. Let's try to fix it by reducing the size of input
+that is to be processed.
 
 1. First, let's cut down the size of `data/Posts.tsv`:
    
@@ -15,7 +15,6 @@ input that is to be processed.
        data/Posts.tsv.1 \
        > data/Posts.tsv
    ```{{execute}}
-   ```
    
    `cat data/Posts.tsv | wc -l`{{execute}}
    
@@ -29,6 +28,8 @@ input that is to be processed.
    
    `dvc lock prepare.dvc`{{execute}}
    
+   `grep locked: *.dvc`{{execute}}
+   
    `dvc status`{{execute}}
    
 2. Let's also modify the split ratio from `0.2` to `0.3` on the
@@ -38,8 +39,13 @@ input that is to be processed.
    sed -i split.dvc \
        -e '/cmd:/ s/0.2/0.3/'
    ```{{execute}}
-   ```
    
+   `git status -s`{{execute}}
+   
+   `git diff prepare.dvc`{{execute}}
+   
+   `git diff split.dvc`{{execute}}
+      
    `dvc status`{{execute}}
    
    The stage `split.dvc` has changed, since its command has been
@@ -53,7 +59,10 @@ input that is to be processed.
    
    `cat data/Posts-test.tsv | wc -l`{{execute}}
    
-3. Finally, let's try to define `featurize.dvc` again:
+   As you see, the size of `data/Posts-train.tsv` is almost half of
+   what it was previously.
+   
+3. Now let's try to define `featurize.dvc` again:
 
    ```
    dvc run \
@@ -70,7 +79,8 @@ input that is to be processed.
            data/matrix-train.pkl \
            data/matrix-test.pkl
    ```{{execute}}
-   ```
+   
+   This time it doesn't break.
 
    `git status -s`{{execute}}
    
@@ -134,9 +144,12 @@ input that is to be processed.
    
    `tree .dvc/cache`{{execute}}
    
-   We are just saving a snapshot of the `.dvc` files that describe
+   We are saving in Git a snapshot of the `.dvc` files that describe
    data, transformations (stages), and relationships between them.
-   The data files themselves are stored in the cache:
+   The data files themselves are stored in the cache. The metrics file
+   is saved in Git, since it is small.
+   
+   Let's check the metrics and the pipeline:
    
    `dvc metrics show`{{execute}}
 

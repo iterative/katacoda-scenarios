@@ -1,7 +1,7 @@
 # Reproduce
 
 As we have seen, reproducing a stage means rerunning its command and
-regenerating its outputs, but only if the dependencies have changed
+regenerating its outputs, but only if the dependencies have changed,
 and if the stage is not locked. If these dependencies are outputs from
 some previous stages, then those stages are reproduced first, to see
 whether there are any changes on the results (outputs). This is done
@@ -20,17 +20,32 @@ recursively for all the previous stages.
    This will try to reproduce the whole pipeline. However, as nothing
    has changed (confirmed by `dvc status`), no stage will be rerun.
    
-2. Let's see what happens if we change/improve `code/featurization.py`
-   (which is one of the dependencies of the stage
-   `featurize.dvc`). Please open it with a text editor (`vim` or
-   `nano`) and set the `ngram_range` parameter in `CountVectorizer`
-   (lines 72–73) like this:
+2. Our NLP model was based on unigrams only. Let's improve the model
+   by adding bigrams. The bigrams model will extract signals not only
+   from separate words but also from two-word combinations. This
+   eventually increases the number of features for the model and
+   hopefully improves the target metric.
+   
+   Before editing the `code/featurization.py` file, lets move the
+   current master to a branch called `unigrams`, then let's create and
+   checkout a new branch called `bigrams`:
+   
+   `git checkout -b unigrams`{{execute}}
+   
+   `git checkout master`{{execute}}
+   
+   `git checkout -b bigrams`{{execute}}
+
+3. Now let's edit `code/featurization.py` (which is one of the
+   dependencies of stage `featurize.dvc`). Open it with a text editor
+   (`vim` or `nano`) and change the `ngram_range` parameter in
+   `CountVectorizer` (lines 72–73) like this:
    
    ```
    vim code/featurization.py
    :72
    2dd
-   i
+   O
    ```{{execute}}
    
    ```
@@ -40,7 +55,7 @@ recursively for all the previous stages.
    ngram_range=(1, 2))
    ```{{execute}}
    
-   Now press **[Esc]**, then `:wq`{{execute}}
+   Now press **[Esc]**, then `:wq`{{execute}} to save and quit.
    
    `git status -s`{{execute}}
    
@@ -58,7 +73,7 @@ recursively for all the previous stages.
    
    `dvc repro evaluate.dvc`{{execute}}
    
-3. Commit changes to git:
+4. Commit changes to git:
 
    `git status -s`{{execute}}
    
@@ -66,11 +81,15 @@ recursively for all the previous stages.
    
    `git add .`{{execute}}
    
-   `git commit -m 'Using ngram'`{{execute}}
+   `git commit -m 'Using bigrams'`{{execute}}
 
-4. Check the metrics again:
+5. Check the metrics again:
 
-   `dvc metrics show -a`
+   `dvc metrics show -a`{{execute}}
 
    The option `-a, --all-branches` tells it to show the value of the
    metric for all the branches.
+   
+   It's convenient to keep track of information even for failed
+   experiments. Sometimes a failed hypothesis gives more information
+   than a successful one.

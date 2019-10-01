@@ -92,6 +92,10 @@ Let's create these stages.
    `cat split.dvc`{{execute}}
    
    `ls -lh data/`{{execute}}
+   
+   `cat data/Posts-train.tsv | wc -l`{{execute}}
+   
+   `cat data/Posts-test.tsv | wc -l`{{execute}}
 
    `git add .`{{execute}}
    
