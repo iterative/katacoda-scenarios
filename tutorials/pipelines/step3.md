@@ -21,14 +21,11 @@
 
    `dvc metrics show`{{execute}}
    
-   Since the dataset for this example is extremely simplified to make
-   it faster to run this pipeline, the exact metric number may vary.
-   
 3. Save the pipeline:
 
    `git add .`{{execute}}
    
-   `git status --cached`{{execute}}
+   `git status`{{execute}}
    
    `git commit -m 'Add tag prediction pipeline (6 stages)'`{{execute}}
    
