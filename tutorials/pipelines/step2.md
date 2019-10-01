@@ -107,8 +107,10 @@ Let's create these stages.
        -o data/matrix-test.pkl \
        python \
            code/featurization.py \
-           data/Posts-train.tsv data/Posts-test.tsv \
-           data/matrix-train.pkl data/matrix-test.pkl
+           data/Posts-train.tsv \
+           data/Posts-test.tsv \
+           data/matrix-train.pkl \
+           data/matrix-test.pkl
    ```{{execute}}
    
    `git status -s`{{execute}}

@@ -60,7 +60,7 @@
        -o data/Posts.xml.zip
    ```{{execute}}
    
-   With the option `-o, --out` we can set the destination of the
+   With the option `-o, --out` we set the destination of the
    downloaded file.
    
    `dvc add data/Posts.xml.zip`{{execute}}

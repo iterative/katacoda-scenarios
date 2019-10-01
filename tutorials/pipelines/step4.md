@@ -26,12 +26,21 @@ stages.
    `nano`) and set the `ngram_range` parameter in `CountVectorizer`
    (lines 72–73) like this:
    
-   ```python
+   ```
+   vim code/featurization.py
+   :72
+   2dd
+   i
+   ```{{execute}}
+   
+   ```
    bag_of_words = CountVectorizer(
        stop_words='english',
        max_features=5000,
        ngram_range=(1, 2))
-   ```{{copy}}
+   ```{{execute}}
+   
+   Press `<Esc>`, then `:wq`{{execute}}
    
    `git status -s`{{execute}}
    

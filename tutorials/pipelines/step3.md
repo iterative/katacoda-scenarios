@@ -6,11 +6,13 @@
    dvc pipeline show \
        evaluate.dvc --ascii
    ```{{execute}}
-   
+
+   ```
    dvc pipeline show \
        evaluate.dvc --ascii -c
    ```{{execute}}
    
+   ```
    dvc pipeline show \
        evaluate.dvc --ascii -o
    ```{{execute}}
