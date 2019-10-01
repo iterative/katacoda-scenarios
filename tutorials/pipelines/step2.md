@@ -113,6 +113,42 @@ Let's create these stages.
            data/matrix-test.pkl
    ```{{execute}}
    
+   **Note:** This command fails because the virtual environment of
+   Katacoda does not have enough RAM to handle it:
+   
+   `free -h`{{execute}}
+   
+   Let's cut down the size of `data/Posts-train.tsv` and try again:
+   
+   `cat data/Posts-train.tsv | wc -l`{{execute}}
+   
+   `cp data/Posts-train{.tsv,.tsv.bak}`{{execute}}
+   
+   ```
+   head -n 10000 \
+       data/Posts-train.tsv.bak \
+       > data/Posts-train.tsv
+   ```{{execute}}
+   
+   `cat data/Posts-train.tsv | wc -l`{{execute}}
+   
+   ```
+   dvc run \
+       -f featurize.dvc \
+       -d code/featurization.py \
+       -d data/Posts-train.tsv \
+       -d data/Posts-test.tsv \
+       -o data/matrix-train.pkl \
+       -o data/matrix-test.pkl \
+       --overwrite-dvcfile \
+       python \
+           code/featurization.py \
+           data/Posts-train.tsv \
+           data/Posts-test.tsv \
+           data/matrix-train.pkl \
+           data/matrix-test.pkl
+   ```{{execute}}
+
    `git status -s`{{execute}}
    
    `git diff data/.gitignore`{{execute}}
