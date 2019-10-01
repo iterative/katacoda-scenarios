@@ -1,13 +1,13 @@
 # Reproduce
 
-Reproducing a stage means rerunning its command and regenerating its
-outputs, but only if the dependencies have changed. If these
-dependencies are outputs from some previous stages, then those stages
-are reproduced first, to see whether there are any changes on the
-results (outputs). This is done recursively for all the previous
-stages.
+As we have seen, reproducing a stage means rerunning its command and
+regenerating its outputs, but only if the dependencies have changed
+and if the stage is not locked. If these dependencies are outputs from
+some previous stages, then those stages are reproduced first, to see
+whether there are any changes on the results (outputs). This is done
+recursively for all the previous stages.
 
-1. Reproduce the last stage of the pipeline:
+1. Let's reproduce the last stage of the pipeline:
 
    `ls *.dvc`{{execute}}
    
@@ -35,12 +35,12 @@ stages.
    
    ```
    bag_of_words = CountVectorizer(
-       stop_words='english',
-       max_features=5000,
-       ngram_range=(1, 2))
+   stop_words='english',
+   max_features=5000,
+   ngram_range=(1, 2))
    ```{{execute}}
    
-   Press `<Esc>`, then `:wq`{{execute}}
+   Now press **[Esc]**, then `:wq`{{execute}}
    
    `git status -s`{{execute}}
    
@@ -48,7 +48,7 @@ stages.
    
    `dvc status`{{execute}}
    
-   Now try to reproduce the last stage:
+   Try to reproduce the last stage:
    
    `dvc repro evaluate.dvc`{{execute}}
    

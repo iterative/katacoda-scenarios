@@ -1,9 +1,9 @@
-# Define stages
+# Defining stages
 
 The pipeline itself is a sequence of transformations we apply to the
 data file, which looks like this:
 
-<img url="/dvc/courses/tutorials/pipelines/assets/example-flow.png" width="300" />
+![](/dvc/courses/tutorials/pipelines/assets/example-flow.png)
 
 Let's create these stages.
 
@@ -118,94 +118,4 @@ Let's create these stages.
    
    `free -h`{{execute}}
    
-   Let's cut down the size of `data/Posts-train.tsv` and try again:
-   
-   `cat data/Posts-train.tsv | wc -l`{{execute}}
-   
-   `cp data/Posts-train{.tsv,.tsv.bak}`{{execute}}
-   
-   ```
-   head -n 10000 \
-       data/Posts-train.tsv.bak \
-       > data/Posts-train.tsv
-   ```{{execute}}
-   
-   `cat data/Posts-train.tsv | wc -l`{{execute}}
-   
-   ```
-   dvc run \
-       -f featurize.dvc \
-       -d code/featurization.py \
-       -d data/Posts-train.tsv \
-       -d data/Posts-test.tsv \
-       -o data/matrix-train.pkl \
-       -o data/matrix-test.pkl \
-       --overwrite-dvcfile \
-       python \
-           code/featurization.py \
-           data/Posts-train.tsv \
-           data/Posts-test.tsv \
-           data/matrix-train.pkl \
-           data/matrix-test.pkl
-   ```{{execute}}
-
-   `git status -s`{{execute}}
-   
-   `git diff data/.gitignore`{{execute}}
-
-   `cat featurize.dvc`{{execute}}
-   
-   `ls -lh data/`{{execute}}
-
-   `git add .`{{execute}}
-
-5. Train a ML model on the training dataset:
-
-   ```
-   dvc run \
-       -f train.dvc \
-       -d code/train_model.py \
-       -d data/matrix-train.pkl \
-       -o data/model.pkl \
-       python \
-           code/train_model.py \
-           data/matrix-train.pkl \
-           20191001 \
-           data/model.pkl
-   ```{{execute}}
-
-   Here `20191001` is a seed value.
-
-   `git status -s`{{execute}}
-   
-   `git diff data/.gitignore`{{execute}}
-
-   `cat featurize.dvc`{{execute}}
-   
-   `ls -lh data/`{{execute}}
-
-   `git add .`{{execute}}
-
-6. Evaluate the model on the test dataset and get the metric file:
-
-   ```
-   dvc run \
-       -f evaluate.dvc \
-       -d code/evaluate.py \
-       -d data/model.pkl \
-       -d data/matrix-test.pkl \
-       -M auc.metric \
-       python \
-           code/evaluate.py \
-           data/model.pkl \
-           data/matrix-test.pkl \
-           auc.metric
-   ```{{execute}}
-   
-   `git status -s`{{execute}}
-   
-   `cat evaluate.dvc`{{execute}}
-   
-   `cat auc.metric`{{execute}}
-   
-   `git add .`{{execute}}
+   We will try to fix it in the next step.
