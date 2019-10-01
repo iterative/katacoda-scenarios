@@ -6,6 +6,11 @@
       "course_id": "versioning",
       "title": "Data Versioning",
       "description": "Using DVC commands to work with multiple versions of datasets and ML models."
+    },
+    {
+      "course_id": "pipelines",
+      "title": "Pipelines",
+      "description": "Using DVC commands to build a simple ML pipeline."
     }
   ]
 }
