@@ -18,7 +18,8 @@ recursively for all the previous stages.
    `dvc repro evaluate.dvc`{{execute}}
    
    This will try to reproduce the whole pipeline. However, as nothing
-   has changed (confirmed by `dvc status`), no stage will be rerun.
+   has changed (confirmed also by `dvc status`), no stage will be
+   rerun.
    
 2. Our NLP model was based on unigrams only. Let's improve the model
    by adding bigrams. The bigrams model will extract signals not only
@@ -35,27 +36,25 @@ recursively for all the previous stages.
    `git checkout master`{{execute}}
    
    `git checkout -b bigrams`{{execute}}
+   
+   `git branch -a`{{execute}}
 
 3. Now let's edit `code/featurization.py` (which is one of the
    dependencies of stage `featurize.dvc`). Open it with a text editor
-   (`vim` or `nano`) and change the `ngram_range` parameter in
+   (`vim` or `nano`) and set the `ngram_range` parameter in
    `CountVectorizer` (lines 72–73) like this:
    
    ```
-   vim code/featurization.py
-   :72
-   2dd
-   O
-   ```{{execute}}
+   bag_of_words = CountVectorizer(
+       stop_words='english',
+       max_features=5000,
+       ngram_range=(1, 2))
+   ```
    
    ```
-   bag_of_words = CountVectorizer(
-   stop_words='english',
-   max_features=5000,
-   ngram_range=(1, 2))
+   sed -i code/featurization.py \
+       -e 's/max_features.*/max_features=5000, ngram_range=(1, 2))/'
    ```{{execute}}
-   
-   Now press **[Esc]**, then `:wq`{{execute}} to save and quit.
    
    `git status -s`{{execute}}
    
@@ -67,7 +66,8 @@ recursively for all the previous stages.
    
    `dvc repro evaluate.dvc`{{execute}}
    
-   Notice that it will reproduce all the stages from `featurize.dvc`.
+   Notice that it will reproduce the stages `featurize.dvc`,
+   `train.dvc` and `evaluate.dvc`.
    
    `dvc status`{{execute}}
    
