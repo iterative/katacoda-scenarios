@@ -4,8 +4,9 @@ As we have seen, reproducing a stage means rerunning its command and
 regenerating its outputs, but only if the dependencies have changed,
 and if the stage is not locked. If these dependencies are outputs from
 some previous stages, then those stages are reproduced first, to see
-whether there are any changes on the results (outputs). This is done
-recursively for all the previous stages.
+whether there are any changes on their results (which are dependencies
+of the current stage). This is done recursively for all the previous
+stages.
 
 1. Let's reproduce the last stage of the pipeline:
 
