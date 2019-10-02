@@ -39,7 +39,6 @@ the master branch.
        -e 's/n_estimators=100/n_estimators=700/' \
        -e 's/n_jobs=2/n_jobs=6/'
    ```{{execute}}
-   ```
    
    `git status -s`{{execute}}
    
@@ -77,7 +76,6 @@ the master branch.
        --strategy-option theirs \
        -m 'Merging bigrams'
    ```{{execute}}
-   ```
 
    `dvc status`{{execute}}
    
