@@ -1,7 +1,7 @@
 # Stages
 
-The commands that we have seen so far: `dvc add`, `dvc push`, `dvc
-pull`, etc. provide a useful framework to track, save and share models
+The commands that we have seen so far: `dvc add`, `dvc push`, `dvc pull`,
+etc. provide a useful framework to track, save and share models
 and large data files. In some cases and scenarios this could be all
 you need. But usually in ML scenarios you need to process data and
 generate outputs in a reproducible way. This requires establishing a
@@ -31,6 +31,8 @@ facilitate reproducibility. And this is exactly what stages of DVC do.
 2. Now let's install the requirements. It is recommended to install
    them in a virtual environment.
    
+   `apt install --yes virtualenv`{{execute}}
+   
    `virtualenv -p python3 .env`{{execute}}
    
    `echo ".env/" >> .gitignore`{{execute}}
@@ -47,13 +49,13 @@ facilitate reproducibility. And this is exactly what stages of DVC do.
    
    `git add .gitignore`{{execute}}
    
-   `git commit -m "Ignore virtual env directory"`{{execute}}
+   `git commit -m "Ignore virtualenv directory"`{{execute}}
    
 3. Let's build a stage based on the script `src/prepare.py`:
 
    ```
-   highlight src/prepare.py -O xterm256 \
-       | less -r
+   highlight src/prepare.py \
+       -O xterm256 | less -r
    ```{{execute}}
    
    ```
@@ -102,7 +104,7 @@ facilitate reproducibility. And this is exactly what stages of DVC do.
    
    ```
    cat .dvc/cache/*/*.dir \
-       | python -m json \
+       | python -m json.tool \
        | highlight -S json -O xterm256
    ```{{execute}}
    

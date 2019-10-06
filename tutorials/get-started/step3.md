@@ -12,22 +12,31 @@ to store and share your code.
    
    `mkdir /tmp/data-storage`{{execute}}
    
-   `dvc remote add -d mystorage /tmp/data-storage`{{execute}}
+   ```
+   dvc remote add --default \
+       mystorage /tmp/data-storage
+   ```{{execute}}
 
    `dvc remote list`{{execute}}
    
-   `git status`{{execute}}
+   `git status -s`{{execute}}
    
-   `cat .dvc/config`{{execute}}
+   `git diff .dvc/config`{{execute}}
    
-   `git commit .dvc/config -m "Configure data storage"`{{execute}}
+   ```
+   git commit .dvc/config \
+       -m "Configure data storage"
+   ```{{execute}}
    
    For simplicity we have created a local data storage, however DVC
    supports several types of storages, like: `ssh`, `s3`, `gs`,
    `azure`, `hdfs`, etc. For example to setup a S3 storage we would
    use something like this:
    
-   `dvc remote add -d s3storage s3://mybucket/myproject`
+   ```
+   dvc remote add -d \
+       s3storage s3://mybucket/myproject
+   ```
    
 2. Push the cached files to the data storage:
 
@@ -36,8 +45,9 @@ to store and share your code.
    `dvc status --cloud`{{execute}}
    
    This command compares the state of the cache with the state of the
-   data storage. It shows that there is a new file on the cache that
-   has not been uploaded to the data storage.
+   data storage (the option `-c, --cloud`). It shows that there is a
+   new file on the cache that has not been uploaded to the data
+   storage.
    
    `dvc push`{{execute}}
    
@@ -69,7 +79,7 @@ to store and share your code.
    
    `dvc status -c`{{execute}}
 
-   So, the file tracked by `data/data.xml.dvc` is missing. It is not
+   So, the file tracked by `data/data.xml.dvc` is missing. It is
    neither in the workspace nor in the cache. But it is on the data
    storage and we can get it with `dvc pull`:
    

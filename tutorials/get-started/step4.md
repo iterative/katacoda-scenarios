@@ -15,7 +15,7 @@ would be to use `dvc import`.
        get-started/data.xml
    ```{{execute}}
    
-   `git status`{{execute}}
+   `git status -s`{{execute}}
    
    `cat .gitignore`{{execute}}
    
@@ -31,8 +31,8 @@ would be to use `dvc import`.
    Note that the data file itself (`data.xml`) is not retrieved from
    the Git repository (because data files are not stored on Git).
    Instead it is retrieved from the default data storage of the
-   project (the one that is listed on `.dvc/config` of the example
-   project).
+   project (the one that is added with `dvc remote add --default`, and
+   that is stored on `.dvc/config` of the example project).
 
 3. Update the imported file:
 
@@ -40,12 +40,17 @@ would be to use `dvc import`.
    
    `dvc update data.xml.dvc`{{execute}}
    
-   This DVC file is locked, so its data file can be updated only with
-   `dvc update`. This is done when we want to check whether there is
-   any new version of the imported file, and if yes download it.
+   The command `dvc update` is used when we want to check whether
+   there is any new version of the imported file, and if yes download
+   it again. A DVC file created by `dvc import` is locked, so the
+   imported data file can be updated only with `dvc update`.
    
 4. We are not going to use this file in the rest of the tutorial, so
    let's remove it again:
    
+   `git status -s`{{execute}}
+   
    `rm data.xml data.xml.dvc .gitignore`{{execute}}
+   
+   `git status`{{execute}}
    

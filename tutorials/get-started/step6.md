@@ -65,7 +65,11 @@ _data pipeline_ or _dependency graph_.
    
    `git commit -m "Create featurization and training stages"`{{execute}}
    
+   `dvc status -c`{{execute}}
+   
    `dvc push`{{execute}}
+   
+   `dvc status -c`{{execute}}
    
 3. Let's see the pipeline that we have built so far:
 

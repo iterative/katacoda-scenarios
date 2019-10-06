@@ -35,14 +35,13 @@ performance through metrics.
    wanted to store it in the DVC cache instead, we would have used the
    option `-m` (lowercase).
 
-
    `git status -s`{{execute}}
    
    `cat evaluate.dvc`{{execute}}
    
    `cat auc.metric`{{execute}}
 
-   `dvc metrics show`
+   `dvc metrics show`{{execute}}
 
 2. Let's get another snapshot of the project by committing changes to
    Git:
