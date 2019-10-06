@@ -3,6 +3,11 @@
   "description": "Basic DVC tutorials with simple ML scenarios.",
   "courses": [
     {
+      "course_id": "get-started",
+      "title": "Get Started",
+      "description": "A step-by-step introduction to DVC by building a simple NLP project from scratch."
+    },
+    {
       "course_id": "versioning",
       "title": "Data Versioning",
       "description": "Using DVC commands to work with multiple versions of datasets and ML models."
