@@ -24,3 +24,4 @@ clear
 
 # auto-play preparation steps
 DELAY=0.7 play prepare.sh
+cd example-get-started/

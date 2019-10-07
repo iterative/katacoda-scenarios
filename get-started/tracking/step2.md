@@ -13,8 +13,6 @@ commit it to Git.
 
 `apt install dos2unix`{{execute}}
 
-`dos2unix data/data.xml`{{execute}}
-
 `md5sum data/data.xml`{{execute}}
 
 The command `dvc add` saves a copy of the file in the DVC cache and
