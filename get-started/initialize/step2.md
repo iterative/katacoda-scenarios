@@ -1,12 +1,12 @@
 # Install DVC
 
-1. `pip3 install dvc`{{execute}}
+`pip3 install dvc`{{execute}}
 
-2. `dvc --help`{{execute}}
+`dvc --help`{{execute}}
    
-3. `dvc version`{{execute}}
+`dvc version`{{execute}}
 
-## Optional: Install bash completion for `dvc`
+**Optional:** Install bash completion for `dvc`:
 
 ```
 wget -O /etc/bash_completion.d/dvc \
