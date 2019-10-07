@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # install highlight and dos2unix
-apt install --yes highlight dos2unix
+DEBIAN_FRONTEND=noninteractive \
+    apt install --yes highlight dos2unix
 
 # install bash competion for dvc
 wget -O /etc/bash_completion.d/dvc \
