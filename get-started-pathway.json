@@ -1,0 +1,16 @@
+{
+    "title": "Get Started",
+    "description": "A step-by-step introduction to DVC by building a simple NLP project from scratch.",
+    "courses": [
+        {
+            "course_id": "initialize",
+            "title": "Initialize",
+            "description": "Install DVC, create a Git project, and initialize DVC."
+        },
+        {
+            "course_id": "tracking",
+            "title": "Data Tracking",
+            "description": "Track data files and datasets with DVC."
+        }
+    ]
+}
