@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# install highlight and dos2unix
-DEBIAN_FRONTEND=noninteractive \
-    apt install --yes highlight dos2unix
-
-# install bash competion for dvc
+# install bash completion for dvc
 wget -O /etc/bash_completion.d/dvc \
     https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash
 source /etc/bash_completion
@@ -19,6 +15,9 @@ trap 'echo -ne "\033[00m"' DEBUG
 
 # install dvc
 pip3 install dvc
+
+# wait for highlight to be installed
+until which highlight; do sleep 1; done
 
 # clear screen
 clear
