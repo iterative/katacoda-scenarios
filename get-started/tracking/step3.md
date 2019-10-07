@@ -1,4 +1,4 @@
-# Commit to Git:
+# Commit to Git
 
 ```
 git add \
