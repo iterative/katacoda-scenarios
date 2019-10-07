@@ -16,6 +16,9 @@ trap 'echo -ne "\033[00m"' DEBUG
 # install dvc
 pip3 install dvc
 
+# install highlight and dos2unix
+apt install --yes highlight dos2unix
+
 # clear screen
 clear
 
