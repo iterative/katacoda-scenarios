@@ -1,8 +1,15 @@
 # Commit to Git:
 
-`git add data/.gitignore data/data.xml.dvc`{{execute}}
+```
+git add \
+    data/.gitignore \
+    data/data.xml.dvc
+```{{execute}}
 
-`git commit -m "Add raw data to project"`{{execute}}
+```
+git commit \
+    -m "Add raw data to project"
+```{{execute}}
 
 When the file `data/data.xml` is changed, DVC will save its new
 version to cache again and update `data/data.xml.dvc` to match the new

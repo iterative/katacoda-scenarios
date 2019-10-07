@@ -23,6 +23,12 @@
             "credits": "https://dvc.org/doc/get-started",
             "code": "init.sh"
         }
+        "assets": {
+            "host01": [
+                { "file": "prepare.sh", "target": "/usr/local/bin/", "chmod": "+x" },
+                { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" }
+            ]
+        }        
     },
     "environment": {
         "uilayout": "terminal"

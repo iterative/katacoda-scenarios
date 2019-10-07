@@ -19,10 +19,5 @@ pip3 install dvc
 # clear screen
 clear
 
-# rerun the commands of the previous parts
-dvc version
-mkdir example-get-started
-cd example-get-started/
-git init
-dvc init
-git commit -m "Initialize DVC project"
+# auto-play preparation steps
+DELAY=0.7 play prepare.sh

@@ -21,8 +21,15 @@ to handle a data file of this size, so let's make it smaller:
 
 `cat data/data.xml | wc -l`{{execute}}
 
-`head -n 12000 data/data.xml > data/data.xml.1`{{execute}}
+```
+head -n 12000 \
+    data/data.xml \
+    > data/data.xml.1
+```{{execute}}
 
-`mv data/data.xml.1 data/data.xml`{{execute}}
+```
+mv data/data.xml.1 \
+   data/data.xml
+```{{execute}}
 
 `cat data/data.xml | wc -l`{{execute}}

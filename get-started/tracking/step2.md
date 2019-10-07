@@ -11,6 +11,8 @@ commit it to Git.
 
 `cat data/data.xml.dvc`{{execute}}
 
+`apt install dos2unix`{{execute}}
+
 `dos2unix data/data.xml`{{execute}}
 
 `md5sum data/data.xml`{{execute}}
