@@ -14,22 +14,20 @@ dvc get \
 `ls -lh data/`{{execute}}
 
 The command `dvc get` is like `wget`, but it is used to download data
-artifacts from DVC projects which are hosted on Git repositories.
+files or datasets from DVC projects which are hosted on Git
+repositories.
 
 **Note:** The RAM available on the tutorial environment is not enough
-to handle a data file of this size, so let's make it smaller:
+to handle a data file of this size (`free -h`{{execute}}), so let's
+make it smaller:
 
 `cat data/data.xml | wc -l`{{execute}}
 
 ```
-head -n 12000 \
-    data/data.xml \
+head -n 12000 data/data.xml \
     > data/data.xml.1
 ```{{execute}}
 
-```
-mv data/data.xml.1 \
-   data/data.xml
-```{{execute}}
+`mv data/data.xml.1 data/data.xml`{{execute}}
 
 `cat data/data.xml | wc -l`{{execute}}
