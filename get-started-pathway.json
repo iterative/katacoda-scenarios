@@ -21,6 +21,16 @@
             "course_id": "importing",
             "title": "Importing Data",
             "description": "Import data from another DVC project."
+        },
+        {
+            "course_id": "stages",
+            "title": "Stages",
+            "description": "Process data and generate outputs in a reproducible way."
+        },
+        {
+            "course_id": "pipelines",
+            "title": "Pipelines",
+            "description": "Connect stages by outputs and dependencies, to create a dependency graph (or a data pipeline)."
         }
     ]
 }
