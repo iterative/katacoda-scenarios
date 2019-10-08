@@ -12,7 +12,7 @@ set -o verbose
 
 ### Get a data file
 :; mkdir data
-:; dvc get \
+:; dvc get -q \
        https://github.com/iterative/dataset-registry \
        get-started/data.xml \
        -o data/data.xml
@@ -33,7 +33,7 @@ set -o verbose
 :; git commit .dvc/config -m "Configure data storage"
 
 ### Push cached files to data storage
-:; dvc push
+:; dvc push -q
 
 ### Get the code
 :; wget https://code.dvc.org/get-started/code.zip
@@ -45,7 +45,7 @@ set -o verbose
 ### Install python requirements
 :; virtualenv -q -p python3 .env
 :; echo ".env/" >> .gitignore
-:; source .env/bin/activate
+source .env/bin/activate
 :; pip install -qqq -r src/requirements.txt
 :; git add .gitignore
 :; git commit -m "Ignore virtualenv directory"
@@ -61,4 +61,4 @@ set -o verbose
            data/data.xml
 :; git add data/.gitignore prepare.dvc
 :; git commit -m "Create data preparation stage"
-:; dvc push
+:; dvc push -q

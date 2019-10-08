@@ -12,7 +12,10 @@ set -o verbose
 
 ### Get a data file
 :; mkdir data
-:; dvc get https://github.com/iterative/dataset-registry get-started/data.xml -o data/data.xml
+:; dvc get -q \
+       https://github.com/iterative/dataset-registry \
+       get-started/data.xml \
+       -o data/data.xml
 
 ### Make it smaller
 :; head -n 12000 data/data.xml > data/data.xml.1
@@ -30,6 +33,6 @@ set -o verbose
 :; git commit .dvc/config -m "Configure data storage"
 
 ### Push cached files to data storage
-:; dvc push
+:; dvc push -q
 
 ### Ready ###
