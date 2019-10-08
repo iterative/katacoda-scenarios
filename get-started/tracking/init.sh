@@ -10,17 +10,15 @@ git config --global user.name "Guest User"
 
 # wait for dvc and highlight to be installed
 :
-: DVC and other stuff are being installed. Please be a bit patient.
+: DVC is being installed. Please be a bit patient.
 :
 :
-until hash dvc &>/dev/null; do sleep 2; done
-until hash highlight &>/dev/null; do sleep 2; done
+until hash dvc &>/dev/null; do sleep 1; done
 
 # enable bash completion
 source /etc/bash_completion
 
 # clear screen
-sleep 2
 clear
 
 # auto-play preparation steps
