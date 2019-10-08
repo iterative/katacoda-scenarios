@@ -1,27 +1,25 @@
 #!/bin/bash
 
-# install bash completion for dvc
-wget -O /etc/bash_completion.d/dvc \
-    https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash
-source /etc/bash_completion
-
-# git
-git config --global user.email "guest@example.com"
-git config --global user.name "Guest User"
+# wait for dvc and highlight to be installed
+until hash dvc; do sleep 1; done
+until hash highlight; do sleep 1; done
 
 # prompt
 PS1='\033[01;34m\w\033[00m$ \033[01;32m'
 trap 'echo -ne "\033[00m"' DEBUG
 
-# install dvc
-pip3 install dvc
+# git
+git config --global user.email "guest@example.com"
+git config --global user.name "Guest User"
 
-# wait for highlight to be installed
-until which highlight; do sleep 1; done
+# enable bash completion
+source /etc/bash_completion
 
 # clear screen
 clear
 
 # auto-play preparation steps
-DELAY=0.7 play prepare.sh
+dvc version
+mkdir example-get-started/
 cd example-get-started/
+DELAY=0.7 play prepare.sh
