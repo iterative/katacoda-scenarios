@@ -36,7 +36,7 @@ set -o verbose
 :; dvc push -q
 
 ### Get the code
-:; wget https://code.dvc.org/get-started/code.zip
+:; wget -q https://code.dvc.org/get-started/code.zip
 :; unzip code.zip
 :; rm code.zip
 :; git add src/
@@ -45,7 +45,9 @@ set -o verbose
 ### Install python requirements
 :; virtualenv -q -p python3 .env
 :; echo ".env/" >> .gitignore
+set +o verbose
 source .env/bin/activate
+set -o verbose
 :; pip install -qqq -r src/requirements.txt
 :; git add .gitignore
 :; git commit -m "Ignore virtualenv directory"
