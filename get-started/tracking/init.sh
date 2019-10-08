@@ -16,6 +16,7 @@ git config --global user.name "Guest User"
 source /etc/bash_completion
 
 # clear screen
+sleep 2
 clear
 
 # auto-play preparation steps
