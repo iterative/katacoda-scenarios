@@ -11,6 +11,11 @@
             "course_id": "tracking",
             "title": "Data Tracking",
             "description": "Track data files and datasets with DVC."
+        },
+        {
+            "course_id": "sharing",
+            "title": "Data Sharing",
+            "description": "Setup a data storage and push/pull cached data to it."
         }
     ]
 }
