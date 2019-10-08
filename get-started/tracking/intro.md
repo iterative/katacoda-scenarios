@@ -8,6 +8,3 @@ We keep in Git a history of the `.dvc` file, and each version in this
 history is linked to a version of the data file in the DVC cache. This
 linking or connection is done through the MD5 hash of the cached file,
 which is also its name on the cache.
-
-**Note:** DVC and other stuff are being installed on the
-playground. Please be a bit patient.

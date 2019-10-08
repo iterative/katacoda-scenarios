@@ -10,9 +10,9 @@ git config --global user.name "Guest User"
 
 # wait for dvc and highlight to be installed
 clear
-:
-: DVC is being installed. Please be a bit patient.
-:
+:;: ===================================
+:;: Please wait until DVC is installed.
+:;: ===================================
 until hash dvc &>/dev/null; do sleep 1; done
 
 # enable bash completion
