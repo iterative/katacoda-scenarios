@@ -9,7 +9,9 @@ git config --global user.email "guest@example.com"
 git config --global user.name "Guest User"
 
 # wait for dvc and highlight to be installed
+:
 : DVC and other stuff are being installed. Please be a bit patient.
+:
 until hash dvc &>/dev/null; do sleep 2; done
 until hash highlight &>/dev/null; do sleep 2; done
 
