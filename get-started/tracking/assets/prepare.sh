@@ -9,3 +9,5 @@ set -o verbose
 ### initialize dvc
 :; dvc init -q
 :; git commit -m "Initialize DVC project"
+
+### done
