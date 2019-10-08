@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # wait for dvc and highlight to be installed
-until hash dvc; do sleep 1; done
-until hash highlight; do sleep 1; done
+until hash dvc &>/dev/null; do sleep 1; done
+until hash highlight &>/dev/null; do sleep 1; done
 
 # prompt
 PS1='\033[01;34m\w\033[00m$ \033[01;32m'
