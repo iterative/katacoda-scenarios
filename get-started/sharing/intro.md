@@ -4,6 +4,3 @@ in a different computing environment, we need to setup a data storage.
 
 Then we can use `dvc push` and `dvc pull`. They provides a basic
 collaboration workflow, similar to `git push` and `git pull`.
-
-**Note:** Please be a bit patient while DVC is being installed on the
-playground.
