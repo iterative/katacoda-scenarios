@@ -12,6 +12,7 @@ git config --global user.name "Guest User"
 :
 : DVC and other stuff are being installed. Please be a bit patient.
 :
+:
 until hash dvc &>/dev/null; do sleep 2; done
 until hash highlight &>/dev/null; do sleep 2; done
 
