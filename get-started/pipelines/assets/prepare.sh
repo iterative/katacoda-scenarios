@@ -39,12 +39,14 @@ set -o verbose
 :; wget https://code.dvc.org/get-started/code.zip
 :; unzip code.zip
 :; rm code.zip
+:; git add src/
+:; git commit -m "Add source code files to repo"
 
 ### Install python requirements
-:; virtualenv -p python3 .env
+:; virtualenv -q -p python3 .env
 :; echo ".env/" >> .gitignore
 :; source .env/bin/activate
-:; pip install -r src/requirements.txt
+:; pip install -qqq -r src/requirements.txt
 :; git add .gitignore
 :; git commit -m "Ignore virtualenv directory"
 

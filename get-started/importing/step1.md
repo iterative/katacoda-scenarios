@@ -17,7 +17,8 @@ https://github.com/iterative/dataset-registry:
    
 ```
 git_repo=https://github.com/iterative/dataset-registry
-dvc import $git_repo get-started/data.xml
+dvc import \
+    $git_repo get-started/data.xml
 ```{{execute}}
 
 `ls -alh`{{execute}}

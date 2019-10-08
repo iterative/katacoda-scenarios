@@ -31,8 +31,10 @@ Just for fun, let's try to download it with `wget`:
 
 ```
 storage=https://remote.dvc.org/dataset-registry
-wget -O data.xml.1 \
-  $storage/a3/04afb96060aad90176268345e10355
+path='a3/04afb96060aad90176268345e10355'
+wget -O data.xml.1 $storage/$path
 ```{{execute}}
+
+`ls -lh`{{execute}}
 
 `diff data.xml data.xml.1`{{execute}}

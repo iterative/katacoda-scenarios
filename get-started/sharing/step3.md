@@ -3,7 +3,7 @@
 With `dvc pull` we can download a file from a data storage to the
 cache.
 
-For the sake of example let's remove first the data file and the
+For the sake of example, let's remove first the data file and the
 cache, and then let's try to retrieve it from the data storage.
 
 `rm data/data.xml`{{execute}}
@@ -20,8 +20,9 @@ cache, and then let's try to retrieve it from the data storage.
 
 `dvc status -c`{{execute}}
 
-So, the file tracked by `data/data.xml.dvc` is missing. It is
-neither in the workspace nor in the cache.
+So, the file tracked by `data/data.xml.dvc` is missing. It is neither
+in the workspace nor in the cache. However the `deleted:` status shows
+us that it is available on the data storage.
 
 Let's try to get it from the data storage:
 

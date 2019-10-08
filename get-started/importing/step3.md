@@ -11,5 +11,4 @@ In this case there is no change and nothing is downloaded.
    
 The file `data.xml.dvc`, which is created by `dvc import`, is
 _locked_, which means that DVC will not try to refresh its data file
-(`data.xml`). So the only way to update this data file is with `dvc
-update`.
+(`data.xml`). So the only way to update this data file is with `dvc update`.
