@@ -16,6 +16,11 @@
             "course_id": "sharing",
             "title": "Data Sharing",
             "description": "Setup a data storage and push/pull cached data to it."
+        },
+        {
+            "course_id": "importing",
+            "title": "Importing Data",
+            "description": "Import data from another DVC project."
         }
     ]
 }
