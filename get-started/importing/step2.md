@@ -1,10 +1,10 @@
 # Where is the data file?
 
-Note that the data file itself (`get-started/data.xml`) is not
-retrieved from the Git repository. If you look at
+Note that the file `get-started/data.xml` is not retrieved from the
+Git repository. If you look at the
 [dataset-registry](https://github.com/iterative/dataset-registry) you
-cannot find it anywhere. However it is listed on this `.dvc` file:
-[get-started/data.xml.dvc](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc)
+cannot find it anywhere. However it is listed on the file
+[get-started/data.xml.dvc](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc).
 
 This makes sense because DVC does not store data files on Git. Instead
 they are stored on a data storage (somewhere on cloud).
@@ -24,8 +24,8 @@ However there is one more catch: the data storage is just a backup for
 the DVC cached files, so don't expect to find there the path
 `get-started/data.xml`. Instead you may find there a path like
 `a3/04afb96060aad90176268345e10355` which is derived from the MD5 hash
-of the data file. You can find this hash on:
-[get-started](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc)
+of the data file. You can find this hash on
+[get-started/data.xml.dvc](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc).
 
 Just for fun, let's try to download it with `wget`:
 
