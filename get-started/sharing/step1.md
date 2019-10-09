@@ -1,10 +1,9 @@
 # Setup a data storage
 
-A _data storage_ is nothing but a but a backup place for
-`.dvc/cache/`.  For analogy with `git remote`, data storages are
-managed with `dvc remote`. However, similar to a Git remote repository
-which can be a local directory, a DVC data storage can also be a local
-directory.
+A _data storage_ is just a backup place for `.dvc/cache/`. Similarly
+to `git remote`, data storages are managed with `dvc remote`.  And
+just like a Git remote can be a local directory, a DVC data storage
+can also be a local directory.
 
 `dvc remote list`{{execute}}
 

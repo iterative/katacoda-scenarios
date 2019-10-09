@@ -40,3 +40,8 @@ The command `dvc pull` is usually used after `git clone`, `git pull`,
 or `git checkout` to synchronize the data with the code. Along with
 `dvc push`, it provides a basic collaboration workflow, similar to
 `git push` and `git pull`, that facilitates sharing of data.
+
+**Note:** Similarly to `git pull`, `dvc pull` is actually a shortcut
+for `dvc fetch` and `dvc checkout`. The first one retrieves the
+missing data from the data storage to the cache, and the second one
+copies them from the cache to the workspace.

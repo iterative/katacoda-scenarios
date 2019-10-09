@@ -1,12 +1,19 @@
 # Push cached files to data storage
 
+The command `dvc status` compares the data on the workspace with the
+data saved on the cache.
+
 `dvc status`{{execute}}
+
+In this case it shows that everything is up to date.
+
+However with the option `-c, --cloud` it compares instead the cache
+with the data storage:
 
 `dvc status --cloud`{{execute}}
 
-This command compares the cache with the data storage. It shows that
-there is a new file on the cache that has not been uploaded yet to the
-data storage.
+In this case it shows that there is a new file on the cache that has
+not been uploaded yet to the data storage.
 
 **Note:** The option is called `-c, --cloud` because usually a data
 storage is provided by a cloud service (like Amazon Simple Storage
