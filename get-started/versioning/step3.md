@@ -5,15 +5,29 @@ want to put that experiment on top (on the branch `master`):
    
 `dvc metrics show -T`{{execute}}
 
-```
-git revert baseline-experiment \
-    --strategy-option theirs \
-    -m "Revert to baseline-experiment"
-```{{execute}}
+`git log --oneline`{{execute}}
+
+`git revert -n baseline-experiment..HEAD`{{execute}}
 
 `git status`{{execute}}
 
+`git diff --cached`{{execute}}
+
+`git revert --continue`{{execute}}
+
 `git log --oneline`{{execute}}
+
+Move the tag `baseline-experiment` to the current commit:
+
+`git tag -d baseline-experiment`{{execute}}
+
+`git tag`{{execute}}
+
+`git tag baseline-experiment`{{execute}}
+
+`git log --oneline`{{execute}}
+
+Synchronize the data with the current version of code:
 
 `dvc status`{{execute}}
 
@@ -25,9 +39,4 @@ git revert baseline-experiment \
 
 `dvc status`{{execute}}
 
-When we merge another experiment on `master`, usually there are
-conflicts on MD5 hashes inside the DVC-files. With the option
-`--strategy-option theirs` we avoid the conflicts by giving priority
-to the version that we are merging. This way hopefully most of the
-data files will have correct versions and will not need to be
-reproduced.
+`dvc metrics show -T`{{execute}}
