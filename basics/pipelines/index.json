@@ -31,9 +31,6 @@
             "courseData": "install.sh",
             "code": "init.sh"
         },
-        "finish": {
-            "text": "finish.md"
-        },
         "assets": {
             "host01": [
                 { "file": "build-pipeline.sh", "target": "/usr/local/bin/", "chmod": "+x" }
