@@ -48,7 +48,7 @@ Git:
 
 Let's also assign a Git tag. It will serve as a checkpoint for us to
 compare this approach with other experiments in the future, or if we
-need to come back and check it out and the get the corresponding data.
+need to come back and check it out, and then get the corresponding data.
 
 ```
 git tag -a "baseline-experiment" \

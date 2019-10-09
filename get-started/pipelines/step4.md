@@ -9,7 +9,7 @@ Let's use the pipeline to produce `model.pkl` again:
 Since nothing has changed and all the outputs are up to date, there is
 nothing to be executed and nothing to be reproduced.
 
-But let's delete the first line of `data/data/xml` and see what
+But let's delete the first line of `data/data.xml` and see what
 happens:
 
 `sed -i data/data.xml -e '1d'`{{execute}}

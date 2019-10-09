@@ -1,10 +1,11 @@
 # Experiment with bigrams
 
-Let's say that now we want to try a modified feature extraction.
-Edit `src/featurization.py` to enable bigrams and increase the
-number of features. Open it with a text editor (`vim` or `nano`)
-and set `max_features=6000` and `ngram_range=(1, 2)` in
-`CountVectorizer`, line 78, like this:
+Let's say that now we want to try a modified feature extraction.  Edit
+`src/featurization.py` to enable bigrams and increase the number of
+features. Open it with a text editor (`vim` or `nano`) and set
+`max_features=6000` and `ngram_range=(1, 2)` in `CountVectorizer`.
+
+It should look like this:
 
 ```
 bag_of_words = CountVectorizer(
@@ -12,6 +13,8 @@ bag_of_words = CountVectorizer(
     max_features=6000,
     ngram_range=(1, 2))
 ```
+
+This `sed` command does the modification automatically:
 
 ```
 sed -i src/featurization.py \
