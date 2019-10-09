@@ -2,6 +2,10 @@
 
 Let's assume that we want to go back to the tag `baseline-experiment`
 to check it again. We can do it like this:
+
+`git tag`{{execute}}
+
+`git log --oneline`{{execute}}
    
 `git checkout baseline-experiment`{{execute}}
 
