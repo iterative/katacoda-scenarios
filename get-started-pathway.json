@@ -31,6 +31,16 @@
             "course_id": "pipelines",
             "title": "Pipelines",
             "description": "Connect stages by outputs and dependencies, to create a dependency graph (or a data pipeline)."
+        },
+        {
+            "course_id": "experiments",
+            "title": "Experiments and Metrics",
+            "description": "Try different approaches or solutions and compare their results."
+        },
+        {
+            "course_id": "versioning",
+            "title": "Data Versioning",
+            "description": "Checkout previous versions of code and data."
         }
     ]
 }
