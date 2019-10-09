@@ -19,12 +19,12 @@
             },
             {
                 "title": "Step 4",
-                "text": "step4.md",
-                "code": "step4.sh"
+                "text": "step4.md"
             }
         ],
         "intro": {
             "text": "intro.md",
+            "courseData": "install.sh",
             "code": "init.sh"
         },
         "finish": {

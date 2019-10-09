@@ -23,12 +23,12 @@
             },
             {
                 "title": "Step 5",
-                "text": "step5.md",
-                "code": "step5.sh"
+                "text": "step5.md"
             }
         ],
         "intro": {
             "text": "intro.md",
+            "courseData": "install.sh",
             "code": "init.sh"
         },
         "finish": {
