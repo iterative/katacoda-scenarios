@@ -1,8 +1,13 @@
 # Get a previous version of the model
 
 Let's say that we want to get a previous version of `model.pkl`, as it
-was on tag `baseline-experiment`. Notice that `model.pkl` is an output
-of `train.dvc`. We can do it like this:
+was on tag `baseline-experiment`.
+
+Notice that `model.pkl` is an output of `train.dvc`:
+
+`cat train.dvc`{{execute}}
+
+We can get the previous version of it like this:
    
 ```
 git checkout \
