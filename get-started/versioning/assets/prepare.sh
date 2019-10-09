@@ -99,25 +99,25 @@ set -o verbose
 :; dvc push -q
 
 ### Stage: evaluate.dvc
-dvc run \
-    -f evaluate.dvc \
-    -d src/evaluate.py \
-    -d model.pkl \
-    -d data/features \
-    -M auc.metric \
-    python \
-        src/evaluate.py \
-        model.pkl \
-        data/features \
-        auc.metric
-git add evaluate.dvc auc.metric
-git commit -m "Create evaluation stage"
-git tag -a "baseline-experiment" -m "Baseline experiment evaluation"
+:; dvc run \
+       -f evaluate.dvc \
+       -d src/evaluate.py \
+       -d model.pkl \
+       -d data/features \
+       -M auc.metric \
+       python \
+           src/evaluate.py \
+           model.pkl \
+           data/features \
+           auc.metric
+:; git add evaluate.dvc auc.metric
+:; git commit -m "Create evaluation stage"
+:; git tag -a "baseline-experiment" -m "Baseline experiment evaluation"
 
 ### Experiment with bigrams
-sed -i src/featurization.py \
-    -e 's/max_features.*/max_features=6000, ngram_range=(1, 2))/'
-dvc repro evaluate.dvc
-git add .
-git commit -m "Using bigrams"
-git tag -a "bigrams-experiment" -m "Bigrams experiment"
+:; sed -i src/featurization.py \
+       -e 's/max_features.*/max_features=6000, ngram_range=(1, 2))/'
+:; dvc repro -q evaluate.dvc
+:; git add .
+:; git commit -m "Using bigrams"
+:; git tag -a "bigrams-experiment" -m "Bigrams experiment"
