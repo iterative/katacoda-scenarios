@@ -28,10 +28,8 @@
         ],
         "intro": {
             "text": "intro.md",
+            "courseData": "install.sh",
             "code": "init.sh"
-        },
-        "finish": {
-            "text": "finish.md"
         }
     },
     "environment": {
