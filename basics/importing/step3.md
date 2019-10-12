@@ -56,7 +56,6 @@ download a certain revision of the file.
    `cp file.txt ../`{{execute}}
    
    `cd ..`{{execute}}
-   ```
    
 3. So far we have used `dvc get` from outside a DVC project. But
    sometimes it may be convenient to use it from inside the DVC
@@ -120,5 +119,11 @@ download a certain revision of the file.
    ```{{execute}}
 
    It cannot find the cached file.
+
+   Let's restore the storage:
    
-   `mv ../dvc-storage.bak ../dvc-storage`{{execute}}
+   `cd ..`{{execute}}
+   
+   `rm -rf dvc-storage/`{{execute}}
+
+   `mv dvc-storage.bak dvc-storage`{{execute}}

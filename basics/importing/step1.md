@@ -10,7 +10,7 @@
    
    `dvc init -q`{{execute}}
    
-   `git status`{{execute}}
+   `git status -s`{{execute}}
    
    `git commit -m 'Initialize DVC'`{{execute}}
    
@@ -27,7 +27,7 @@
    
    `dvc remote list`{{execute}}
    
-   `git status`{{execute}}
+   `git status -s`{{execute}}
    
    `git diff .dvc/config`{{execute}}
    
@@ -37,7 +37,6 @@
    git commit \
        -m 'Set a default storage'
    ```{{execute}}
-   ```
    
 3. Add a data file and make several versions of it:
    

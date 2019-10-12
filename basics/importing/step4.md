@@ -7,11 +7,16 @@ This means that it has to be used from inside a DVC project (unlike
 
 1. Create a second DVC project and import a file from the first one:
 
+   `cd ..`{{execute}}
+
    `mkdir proj2`{{execute}}
    
    `cd proj2/`{{execute}}
    
    `dvc import ../proj1 file.txt`{{execute}}
+   
+   It doesn't work unless we are inside a DVC repository. Let's
+   initialize DVC:
    
    `dvc init --no-scm -q`{{execute}}
    

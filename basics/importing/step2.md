@@ -106,8 +106,9 @@ because they are closely related.
    
    `cat file.txt`{{execute}}
    
-   So, it gets it from the **default data storage** of the DVC
-   project.
+   So, we downloaded it from the **default data storage** of the DVC
+   project (with `dvc pull`), and this is where `dvc get` downloads it
+   from too.
 
 6. If we want to copy it directly from the data storage, without using
    `dvc pull`, we can do it like this:
@@ -120,7 +121,7 @@ because they are closely related.
    
    ```
    cat tmp/file.txt.dvc \
-       | grep -e '- path: '
+       | grep -e ' path: '
    ```{{execute}}
    
    ```
@@ -135,9 +136,9 @@ because they are closely related.
    
    `cat file.txt`{{execute}}
 
-   So, we get the URL of data storage from `.dvc/config`, the file
-   name and the MD5 hash from `file.txt.dvc`, and we can construct
-   a `cp` command to get it.
+   We get the URL of data storage from `.dvc/config`, we get the file
+   name and the MD5 hash from `file.txt.dvc`, and we can construct a
+   `cp` command to copy the file.
    
    Note that in case that the default data storage is on cloud, the
    download command would be similar but different. For example

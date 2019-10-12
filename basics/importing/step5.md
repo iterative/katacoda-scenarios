@@ -1,7 +1,6 @@
 # More realistic examples
 
-Let's see some more realistic examples with `dvc get` and `dvc
-import`.
+Let's see some more realistic examples with `dvc get` and `dvc import`.
 
 1. Let's get the model file from the [get-started example
    repo](https://github.com/iterative/example-get-started).
@@ -22,7 +21,7 @@ import`.
    
    In order to download this file, first of all we need to know what
    is the url of the **default data storage** of the DVC project. We
-   find on
+   can find on
    [.dvc/config](https://github.com/iterative/example-get-started/blob/master/.dvc/config)
    that it is `https://remote.dvc.org/get-started`).
    
