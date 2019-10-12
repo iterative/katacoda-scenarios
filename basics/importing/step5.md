@@ -63,7 +63,7 @@ Let's see some more realistic examples with `dvc get` and `dvc import`.
 3. Now let's try to _import_ the file `data/data.xml` from the same
    Git repo:
    
-   `rm *.* .dvc/cache`
+   `rm -rf *.* .dvc/cache`{{execute}}
    
    `dvc status`{{execute}}
    
@@ -80,8 +80,8 @@ Let's see some more realistic examples with `dvc get` and `dvc import`.
    to cache.
 
    Notice the `url:` and `rev_lock:` fields that are used to specify
-   the origin and version of the dependency. When we do a `dvc
-   update`, the field `rev_lock:` is updated.
+   the origin and version of the dependency. When we do a `dvc update`,
+   the field `rev_lock:` is updated.
    
    Same as `dvc get`, the data file is not downloaded from the git
    repo itself, and the details for downloading it can be found on
