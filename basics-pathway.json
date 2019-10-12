@@ -26,6 +26,11 @@
       "course_id": "pipelines",
       "title": "Stages And Pipelines",
       "description": "DVC has a built-in way to connect ML steps into a DAG and run the full pipeline end-to-end."
+    },
+    {
+      "course_id": "importing",
+      "title": "Importing Data",
+      "description": "Download and track data from another DVC project that is hosted in a Git repository."
     }
   ]
 }
