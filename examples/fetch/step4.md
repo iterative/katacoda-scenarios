@@ -48,45 +48,53 @@ download only the data related to these stages.
 3. We can give more than one argument as targets for `dvc fetch`:
 
    ```
-   cat data/data.xml.dvc prepare.dvc \
-       | grep path:
+   cat \
+       data/data.xml.dvc \
+       prepare.dvc | grep path:
    ```{{execute}}
    
    ```
    dvc status \
-       data/data.xml.dvc prepare.dvc
+       data/data.xml.dvc \
+       prepare.dvc
    ```{{execute}}
    
    ```
    dvc status \
-       data/data.xml.dvc prepare.dvc -c
+       data/data.xml.dvc \
+       prepare.dvc -c
    ```{{execute}}
    
    ```
    dvc fetch \
-       data/data.xml.dvc prepare.dvc
+       data/data.xml.dvc \
+       prepare.dvc
    ```{{execute}}
    
    `tree .dvc/cache/`{{execute}}
    
    ```
    dvc status \
-       data/data.xml.dvc prepare.dvc -c
+       data/data.xml.dvc \
+       prepare.dvc -c
    ```{{execute}}
 
    ```
    dvc status \
-       data/data.xml.dvc prepare.dvc
+       data/data.xml.dvc \
+       prepare.dvc
    ```{{execute}}
    
    ```
    dvc checkout \
-       data/data.xml.dvc prepare.dvc
+       data/data.xml.dvc \
+       prepare.dvc
    ```{{execute}}
 
    ```
    dvc status \
-       data/data.xml.dvc prepare.dvc
+       data/data.xml.dvc \
+       prepare.dvc
    ```{{execute}}
 
 4. For `data/data.xml.dvc` it is OK to download only its own data
