@@ -1,7 +1,7 @@
 # Location of .dvcignore
 
 1. If we try to create `.dvcignore` inside a directory tracked by DVC,
-   this will give an error:
+   it will give an error:
    
    `echo data3 > data/.dvcignore`{{execute}}
    
@@ -16,6 +16,8 @@
    `rm data/.dvcignore`{{execute}}
    
    `echo data/data3 > .dvcignore`{{execute}}
+   
+   `tree -a dir/`{{execute}}
    
    `cat .dvcignore`{{execute}}
    
@@ -36,6 +38,16 @@
 
    `echo data.dvc > .dvcignore`{{execute}}
    
+   `echo stage.dvc >> .dvcignore`{{execute}}
+   
    `tree -a -I .dvc`{{execute}}
+   
+   `cat .dvcignore`{{execute}}
+   
+   `cat dir/.dvcignore`{{execute}}
+   
+   `dvc status`{{execute}}
+   
+   `rm .dvcignore`{{execute}}
    
    `dvc status`{{execute}}

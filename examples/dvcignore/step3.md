@@ -54,9 +54,9 @@
    ```
    dvc run \
        -f stage.dvc \
-       -o dir/data2.dvc \
-       'echo data2 > dir/data2.dvc'
-   `{{execute}}
+       -o dir/data2 \
+       'echo data2 > dir/data2'
+   ```{{execute}}
    
    `dvc status`{{execute}}
    
