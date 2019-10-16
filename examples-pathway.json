@@ -3,6 +3,11 @@
   "description": "Examples that illustrate DVC commands and other features.",
   "courses": [
     {
+      "course_id": "dvcignore",
+      "title": ".dvcignore",
+      "description": "Examples of ignoring files with `.dvcignore`."
+    },
+    {
       "course_id": "fetch",
       "title": "dvc fetch",
       "description": "Examples of using the command `dvc fetch`."
