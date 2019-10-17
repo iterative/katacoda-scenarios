@@ -35,11 +35,26 @@
    
    `git status`{{execute}}
   
-2. Install requirements:
+2. Install requirements. It is recommended to install them in a
+   virtual environment:
 
+   `apt install --yes virtualenv`{{execute}}
+   
+   `virtualenv -p python3 .env`{{execute}}
+   
+   `source .env/bin/activate`{{execute}}
+   
    `cat code/requirements.txt`{{execute}}
    
    `pip3 install -r code/requirements.txt`{{execute}}
+
+   `echo ".env/" >> .gitignore`{{execute}}
+   
+   `cat .gitignore`{{execute}}
+   
+   `git add .gitignore`{{execute}}
+   
+   `git commit -m "Ignore virtualenv directory"`{{execute}}
 
 3. Initialize DVC:
 
