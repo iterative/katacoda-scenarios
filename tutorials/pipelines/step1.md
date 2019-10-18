@@ -38,8 +38,6 @@
 2. Install requirements. It is recommended to install them in a
    virtual environment:
 
-   `apt install --yes virtualenv`{{execute}}
-   
    `virtualenv -p python3 .env`{{execute}}
    
    `source .env/bin/activate`{{execute}}
@@ -48,7 +46,7 @@
    
    `pip3 install -r code/requirements.txt`{{execute}}
 
-   `echo ".env/" >> .gitignore`{{execute}}
+   `echo -e "\n.env/" >> .gitignore`{{execute}}
    
    `cat .gitignore`{{execute}}
    
