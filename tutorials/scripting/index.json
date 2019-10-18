@@ -31,7 +31,7 @@
             "credits": "https://stdiff.net/MB2019051301.html",
             "courseData": "install.sh",
             "code": "init.sh"
-        }
+        },
         "assets": {
             "host01": [
                 { "file": "code.zip", "target": "/usr/local/share/" }
