@@ -16,6 +16,11 @@
       "course_id": "pipelines",
       "title": "Pipelines",
       "description": "Using DVC commands to build a simple ML pipeline."
+    },
+    {
+      "course_id": "scripting",
+      "title": "Scripting DVC",
+      "description": "Using bash scripting to build stages and pipelines."
     }
   ]
 }
