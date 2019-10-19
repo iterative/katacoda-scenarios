@@ -20,10 +20,16 @@
        -e '33 s/#pipeline/pipeline/'
    ```{{execute}}
    
+   `git diff lib/modeling.py`{{execute}}
+   
    This change switches from the elastic net to the random
    forest. Then we reproduce the pipeline with `dvc repro`:
 
+   `dvc status`{{execute}}
+   
    `dvc repro run/03-modeling.dvc`{{execute}}
+   
+   `dvc status`{{execute}}
    
    As you see, DVC detects the change in the script (because it is a
    dependency of the third stage), and executes the command of the
@@ -57,6 +63,8 @@
        -e '/^round/ c round = 2'
    ```{{execute}}
    
+   `git diff config.ini`{{execute}}
+   
    Then we need to rebuild the first stage, which retrieves the new
    data:
    
@@ -75,6 +83,8 @@
    `git commit -m 'Data loading round2'`{{execute}}
    
    Reproduce the model:
+   
+   `dvc status`{{execute}}
    
    `dvc repro run/03-modeling.dvc`{{execute}}
    
