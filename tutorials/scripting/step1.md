@@ -5,6 +5,8 @@
    `ls /usr/local/share/`{{execute}}
 
    `unzip /usr/local/share/code.zip`{{execute}}
+   
+   `ls`{{execute}}
   
    `cd dvc-usecase-1.0/`{{execute}}
    
