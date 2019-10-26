@@ -24,8 +24,8 @@ Let's create stages for training and evaluation.
    `cat training.dvc`{{execute}}
    
    ```
-   cat data/train_metric.json \
-       | python json.tool
+   cat metrics/train_metric.json \
+       | python -m json.tool
    ```{{execute}}
 
    `git add .`{{execute}}
@@ -88,11 +88,6 @@ Let's create stages for training and evaluation.
    ```
    dvc pipeline show \
        eval.dvc --ascii -c
-   ```{{execute}}
-
-   ```
-   dvc pipeline show \
-       eval.dvc --ascii -o
    ```{{execute}}
 
 6. Push cached data to the storage:

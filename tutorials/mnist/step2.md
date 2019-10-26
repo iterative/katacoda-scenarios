@@ -15,13 +15,9 @@ multi-class Support Vector Machine (SVM) to classify the data.
        -O data/test_data.csv
    ```{{execute}}
 
-   `head data/train_data.csv`{{execute}}
-   
-   `head data/test_data.csv`{{execute}}
-   
    `cat data/train_data.csv | wc -l`{{execute}}
 
-   `cat data/train_data.csv | wc -l`{{execute}}
+   `cat data/test_data.csv | wc -l`{{execute}}
    
 2. Add them to DVC:
    
@@ -71,7 +67,7 @@ multi-class Support Vector Machine (SVM) to classify the data.
    
    ```
    cat data/norm_params.json \
-       | python json.tool
+       | python -m json.tool
    ```{{execute}}
    
    `git add .`{{execute}}

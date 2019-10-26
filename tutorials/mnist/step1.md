@@ -27,12 +27,12 @@
 
 3. Add the code and create other directories:
 
-   `ls /usr/local/share/`{{execute}}
-
    `mkdir code data metrics`{{execute}}
    
+   `ls /usr/local/share/`{{execute}}
+
    ```
-   tar -C /tmp -xfzv \
+   tar -C /tmp -xzvf \
        /usr/local/share/mnist-example-code.tgz
    ```{{execute}}
    
@@ -64,6 +64,8 @@
    sklearn==0.0
    EOF
    ```{{execute}}
+   
+   `cat requirements.txt`{{execute}}
    
    `pip install -r requirements.txt`{{execute}}
 

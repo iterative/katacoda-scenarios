@@ -14,7 +14,7 @@ experimentation and automatic reproducibility.
    
    `dvc repro eval.dvc`{{execute}}
    
-   Nothing has changed yet, so nothing to re-run.
+   Nothing has changed yet, so there is nothing to re-run.
    
 2. Let's start changing our code. For this experiment we edit only the
    featurization stage (`featurization.py`). Logically that means that
@@ -51,8 +51,12 @@ experimentation and automatic reproducibility.
    `dvc metrics show -a`{{execute}}
 
 5. Upload caches to the data storage:
+
+   `dvc status -c`{{execute}}
    
    `dvc push`{{execute}}
+   
+   `dvc status -c`{{execute}}
    
    Notice that this time, only changed files are uploaded to the
    storage. The imported data for example, doesn't need to be pushed
