@@ -1,0 +1,43 @@
+{
+    "title": "MNIST",
+    "description": "Creating a model to classify images of hand-written digits using MNIST as the data-set.",
+    "difficulty": "Intermediate",
+    "time": "45-60 min",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3",
+                "text": "step3.md"
+            },
+            {
+                "title": "Step 4",
+                "text": "step4.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "credits": "https://dagshub.com/docs/overview/",
+            "courseData": "install.sh",
+            "code": "init.sh"
+        },
+        "assets": {
+            "host01": [
+                { "file": "mnist-example-code.tgz", "target": "/usr/local/share/" }
+            ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal"
+    },
+    "backend": {
+        "imageid": "ubuntu1804"
+    }
+}
