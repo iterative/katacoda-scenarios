@@ -1,7 +1,8 @@
 # Start Defining the Pipeline
 
-In this section we start creating our basic pipeline, which will use a
-multi-class Support Vector Machine (SVM) to classify the data.
+In this section we start creating our basic pipeline, which is going
+to use a multi-class Support Vector Machine (SVM) to classify the
+data.
 
 1. Download training and test data:
 

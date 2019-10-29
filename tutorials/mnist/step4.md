@@ -8,9 +8,16 @@ experimentation and automatic reproducibility.
    number of features in our data, from 784 (28*28 pixels) to 15
    (using Principle Component Analysis (PCA)).
    
-   Let's start by creating a new branch for this experiment:
+   Let's start by saving the current master to branch SVM and creating
+   a new branch for PCA:
+   
+   `git checkout -b SVM`{{execute}}
+   
+   `git checkout master`{{execute}}
    
    `git checkout -b PCA`{{execute}}
+   
+   `git branch -a`{{execute}}
    
    `dvc repro eval.dvc`{{execute}}
    

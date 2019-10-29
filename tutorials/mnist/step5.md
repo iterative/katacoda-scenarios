@@ -27,6 +27,8 @@ networks to tackle this digit classification problem.
    
    `git checkout -b CNN`{{execute}}
    
+   `git branch -a`{{execute}}
+   
 2. For this experiment, we are going to use PyTorch, and therefore
    need to install this package:
    
@@ -34,12 +36,18 @@ networks to tackle this digit classification problem.
    
    `pip freeze > requirements.txt`{{execute}}
    
+   `cat requirements.txt`{{execute}}
+   
+   `git status -s`{{execute}}
+   
+   `git diff requirements.txt`{{execute}}
+   
 3. We need `my_torch_model.py` which contains a class definition of
    our CNN:
    
    `cp /tmp/*/CNN/my_torch_model.py code/`{{execute}}
    
-   `hl code/my_torch_model.py | less -r`{{execute}}
+   `hl code/my_torch_model.py`{{execute}}
    
    Next, let's get a new code for the model training:
    
