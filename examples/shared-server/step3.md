@@ -40,14 +40,7 @@
    `ls -al $DATA`{{execute}}
 
    `su - user1`{{execute}}
-   
-   ```
-   echo 'export DATA=/var/local/data' \
-       >> ~/.bashrc
-   ```{{execute}}
-   
-   `source ~/.bashrc`{{execute}}
-   
+      
    `echo $DATA`{{execute}}
    
    `git clone $DATA/project.git`{{execute}}
@@ -69,15 +62,10 @@
    
    `chown user2: $DATA/user2-project-cache`{{execute}}
    
+   `ls -al $DATA`{{execute}}
+
    `su - user2`{{execute}}
-   
-   ```
-   echo 'export DATA=/var/local/data' \
-       >> ~/.bashrc
-   ```{{execute}}
-   
-   `source ~/.bashrc`{{execute}}
-   
+      
    `echo $DATA`{{execute}}
    
    `git clone $DATA/project.git`{{execute}}

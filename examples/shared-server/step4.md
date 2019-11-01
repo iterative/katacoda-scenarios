@@ -68,10 +68,6 @@
    
    `cd project/`{{execute}}
    
-   `ls -lh`{{execute}}
-   
-   `git status`{{execute}}
-   
    `git pull`{{execute}}
    
    `ls -lh`{{execute}}
@@ -81,6 +77,8 @@
    `dvc status`{{execute}}
    
 5. Pull cached files from the central data storage:
+   
+   `dvc status -c`{{execute}}
    
    `dvc status -c`{{execute}}
    
@@ -100,6 +98,8 @@
    
    `dvc status -c`{{execute}}
    
+   `dvc status -c`{{execute}}
+   
    `dvc status`{{execute}}
    
    `dvc checkout`{{execute}}
@@ -111,7 +111,7 @@
    `exit`{{execute}}
 
 With this setup we can share data the normal way:
-- we can push data from the cache to the data storage with `dvc push`
+- we can push from the cache to the data storage with `dvc push`
 - we can fetch from the data storage to the cache with `dvc fetch`
 
 However, since all the user caches and the central data storage are
