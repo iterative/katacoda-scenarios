@@ -14,8 +14,8 @@
     },
     {
       "course_id": "shared-server",
-      "title": "Shared Development Server",
-      "description": "Some teams may prefer using one single shared machine to run their experiments. This allows them to have better resource utilization and to share data of their projects effectively."
+      "title": "Shared Server",
+      "description": "Some teams may prefer using a single shared machine to run their experiments. This allows them to have better resource utilization and to share data of their projects efficiently."
     }
   ]
 }
