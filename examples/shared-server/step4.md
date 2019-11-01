@@ -18,7 +18,7 @@
    
    `cat datafile.dvc`{{execute}}
    
-   `tree $DATA/user1-project-cache`{{execute}}
+   `tree .dvc/cache/`{{execute}}
 
 2. Commit changes to Git and push them to the Git central repository:
 
@@ -36,13 +36,11 @@
    
    `git push`{{execute}}
    
-   `git status`{{execute}}
-   
 3. Push cached files to the central data storage:
    
    `dvc status -c`{{execute}}
    
-   `tree $DATA/user1-project-cache`{{execute}}
+   `tree .dvc/cache/`{{execute}}
 
    `tree $DATA/dvc-storage`{{execute}}
    
@@ -80,46 +78,34 @@
    
    `dvc status -c`{{execute}}
    
-   `dvc status -c`{{execute}}
-   
-   `tree $DATA/user2-project-cache/`{{execute}}
+   `tree .dvc/cache/`{{execute}}
    
    `df -h $DATA`{{execute}}
    
-   `dvc fetch`{{execute}}
+   `dvc pull`{{execute}}
    
-   `tree $DATA/user2-project-cache/`{{execute}}
-   
-   `df -h $DATA`{{execute}}
-   
-   Notice that `dvc fetch` was instantaneous and the space usage was
-   not increased at all by fetching the cached file from the central
-   data storage.
-   
-   `dvc status -c`{{execute}}
-   
-   `dvc status -c`{{execute}}
-   
-   `dvc status`{{execute}}
-   
-   `dvc checkout`{{execute}}
-   
-   `dvc status`{{execute}}
+   `tree .dvc/cache/`{{execute}}
    
    `ls -lh`{{execute}}
+   
+   `df -h $DATA`{{execute}}
+   
+   Notice that `dvc pull` was instantaneous and the space usage was
+   not increased at all by pulling the data file from the central data
+   storage.
+   
+   `dvc status`{{execute}}
+   
+   `dvc status -c`{{execute}}
    
    `exit`{{execute}}
 
 With this setup we can share data the normal way:
 - we can push from the cache to the data storage with `dvc push`
-- we can fetch from the data storage to the cache with `dvc fetch`
+- we can pull from the data storage to the cache and to the workspace
+  with `dvc pull`
 
-However, since all the user caches and the central data storage are
+However, since all the user projects and the central data storage are
 located on the same XFS filesystem (that supports reflinks), copying
-cached files around with `push` and `fetch` will be instantaneous and
+cached files around with `push` and `pull` will be instantaneous and
 no additional space will be used for the duplicated files.
-
-If the user projects were located on the XFS filesystem too (or if the
-whole root directory was mounted on a reflink enabled filesystem),
-then the data copy between the workspace and the cache would also be
-very efficient (instantaneous and using no extra space).

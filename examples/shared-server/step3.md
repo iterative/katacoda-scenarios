@@ -1,4 +1,4 @@
-# Create user accounts
+# Create users and clone the project
 
 1. Create a couple of users:
 
@@ -31,60 +31,26 @@
 
    `ls -al $DATA`{{execute}}
 
-3. Clone the project for the first user:
+3. Clone the project for each user:
 
-   `mkdir $DATA/user1-project-cache`{{execute}}
+   `cd $DATA/`{{execute}}
    
-   `chown user1: $DATA/user1-project-cache`{{execute}}
+   `git clone project.git user1-project`{{execute}}
+   
+   `chown user1: -R user1-project/`{{execute}}
+   
+   `ln -s $DATA/user1-project ~user1/project`{{execute}}
+   
+   `git clone project.git user2-project`{{execute}}
+   
+   `chown user2: -R user2-project/`{{execute}}
+   
+   `ln -s $DATA/user2-project ~user2/project`{{execute}}
 
-   `ls -al $DATA`{{execute}}
-
-   `su - user1`{{execute}}
-      
-   `echo $DATA`{{execute}}
-   
-   `git clone $DATA/project.git`{{execute}}
-   
-   `cd project/`{{execute}}
-   
-   ```
-   dvc config --local cache.dir \
-       $DATA/user1-project-cache
-   ```{{execute}}
-
-   `cat .dvc/config.local`{{execute}}
-   
-   `exit`{{execute}}
-   
-4. Do the same for the second user:
-
-   `mkdir $DATA/user2-project-cache`{{execute}}
-   
-   `chown user2: $DATA/user2-project-cache`{{execute}}
-   
-   `ls -al $DATA`{{execute}}
-
-   `su - user2`{{execute}}
-      
-   `echo $DATA`{{execute}}
-   
-   `git clone $DATA/project.git`{{execute}}
-   
-   `cd project/`{{execute}}
-   
-   ```
-   dvc config --local cache.dir \
-       $DATA/user2-project-cache
-   ```{{execute}}
-
-   `cat .dvc/config.local`{{execute}}
-   
-   `exit`{{execute}}
-
-Note that the cache of the user projects and the data storage of the
-project are both located on `/var/local/data`, which is formatted with
-XFS and supports reflinks. This is done in order to make the operation
-of DVC more efficient, both in terms of space and speed. As we will
-see on the next step, the commands `dvc push` and `dvc fetch` will run
-instantaneously (literally), and the occupied space on disk will not
-be increased at all when the cached files are copied and duplicated.
+Note that all the user projects and the central data storage are
+located on `$DATA`, which is formatted with XFS and supports
+reflinks. This is done for making DVC more efficient, both in terms of
+space and speed. As we will see on the next step, the commands `dvc
+push` and `dvc pull` will run instantaneously (literally), and the
+occupied space on disk will not be increased at all when the data
+files are cached, copied and duplicated.
