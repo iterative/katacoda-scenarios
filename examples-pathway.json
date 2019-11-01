@@ -11,6 +11,11 @@
       "course_id": "fetch",
       "title": "dvc fetch",
       "description": "Examples of using the command `dvc fetch`."
+    },
+    {
+      "course_id": "data-sharing",
+      "title": "Data Sharing",
+      "description": "Advanced data sharing and collaboration scenarios: shared development server and synchronized data storage.",
     }
   ]
 }
