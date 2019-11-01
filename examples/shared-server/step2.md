@@ -116,11 +116,10 @@
    `ls -l`{{execute}}
 
 Note that the cache of the project and the data storage of the project
-are both located on `/var/local/data`, which is formated with XFS, a
+are both located on `/var/local/data`, which is formatted with XFS, a
 filesystem that supports **reflinks**. The fact that they are both
 located on the same filesystem that supports reflinks will make the
 operation of DVC very efficient, both in terms of space and speed. The
 commands `dvc push` and `dvc pull` will run instantaneously
 (literally), and the occupied space on disk will not be increased at
-all when cached files are copied and duplicated.
-   
+all when the cached files are copied and duplicated.

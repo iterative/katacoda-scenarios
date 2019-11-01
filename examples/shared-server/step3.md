@@ -1,4 +1,4 @@
-# Create users
+# Create user accounts
 
 1. Create a couple of users:
 
@@ -17,7 +17,7 @@
    `ls -al /home/user1/`{{execute}}
    
    `ls -al /home/user2/`{{execute}}
-```
+
 
 2. Grant them read-write access to the data storage and to the
    project:

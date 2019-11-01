@@ -1,8 +1,8 @@
 {
-    "title": "Data Sharing",
-  "description": "Advanced data sharing and collaboration scenarios: shared development server and synchronized data storage.",
+    "title": "Shared Development Server",
+  "description": "Some teams may prefer using one single shared machine to run their experiments. This allows them to have better resource utilization and to share data of their projects effectively.",
     "difficulty": "Advanced",
-    "time": "45-60 minutes",
+    "time": "40-50 minutes",
     "details": {
         "steps": [
             {

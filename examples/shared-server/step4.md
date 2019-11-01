@@ -1,13 +1,4 @@
-# Share data 
-
-With this setup we can share data the normal way: we push data from
-the cache to the data storage with `dvc push`, and we pull from the
-data storage with `dvc pull`. The fact that all the project copies and
-the data storage itself are located on the same host doesn't make any
-difference. The only difference will be in efficiency; since all the
-caches and the data storage are located on the same XFS filesystem
-(that supports reflinks), copying data files around will be
-instantabous and no data will be duplicated.
+# Share data
 
 1. Login as the first user and add some data to the project:
 
@@ -72,3 +63,10 @@ instantabous and no data will be duplicated.
    `tree $DATA/user2-project-cache/`{{execute}}
    
    `exit`{{execute}}
+
+With this setup we can share data the normal way: we push data from
+the cache to the data storage with `dvc push`, and we pull from the
+data storage with `dvc pull`. Since all the caches and the data
+storage are located on the same XFS filesystem (that supports
+reflinks), copying data files around will be instantaneous and no data
+will be duplicated.

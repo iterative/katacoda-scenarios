@@ -17,7 +17,7 @@ that supports reflinks is important for an efficient operation.
 
    `df -h /`{{execute}}
    
-2. Format it as an XFS filesystem with _reflink_ enabed, and mount it:
+2. Format it as an XFS filesystem with _reflink_ enabled, and mount it:
 
    ```
    mkfs.xfs \

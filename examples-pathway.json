@@ -13,9 +13,9 @@
       "description": "Examples of using the command `dvc fetch`."
     },
     {
-      "course_id": "data-sharing",
-      "title": "Data Sharing",
-      "description": "Advanced data sharing and collaboration scenarios: shared development server and synchronized data storage.",
+      "course_id": "shared-server",
+      "title": "Shared Development Server",
+      "description": "Some teams may prefer using one single shared machine to run their experiments. This allows them to have better resource utilization and to share data of their projects effectively."
     }
   ]
 }
