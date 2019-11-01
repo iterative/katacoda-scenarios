@@ -82,11 +82,9 @@
    
    `df -h $DATA`{{execute}}
    
-   `dvc pull`{{execute}}
+   `dvc fetch`{{execute}}
    
    `tree .dvc/cache/`{{execute}}
-   
-   `ls -lh`{{execute}}
    
    `df -h $DATA`{{execute}}
    
@@ -96,14 +94,19 @@
    
    `dvc status`{{execute}}
    
+   `dvc checkout`{{execute}}
+   
+   `ls -lh`{{execute}}
+   
+   `dvc status`{{execute}}
+   
    `dvc status -c`{{execute}}
    
    `exit`{{execute}}
 
 With this setup we can share data the normal way:
 - we can push from the cache to the data storage with `dvc push`
-- we can pull from the data storage to the cache and to the workspace
-  with `dvc pull`
+- we can pull from the data storage to the cache with `dvc pull`
 
 However, since all the user projects and the central data storage are
 located on the same XFS filesystem (that supports reflinks), copying

@@ -50,7 +50,7 @@
 Note that all the user projects and the central data storage are
 located on `$DATA`, which is formatted with XFS and supports
 reflinks. This is done for making DVC more efficient, both in terms of
-space and speed. As we will see on the next step, the commands `dvc
-push` and `dvc pull` will run instantaneously (literally), and the
+space and speed. As we will see on the next step, the commands `dvc push`
+and `dvc pull` will run instantaneously (literally), and the
 occupied space on disk will not be increased at all when the data
 files are cached, copied and duplicated.
