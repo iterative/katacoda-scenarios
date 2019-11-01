@@ -18,7 +18,6 @@
    
    `ls -al /home/user2/`{{execute}}
 
-
 2. Grant them read-write access to the data storage and to the
    project:
 
@@ -49,7 +48,7 @@
    `su - user1`{{execute}}
    
    ```
-   echo 'export DATA=/var/lib/data' \
+   echo 'export DATA=/var/local/data' \
        >> ~/.bashrc
    ```{{execute}}
    
@@ -66,22 +65,8 @@
        $DATA/user1-project-cache
    ```{{execute}}
 
-   `git status -s`{{execute}}
-   
    `cat .dvc/config.local`{{execute}}
    
-   `dvc status`{{execute}}
-   
-   `dvc status -c`{{execute}}
-   
-   `dvc pull`{{execute}}
-   
-   `dvc status -c`{{execute}}
-   
-   `dvc status`{{execute}}
-   
-   `tree $DATA/user1-project-cache`{{execute}}
-
    `exit`{{execute}}
    
 4. Do the same for the second user:
@@ -93,7 +78,7 @@
    `su - user2`{{execute}}
    
    ```
-   echo 'export DATA=/var/lib/data' \
+   echo 'export DATA=/var/local/data' \
        >> ~/.bashrc
    ```{{execute}}
    
@@ -110,20 +95,14 @@
        $DATA/user2-project-cache
    ```{{execute}}
 
-   `git status -s`{{execute}}
-   
    `cat .dvc/config.local`{{execute}}
    
-   `dvc status`{{execute}}
-   
-   `dvc status -c`{{execute}}
-   
-   `dvc pull`{{execute}}
-   
-   `dvc status -c`{{execute}}
-   
-   `dvc status`{{execute}}
-   
-   `tree $DATA/user2-project-cache`{{execute}}
-
    `exit`{{execute}}
+
+Note that the cache of the user projects and the data storage of the
+project are both located on `/var/local/data`, which is formatted with
+XFS and supports reflinks. This is done in order to make the operation
+of DVC more efficient, both in terms of space and speed. As we will
+see on the next step, the commands `dvc push` and `dvc fetch` will run
+instantaneously (literally), and the occupied space on disk will not
+be increased at all when the cached files are copied and duplicated.

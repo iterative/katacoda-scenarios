@@ -2,7 +2,10 @@
 
 Since our filesystem (ext4) does not support _reflinks_, let's create
 and mount an XFS filesystem. We will see later why using a filesystem
-that supports reflinks is important for an efficient operation.
+that supports reflinks is important for an efficient operation of DVC.
+
+**Note:** If your root filesystem already supports reflinks, you can
+skip the steps 1-3.
 
 1. Create an image file big enough to hold the data and all the
    caches:
