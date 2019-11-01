@@ -14,7 +14,7 @@ skip the steps 1-3.
    
    `df -h /`{{execute}}
    
-   `fallocate -l 30G data.img`{{execute}}
+   `fallocate -l 20G data.img`{{execute}}
    
    `ls -lh`{{execute}}
 
@@ -58,3 +58,11 @@ skip the steps 1-3.
    `source ~/.bashrc`{{execute}}
    
    `echo $DATA`{{execute}}
+   
+   Declare it for all the new users as well:
+
+   ```
+   echo 'export DATA=/var/local/data' \
+       >> /etc/skel/.bashrc
+   ```{{execute}}
+   

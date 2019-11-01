@@ -1,6 +1,6 @@
 # Share data
 
-1. Login as the first user and add a data file to the project:
+1. Switch to the first user and add a data file to the project:
 
    `su - user1`{{execute}}
    
@@ -8,11 +8,13 @@
    
    `fallocate -l 10G datafile`{{execute}}
    
+   `ls -lh`{{execute}}
+   
    `dvc add datafile`{{execute}}
    
    `git status -s`{{execute}}
    
-   `git diff .gitignore`{{execute}}
+   `cat .gitignore`{{execute}}
    
    `cat datafile.dvc`{{execute}}
    
@@ -22,9 +24,19 @@
 
    `git add .`{{execute}}
    
+   `git status -s`{{execute}}
+   
+   `git config --global user.email 'user1@example.com'`{{execute}}
+   
+   `git config --global user.name 'User1'`{{execute}}
+   
    `git commit -m 'Add datafile'`{{execute}}
    
+   `git status`{{execute}}
+   
    `git push`{{execute}}
+   
+   `git status`{{execute}}
    
 3. Push cached files to the central data storage:
    
@@ -40,17 +52,17 @@
    
    `tree $DATA/dvc-storage`{{execute}}
    
-   `dvc status -c`{{execute}}
-   
    `df -h $DATA`{{execute}}
    
    Notice that `dvc push` was instantaneous and the space usage was
    not increased at all by pushing the cached file to the central data
    storage.
 
+   `dvc status -c`{{execute}}
+   
    `exit`{{execute}}
    
-4. Login as the second user and pull changes from Git:
+4. Switch to the second user and pull changes from Git:
 
    `su - user2`{{execute}}
    
@@ -80,13 +92,13 @@
    
    `tree $DATA/user2-project-cache/`{{execute}}
    
-   `dvc status -c`{{execute}}
-   
    `df -h $DATA`{{execute}}
    
    Notice that `dvc fetch` was instantaneous and the space usage was
    not increased at all by fetching the cached file from the central
    data storage.
+   
+   `dvc status -c`{{execute}}
    
    `dvc status`{{execute}}
    
@@ -102,10 +114,10 @@ With this setup we can share data the normal way:
 - we can push data from the cache to the data storage with `dvc push`
 - we can fetch from the data storage to the cache with `dvc fetch`
 
-However, since all the user caches and the data storage are located on
-the same XFS filesystem (that supports reflinks), copying cached files
-around with `push` and `fetch` will be instantaneous and no additional
-space will be used for the duplicated files.
+However, since all the user caches and the central data storage are
+located on the same XFS filesystem (that supports reflinks), copying
+cached files around with `push` and `fetch` will be instantaneous and
+no additional space will be used for the duplicated files.
 
 If the user projects were located on the XFS filesystem too (or if the
 whole root directory was mounted on a reflink enabled filesystem),

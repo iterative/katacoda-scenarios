@@ -2,17 +2,11 @@
 
 1. Create a couple of users:
 
-   ```
-   echo -e "pass1\npass1" \
-       | adduser --gecos '' user1
-   ```{{execute}}
-
-   ```
-   echo -e "pass2\npass2" \
-       | adduser --gecos '' user2
-   ```{{execute}}
+   `useradd -m -s /bin/bash user1`{{execute}}
    
-   `ls /home/`{{execute}}
+   `useradd -m -s /bin/bash user2`{{execute}}
+   
+   `ls -l /home/`{{execute}}
    
    `ls -al /home/user1/`{{execute}}
    
@@ -27,13 +21,13 @@
 
    `adduser user2 dvcgroup`{{execute}}
 
-   `chgrp dvcgroup $DATA/dvc-storage`{{execute}}
+   `chgrp dvcgroup -R $DATA/dvc-storage`{{execute}}
    
-   `chgrp dvcgroup $DATA/project.git`{{execute}}
+   `chmod g+rw -R $DATA/dvc-storage`{{execute}}
 
-   `chmod g+rw $DATA/project.git`{{execute}}
+   `chgrp dvcgroup -R $DATA/project.git`{{execute}}
 
-   `chmod g+rw $DATA/dvc-storage`{{execute}}
+   `chmod g+rw -R $DATA/project.git`{{execute}}
 
    `ls -al $DATA`{{execute}}
 
