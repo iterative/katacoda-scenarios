@@ -88,7 +88,7 @@
    
    `df -h $DATA`{{execute}}
    
-   Notice that `dvc pull` was instantaneous and the space usage was
+   Notice that `dvc fetch` was instantaneous and the space usage was
    not increased at all by pulling the data file from the central data
    storage.
    
