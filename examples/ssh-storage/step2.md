@@ -141,6 +141,4 @@ tab: `su - first-user`{{execute T2}}
    
    `git commit -m 'Add a SSH remote cache'`{{execute}}
 
-   `git status`{{execute}}
-   
    `git push --set-upstream origin master`{{execute}}

@@ -50,7 +50,7 @@ data storage with `dvc pull`.
    
 4. Switch to the second user and pull changes from Git:
 
-   On terminal 3: `cd ~/project/`{{execute T2}}
+   On terminal 3: `cd ~/project/`{{execute T3}}
    
    `git pull`{{execute}}
    
