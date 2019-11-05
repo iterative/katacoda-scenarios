@@ -16,6 +16,11 @@
       "course_id": "shared-server",
       "title": "Shared Server",
       "description": "Some teams may prefer using a single shared machine to run their experiments. This allows them to have better resource utilization and to share data of their projects efficiently."
+    },
+    {
+      "course_id": "ssh-storage",
+      "title": "SSH Remote DVC Storage",
+      "description": "Sharing data through a SSH remote DVC storage."
     }
   ]
 }
