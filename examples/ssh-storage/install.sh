@@ -18,12 +18,6 @@ runuser -l first-user -c "git config --global user.name 'First User'"
 runuser -l second-user -c "git config --global user.email 'second-user@example.org'"
 runuser -l second-user -c "git config --global user.name 'Second User'"
 
-# set hosts
-echo <<EOF >> /etc/hosts
-127.0.0.1    storage-server git-server dvc-server
-127.0.0.1    localhost-1 localhost-2
-EOF
-
 # install xfsprogs
 apt install xfsprogs
 
@@ -32,4 +26,4 @@ wget -O /etc/bash_completion.d/dvc \
     https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash
 
 # install dvc
-pip3 install dvc
+pip3 install 'dvc[ssh]'

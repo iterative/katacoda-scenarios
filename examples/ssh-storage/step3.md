@@ -6,9 +6,23 @@ for the first user.
 
 1. Set up ssh keys for the Git server:
    
-   Login to the Git server (with password `pass2`):
+   Setup the ssh config:
    
-   `ssh user2@git-server`{{execute}}
+   `mkdir ~/.ssh`{{execute}}
+   
+   `chmod 700 ~/.ssh/`{{execute}}
+   
+   ```
+   cat <<EOF >> ~/.ssh/config
+   Host git-server
+       HostName host01
+       User user2
+       IdentityFile ~/.ssh/git-server
+       IdentitiesOnly yes 
+   EOF
+   ```{{execute}}
+   
+   `cat ~/.ssh/config`{{execute}}
    
    Generate a SSH key pair:
 
@@ -21,28 +35,9 @@ for the first user.
    
    `ls -al ~/.ssh/`{{execute}}
    
-   Send the public key to the server:
+   Send the public key to the server (use password `pass2`):
    
-   ```
-   ssh-copy-id \
-       -i ~/.ssh/git-server.pub \
-       user2@git-server
-   ```{{execute}}
-   
-   Setup the ssh config:
-   
-   ```
-   cat <<EOF >> ~/.ssh/config
-   
-   Host git-server
-       HostName 127.0.0.1
-       User user2
-       IdentityFile ~/.ssh/git-server
-       IdentitiesOnly yes 
-   EOF
-   ```{{execute}}
-   
-   `cat ~/.ssh/config`{{execute}}
+   `ssh-copy-id -i ~/.ssh/git-server.pub git-server`{{execute}}
    
    Try to login with the new key (you should be able to login without
    a password):
@@ -67,32 +62,13 @@ for the first user.
    
 3. Set up ssh keys for the DVC server:
    
-   Generate a SSH key pair:
-
-   ```
-   ssh-keygen -t rsa \
-       -f ~/.ssh/git-server
-   ```{{execute}}
-   
-   Don't set a password, just press [Enter] on all the prompts.
-   
-   `ls -al ~/.ssh/`{{execute}}
-   
-   Send the public key to the server:
-   
-   ```
-   ssh-copy-id \
-       -i ~/.ssh/dvc-server.pub \
-       user2@dvc-server
-   ```{{execute}}
-   
    Setup the ssh config:
    
    ```
    cat <<EOF >> ~/.ssh/config
    
    Host dvc-server
-       HostName 127.0.0.1
+       HostName host01
        User user2
        IdentityFile ~/.ssh/dvc-server
        IdentitiesOnly yes 
@@ -100,6 +76,21 @@ for the first user.
    ```{{execute}}
    
    `cat ~/.ssh/config`{{execute}}
+   
+   Generate a SSH key pair:
+
+   ```
+   ssh-keygen -t rsa \
+       -f ~/.ssh/dvc-server
+   ```{{execute}}
+   
+   Don't set a password, just press [Enter] on all the prompts.
+   
+   `ls -al ~/.ssh/`{{execute}}
+   
+   Send the public key to the server (use password `pass2`):
+   
+   `ssh-copy-id -i ~/.ssh/dvc-server.pub dvc-server`{{execute}}
    
    Try to login with the new key (you should be able to login without
    a password):
