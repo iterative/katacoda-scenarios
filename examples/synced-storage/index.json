@@ -32,7 +32,7 @@
                 { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" },
                 { "file": "setup-server.sh", "target": "/usr/local/bin/", "chmod": "+x" },
                 { "file": "setup-first-user.sh", "target": "/usr/local/bin/", "chmod": "+x" },
-                { "file": "setup-second-user.sh", "target": "/usr/local/bin/", "chmod": "+x" },
+                { "file": "setup-second-user.sh", "target": "/usr/local/bin/", "chmod": "+x" }
             ]
         }
     },

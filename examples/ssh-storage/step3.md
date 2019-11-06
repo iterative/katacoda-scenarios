@@ -87,7 +87,7 @@ for the first user.
    Try to ssh with the new key (you should be able to do it without
    a password):
    
-   `ssh dvc-server ls -al ssh/`{{execute}}
+   `ssh dvc-server ls -al .ssh/`{{execute}}
    
    `ssh dvc-server cat .ssh/authorized_keys`{{execute}}
    
