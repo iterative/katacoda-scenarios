@@ -12,9 +12,9 @@ git config --global user.name "Admin User"
 
 # wait for dvc to be installed
 clear
-:;: ===================================
-:;: Please wait until DVC is installed.
-:;: ===================================
+: ===================================
+: Please wait until DVC is installed.
+: ===================================
 until hash dvc &>/dev/null; do sleep 1; done
 
 # enable bash completion

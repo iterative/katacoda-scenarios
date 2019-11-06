@@ -19,13 +19,9 @@ better.
    
    `play setup-first-user.sh`{{execute}}
    
-   `exit`{{execute}}
-   
 3. Click on this command to switch to the second user on another
-   terminal tab: `su - first-user`{{execute T3}}
+   terminal tab: `su - second-user`{{execute T3}}
    
    Then run the setup commands:
    
    `play setup-second-user.sh`{{execute}}
-   
-   `exit`{{execute}}

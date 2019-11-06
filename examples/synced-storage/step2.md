@@ -6,9 +6,7 @@ storage. This local DVC storage can be synchronized with the remote
 storage.
 
 1. Click on this command to switch to the first user (on the second
-   terminal tab): `su - first-user`{{execute T2}}
-
-   `ls`{{execute}}
+   terminal tab): `ls`{{execute T2}}
    
    `mkdir project.cache`{{execute}}
    
@@ -23,9 +21,7 @@ storage.
    `dvc remote list`{{execute}}
    
 2. Click on this command to switch to the second user (on the third
-   terminal tab): `su - second-user`{{execute T2}}
-
-   `ls`{{execute}}
+   terminal tab): `ls`{{execute T3}}
    
    `mkdir project.cache`{{execute}}
    
