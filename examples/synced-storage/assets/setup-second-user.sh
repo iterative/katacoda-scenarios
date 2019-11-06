@@ -29,7 +29,7 @@ EOF
 
 ## Send the public key to the server:
 
-:; ssh-copy-id -i ~/.ssh/git-server.pub -o StrictHostKeyChecking=no git-server <<< pass2
+:; echo pass2 | sshpass ssh-copy-id -i ~/.ssh/git-server.pub -o StrictHostKeyChecking=no git-server
 
 ## Try to ssh with the new key:
 
@@ -70,7 +70,7 @@ EOF
 
 ## Send the public key to the server:
 
-:; ssh-copy-id -i ~/.ssh/dvc-server.pub -o StrictHostKeyChecking=no dvc-server <<< pass2
+:; echo pass2 | sshpass ssh-copy-id -i ~/.ssh/dvc-server.pub -o StrictHostKeyChecking=no dvc-server
 
 ## Try to ssh with the new key:
 
