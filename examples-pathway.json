@@ -21,6 +21,11 @@
       "course_id": "ssh-storage",
       "title": "SSH Remote DVC Storage",
       "description": "Sharing data through a SSH remote DVC storage."
+    },
+    {
+      "course_id": "synced-storage",
+      "title": "Synchronized DVC Storage",
+      "description": "Sharing data by synchronizing DVC storages through a cloud storage provider."
     }
   ]
 }

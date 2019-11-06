@@ -18,6 +18,9 @@ runuser -l first-user -c "git config --global user.name 'First User'"
 runuser -l second-user -c "git config --global user.email 'second-user@example.org'"
 runuser -l second-user -c "git config --global user.name 'Second User'"
 
+# install xfsprogs
+apt install xfsprogs
+
 # install bash completion for dvc
 wget -O /etc/bash_completion.d/dvc \
     https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash

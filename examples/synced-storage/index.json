@@ -1,0 +1,45 @@
+{
+    "title": "Synchronized DVC Storage",
+    "description": "Sharing data by synchronizing DVC storages through a cloud storage provider.",
+    "difficulty": "Advanced",
+    "time": "30-45 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3",
+                "text": "step3.md"
+            },
+            {
+                "title": "Step 4",
+                "text": "step4.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "install.sh",
+            "code": "init.sh"
+        },
+        "assets": {
+            "host01": [
+                { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" },
+                { "file": "setup-server.sh", "target": "/usr/local/bin/", "chmod": "+x" },
+                { "file": "setup-first-user.sh", "target": "/usr/local/bin/", "chmod": "+x" },
+                { "file": "setup-second-user.sh", "target": "/usr/local/bin/", "chmod": "+x" },
+            ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal"
+    },
+    "backend": {
+        "imageid": "ubuntu1804"
+    }
+}
