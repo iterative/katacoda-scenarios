@@ -19,7 +19,7 @@ runuser -l second-user -c "git config --global user.email 'second-user@example.o
 runuser -l second-user -c "git config --global user.name 'Second User'"
 
 # install needed packages
-apt install highlight sshpass xfsprogs duperemove
+apt install --yes highlight sshpass xfsprogs duperemove
 
 # install bash completion for dvc
 wget -O /etc/bash_completion.d/dvc \
