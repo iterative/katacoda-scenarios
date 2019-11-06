@@ -26,11 +26,9 @@ tab: `su - first-user`{{execute T2}}
    Generate a SSH key pair:
 
    ```
-   ssh-keygen -t rsa \
+   ssh-keygen -t rsa -q -N '' \
        -f ~/.ssh/git-server
    ```{{execute}}
-   
-   Don't set a password, just press [Enter] on all the prompts.
    
    `ls -al ~/.ssh/`{{execute}}
    
@@ -38,17 +36,16 @@ tab: `su - first-user`{{execute T2}}
    
    `ssh-copy-id -i ~/.ssh/git-server.pub git-server`{{execute}}
    
-   Try to login with the new key (you should be able to login without
+   Try to ssh with the new key (you should be able to do it without
    a password):
    
-   `ssh git-server`{{execute}}
+   `ssh git-server ls -al .ssh/`{{execute}}
    
-   `ls -al .ssh/`{{execute}}
+   ```
+   ssh git-server \
+       cat .ssh/authorized_keys
+   ```{{execute}}
    
-   `cat .ssh/authorized_keys`{{execute}}
-   
-   `exit`{{execute}}
-
 2. Create the Git project:
 
    `mkdir project`{{execute}}
@@ -90,11 +87,9 @@ tab: `su - first-user`{{execute T2}}
    Generate a SSH key pair:
 
    ```
-   ssh-keygen -t rsa \
+   ssh-keygen -t rsa -q -N '' \
        -f ~/.ssh/dvc-server
    ```{{execute}}
-   
-   Don't set a password, just press [Enter] on all the prompts.
    
    `ls -al ~/.ssh/`{{execute}}
    
@@ -102,17 +97,16 @@ tab: `su - first-user`{{execute T2}}
    
    `ssh-copy-id -i ~/.ssh/dvc-server.pub dvc-server`{{execute}}
    
-   Try to login with the new key (you should be able to login without
+   Try to ssh with the new key (you should be able to do it without
    a password):
    
-   `ssh dvc-server`{{execute}}
+   `ssh dvc-server ls -al .ssh/`{{execute}}
    
-   `ls -al .ssh/`{{execute}}
+   ```
+   ssh dvc-server \
+       cat .ssh/authorized_keys
+   ```{{execute}}
    
-   `cat .ssh/authorized_keys`{{execute}}
-   
-   `exit`{{execute}}
-
 4. Setup the remote DVC cache on the project:
 
    `cd ~/project/`{{execute}}
