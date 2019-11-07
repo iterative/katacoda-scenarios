@@ -24,6 +24,20 @@ storage.
 
    `dvc remote list`{{execute}}
    
+   `dvc remote list --local`{{execute}}
+   
+   Commit config changes to Git:
+   
+   `git status -s`{{execute}}
+   
+   `git diff .dvc/config`{{execute}}
+   
+   `git add .dvc/config`{{execute}}
+   
+   `git commit -m 'Remove remote storage'`{{execute}}
+   
+   `git push`{{execute}}
+   
 2. Click on this command to switch to the second user (on the third
    terminal tab): `ls`{{execute T3}}
    
@@ -31,9 +45,9 @@ storage.
    
    `cd project/`{{execute}}
    
-   `dvc remote list`{{execute}}
+   `git pull`{{execute}}
    
-   `dvc remote remove ssh-cache`{{execute}}
+   `dvc remote list`{{execute}}
    
    ```
    dvc remote add \
@@ -42,6 +56,8 @@ storage.
    ```{{execute}}
 
    `dvc remote list`{{execute}}
+   
+   `dvc remote list --local`{{execute}}
    
 3. From the project of the second user, add a data file:
 
