@@ -42,17 +42,23 @@ for the first user.
    
    `ssh git-server ls -al .ssh/`{{execute}}
    
-   `ssh git-server cat .ssh/authorized_keys`{{execute}}
+   ```
+   ssh git-server \
+       cat .ssh/authorized_keys
+   ```{{execute}}
    
 2. Clone the Git project:
 
-   `git clone git-server:/srv/project.git`{{execute}}
+   ```
+   git clone \
+       git-server:/srv/project.git
+   ```{{execute}}
 
    `cd project/`{{execute}}
    
    `git remote -v`{{execute}}
    
-   `git log`{{execute}}
+   `git log --oneline`{{execute}}
    
 3. Set up ssh keys for the DVC server:
    

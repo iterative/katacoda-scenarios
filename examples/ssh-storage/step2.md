@@ -127,7 +127,7 @@ tab: `su - first-user`{{execute T2}}
    
    Let's commit this configuration to Git:
 
-   `git status`{{execute}}
+   `git status -s`{{execute}}
    
    `git diff .dvc/config`{{execute}}
    
