@@ -6,20 +6,18 @@ storage. This local DVC storage can be synchronized with the remote
 storage.
 
 1. Click on this command to switch to the first user (on the second
-   terminal tab): `ls`{{execute T2}}
-   
-   `mkdir project.cache`{{execute}}
-   
-   `cd project/`{{execute}}
+   terminal tab): `cd project/`{{execute T2}}
    
    `dvc remote list`{{execute}}
    
    `dvc remote remove ssh-cache`{{execute}}
    
+   `mkdir ~/project.cache`{{execute}}
+   
    ```
-   dvc remote add \
-       --local --default \
-       local-cache $HOME/project.cache
+   dvc remote add --local \
+       --default local-cache \
+       $HOME/project.cache
    ```{{execute}}
 
    `dvc remote list`{{execute}}
@@ -39,20 +37,18 @@ storage.
    `git push`{{execute}}
    
 2. Click on this command to switch to the second user (on the third
-   terminal tab): `ls`{{execute T3}}
-   
-   `mkdir project.cache`{{execute}}
-   
-   `cd project/`{{execute}}
+   terminal tab): `cd project/`{{execute T3}}
    
    `git pull`{{execute}}
    
    `dvc remote list`{{execute}}
    
+   `mkdir ~/project.cache`{{execute}}
+   
    ```
-   dvc remote add \
-       --local --default \
-       local-cache $HOME/project.cache
+   dvc remote add --local \
+       --default local-cache \
+       $HOME/project.cache
    ```{{execute}}
 
    `dvc remote list`{{execute}}
@@ -79,7 +75,7 @@ storage.
    
    `git push`{{execute}}
    
-   Push to the local storage:
+   Push cache to the local storage:
 
    `dvc status -c`{{execute}}
    

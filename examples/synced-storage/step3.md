@@ -5,7 +5,7 @@ on `.dvc/cache/`, and another copy on `~/project.cache/` (besides the
 copy on the remote storage).
 
 If you have a deduplicating filesystem (like XFS, Btrfs, etc.)  then
-ecerything is fine because making copies of the same file does not
+everything is fine because making copies of the same file does not
 actually increase the disk usage.  If not, then you can create and
 mount by loopback a deduplicating filesystem, and move the project and
 caches there.
@@ -64,11 +64,7 @@ filesystems for each of the user projects.
    
    `df -h $DATA/`{{execute}}
    
-   ```
-   duperemove -hdr \
-       --hashfile=/tmp/test.hash \
-       $DATA >/dev/null
-   ```{{execute}}
+   `duperemove -hdr $DATA >/dev/null`{{execute}}
    
    `df -h $DATA/`{{execute}}
    
@@ -85,9 +81,9 @@ filesystems for each of the user projects.
    `dvc remote list --local`{{execute}}
    
    ```
-   dvc remote modify \
-       --local local-cache \
-       url $DATA/project.cache
+   dvc remote modify --local \
+       local-cache url \
+       $DATA/project.cache
    ```{{execute}}
 
    `dvc remote list --local`{{execute}}

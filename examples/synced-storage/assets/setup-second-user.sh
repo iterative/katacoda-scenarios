@@ -8,9 +8,7 @@ set -o verbose
 ## Setup the ssh config:
 
 :; mkdir ~/.ssh
-
 :; chmod 700 ~/.ssh/
-
 :; cat <<EOF >> ~/.ssh/config
 Host git-server
     HostName host01
@@ -18,13 +16,11 @@ Host git-server
     IdentityFile ~/.ssh/git-server
     IdentitiesOnly yes 
 EOF
-
 :; cat ~/.ssh/config
 
 ## Generate a SSH key pair:
 
 :; ssh-keygen -t rsa -q -N '' -f ~/.ssh/git-server
-
 :; ls -al ~/.ssh/
 
 ## Send the public key to the server:
@@ -34,17 +30,13 @@ EOF
 ## Try to ssh with the new key:
 
 :; ssh git-server ls -al .ssh/
-
 :; ssh git-server cat .ssh/authorized_keys
 
 ### Clone the Git project
 
 :; git clone git-server:/srv/project.git
-
 :; cd project/
-
 :; git remote -v
-
 :; git log --oneline
 
 ### Set up ssh keys for the DVC server
@@ -59,13 +51,11 @@ Host dvc-server
     IdentityFile ~/.ssh/dvc-server
     IdentitiesOnly yes 
 EOF
-
 :; cat ~/.ssh/config
 
 ## Generate a SSH key pair:
 
 :; ssh-keygen -t rsa -q -N '' -f ~/.ssh/dvc-server
-
 :; ls -al ~/.ssh/
 
 ## Send the public key to the server:
@@ -75,23 +65,18 @@ EOF
 ## Try to ssh with the new key:
 
 :; ssh dvc-server ls -al .ssh/
-
 :; ssh dvc-server cat .ssh/authorized_keys
 
 ### Check the remote DVC cache
 
 :; cd ~/project/
-
 :; dvc remote list
-
 :; cat .dvc/config
-
 :; dvc status -c
 
-: "Note that we didn't tell DVC the username and the key-file of the
-SSH connection, however they are specified on the SSH config file,
-so it already knows how to connect to the server:
-"
+: Note that we didn't tell DVC the username and the key-file of the
+: SSH connection, however they are specified on the SSH config file,
+: so it already knows how to connect to the server:
 
 :; cat ~/.ssh/config
 

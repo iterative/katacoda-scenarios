@@ -23,7 +23,7 @@ hl_wait() {
 }
 
 hl_cmd() {
-    local PS1='\033[01;34m\w\033[00m$ '
+    #local PS1='\033[01;34m\w\033[00m$ '
     echo -n "${PS1@P}"
     local cmd=$(echo "$1" | cut -d';' -f2)
     hl_wait "$(echo $cmd)"
