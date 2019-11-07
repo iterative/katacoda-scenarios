@@ -64,7 +64,11 @@ filesystems for each of the user projects.
    
    `df -h $DATA/`{{execute}}
    
-   `duperemove -hdr --hashfile=/tmp/test.hash . >/dev/null`{{execute}}
+   ```
+   duperemove -hdr \
+       --hashfile=/tmp/test.hash \
+       $DATA >/dev/null
+   ```{{execute}}
    
    `df -h $DATA/`{{execute}}
    
@@ -78,11 +82,15 @@ filesystems for each of the user projects.
    
    `cd project/`{{execute}}
    
-   `dvc remote list`{{execute}}
+   `dvc remote list --local`{{execute}}
    
-   `dvc remote modify local-cache url $DATA/project.cache`{{execute}}
+   ```
+   dvc remote modify \
+       --local local-cache \
+       url $DATA/project.cache
+   ```{{execute}}
 
-   `dvc remote list`{{execute}}
+   `dvc remote list --local`{{execute}}
    
 3. Go to the terminal of the second user and create and mount an XFS
    filesystem:
@@ -134,7 +142,11 @@ filesystems for each of the user projects.
    
    `df -h $DATA/`{{execute}}
    
-   `duperemove -hdr --hashfile=/tmp/test.hash . >/dev/null`{{execute}}
+   ```
+   duperemove -hdr \
+       --hashfile=/tmp/test.hash \
+       $DATA >/dev/null
+   ```{{execute}}
    
    `df -h $DATA/`{{execute}}
    
@@ -148,8 +160,12 @@ filesystems for each of the user projects.
    
    `cd project/`{{execute}}
    
-   `dvc remote list`{{execute}}
+   `dvc remote list --local`{{execute}}
    
-   `dvc remote modify local-cache url $DATA/project.cache`{{execute}}
+   ```
+   dvc remote modify \
+       --local local-cache \
+       url $DATA/project.cache
+   ```{{execute}}
 
-   `dvc remote list`{{execute}}
+   `dvc remote list --local`{{execute}}

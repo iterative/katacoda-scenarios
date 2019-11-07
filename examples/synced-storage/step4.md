@@ -4,7 +4,7 @@
 
    `cd ~/project/`{{execute T3}}
 
-   `falloc -l 2G data2`{{execute}}
+   `fallocate -l 2G data2`{{execute}}
    
    `ls -lh`{{execute}}
    
@@ -37,7 +37,7 @@
    Synchronize the local storage with the remote one:
 
    ```
-   rsync \
+   rsync -r -P \
        $DATA/project.cache/ \
        dvc-server:/srv/project.cache/
    ```{{execute}}
@@ -55,7 +55,7 @@
    `tree $DATA/project.cache/`{{execute}}
    
    ```
-   rsync \
+   rsync -r -P \
        dvc-server:/srv/project.cache/ \
        ~/project.cache/
    ```{{execute}}

@@ -16,7 +16,11 @@ storage.
    
    `dvc remote remove ssh-cache`{{execute}}
    
-   `dvc remote add -d local-cache $HOME/project.cache`{{execute}}
+   ```
+   dvc remote add \
+       --local --default \
+       local-cache $HOME/project.cache
+   ```{{execute}}
 
    `dvc remote list`{{execute}}
    
@@ -31,13 +35,17 @@ storage.
    
    `dvc remote remove ssh-cache`{{execute}}
    
-   `dvc remote add -d local-cache ~/project.cache`{{execute}}
+   ```
+   dvc remote add \
+       --local --default \
+       local-cache $HOME/project.cache
+   ```{{execute}}
 
    `dvc remote list`{{execute}}
    
 3. From the project of the second user, add a data file:
 
-   `falloc -l 2G data1`{{execute}}
+   `fallocate -l 2G data1`{{execute}}
    
    `ls -lh`{{execute}}
    
@@ -70,7 +78,7 @@ storage.
    Synchronize the local storage with the remote one:
 
    ```
-   rsync \
+   rsync -r -P \
        ~/project.cache/ \
        dvc-server:/srv/project.cache/
    ```{{execute}}
@@ -78,7 +86,7 @@ storage.
 5. Pull it from the project of the first user:
 
    First, click on this command to switch to the first user (on the
-   second terminal tab): `su - first-user`{{execute T2}}
+   second terminal tab): `cd ~/project/`{{execute T2}}
    
    Then pull from Git:
    
@@ -91,7 +99,7 @@ storage.
    `tree ~/project.cache/`{{execute}}
    
    ```
-   rsync \
+   rsync -r -P \
        dvc-server:/srv/project.cache/ \
        ~/project.cache/
    ```{{execute}}
