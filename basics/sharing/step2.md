@@ -35,7 +35,7 @@ workspaces.
    
    `cd central-repo.git`{{execute}}
    
-   `git init --bare`{{execute}}
+   `git init --bare --shared`{{execute}}
    
 2. Now let's push all the content from `workspace-a` to
    `central-repo.git`:
