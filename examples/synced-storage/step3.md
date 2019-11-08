@@ -23,13 +23,20 @@ filesystems for each of the user projects.
 
    `fallocate -l 10G first-user.img`{{execute}}
    
-   `mkfs.xfs -m reflink=1 first-user.img`{{execute}}
+   ```
+   mkfs.xfs \
+       -m reflink=1 \
+       first-user.img
+   ```{{execute}}
 
    `mkdir first-user`{{execute}}
    
    `ls -lh`{{execute}}
    
-   `mount -o loop first-user.img first-user`{{execute}}
+   ```
+   mount -o loop \
+       first-user.img first-user
+   ```{{execute}}
    
    Make sure that it is mounted automatically on reboot:
 
@@ -56,7 +63,11 @@ filesystems for each of the user projects.
 
 2. Move the project and caches to DATA:
 
-   `mv ~first-user/project.cache/ $DATA/`{{execute}}
+   ```
+   mv \
+       ~first-user/project.cache/ \
+       $DATA/
+   ```{{execute}}
    
    `mv ~first-user/project/ $DATA/`{{execute}}
    
@@ -97,13 +108,20 @@ filesystems for each of the user projects.
 
    `fallocate -l 10G second-user.img`{{execute}}
    
-   `mkfs.xfs -m reflink=1 second-user.img`{{execute}}
+   ```
+   mkfs.xfs \
+       -m reflink=1 \
+       second-user.img
+   ```{{execute}}
 
    `mkdir second-user`{{execute}}
    
    `ls -lh`{{execute}}
    
-   `mount -o loop second-user.img second-user`{{execute}}
+   ```
+   mount -o loop \
+       second-user.img second-user
+   ```{{execute}}
    
    Make sure that it is mounted automatically on reboot:
 
@@ -130,7 +148,11 @@ filesystems for each of the user projects.
 
 4. Move the project and caches to DATA:
 
-   `mv ~second-user/project.cache/ $DATA/`{{execute}}
+   ```
+   mv \
+       ~second-user/project.cache/ \
+       $DATA/
+   ```{{execute}}
    
    `mv ~second-user/project/ $DATA/`{{execute}}
    
@@ -138,11 +160,7 @@ filesystems for each of the user projects.
    
    `df -h $DATA/`{{execute}}
    
-   ```
-   duperemove -hdr \
-       --hashfile=/tmp/test.hash \
-       $DATA >/dev/null
-   ```{{execute}}
+   `duperemove -hdr $DATA >/dev/null`{{execute}}
    
    `df -h $DATA/`{{execute}}
    
@@ -159,9 +177,9 @@ filesystems for each of the user projects.
    `dvc remote list --local`{{execute}}
    
    ```
-   dvc remote modify \
-       --local local-cache \
-       url $DATA/project.cache
+   dvc remote modify --local \
+       local-cache url \
+       $DATA/project.cache
    ```{{execute}}
 
    `dvc remote list --local`{{execute}}

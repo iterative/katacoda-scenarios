@@ -6,6 +6,8 @@
 
    `fallocate -l 2G data2`{{execute}}
    
+   `echo 0 >> data2`{{execute}}
+   
    `ls -lh`{{execute}}
    
    `dvc add data2`{{execute}}
@@ -57,7 +59,7 @@
    ```
    rsync -r -P \
        dvc-server:/srv/project.cache/ \
-       ~/project.cache/
+       $DATA/project.cache/
    ```{{execute}}
 
    `tree $DATA/project.cache/`{{execute}}
