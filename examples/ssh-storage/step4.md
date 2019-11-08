@@ -8,7 +8,7 @@ data storage with `dvc pull`.
 
    On terminal 2: `cd ~/project/`{{execute T2}}
    
-   `fallocate -l 2G datafile`{{execute}}
+   `fallocate -l 1G datafile`{{execute}}
    
    `ls -lh`{{execute}}
    

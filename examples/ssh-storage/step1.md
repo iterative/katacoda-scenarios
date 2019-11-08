@@ -22,15 +22,11 @@
 
    `adduser user2 git-group`{{execute}}
    
-   `members git-group`{{execute}}
-
    `addgroup dvc-group`{{execute}}
 
    `adduser user1 dvc-group`{{execute}}
 
    `adduser user2 dvc-group`{{execute}}
-
-   `members dvc-group`{{execute}}
 
 3. Create a bare Git repository for the project:
    
