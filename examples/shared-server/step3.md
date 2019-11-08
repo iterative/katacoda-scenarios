@@ -26,10 +26,6 @@
    
    `git status -s`{{execute}}
    
-   `git config user.email 'user1@example.com'`{{execute}}
-   
-   `git config user.name 'User1'`{{execute}}
-   
    `git commit -m 'Add datafile'`{{execute}}
    
    `git status`{{execute}}

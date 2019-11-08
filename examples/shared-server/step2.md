@@ -54,9 +54,13 @@
    
    `dvc init -q`{{execute}}
    
-   `tree -a`{{execute}}
+   `tree -a -I .git`{{execute}}
    
    `git status -s`{{execute}}
+   
+   `git config user.email 'user1@host01.com'`{{execute}}
+   
+   `git config user.name 'user1'`{{execute}}
    
    `git commit -m 'Initialize DVC'`{{execute}}
    
