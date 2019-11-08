@@ -12,33 +12,18 @@ automated and simplified by defining aliases or functions on
    ```
    cat << EOF >> ~/.bashrc
    push() {
-       set -o verbose
-       
-       ##### push to Git
+       set -x
        git push
-       
-       ##### push to local DVC storage
        dvc push
-       
-       ##### push from local to remote DVC storage
        rsync -rP $DATA/project.cache/ dvc-server:/srv/project.cache/
-           
-       set + verbose
+       set +x
    }
-   
    pull() {
-       set -o verbose
-       
-       ##### pull from Git
+       set -x
        git pull
-       
-       ##### pull from remote to local DVC storage
        rsync -rP dvc-server:/srv/project.cache/ $DATA/project.cache/
-           
-       ##### pull from local DVC storage
        dvc pull
-       
-       set + verbose
+       set +x
    }
    EOF
    ```{{execute}}
@@ -51,35 +36,19 @@ automated and simplified by defining aliases or functions on
    
    ```
    cat << EOF >> ~/.bashrc
-   cat << EOF >> ~/.bashrc
    push() {
-       set -o verbose
-       
-       ##### push to Git
+       set -x
        git push
-       
-       ##### push to local DVC storage
        dvc push
-       
-       ##### push from local to remote DVC storage
        rsync -rP $DATA/project.cache/ dvc-server:/srv/project.cache/
-           
-       set + verbose
+       set +x
    }
-   
    pull() {
-       set -o verbose
-       
-       ##### pull from Git
+       set -x
        git pull
-       
-       ##### pull from remote to local DVC storage
        rsync -rP dvc-server:/srv/project.cache/ $DATA/project.cache/
-           
-       ##### pull from local DVC storage
        dvc pull
-       
-       set + verbose
+       set +x
    }
    EOF
    ```{{execute}}
