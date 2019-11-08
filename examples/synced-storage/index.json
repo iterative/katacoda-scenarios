@@ -2,7 +2,7 @@
     "title": "Synchronized DVC Storage",
     "description": "Sharing data by synchronizing DVC storages through a cloud storage provider.",
     "difficulty": "Advanced",
-    "time": "30-45 minutes",
+    "time": "45-60 minutes",
     "details": {
         "steps": [
             {
