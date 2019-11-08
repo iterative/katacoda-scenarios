@@ -4,9 +4,9 @@
 
    `cd ~/project/`{{execute T3}}
 
-   `fallocate -l 2G data2`{{execute}}
+   `fallocate -l 1G data2`{{execute}}
    
-   `echo 0 >> data2`{{execute}}
+   `echo 2 >> data2`{{execute}}
    
    `ls -lh`{{execute}}
    

@@ -1,17 +1,12 @@
 # Setup local DVC storage and share data
 
 Instead of connecting the project cache directly to the remote DVC
-storage (as it is now), we will connect it instead to a local DVC
-storage. This local DVC storage can be synchronized with the remote
-storage.
+storage, we will connect it instead to a local DVC storage. This local
+DVC storage can be synchronized with the remote storage.
 
 1. Click on this command to switch to the first user (on the second
    terminal tab): `cd project/`{{execute T2}}
    
-   `dvc remote list`{{execute}}
-   
-   `dvc remote remove ssh-cache`{{execute}}
-   
    `mkdir ~/project.cache`{{execute}}
    
    ```
@@ -24,25 +19,13 @@ storage.
    
    `dvc remote list --local`{{execute}}
    
-   Commit config changes to Git:
+   `cat .dvc/config.local`{{execute}}
    
    `git status -s`{{execute}}
-   
-   `git diff .dvc/config`{{execute}}
-   
-   `git add .dvc/config`{{execute}}
-   
-   `git commit -m 'Remove remote storage'`{{execute}}
-   
-   `git push`{{execute}}
    
 2. Click on this command to switch to the second user (on the third
    terminal tab): `cd project/`{{execute T3}}
    
-   `git pull`{{execute}}
-   
-   `dvc remote list`{{execute}}
-   
    `mkdir ~/project.cache`{{execute}}
    
    ```
@@ -55,9 +38,13 @@ storage.
    
    `dvc remote list --local`{{execute}}
    
+   `cat .dvc/config.local`{{execute}}
+   
+   `git status -s`{{execute}}
+
 3. From the project of the second user, add a data file:
 
-   `fallocate -l 2G data1`{{execute}}
+   `fallocate -l 1G data1`{{execute}}
    
    `ls -lh`{{execute}}
    

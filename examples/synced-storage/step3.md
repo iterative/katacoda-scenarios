@@ -6,7 +6,7 @@ copy on the remote storage).
 
 If you have a deduplicating filesystem (like XFS, Btrfs, etc.)  then
 everything is fine because making copies of the same file does not
-actually increase the disk usage.  If not, then you can create and
+actually increase the disk usage. If not, then you can create and
 mount by loopback a deduplicating filesystem, and move the project and
 caches there.
 
