@@ -1,4 +1,4 @@
-# Setup for the first user
+# First user setup
 
 Click on this command to switch to the first user on another terminal
 tab: `su - first-user`{{execute T2}}

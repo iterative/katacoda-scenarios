@@ -1,4 +1,4 @@
-# Setup for the second user
+# Second user setup
 
 Click on this command to switch to the second user on another terminal
 tab: `su - second-user`{{execute T3}} The steps are similar to those

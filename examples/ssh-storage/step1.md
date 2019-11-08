@@ -13,45 +13,49 @@
    `echo user2:pass2 | chpasswd`{{execute}}
 
    `ls -al /home/user2/`{{execute}}
-
-2. Create a bare Git repository for the project and grant users
-   read-write access to it:
    
-   `git init --bare /srv/project.git`{{execute}}
-   
-   `ls -al /srv/project.git`{{execute}}
+2. Create groups for Git and DVC:
 
    `addgroup git-group`{{execute}}
 
    `adduser user1 git-group`{{execute}}
 
    `adduser user2 git-group`{{execute}}
-
-   ```
-   chgrp git-group -R \
-         /srv/project.git/
-   ```{{execute}}
    
-   `chmod g+rw -R /srv/project.git/`{{execute}}
+   `members git-group`{{execute}}
 
-   `ls -al /srv/project.git/`{{execute}}
-
-3. Create a directory for the DVC remote cache and grant users
-   read-write access to it:
-   
-   `mkdir /srv/project.cache`{{execute}}
-   
    `addgroup dvc-group`{{execute}}
 
    `adduser user1 dvc-group`{{execute}}
 
    `adduser user2 dvc-group`{{execute}}
 
-   ```
-   chgrp dvc-group -R \
-         /srv/project.cache/
-   ```{{execute}}
-   
-   `chmod g+rw -R /srv/project.cache/`{{execute}}
+   `members dvc-group`{{execute}}
 
-   `ls -al /srv/project.cache/`{{execute}}
+3. Create a bare Git repository for the project:
+   
+   `git init --bare --shared /srv/project.git`{{execute}}
+   
+   `cd /srv/project.git`{{execute}}
+   
+   `ls -al`{{execute}}
+
+   `chgrp -R git-group .`{{execute}}
+   
+   `chmod -R g+rw .`{{execute}}
+
+   `ls -al`{{execute}}
+   
+   `cd -`{{execute}}
+
+4. Create a directory for the DVC remote cache:
+   
+   `mkdir /srv/project.cache`{{execute}}
+   
+   `cd /srv/project.cache/`{{execute}}
+   
+   `chgrp -R dvc-group .`{{execute}}
+   
+   `chmod -R g+rw .`{{execute}}
+
+   `cd -`{{execute}}

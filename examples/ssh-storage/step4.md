@@ -75,4 +75,3 @@ data storage with `dvc pull`.
    `dvc status`{{execute}}
    
    `dvc status -c`{{execute}}
-   
