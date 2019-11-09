@@ -50,6 +50,8 @@
 
    `su - user1`{{execute}}
    
+   `ls -l`{{execute}}
+   
    `cd project/`{{execute}}
    
    `dvc init -q`{{execute}}
