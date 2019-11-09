@@ -60,6 +60,8 @@
 
    `su - user2`{{execute}}
    
+   `ls -l`{{execute}}
+   
    `cd project/`{{execute}}
    
    `git pull`{{execute}}

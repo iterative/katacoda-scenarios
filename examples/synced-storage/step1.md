@@ -2,11 +2,7 @@
 
 The setup of this example is similar to that of [using a SSH server
 for data
-sharing](https://katacoda.com/dvc/courses/examples/ssh-storage). So in
-this section we will setup just the same configuration. In the
-following sections we will modify it for the new situation. This may
-also help to understand the setup of the new situation easier and
-better.
+sharing](https://katacoda.com/dvc/courses/examples/ssh-storage).
 
 1. Setup of the server:
 
