@@ -12,4 +12,6 @@ can share data with the help of a local data storage. So, both of the
 users and the data storage are located on the same machine and no
 remote server or storage is involved.
 
-![](/dvc/courses/examples/shared-server/assets/shared-server.png)
+<p align="center">
+<img src="/dvc/courses/examples/shared-server/assets/shared-server.png">
+</p>
