@@ -1,8 +1,8 @@
 {
     "title": "Mounted DVC Storage",
     "description": "Sharing data through a DVC storage that is mounted (by sshfs, NFS, Samba, etc.)",
-    "difficulty": "Advanced",
-    "time": "40-50 minutes",
+    "difficulty": "Intermediate",
+    "time": "25-35 minutes",
     "details": {
         "steps": [
             {

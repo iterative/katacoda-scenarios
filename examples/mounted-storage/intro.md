@@ -14,6 +14,6 @@ need to do this, since we can [use a SSH remote storage](
 https://katacoda.com/dvc/courses/examples/ssh-storage) directly. But
 we are using it just as an example, since SSHFS is easy to be used for
 an interactive tutorial. Once you understand how it works, it should
-be easy to implement it for other types of mounted storages (NFS,
+be easy to implement it for other types of mounted storages (like NFS,
 Samba, etc.).
 
