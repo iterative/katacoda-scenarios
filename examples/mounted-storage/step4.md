@@ -2,17 +2,37 @@
 
 In the previous sections we have mounted the remote storage manually
 with the command `sshfs`. In this section we will see how to mount it
-automatically. This section is optional and just for sake of
+automatically. This section is optional and just for the sake of
 completeness.
 
-1. Mount the cache directory for the first user:
+1. Unmount the directories that we mounted previously with `sshfs`:
 
-   Go to the first terminal: `cd`{{execute T1}}
+   On the second terminal: `whoami`{{execute T2}}
+   
+   `tree ~/project.cache/`{{execute}}
+
+   `fusermount -u ~/project.cache/`{{execute}}
+
+   `tree ~/project.cache/`{{execute}}
+
+   On the third terminal: `whoami`{{execute T3}}
+   
+   `tree ~/project.cache/`{{execute}}
+
+   `fusermount -u ~/project.cache/`{{execute}}
+
+   `tree ~/project.cache/`{{execute}}
+
+2. Mount the cache directory for the first user:
+
+   On the first terminal: `whoami`{{execute T1}}
 
    Let's do a manual login first, so that the fingerprint of `host01`
    is added on the list of known hosts:
    
    `ssh user1@host01 -i ~first-user/.ssh/dvc-server`{{execute}}
+   
+   `exit`{{execute}}
    
    Get `uid` and `gid` of the first user:
    
@@ -26,6 +46,8 @@ completeness.
    EOF
    ```{{execute}}
    
+   `cat /etc/fstab | grep first-user`{{execute}}
+   
    Reload and restart systemctl:
    
    `systemctl daemon-reload`{{execute}}
@@ -34,7 +56,11 @@ completeness.
    
    `systemctl restart 'home-first\x2duser-project.cache.automount'`{{execute}}
    
-2. Mount the cache directory for the second user:
+   `systemctl status 'home-first\x2duser-project.cache.automount'`{{execute}}
+   
+   `tree ~first-user/project.cache/`{{execute}}
+
+3. Mount the cache directory for the second user:
 
    Get `uid` and `gid` of the second user:
    
@@ -55,3 +81,8 @@ completeness.
    `systemctl list-unit-files --type automount`{{execute}}
    
    `systemctl restart 'home-second\x2duser-project.cache.automount'`{{execute}}
+
+   `systemctl status 'home-second\x2duser-project.cache.automount'`{{execute}}
+
+   `tree ~second-user/project.cache/`{{execute}}
+
