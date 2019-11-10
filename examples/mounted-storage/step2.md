@@ -1,0 +1,69 @@
+# Setup project storage for each user
+
+1. Install sshfs:
+
+   `apt install sshfs`{{execute}}
+   
+2. Switch to the first user and mount the remote storage directory:
+
+   On the second terminal: `su - first-user`{{execute T2}}
+   
+   `mkdir project.cache`{{execute}}
+   
+   ```
+   sshfs \
+       dvc-server:/srv/project.cache \
+       project.cache
+   ```{{execute}}
+   
+3. Set the default storage of the project:
+
+   `cd project/`{{execute}}
+   
+   `dvc remote list`{{execute}}
+   
+   `dvc remote list --local`{{execute}}
+   
+   ```
+   dvc remote add \
+       --local --default \
+       local-cache $HOME/project.cache
+   ```{{execute}}
+
+   `dvc remote list`{{execute}}
+   
+   `dvc remote list --local`{{execute}}
+   
+   `cat .dvc/config.local`{{execute}}
+   
+4. Switch to the second user and mount the remote storage directory:
+
+   On the second terminal: `su - second-user`{{execute T2}}
+   
+   `mkdir project.cache`{{execute}}
+   
+   ```
+   sshfs \
+       dvc-server:/srv/project.cache \
+       project.cache
+   ```{{execute}}
+   
+5. Set the default storage of the project:
+
+   `cd project/`{{execute}}
+   
+   `dvc remote list`{{execute}}
+   
+   `dvc remote list --local`{{execute}}
+   
+   ```
+   dvc remote add \
+       --local --default \
+       local-cache $HOME/project.cache
+   ```{{execute}}
+
+   `dvc remote list`{{execute}}
+   
+   `dvc remote list --local`{{execute}}
+   
+   `cat .dvc/config.local`{{execute}}

@@ -23,6 +23,11 @@
       "description": "Sharing data through a SSH remote DVC storage."
     },
     {
+      "course_id": "mounted-storage",
+      "title": "Mounted DVC Storage",
+      "description": "Sharing data through a DVC storage that is mounted (by sshfs, NFS, Samba, etc.)"
+    },
+    {
       "course_id": "synced-storage",
       "title": "Synchronized DVC Storage",
       "description": "Sharing data by synchronizing DVC storages through a cloud storage provider."
