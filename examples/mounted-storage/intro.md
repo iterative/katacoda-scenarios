@@ -17,3 +17,6 @@ an interactive tutorial. Once you understand how it works, it should
 be easy to implement it for other types of mounted storages (like NFS,
 Samba, etc.).
 
+<p align="center">
+<img src="/dvc/courses/examples/mounted-storage/assets/mounted-storage.png">
+</p>

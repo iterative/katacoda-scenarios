@@ -1,4 +1,4 @@
-> **Prerequisites:** If you havn't already done it, you should study
+> **Prerequisites:** If you haven't already done it, you should study
 > first these examples which are closely related:
 > - https://katacoda.com/dvc/courses/examples/shared-server
 > - https://katacoda.com/dvc/courses/examples/ssh-storage
@@ -17,9 +17,12 @@ all! Using a couple of tricks we can still share DVC data through
 them.
 
 In this example we will see how to achieve this with the help of a SSH
-storage. Yes, SSH is one the storage types that is already supported
-by DVC, and normally we don't need to do this. But we are using it
-just as an example, since SSH is easy to be used for an interactive
-tutorial. Once you understand how it works, it should be easy to
-implement it for other storage types.
+storage and `rsync`. Yes, SSH is one the storage types that is already
+supported by DVC, and normally we don't need to do this. But we are
+using it just as an example, since SSH is easy to be used for an
+interactive tutorial. Once you understand how it works, it should be
+easy to implement it for other storage types.
 
+<p align="center">
+<img src="/dvc/courses/examples/synced-storage/assets/synced-storage.png">
+</p>

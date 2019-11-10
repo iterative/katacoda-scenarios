@@ -15,3 +15,7 @@ We will see some configurations and setup that can enable and
 facilitate data sharing in such a scenario. However keep in mind that
 this is just an example, and other variations in configuration might be
 possible, depending on your real situation.
+
+<p align="center">
+<img src="/dvc/courses/examples/ssh-storage/assets/ssh-storage.png">
+</p>
