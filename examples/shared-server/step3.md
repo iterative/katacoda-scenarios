@@ -38,13 +38,13 @@
    
    `tree .dvc/cache/`{{execute}}
 
-   `tree $DATA/dvc-storage`{{execute}}
+   `tree $DATA/project.cache`{{execute}}
    
    `df -h $DATA`{{execute}}
    
    `dvc push`{{execute}}
    
-   `tree $DATA/dvc-storage`{{execute}}
+   `tree $DATA/project.cache`{{execute}}
    
    `df -h $DATA`{{execute}}
    

@@ -27,13 +27,13 @@ fontfamily=Monospaced //possible: SansSerif,Serif,Monospaced
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
-      <y>80</y>
-      <w>130</w>
+      <x>190</x>
+      <y>70</y>
+      <w>170</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
-* dvc-storage/*
+*/srv/project.cache/ *
 bg=#9802f5
 lw=0</panel_attributes>
     <additional_attributes/>
@@ -41,13 +41,13 @@ lw=0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
-      <y>120</y>
-      <w>130</w>
+      <x>190</x>
+      <y>110</y>
+      <w>170</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
-* project.git/*
+*/srv/project.git/ *
 bg=#fc5e03
 lw=0</panel_attributes>
     <additional_attributes/>
@@ -56,67 +56,65 @@ lw=0</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>270</x>
-      <y>140</y>
+      <y>130</y>
       <w>70</w>
-      <h>170</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
 lw=1.5
 fg=#fc5e03</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;150.0;50.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;50.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>140</y>
+      <y>130</y>
       <w>70</w>
-      <h>170</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
 lw=1.5
 fg=#fc5e03</panel_attributes>
-    <additional_attributes>50.0;10.0;50.0;150.0;10.0;150.0</additional_attributes>
+    <additional_attributes>50.0;10.0;50.0;160.0;10.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>210</y>
-      <w>70</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
-lw=1.5
-fg=#9802f5
-group=2</panel_attributes>
-    <additional_attributes>30.0;10.0;50.0;10.0;50.0;120.0;10.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>150</x>
-      <y>80</y>
-      <w>80</w>
-      <h>150</h>
+      <x>430</x>
+      <y>230</y>
+      <w>60</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
 lw=1.5
 fg=#9802f5</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>40.0;10.0;40.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>70</y>
+      <w>70</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
+lw=1.5
+fg=#9802f5</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>300</x>
       <y>250</y>
-      <w>150</w>
+      <w>180</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>halign=left
 *user2/project/*
-lt=..
-group=2</panel_attributes>
+lt=..</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -124,14 +122,13 @@ group=2</panel_attributes>
     <coordinates>
       <x>320</x>
       <y>320</y>
-      <w>110</w>
+      <w>120</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
 *.dvc/cache/*
 bg=#9802f5
-lw=0
-group=2</panel_attributes>
+lw=0</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -139,22 +136,21 @@ group=2</panel_attributes>
     <coordinates>
       <x>320</x>
       <y>280</y>
-      <w>110</w>
+      <w>120</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
 *.git/*
 bg=#fc5e03
-lw=0
-group=2</panel_attributes>
+lw=0</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>170</x>
-      <y>60</y>
-      <w>210</w>
+      <x>160</x>
+      <y>50</y>
+      <w>230</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=..
@@ -166,126 +162,118 @@ group=2</panel_attributes>
     <coordinates>
       <x>290</x>
       <y>180</y>
-      <w>190</w>
+      <w>200</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>*host2*
-halign=left
-group=2</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>90</x>
-      <y>250</y>
-      <w>150</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>halign=left
-*user1/project/*
-lt=..
-group=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>110</x>
-      <y>320</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>halign=left
-*.dvc/cache/*
-bg=#9802f5
-lw=0
-group=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>110</x>
-      <y>280</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>halign=left
-*.git/*
-bg=#fc5e03
-lw=0
-group=1</panel_attributes>
+halign=left</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>60</x>
-      <y>180</y>
-      <w>190</w>
-      <h>190</h>
+      <y>250</y>
+      <w>180</w>
+      <h>110</h>
     </coordinates>
-    <panel_attributes>*host1*
-halign=left
-group=1</panel_attributes>
+    <panel_attributes>halign=left
+*  user1/project/*
+lt=..</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>210</y>
-      <w>150</w>
+      <x>100</x>
+      <y>320</y>
+      <w>120</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
-*  dvc-storage/*
+*.dvc/cache/*
 bg=#9802f5
-lw=0
-group=1</panel_attributes>
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>280</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>halign=left
+*.git/*
+bg=#fc5e03
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>180</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*host1*
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>210</y>
+      <w>180</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>halign=left
+*user1/project.cache/*
+bg=#9802f5
+lw=0</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>60</x>
-      <y>210</y>
-      <w>70</w>
-      <h>140</h>
+      <y>230</y>
+      <w>60</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
 lw=1.5
-fg=#9802f5
-group=1</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;10.0;10.0;120.0;50.0;120.0</additional_attributes>
+fg=#9802f5</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;40.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>300</x>
       <y>210</y>
-      <w>150</w>
+      <w>180</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
-*  dvc-storage/*
+*user2/project.cache/*
 bg=#9802f5
-lw=0
-group=2</panel_attributes>
+lw=0</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
-      <y>80</y>
-      <w>80</w>
-      <h>150</h>
+      <x>350</x>
+      <y>70</y>
+      <w>70</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
 lw=1.5
 fg=#9802f5</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;10.0;60.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;140.0</additional_attributes>
   </element>
 </diagram>

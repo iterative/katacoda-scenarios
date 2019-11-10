@@ -27,13 +27,13 @@ fontfamily=Monospaced //possible: SansSerif,Serif,Monospaced
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>190</x>
+      <x>170</x>
       <y>60</y>
-      <w>130</w>
+      <w>170</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
-* dvc-storage/*
+*/srv/project.cache/ *
 bg=#9802f5
 lw=0</panel_attributes>
     <additional_attributes/>
@@ -41,13 +41,13 @@ lw=0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>190</x>
+      <x>170</x>
       <y>100</y>
-      <w>130</w>
+      <w>170</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
-* project.git/*
+*/srv/project.git/ *
 bg=#fc5e03
 lw=0</panel_attributes>
     <additional_attributes/>
@@ -81,28 +81,28 @@ fg=#fc5e03</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
+      <x>330</x>
       <y>70</y>
-      <w>160</w>
+      <w>140</w>
       <h>230</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
 lw=1.5
 fg=#9802f5</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;10.0;140.0;210.0;100.0;210.0</additional_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0;120.0;210.0;80.0;210.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>40</x>
       <y>70</y>
-      <w>170</w>
+      <w>150</w>
       <h>230</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;
 lw=1.5
 fg=#9802f5</panel_attributes>
-    <additional_attributes>150.0;10.0;10.0;10.0;10.0;210.0;50.0;210.0</additional_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0;10.0;210.0;50.0;210.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -151,10 +151,10 @@ group=9</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>150</x>
-      <y>50</y>
-      <w>210</w>
-      <h>90</h>
+      <x>130</x>
+      <y>40</y>
+      <w>250</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>

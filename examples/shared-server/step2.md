@@ -40,11 +40,11 @@
    
 4. Create a data storage:
    
-   `mkdir -p dvc-storage`{{execute}}
+   `mkdir -p project.cache`{{execute}}
    
-   `chgrp -R team dvc-storage`{{execute}}
+   `chgrp -R team project.cache`{{execute}}
    
-   `chmod -R g+rws dvc-storage`{{execute}}
+   `chmod -R g+rws project.cache`{{execute}}
 
 5. Initialize DVC:
 
@@ -70,7 +70,7 @@
 
    ```
    dvc remote add --default \
-       storage $DATA/dvc-storage
+       storage $DATA/project.cache
    ```{{execute}}
    
    `dvc remote list`{{execute}}
