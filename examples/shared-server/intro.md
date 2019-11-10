@@ -11,3 +11,5 @@ In this example we will see how two different users on the same host
 can share data with the help of a local data storage. So, both of the
 users and the data storage are located on the same machine and no
 remote server or storage is involved.
+
+![](/dvc/courses/examples/diagrams/shared-server.png)
