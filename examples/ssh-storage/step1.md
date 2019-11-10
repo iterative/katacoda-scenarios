@@ -38,7 +38,7 @@
 
    `chgrp -R git-group .`{{execute}}
    
-   `chmod -R g+rw .`{{execute}}
+   `chmod -R g+rws .`{{execute}}
 
    `ls -al`{{execute}}
    
@@ -52,6 +52,6 @@
    
    `chgrp -R dvc-group .`{{execute}}
    
-   `chmod -R g+rw .`{{execute}}
+   `chmod -R g+rws .`{{execute}}
 
    `cd -`{{execute}}

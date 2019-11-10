@@ -26,7 +26,7 @@
    
    `chgrp -R team project.git`{{execute}}
 
-   `chmod -R g+rw project.git`{{execute}}
+   `chmod -R g+rws project.git`{{execute}}
 
    `ls -al project.git`{{execute}}
 
@@ -44,7 +44,7 @@
    
    `chgrp -R team dvc-storage`{{execute}}
    
-   `chmod -R g+rw dvc-storage`{{execute}}
+   `chmod -R g+rws dvc-storage`{{execute}}
 
 5. Initialize DVC:
 

@@ -24,12 +24,12 @@ set -o verbose
 
 :; git init --bare --shared /srv/project.git
 :; chgrp -R git-group /srv/project.git
-:; chmod -R g+rw /srv/project.git
+:; chmod -R g+rws /srv/project.git
 
 ### Create a directory for the DVC remote cache
 
 :; mkdir /srv/project.cache
 :; chgrp -R dvc-group /srv/project.cache/
-:; chmod -R g+rw /srv/project.cache/
+:; chmod -R g+rws /srv/project.cache/
 
 ### Done
