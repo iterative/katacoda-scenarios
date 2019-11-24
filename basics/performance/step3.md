@@ -25,7 +25,7 @@ If this is the case, then we can configure DVC to use **symlink**
    
    `time cp ../file2.big .`{{execute}}
    
-   `ls -l`{{execute}
+   `ls -l`{{execute}}
    
    `rm file2.big`{{execute}}
    
