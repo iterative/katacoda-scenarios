@@ -40,6 +40,8 @@
    
    `git commit -m 'Use symlinks'`{{execute}}
    
+   `git push`{{execute}}
+   
 4. Switch to the second user and mount the remote cache directory:
 
    On the third terminal: `whoami`{{execute T3}}
