@@ -28,6 +28,11 @@
       "description": "Sharing data through a DVC storage that is mounted (by sshfs, NFS, Samba, etc.)"
     },
     {
+      "course_id": "mounted-cache",
+      "title": "Mounted DVC Cache",
+      "description": "Sharing data through a DVC cache that is located on a Network-Attached Storage (NAS)."
+    },
+    {
       "course_id": "synced-storage",
       "title": "Synchronized DVC Storage",
       "description": "Sharing data by synchronizing DVC storages through a cloud storage provider."
