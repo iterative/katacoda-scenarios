@@ -21,7 +21,6 @@
    ```{{execute}}
    
    `tree -a -I .git`{{execute}}
-   ```
    
 3. Reflink copy (deduplication of data) does not work in this
    situation, since the cache directory is located on another
@@ -32,6 +31,14 @@
    `dvc config cache.type 'reflink,symlink,hardlink,copy'`{{execute}}
    
    `dvc config cache.protected true`{{execute}}
+   
+   `git status -s`{{execute}}
+   
+   `git diff .dvc/config`{{execute}}
+   
+   `git add .dvc/config`{{execute}}
+   
+   `git commit -m 'Use symlinks'`{{execute}}
    
 4. Switch to the second user and mount the remote cache directory:
 
@@ -51,6 +58,6 @@
 
 5. Optimize data management with symlinks:
 
-   `dvc config cache.type 'reflink,symlink,hardlink,copy'`{{execute}}
+   `git pull`{{execute}}
    
-   `dvc config cache.protected true`{{execute}}
+   `cat .dvc/config`{{execute}}

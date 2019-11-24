@@ -54,11 +54,11 @@ completeness.
    
    `systemctl list-unit-files --type automount`{{execute}}
    
-   `systemctl restart 'home-first\x2duser-project.cache.automount'`{{execute}}
+   `systemctl restart 'home-first\x2duser-project-.dvc-cache.automount'`{{execute}}
    
-   `systemctl status 'home-first\x2duser-project.cache.automount'`{{execute}}
+   `systemctl status 'home-first\x2duser-project-.dvc-cache.automount'`{{execute}}
    
-   `tree ~first-user/project.cache/`{{execute}}
+   `tree ~first-user/project/.dvc/cache/`{{execute}}
 
 3. Mount the cache directory for the second user:
 
@@ -80,9 +80,9 @@ completeness.
    
    `systemctl list-unit-files --type automount`{{execute}}
    
-   `systemctl restart 'home-second\x2duser-project.cache.automount'`{{execute}}
+   `systemctl restart 'home-second\x2duser-project-.dvc-cache.automount'`{{execute}}
 
-   `systemctl status 'home-second\x2duser-project.cache.automount'`{{execute}}
+   `systemctl status 'home-second\x2duser-project-.dvc-cache.automount'`{{execute}}
 
-   `tree ~second-user/project.cache/`{{execute}}
+   `tree ~second-user/project/.dvc/cache/`{{execute}}
 

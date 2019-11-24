@@ -10,18 +10,25 @@
    
    `dvc add datafile`{{execute}}
    
-   `git status -s`{{execute}}
-   
    `tree .dvc/cache/`{{execute}}
    
-   Commit to Git:
+   `ls -lh`{{execute}}
+   
+   Notice the symlink.
+   
+   `cat datafile.dvc`{{execute}}
+   
+2. Commit to Git:
+   
+   `git status -s`{{execute}}
    
    `git add .`{{execute}}
    
    `git commit -m 'Add datafile'`{{execute}}
    
-
-2. We don't need to push it because it is already available on the
+   `git push`{{execute}}
+   
+3. We don't need to push it because it is already available on the
    mounted cache directory:
 
    `tree /srv/project.cache/`{{execute}}
@@ -30,11 +37,15 @@
    users because it will be immediately available on their mounted
    cache directories.
 
-3. Check it out from the project of the first user:
+4. Check it out from the project of the first user:
 
-   `cd ~/project/`{{execute T2}}
+   On the second terminal: `whoami`{{execute T2}}
+
+   `cd ~/project/`{{execute}}
    
    `git pull`{{execute}}
+   
+   `ls -lh`{{execute}}
    
    `dvc status`{{execute}}
    
