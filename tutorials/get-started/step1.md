@@ -2,6 +2,8 @@
 
 1. Install DVC:
 
+   `pip3 install --ignore-installed PyYAML`{{execute}}
+
    `pip3 install dvc`{{execute}}
    
    `dvc version`{{execute}}
