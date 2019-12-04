@@ -79,7 +79,7 @@
    `ls`{{execute}}
    
    It produces a bunch of files, among them `model.h5` (weights of the
-   trained model) and `metrics.json`.
+   trained model) and `metrics.csv`.
    
    We can store a copy of the produced model on the DVC cache (using
    `dvc add` again):
@@ -97,7 +97,7 @@
    
    `git status`{{execute}}
    
-   `git add .gitignore model.h5.dvc data.dvc metrics.json`{{execute}}
+   `git add .gitignore model.h5.dvc data.dvc metrics.csv`{{execute}}
    
    `git commit -m "First model, trained with 1000 images"`{{execute}}
 
