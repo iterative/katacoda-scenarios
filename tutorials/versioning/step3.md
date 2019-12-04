@@ -62,7 +62,7 @@ retrain the model with this larger set of images.
 
    `git status`{{execute}}
    
-   `git add model.h5.dvc data.dvc metrics.csv`{{execute}}
+   `git add .gitignore model.h5.dvc data.dvc metrics.csv`{{execute}}
    
    `git commit -m "Second model, trained with 2000 images"`{{execute}}
    
