@@ -53,7 +53,7 @@ retrain the model with this larger set of images.
    besides storing in cache the current version of their corresponding
    data files, the contents of `data.dvc` and `model.h5.dvc` have been
    updated as well (to point to the latest versions of the cached
-   data).  The file `metrics.json` has been changed as well by the
+   data).  The file `metrics.csv` has been changed as well by the
    training process.
    
    To record the state of the project after the second training, let's
