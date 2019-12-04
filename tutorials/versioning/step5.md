@@ -24,8 +24,8 @@ the stage are changed, they are automatically saved to cache.
    dvc run -f train.dvc \
            -d data \
            -d train.py \
-           -o model.h5 \
-           -M metrics.json \
+           -M metrics.csv \
+           -o model.h5 -o bottleneck_features_train.npy -o bottleneck_features_validation.npy \
            python3 train.py
    ```{{execute}}
    
@@ -55,7 +55,7 @@ the stage are changed, they are automatically saved to cache.
    
    `git add train.dvc`{{execute}}
    
-   `git add metrics.json`{{execute}}
+   `git add metrics.csv`{{execute}}
    
    `git commit -m "Tracking model.h5 as an output of stage train.dvc"`{{execute}}
    
