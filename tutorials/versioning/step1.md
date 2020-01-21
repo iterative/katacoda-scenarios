@@ -28,11 +28,3 @@
    `cat requirements.txt`{{execute}}
    
    `pip3 install -r requirements.txt`{{execute}}
-
-   `echo -e "\n.env/" >> .gitignore`{{execute}}
-   
-   `cat .gitignore`{{execute}}
-   
-   `git add .gitignore`{{execute}}
-   
-   `git commit -m "Ignore virtualenv directory"`{{execute}}
