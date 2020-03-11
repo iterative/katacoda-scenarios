@@ -90,7 +90,7 @@
    
    We can clean it up like this:
    
-   `dvc gc`{{execute}}
+   `dvc gc -w`{{execute}}
    
    `tree -a`{{execute}}
    
