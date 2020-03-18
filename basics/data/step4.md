@@ -183,7 +183,7 @@
    
    `tree -a`{{execute}}
    
-   `dvc gc`{{execute}}
+   `dvc gc -w`{{execute}}
    
    `tree -a`{{execute}}
    

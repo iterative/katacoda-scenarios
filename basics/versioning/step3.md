@@ -55,7 +55,7 @@ for marking versions of interest is by using tags and branches.
 4. If you wish, try yourself to go to version `v2` of the file, and
    then back to the latest version.
 
-5. If you run `dvc gc` now, it will leave only one copy of the data
+5. If you run `dvc gc -w` now, it will leave only one copy of the data
    file on the cache, the one that corresponds with the current data
    file (which has the checksum stored on `file.txt.dvc`). The other
    two will be deleted. If we want to be careful and not delete the
@@ -78,7 +78,7 @@ for marking versions of interest is by using tags and branches.
    We told `dvc gc` to skip (not delete) any cached files that are
    marked by any tags, so again nothing was deleted.
    
-   `dvc gc`{{execute}}
+   `dvc gc -w`{{execute}}
    
    `tree -a -I .git`{{execute}}
    

@@ -76,7 +76,7 @@ If this is the case, then we can configure DVC to use **symlink**
    
    `dvc remove -p file3.big.dvc`{{execute}}
    
-   `dvc gc`{{execute}}
+   `dvc gc -w`{{execute}}
    
 4. Track `../file2.big` (which is on a different filesystem from the cache):
 
