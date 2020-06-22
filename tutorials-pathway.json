@@ -8,24 +8,9 @@
       "description": "Using DVC commands to work with multiple versions of datasets and ML models."
     },
     {
-      "course_id": "pipelines",
-      "title": "Pipelines",
-      "description": "Using DVC commands to build a simple ML pipeline."
-    },
-    {
-      "course_id": "scripting",
-      "title": "Scripting DVC",
-      "description": "Using bash scripting to build stages and pipelines."
-    },
-    {
       "course_id": "mnist",
       "title": "MNIST",
       "description": "Creating a model to classify images of hand-written digits using MNIST as the data-set."
-    },
-    {
-      "course_id": "get-started",
-      "title": "Get Started",
-      "description": "A step-by-step introduction to DVC by building a simple NLP project from scratch."
     }
   ]
 }
