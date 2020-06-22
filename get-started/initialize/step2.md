@@ -4,6 +4,9 @@
 
 `dvc version`{{execute}}
 
+> DVC provides other ways to install it - `pip`, `conda`, self-contained
+> packages. Please, refer to [install](https://dvc.org/doc/install) page.
+
 **Optional:** Install bash completion for `dvc`:
 
 ```
