@@ -5,14 +5,13 @@
 `pip3 install dvc`{{execute}}
 
 `dvc --help`{{execute}}
-   
+
 `dvc version`{{execute}}
 
 **Optional:** Install bash completion for `dvc`:
 
 ```
-wget -O /etc/bash_completion.d/dvc \
-    https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash
+dvc completion -s bash | sudo tee /etc/bash_completion.d/dvc
 ```{{execute}}
 
 `source /etc/bash_completion`{{execute}}
