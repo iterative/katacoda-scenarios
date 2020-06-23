@@ -8,6 +8,11 @@
             "description": "Install DVC, create a Git project, and initialize DVC."
         },
         {
+            "course_id": "versioning",
+            "title": "Data Versioning",
+            "description": "Track data files, ML models, and datasets with DVC."
+        },
+        {
             "course_id": "tracking",
             "title": "Data Tracking",
             "description": "Track data files and datasets with DVC."
@@ -36,11 +41,6 @@
             "course_id": "experiments",
             "title": "Experiments and Metrics",
             "description": "Try different approaches or solutions and compare their results."
-        },
-        {
-            "course_id": "versioning",
-            "title": "Data Versioning",
-            "description": "Checkout previous versions of code and data."
         }
     ]
 }

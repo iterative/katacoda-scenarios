@@ -3,10 +3,12 @@
 # install highlight and virtualenv
 apt install --yes highlight virtualenv
 
-# install bash completion for dvc
-wget -O /etc/bash_completion.d/dvc \
-    https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash
-
 # install dvc
-pip3 install --ignore-installed PyYAML
-pip3 install dvc
+sudo wget https://dvc.org/deb/dvc.list \
+          -O /etc/apt/sources.list.d/dvc.list
+sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/dvc.list" \
+    -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"
+sudo apt install dvc
+
+# install bash completion for dvc
+dvc completion -s bash > /etc/bash_completion.d/dvc

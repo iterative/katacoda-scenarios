@@ -1,8 +1,8 @@
 {
     "title": "Data Versioning",
-    "description": "Checkout previous versions of code and data.",
+    "description": "Large datasets, files, ML models versioning and sharing.",
     "difficulty": "Beginner",
-    "time": "10-15 min",
+    "time": "15-20 min",
     "details": {
         "steps": [
             {
@@ -29,7 +29,7 @@
                 { "file": "prepare.sh", "target": "/usr/local/bin/", "chmod": "+x" },
                 { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" }
             ]
-        }        
+        }
     },
     "environment": {
         "uilayout": "terminal"

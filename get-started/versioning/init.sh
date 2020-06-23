@@ -23,7 +23,7 @@ clear
 
 # auto-play preparation steps
 dvc version
-mkdir example-get-started/
-cd example-get-started/
-DELAY=0.5 play prepare.sh
-source .env/bin/activate
+#mkdir example-get-started/
+#cd example-get-started/
+#DELAY=0.5 play prepare.sh
+#source .env/bin/activate
