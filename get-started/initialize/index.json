@@ -20,7 +20,7 @@
         ],
         "intro": {
             "text": "intro.md",
-            "credits": "https://dvc.org/doc/get-started",
+            "credits": "https://dvc.org/doc/start",
             "code": "init.sh"
         }
     },

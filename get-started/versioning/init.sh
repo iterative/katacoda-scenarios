@@ -22,5 +22,9 @@ source /etc/bash_completion
 clear
 
 dvc version
-git clone
+git clone --branch 1-dvc-init git@github.com:iterative/example-get-started.git
+git checkout 1-dvc-init
 cd example-get-started/
+
+# clear screen
+clear
