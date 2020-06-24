@@ -20,7 +20,7 @@ update `data/data.xml.dvc` to match the new hash of the data file:
 
 `git commit -a -m "Dataset updates"`{{execute}}
 
-`dvc push`
+`dvc push`{{execute}}
 
 So, each version of `data/data.xml.dvc` in Git is linked to a version of the
 data file in the DVC cache. This linking or connection is done through the MD5

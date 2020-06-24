@@ -10,7 +10,7 @@ Let's get get the previous version of the dataset `data/data.xml`:
 
 `git checkout HEAD^1 data/data.xml.dvc`{{execute}}
 
-`git diff`
+`git diff --staged`
 
 `md5 data/data.xml`{{execute}}
 

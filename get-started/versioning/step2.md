@@ -4,8 +4,6 @@
 
 `md5sum data/data.xml`{{execute}}
 
-`cat data/data.xml.dvc | grep -e '- md5:'`{{execute}}
-
 DVC has created a tracking file with the extension `.dvc`.
 
 In `data.xml.dvc` it keeps also the MD5 hash of the data file `data.xml`, and
