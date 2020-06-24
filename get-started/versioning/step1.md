@@ -1,43 +1,36 @@
-# Go back to baseline-experiment
+# Track a file or directory
 
-Let's assume that we want to go back to the tag `baseline-experiment`
-to check it again. We can do it like this:
+Let's get a data file from the [Get Started](https://dvc.org/doc/start) example
+project:
 
-`git tag`{{execute}}
+```
+dvc get \
+    https://github.com/iterative/dataset-registry \
+    get-started/data.xml \
+    -o data/data.xml
+```{{execute}}
 
-`git log --oneline`{{execute}}
-   
-`git checkout baseline-experiment`{{execute}}
+> The command `dvc get` is like `wget`, but it is used to download data
+> artifacts from DVC projects which are hosted on Git repositories.
 
-`git status`{{execute}}
+`ls -lh data/`{{execute}}
 
-`dvc status`{{execute}}
+To track a large file, ML model or a whole directory with DVC we use `dvc add`:
 
-`dvc checkout`{{execute}}
+`dvc add data/data.xml`{{execute}}
 
-`dvc status`{{execute}}
+`cat data/.gitignore`{{execute}}
 
-`dvc repro evaluate.dvc`{{execute}}
+DVC has listed `data.xml` on `.gitignore` to make sure that we don't commit it
+to Git.
 
-With `dvc checkout` we bring back (from cache) all the data files
-and outputs that correspond to the checked out version of `.dvc`
-files. This is possible because the MD5 hashes of the data files,
-which are kept inside the `.dvc` files, point to the right version
-of data on the cache.
+Instead, we track with Git the file `data/data.xml.dvc`:
 
-After the data are synchronized with `.dvc` files, `dvc status`
-finds that everything is up to date, and `dvc repro` finds that no
-commands need to be re-executed, because all the dependencies and
-outputs are unchanged.
+```
+git add data/.gitignore \
+        data/data.xml.dvc
+```{{execute}}
 
-Let's go forward to the latest version again:
-
-`git checkout master`{{execute}}
-
-`dvc status`{{execute}}
-
-`dvc checkout`{{execute}}
-
-`dvc status`{{execute}}
-
-`dvc repro evaluate.dvc`{{execute}}
+```
+git commit -m "Add raw data to project"
+```{{execute}}

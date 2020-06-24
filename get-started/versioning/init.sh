@@ -21,9 +21,6 @@ source /etc/bash_completion
 # clear screen
 clear
 
-# auto-play preparation steps
 dvc version
-#mkdir example-get-started/
-#cd example-get-started/
-#DELAY=0.5 play prepare.sh
-#source .env/bin/activate
+git clone
+cd example-get-started/

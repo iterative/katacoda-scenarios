@@ -2,7 +2,7 @@
     "title": "Data Versioning",
     "description": "Large datasets, files, ML models versioning and sharing.",
     "difficulty": "Beginner",
-    "time": "15-20 min",
+    "time": "20-25 min",
     "details": {
         "steps": [
             {
@@ -16,6 +16,14 @@
             {
                 "title": "Step 3",
                 "text": "step3.md"
+            },
+            {
+                "title": "Step 4",
+                "text": "step4.md"
+            },
+            {
+                "title": "Step 5",
+                "text": "step5.md"
             }
         ],
         "intro": {
@@ -23,12 +31,6 @@
             "credits": "https://dvc.org/doc/get-started",
             "courseData": "install.sh",
             "code": "init.sh"
-        },
-        "assets": {
-            "host01": [
-                { "file": "prepare.sh", "target": "/usr/local/bin/", "chmod": "+x" },
-                { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" }
-            ]
         }
     },
     "environment": {

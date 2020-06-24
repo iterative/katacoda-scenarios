@@ -1,42 +1,40 @@
-# Transfer a tagged experiment to master
+# Data remotes
 
-Let's assume that `baseline-experiment` has the best metrics, so we
-want to put that experiment on top (on the branch `master`):
-   
-`dvc metrics show -T`{{execute}}
+`dvc push` and `dvc pull` commands can save and retrieve data files from the
+`.dvc/cache` to a data remote - for backup, for other team members or systems
+to have access to your work, etc. It's very similar to how we `git push` and
+`git pull` Git commits to and from Github, but for DVC tracked data files.
 
-`git log --oneline`{{execute}}
+Usually, you would use S3 bucket, Google cloud or a bunch of other supported
+storage to setup a remote like this:
 
-`git revert -n baseline-experiment..HEAD`{{execute}}
+```
+dvc remote add --default \
+    my-storage s3://my-bucket/dvc-storage
+```
 
-`git status`{{execute}}
+> DVC supports the following remote storage types: Google Drive, Amazon S3,
+> Azure Blob Storage, Google Cloud Storage, Aliyun OSS, SSH, HDFS, and HTTP.
+> Please refer to
+> [dvc remote add](https://dvc.org/doc/command-reference/remote/add) for more
+> details and examples.
 
-`git diff --cached`{{execute}}
+```
+dvc remote add --default \
+    mystorage /tmp/data-storage
+```{{execute}}
 
-`git revert --continue`{{execute}}
+For the sake of keeping this scenario simple and do not depend on some external
+storage we'll use artificial "local" remote storage. Sometimes it can be useful
+to backup data to a large mounted volume.
 
-`git log --oneline`{{execute}}
+`dvc remote list`{{execute}}
 
-Move the tag `baseline-experiment` to the current commit:
+`git status -s`{{execute}}
 
-`git tag -d baseline-experiment`{{execute}}
+`git diff .dvc/config`{{execute}}
 
-`git tag`{{execute}}
-
-`git tag baseline-experiment`{{execute}}
-
-`git log --oneline`{{execute}}
-
-Synchronize the data with the current version of code:
-
-`dvc status`{{execute}}
-
-`dvc checkout`{{execute}}
-
-`dvc status`{{execute}}
-
-`dvc repro evaluate.dvc`{{execute}}
-
-`dvc status`{{execute}}
-
-`dvc metrics show -T`{{execute}}
+```
+git commit .dvc/config \
+    -m "Configure data storage"
+```{{execute}}

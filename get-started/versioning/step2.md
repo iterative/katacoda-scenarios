@@ -1,40 +1,27 @@
-# Get a previous version of the model
+# How does it work?
 
-Let's say that we want to get a previous version of `model.pkl`, as it
-was on tag `baseline-experiment`.
+`cat data/data.xml.dvc`{{execute}}
 
-Notice that `model.pkl` is an output of `train.dvc`:
+`md5sum data/data.xml`{{execute}}
 
-`cat train.dvc`{{execute}}
+`cat data/data.xml.dvc | grep -e '- md5:'`{{execute}}
 
-We can get the previous version of it like this:
-   
-```
-git checkout \
-    baseline-experiment train.dvc
-```{{execute}}
+DVC has created a tracking file with the extension `.dvc`.
 
-`git status`{{execute}}
+In `data.xml.dvc` it keeps also the MD5 hash of the data file `data.xml`, and
+this effectively creates a pointer to the copy that is saved in the cache, since
+it is named after this MD5 hash.
 
-`git diff --cached train.dvc`{{execute}}
+If the content of `data.xml` is changed, its MD5 hash will change as well and
+will be different from what is recorded on `data.xml.dvc`. This would allow DVC
+to detect the change.
 
-`dvc status train.dvc`{{execute}}
+`tree .dvc/cache`{{execute}}
 
-`dvc checkout train.dvc`{{execute}}
+DVC has also saved a copy of `data/data.xml` to `.dvc/cache/` using it's `md5`
+as a file name.
 
-`dvc status train.dvc`{{execute}}
-
-Let's get again the latest version of `train.dvc` and `model.pkl`:
-
-`git status`{{execute}}
-
-`git reset --hard`{{execute}}
-
-`git status`{{execute}}
-
-`dvc status`{{execute}}
-
-`dvc checkout`{{execute}}
-
-`dvc status`{{execute}}
-
+> DVC can utilize `symlinks`, `hardlinks`, or `reflinks`, depending on the file
+> system and DVC settings. It can save storage space and time if you deal with
+> large files. Read more information in the
+> [Large Dataset Optimization](https://dvc.org/doc/user-guide/large-dataset-optimization).
