@@ -1,0 +1,19 @@
+{
+  "courses": [
+    {
+      "title": "Get Started",
+      "description": "A step-by-step introduction to DVC by building a simple NLP project from scratch.",
+      "id": "get-started"
+    },
+    {
+      "title": "Examples",
+      "description": "Examples that illustrate DVC commands and other features.",
+      "id": "examples"
+    },
+    {
+      "title": "Tutorials",
+      "description": "DVC tutorials with simple ML scenarios.",
+      "id": "tutorials"
+    }
+  ]
+}
