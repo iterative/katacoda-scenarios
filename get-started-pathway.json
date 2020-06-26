@@ -5,17 +5,17 @@
         {
             "course_id": "initialize",
             "title": "Initialize",
-            "description": "Install DVC, create a Git project, and initialize DVC."
+            "description": "Lear how to install DVC and initialize project."
         },
         {
             "course_id": "versioning",
             "title": "Data Versioning",
-            "description": "Track data files, ML models, and datasets with DVC."
+            "description": "Learn how to start versioning, share large files, ML models, datasets with Git and DVC."
         },
         {
-            "course_id": "importing",
-            "title": "Importing Data",
-            "description": "Import data from another DVC project."
+            "course_id": "accessing",
+            "title": "Accessing Data",
+            "description": "Learn how to use data from another DVC project, access it via Python API and CLI."
         },
         {
             "course_id": "stages",
