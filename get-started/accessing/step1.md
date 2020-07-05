@@ -14,10 +14,5 @@ dvc get \
 
 
 Here we see that instead of accessing data file directly (e.g. with `aws s3 cp`,
-or `scp`, `wget`, etc) we access it using a Git repo URL as an "entry point" or
-"registry".
-
-Remember those `.dvc` files `dvc add` generates? Those files (and `dvc.lock`
-that we'll cover later), their history in Git, DVC remote storage config saved
-in Git contain all the information needed to access and download any version of
-datasets, files, and models.
+or `scp`, `wget`, etc) we are accessing it using a Git repo URL as an _entry
+point_ or as a _data/model registry_.

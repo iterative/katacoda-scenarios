@@ -9,7 +9,7 @@ version them with Git, next question is:
 > These questions tend to come up when you browse the files that DVC saves to
 > remote storage, e.g.
 > `s3://dvc-public/remote/get-started/fb/89904ef053f04d64eafcc3d70db673` 😱
-> instead of the original files, name such as model.pkl or data.xml.
+> instead of the original files, name such as `model.pkl` or `data.xml`.
 
 Let's learn how any DVC tracked ML model, dataset or file can be accessed:
 
