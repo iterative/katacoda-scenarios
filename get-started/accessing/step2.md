@@ -1,39 +1,29 @@
 # How does it work?
 
-Note that the file `get-started/data.xml` is not retrieved from the Git
-repository. If you look at the
-[dataset-registry](https://github.com/iterative/dataset-registry) you cannot
-find it anywhere. However it is listed on the file
-[get-started/data.xml.dvc](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc).
-
-This makes sense because DVC does not store data files on Git. Instead they are
-stored on a data storage (somewhere on cloud).
-
-So, `dvc get` and `dvc import` retrieve a data file from the **default data
-storage** of the given Git project, the data storage that is added with `dvc
-remote add --default`, and that is stored on the file `.dvc/config` of the
-remote project.
-
-If you check
-[.dvc/config](https://github.com/iterative/dataset-registry/blob/master/.dvc/config)
-you will see that the url of the default data storage is
-https://remote.dvc.org/dataset-registry, and that is where `dvc get`
-and `dvc import` retrieve the data file from.
-
-However there is one more catch: don't expect to find there the path
-`get-started/data.xml`. Instead you may find there a path like
-`a3/04afb96060aad90176268345e10355` which is derived from the MD5 hash of the
-data file. You can find this hash on
-[get-started/data.xml.dvc](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc).
+Remember those `.dvc` files `dvc add` generates? Those files (and `dvc.lock`
+that we'll cover later), their history in Git, DVC remote storage config saved
+in Git contain all the information needed to access and download any version of
+datasets, files, and models.
 
 Just for fun, let's try to download it with `wget`:
 
 ```
-storage=https://remote.dvc.org/dataset-registry
-path='a3/04afb96060aad90176268345e10355'
+storage="https://remote.dvc.org/dataset-registry"
+path="a3/04afb96060aad90176268345e10355"
 wget -O data.xml.1 $storage/$path
 ```{{execute}}
 
 `ls -lh`{{execute}}
 
 `diff data.xml data.xml.1`{{execute}}
+
+`dvc get` automated this by reading `https://remote.dvc.org/dataset-registry`
+from the
+[.dvc/config](https://github.com/iterative/dataset-registry/blob/master/.dvc/config)
+and `a3/04afb96060aad90176268345e10355` path from the
+[get-started/data.xml.dvc](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc).
+
+This makes sense because DVC does not store data files with Git. If you look at
+the [dataset-registry](https://github.com/iterative/dataset-registry) you cannot
+find it anywhere. Instead they are stored in a data storage (usually. somewhere
+on cloud).

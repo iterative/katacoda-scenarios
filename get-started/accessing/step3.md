@@ -1,6 +1,6 @@
 # Discovering files
 
-As we mentioned, if you look at
+As we mentioned, if you look at the
 [Get Started](https://github.com/iterative/example-get-started) repository
 you won't see `data/data.xml` or `model.pkl`, or any DVC-tracked files. They are
 not stored in Git. `dvc get` can download them, but how do we first even know
@@ -18,5 +18,3 @@ dvc list \
 Again, the only difference is that we pass Git URL. Same interface as with
 `dvc get`. Now, you can see the `data.xml` file. As well as regular Git files.
 
-> `dvc get` and other commands described in this section can download/access DVC
-> tracked and regular Git tracked files.

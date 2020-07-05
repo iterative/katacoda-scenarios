@@ -16,13 +16,22 @@
             {
                 "title": "Step 3",
                 "text": "step3.md"
+            },
+            {
+                "title": "Step 4",
+                "text": "step4.md"
             }
         ],
         "intro": {
             "text": "intro.md",
-            "credits": "https://dvc.org/doc/get-started",
+            "credits": "https://dvc.org/doc/start",
             "courseData": "install.sh",
             "code": "init.sh"
+        },
+        "assets": {
+            "host01": [
+                { "file": "deploy.py", "target": "/root", "chmod": "+x" }
+            ]
         }
     },
     "environment": {

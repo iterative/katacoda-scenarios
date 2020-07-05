@@ -20,7 +20,7 @@
         ],
         "intro": {
             "text": "intro.md",
-            "credits": "https://dvc.org/doc/get-started",
+            "credits": "https://dvc.org/doc/start",
             "courseData": "install.sh",
             "code": "init.sh"
         },
@@ -29,7 +29,7 @@
                 { "file": "prepare.sh", "target": "/usr/local/bin/", "chmod": "+x" },
                 { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" }
             ]
-        }        
+        }
     },
     "environment": {
         "uilayout": "terminal"

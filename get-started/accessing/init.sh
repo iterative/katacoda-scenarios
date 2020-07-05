@@ -25,6 +25,4 @@ git reset –hard 3-config-remote
 # clear screen
 clear
 
-cd example-get-started/
-tree .
 dvc version
