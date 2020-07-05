@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt install --yes highlight virtualenv
+
 # install dvc
 sudo wget https://dvc.org/deb/dvc.list \
           -O /etc/apt/sources.list.d/dvc.list
