@@ -3,7 +3,7 @@
 Remember those `.dvc` files `dvc add` generates? Those files (and `dvc.lock`
 that we'll cover later), their history in Git, DVC remote storage config saved
 in Git contain all the information needed to access and download any version of
-datasets, files, and models.
+a dataset, file, or model.
 
 Just for fun, let's try to download it with `wget`:
 
@@ -25,5 +25,5 @@ and `a3/04afb96060aad90176268345e10355` path from the
 
 This makes sense because DVC does not store data files with Git. If you look at
 the [dataset-registry](https://github.com/iterative/dataset-registry) you cannot
-find it anywhere. Instead they are stored in a data storage (usually. somewhere
-on cloud).
+find it anywhere. Instead they are stored in a data storage (e.g. somewhere
+in cloud, in this case in S3).

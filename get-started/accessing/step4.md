@@ -6,7 +6,7 @@ artifact "natively" from Python code with
 
 `cat process.py`{{execute}}
 
-`python process.py`{{execute}}
+`python3 process.py`{{execute}}
 
 Yes, the interface is similar to the one we've seen already - Git repo URL,
 path, etc. And internally it works similar - reads Git repo to get data storage
