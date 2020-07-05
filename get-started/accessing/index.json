@@ -30,7 +30,7 @@
         },
         "assets": {
             "host01": [
-                { "file": "deploy.py", "target": "/root", "chmod": "+x" }
+                { "file": "process.py", "target": "/root", "chmod": "+x" }
             ]
         }
     },
