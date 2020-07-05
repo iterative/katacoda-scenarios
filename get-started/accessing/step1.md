@@ -12,6 +12,7 @@ dvc get \
 
 `ls data.xml`{{execute}}
 
+`md5sum data.xml`{{execute}}
 
 Here we see that instead of accessing data file directly (e.g. with `aws s3 cp`,
 or `scp`, `wget`, etc) we are accessing it using a Git repo URL as an _entry

@@ -8,7 +8,7 @@ artifact "natively" from Python code with
 
 > We need to install DVC as a Python library to import if from Python code:
 
-`pip3 install --user dvc`
+`pip3 install --user dvc`{{execute}}
 
 `python3 process.py`{{execute}}
 
