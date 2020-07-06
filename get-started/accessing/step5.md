@@ -1,7 +1,7 @@
 # Reusing (importing) data or models
 
 Modern programming languages have a way to package, distribute, and reuse code
-as libraries (in the Python world - [PyPI](https://pypi.org/) + `pip`, `conda` -
+as libraries (in the Python world - [PyPI](https://pypi.org/), `pip`, `conda` -
 are some well known examples). It's an important feature that significantly
 simplified managing complexity of the development process.
 
@@ -33,5 +33,5 @@ using:
 `dvc update data/data.xml.dvc`{{execute}}
 
 In this case everything is up to date, but if someone creates a new version
-of the `data.xml` in the data registry repository this command will detect this
+of the `data.xml` in the data registry repository this command can detect this
 and update the `data/data.xml.dvc` file accordingly.

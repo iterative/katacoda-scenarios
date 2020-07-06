@@ -27,3 +27,6 @@ few important one:
 - **It reads data lazily** - it doesn't allocate a huge array internally to hold
   the data, instead it streams it from the remote storage. Means, you can
   process a huge dataset with a very low memory footprint.
+
+- **It unifies storage access** - it doesn't matter if actual data is stored on
+  S3, or Google Cloud, or SSH - interface is the same.

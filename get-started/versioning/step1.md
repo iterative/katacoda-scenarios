@@ -5,9 +5,8 @@ project:
 
 ```
 dvc get \
-    https://github.com/iterative/dataset-registry \
-    get-started/data.xml \
-    -o data/data.xml
+  https://github.com/iterative/dataset-registry \
+  get-started/data.xml -o data/data.xml
 ```{{execute}}
 
 > The command `dvc get` is like `wget`, but it is used to download data
