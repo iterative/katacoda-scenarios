@@ -8,7 +8,9 @@ The idea is to use one or more dedicated Git (DVC-enabled) repositories to keep
 and update models, datasets, or any artifacts for that sake. They are being
 used in other projects, in production, etc:
 
-<img src="/dvc/courses/get-started/accessing/data-registry.png">
+<p align="center">
+<img src="/dvc/courses/get-started/accessing/assets/data-registry.png">
+</p>
 
 It's based on Git and Git workflow to provide the versioning mechanism, it's
 simple in a sense that no additional infrastructure required (no databases,
