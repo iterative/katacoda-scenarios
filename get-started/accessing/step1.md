@@ -6,8 +6,8 @@ Let's first get/download any file that was added to DVC:
 
 ```
 dvc get \
-    https://github.com/iterative/dataset-registry \
-    get-started/data.xml
+  https://github.com/iterative/dataset-registry \
+  get-started/data.xml
 ```{{execute}}
 
 `ls data.xml`{{execute}}

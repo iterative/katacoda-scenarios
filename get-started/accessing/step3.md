@@ -12,7 +12,8 @@ or `aws s3 ls` and similar commands:
 
 ```
 dvc list \
-    https://github.com/iterative/example-get-started data/
+  https://github.com/iterative/example-get-started \
+  data/
 ```{{execute}}
 
 Again, the only difference is that we pass Git URL. Same interface as with

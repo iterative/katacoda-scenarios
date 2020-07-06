@@ -20,7 +20,7 @@ source /etc/bash_completion
 
 git clone --branch 1-dvc-init \
     https://github.com/iterative/example-get-started.git
-git reset –hard 3-config-remote
+git reset --hard 3-config-remote
 
 # clear screen
 clear
