@@ -18,10 +18,14 @@ until hash dvc &>/dev/null; do sleep 1; done
 # enable bash completion
 source /etc/bash_completion
 
-git clone https://github.com/iterative/example-get-started.git
-git reset --hard 3-config-remote
+git clone --branch 3-config-remote \
+    https://github.com/iterative/example-get-started.git
+cd example-get-started/
+git reset –-hard 3-config-remote
+cd ..
 
 # clear screen
 clear
 
+ls
 dvc version
