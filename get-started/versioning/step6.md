@@ -12,14 +12,14 @@ Let's get get the previous version of the dataset `data/data.xml`:
 
 `git diff --staged`
 
-`md5 data/data.xml`{{execute}}
+`md5sum data/data.xml`{{execute}}
 
 `dvc checkout`{{execute}}
 
 `dvc checkout` command synchronizes data files in the workspace to match the
 `.dvc` files content:
 
-`md5 data/data.xml`{{execute}}
+`md5sum data/data.xml`{{execute}}
 
 Alternatively, `dvc pull` can be used again. The difference is that `dvc pull`
 also downloads missing data into cache, while `dvc checkout` only can restore
