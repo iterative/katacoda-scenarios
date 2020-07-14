@@ -10,7 +10,5 @@
 **Optional:** Install bash completion for `dvc`:
 
 ```
-dvc completion -s bash > /etc/bash_completion.d/dvc
+dvc completion -s bash | sudo tee /etc/bash_completion.d/dvc
 ```{{execute}}
-
-`source /etc/bash_completion`{{execute}}
