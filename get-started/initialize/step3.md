@@ -1,7 +1,6 @@
 # Initialize DVC
 
-`dvc init` creates a new `.dvc/` directory for internal configuration and cache
-files
+`dvc init` creates a new `.dvc/` directory for internal configuration and cache files
 
 `dvc init`{{execute}}
 
@@ -15,6 +14,7 @@ Some files and folders are automatically added to `.gitignore`:
 
 `cat .dvc/.gitignore`{{execute}}
 
+`<!---` should `dvc init` add something to `config` file? `--->`
 `cat .dvc/config`{{execute}}
 
 ```
