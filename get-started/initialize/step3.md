@@ -1,7 +1,7 @@
 # Initialize DVC
 
 `dvc init` creates a new `.dvc/` directory for internal configuration and cache
-files
+files:
 
 `dvc init`{{execute}}
 
