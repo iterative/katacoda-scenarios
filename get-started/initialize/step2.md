@@ -12,3 +12,5 @@
 ```
 dvc completion -s bash | sudo tee /etc/bash_completion.d/dvc
 ```{{execute}}
+
+`source /etc/bash_completion`{{execute}}
