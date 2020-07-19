@@ -12,7 +12,7 @@ Let's build a stage based on this script:
 
 ```
 dvc run \
-    -f prepare.dvc \
+    -n prepare \
     -d src/prepare.py \
     -d data/data.xml \
     -o data/prepared \
@@ -26,10 +26,10 @@ python command. The output of this command is supposed to be on the
 directory `data/prepared`, as indicated by the option `-o`
 (output). So, after running the command, the output directory is added
 to `data/.gitignore` and is saved in `.dvc/cache/`. Finally, the
-information needed for rerunning this stage is saved in the file
-`prepare.dvc`, which is indicated by the option `-f` (filename). The
-options `-d` indicate the dependencies of this stage. We will see
-later what are dependencies and how they are used by DVC.
+information needed for rerunning this stage is saved in the `prepare`
+section of `dvc.yaml`, which is indicated by the option `-n`
+(stage name). The options `-d` indicate the dependencies of this stage.
+We will see later what are dependencies and how they are used by DVC.
 
 `git status -s`{{execute}}
 
@@ -40,9 +40,9 @@ later what are dependencies and how they are used by DVC.
 Notice that `train.tsv` and `test.tsv` have been created on
 `data/prepared/`.
 
-`cat prepare.dvc`{{execute}}
+`cat dvc.yaml`{{execute}}
 
-The stage file created by `dvc run` is similar to the data-tracking
+The stage created in `dvc.yaml` by `dvc run` is similar to the `.dvc`
 file created by `dvc add`, but it also has the field `cmd:` for the
 command and the field `deps:` for dependencies.
 
