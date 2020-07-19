@@ -6,13 +6,13 @@
    
    `unzip code.zip`{{execute}}
    
-   `tree`{{execute}}
-   
    `rm code.zip`{{execute}}
 
+   `tree`{{execute}}
+   
    `git status -s`{{execute}}
    
-   `git add src/`{{execute}}
+   `git add params.yaml src/`{{execute}}
    
    `git status -s`{{execute}}
    
