@@ -3,11 +3,11 @@
 The command `dvc repro` is used to rerun the command of the stage and
 to reproduce its outputs:
 
-`cat prepare.dvc`{{execute}}
+`cat dvc.yaml`{{execute}}
 
-`dvc status prepare.dvc`{{execute}}
+`dvc status prepare`{{execute}}
 
-`dvc repro prepare.dvc`{{execute}}
+`dvc repro prepare`{{execute}}
 
 However, before running again the command of the stage, DVC checks
 whether the dependencies have changed. The dependencies usually
@@ -19,8 +19,8 @@ have them saved in cache).
 
 Our stage has as dependencies `src/prepare.py`, which has not changed,
 and `data/data.xml`, which is tracked by `data/data.xml.dvc`. So, in
-order to decide whether the outputs of the stage `prepare.dvc` need to
-be reproduced, DVC has to check `data/data.xml.dvc` as well.
+order to decide whether the outputs of the stage `prepare` need to be
+reproduced, DVC has to check `data/data.xml.dvc` as well.
 
 In our case nothing has changed, so nothing needs to be reproduced.
    
@@ -28,7 +28,7 @@ Finally, let's save the current state of the project to Git:
 
 `git status -s`{{execute}}
 
-`git add data/.gitignore prepare.dvc`{{execute}}
+`git add data/.gitignore dvc.yaml dvc.lock`{{execute}}
 
 `git commit -m "Create data preparation stage"`{{execute}}
    
