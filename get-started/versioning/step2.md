@@ -4,22 +4,22 @@
 
 `md5sum data/data.xml`{{execute}}
 
-DVC has created a tracking file with the extension `.dvc`.
+DVC created a tracking file with the extension `.dvc`.
 
-In `data.xml.dvc` it keeps also the MD5 hash of the data file `data.xml`, and
-this effectively creates a pointer to the copy that is saved in the cache, since
-it is named after this MD5 hash.
+The MD5 hash of the data file `data.xml` is kept in `data.xml.dvc`. Since the
+copy of `data.xml` saved in the cache is named after its MD5 hash, the hash is
+effectively a pointer to the cached copy.
 
-If the content of `data.xml` is changed, its MD5 hash will change as well and
-will be different from what is recorded on `data.xml.dvc`. This would allow DVC
-to detect the change.
+If the content of `data.xml` is changed, its MD5 hash will change. DVC is able
+to detect the change by comparing the new MD5 hash to the MD5 hash kept in
+`data.xml.dvc`.
 
 `tree .dvc/cache`{{execute}}
 
-DVC has also saved a copy of `data/data.xml` to `.dvc/cache/` using it's `md5`
+DVC has also saved a copy of `data/data.xml` to `.dvc/cache/` using its MD5 hash
 as a file name.
 
-> DVC can utilize `symlinks`, `hardlinks`, or `reflinks`, depending on the file
-> system and DVC settings. It can save storage space and time if you deal with
-> large files. Read more information in the
+> To save storage space and time when dealing with large files, DVC can use
+> `symlinks`, `hardlinks`, or `reflinks`, depending on the file system and DVC
+> settings. Read more in the user guide for
 > [Large Dataset Optimization](https://dvc.org/doc/user-guide/large-dataset-optimization).
