@@ -11,7 +11,7 @@ Let's add another stage for it:
 
 ```
 dvc run \
-    -f train.dvc \
+    -n train \
     -d src/train.py \
     -d data/features \
     -o model.pkl \
@@ -23,15 +23,15 @@ dvc run \
 
 `git status -s`{{execute}}
 
-`git diff .gitignore`{{execute}}
+`git diff .gitignore dvc.yaml`{{execute}}
 
 `ls -lh model.pkl`{{execute}}
 
-`cat train.dvc`{{execute}}
+`cat dvc.yaml`{{execute}}
 
 Add changes to Git and commit:
 
-`git add .gitignore train.dvc`{{execute}}
+`git add .gitignore dvc.yaml dvc.lock`{{execute}}
 
 `git status -s`{{execute}}
 
