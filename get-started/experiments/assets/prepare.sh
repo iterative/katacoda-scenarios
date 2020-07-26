@@ -39,7 +39,7 @@ set -o verbose
 :; wget -q https://code.dvc.org/get-started/code.zip
 :; unzip code.zip
 :; rm code.zip
-:; git add src/
+:; git add params.yaml src/
 :; git commit -m "Add source code files to repo"
 
 ### Install python requirements
@@ -52,22 +52,22 @@ set -o verbose
 :; git add .gitignore
 :; git commit -m "Ignore virtualenv directory"
 
-### Stage: prepare.dvc
+### Stage: prepare
 :; dvc run \
-       -f prepare.dvc \
+       -n prepare \
        -d src/prepare.py \
        -d data/data.xml \
        -o data/prepared \
        python \
            src/prepare.py \
            data/data.xml
-:; git add data/.gitignore prepare.dvc
+:; git add data/.gitignore dvc.yaml dvc.lock
 :; git commit -m "Create data preparation stage"
 :; dvc push -q
 
-### Stage: featurize.dvc
+### Stage: featurize
 :; dvc run \
-       -f featurize.dvc \
+       -n featurize \
        -d src/featurization.py \
        -d data/prepared \
        -o data/features \
@@ -75,11 +75,11 @@ set -o verbose
            src/featurization.py \
            data/prepared \
            data/features
-:; git add data/.gitignore featurize.dvc
+:; git add data/.gitignore dvc.yaml dvc.lock
 
-### Stage: train.dvc
+### Stage: train
 :; dvc run \
-       -f train.dvc \
+       -n train \
        -d src/train.py \
        -d data/features \
        -o model.pkl \
@@ -87,13 +87,13 @@ set -o verbose
            src/train.py \
            data/features \
            model.pkl
-:; git add .gitignore train.dvc
+:; git add data/.gitignore dvc.yaml dvc.lock
 :; git commit -m "Create featurization and training stages"
 :; dvc push -q
 
 ### Reproducing the model
 :; sed -i data/data.xml -e '1d'
-:; dvc repro -q train.dvc
+:; dvc repro
 :; git add .
 :; git commit -m "Produced another version of model.pkl"
 :; dvc push -q
