@@ -3,22 +3,20 @@
 Let's say that now we want to try a modified feature extraction.  Edit
 `src/featurization.py` to enable bigrams and increase the number of
 features. Open it with a text editor (`vim` or `nano`) and set
-`max_features=6000` and `ngram_range=(1, 2)` in `CountVectorizer`.
+`max_features = 6000` and `ngrams = 2` in global variables at the top (lines 28-29).
 
 It should look like this:
 
 ```
-bag_of_words = CountVectorizer(
-    stop_words='english',
-    max_features=6000,
-    ngram_range=(1, 2))
+max_features = 6000
+ngrams = 2
 ```
 
 This `sed` command does the modification automatically:
 
 ```
 sed -i src/featurization.py \
-    -e 's/max_features.*/max_features=6000, ngram_range=(1, 2))/'
+    -e 's/max_features = params.*/max_features = 6000/; s/ngrams = params.*/ngrams = 2/'
 ```{{execute}}
 
 `git status -s`{{execute}}
@@ -29,14 +27,14 @@ sed -i src/featurization.py \
 
 Try to reproduce the last stage:
 
-`dvc repro evaluate.dvc`{{execute}}
+`dvc repro evaluate`{{execute}}
 
-Notice that it will reproduce the stages `featurize.dvc`,
-`train.dvc` and `evaluate.dvc`.
+Notice that it will reproduce the stages `featurize`,
+`train` and `evaluate`.
 
 `dvc status`{{execute}}
 
-`dvc repro evaluate.dvc`{{execute}}
+`dvc repro evaluate`{{execute}}
 
 `dvc metrics show`{{execute}}
 

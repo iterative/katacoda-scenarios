@@ -11,7 +11,7 @@ Let's create another stage for it:
 
 ```
 dvc run \
-    -f featurize.dvc \
+    -n featurize \
     -d src/featurization.py \
     -d data/prepared \
     -o data/features \
@@ -23,12 +23,12 @@ dvc run \
 
 `git status -s`{{execute}}
 
-`git diff data/.gitignore`{{execute}}
+`git diff data/.gitignore dvc.yaml`{{execute}}
 
 `ls -lh data/features/`{{execute}}
 
-`cat featurize.dvc`{{execute}}
+`cat dvc.yaml`{{execute}}
 
 Add changes to Git:
 
-`git add data/.gitignore featurize.dvc`{{execute}}
+`git add data/.gitignore dvc.yaml dvc.lock`{{execute}}

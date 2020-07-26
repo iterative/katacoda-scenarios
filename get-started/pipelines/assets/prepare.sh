@@ -39,7 +39,7 @@ set -o verbose
 :; wget -q https://code.dvc.org/get-started/code.zip
 :; unzip code.zip
 :; rm code.zip
-:; git add src/
+:; git add params.yaml src/
 :; git commit -m "Add source code files to repo"
 
 ### Install python requirements
@@ -52,15 +52,15 @@ set -o verbose
 :; git add .gitignore
 :; git commit -m "Ignore virtualenv directory"
 
-### Stage: prepare.dvc
+### Stage: prepare
 :; dvc run \
-       -f prepare.dvc \
+       -n prepare \
        -d src/prepare.py \
        -d data/data.xml \
        -o data/prepared \
        python \
            src/prepare.py \
            data/data.xml
-:; git add data/.gitignore prepare.dvc
+:; git add data/.gitignore dvc.yaml dvc.lock
 :; git commit -m "Create data preparation stage"
 :; dvc push -q
