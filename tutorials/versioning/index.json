@@ -36,6 +36,6 @@
         "uilayout": "terminal"
     },
     "backend": {
-        "imageid": "ubuntu1804"
+        "imageid": "ubuntu2004"
     }
 }
