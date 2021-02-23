@@ -5,13 +5,12 @@ files:
 
 `dvc init`{{execute}}
 
-`tree -a -I .git`{{execute}}
-
 The directory is automatically staged on git:
 
 `git status -s`{{execute}}
 
-Some files and folders are automatically added to `.gitignore`:
+Some files and folders in `.dvc/` are automatically added to `.gitignore`. This
+is to keep large files out of git. We'll use DVC for to manage large files. 
 
 `cat .dvc/.gitignore`{{execute}}
 
