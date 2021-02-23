@@ -14,3 +14,7 @@ dvc completion -s bash | sudo tee /etc/bash_completion.d/dvc
 ```{{execute}}
 
 `source /etc/bash_completion`{{execute}}
+
+Now you can use <Tab> to learn available commands and options: 
+
+```dvc ^i```{{execute ctrl-seq no-newline}}
