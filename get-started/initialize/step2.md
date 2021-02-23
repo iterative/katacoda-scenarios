@@ -15,8 +15,7 @@ dvc completion -s bash | sudo tee /etc/bash_completion.d/dvc
 
 `source /etc/bash_completion`{{execute}}
 
-Now you can use `Tab` key to learn available commands and options. 
+Now you can use `Tab` key to learn available commands and options. Please type
+`dvc ` (with space) and press `Tab` key to see a list of possible commands. 
 
-```dvc ```{{execute no-newline}}
-
-Please press `Tab` to see `dvc` commands in your terminal. 
+We'll learn all these commands in the upcoming scenarios! 
