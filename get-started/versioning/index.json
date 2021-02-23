@@ -1,5 +1,5 @@
 {
-    "title": "Data Versioning",
+    "title": "Data and Model Versioning",
     "description": "Large datasets, files, ML models versioning and sharing.",
     "difficulty": "Beginner",
     "time": "20-25 min",
@@ -32,7 +32,7 @@
         ],
         "intro": {
             "text": "intro.md",
-            "credits": "https://dvc.org/doc/start",
+            "credits": "https://dvc.org/doc/start/data-and-model-versioning",
             "courseData": "install.sh",
             "code": "init.sh"
         }
