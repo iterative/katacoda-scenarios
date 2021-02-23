@@ -1,8 +1,6 @@
-In this lesson we will build a simple ML project from scratch. It explores the
-NLP problem of predicting tags for a given StackOverflow question. For example,
-we want the model to classify posts about the Python language by tagging them
-with `python`.
+In this lesson we install and initialize a DVC project. 
 
-However the aim is to show how DVC can be used, so ML details will not be
-discussed. We will assume that the python scripts process the data properly and
-will not explain how it works.
+Our aim is to show how to install DVC for the environment we are currently in
+and start a new project with git and DVC. 
+
+
