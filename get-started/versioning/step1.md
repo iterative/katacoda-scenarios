@@ -1,7 +1,7 @@
 # Track a file or directory
 
-Let's get a data file from the [Get Started](https://dvc.org/doc/start) example
-project:
+Let's get a data file from the [Get
+Started](https://dvc.org/doc/start/data-and-model-versioning) example project:
 
 ```
 dvc get \
@@ -9,8 +9,10 @@ dvc get \
   get-started/data.xml -o data/data.xml
 ```{{execute}}
 
-> The command `dvc get` is like `wget`, but it is used to download data
-> artifacts from DVC projects which are hosted on Git repositories.
+> The command [`dvc get`][cmdget] is like much streamlined and smart `wget`
+> that can be used to retrieve artifacts from DVC projects hosted on Git
+> repositories. You don't even need an _initialized_ DVC repository to use
+> `get`
 
 `ls -lh data/`{{execute}}
 
@@ -18,18 +20,19 @@ To track a large file, ML model or a whole directory with DVC we use `dvc add`:
 
 `dvc add data/data.xml`{{execute}}
 
-`cat data/.gitignore`{{execute}}
-
 DVC has listed `data.xml` on `.gitignore` to make sure that we don't commit it
 to Git.
 
-Instead, we track with Git the file `data/data.xml.dvc`:
+`cat data/.gitignore`{{execute}}
+
+Instead, we track `data/data.xml.dvc` with Git. 
 
 ```
 git add data/.gitignore \
         data/data.xml.dvc
+
+git commit -m "Add dataset to the project"
 ```{{execute}}
 
-```
-git commit -m "Add raw data to project"
-```{{execute}}
+
+[cmdget]: https://dvc.org/doc/command-reference/get
