@@ -9,7 +9,7 @@ dvc get \
   get-started/data.xml -o data/data.xml
 ```{{execute}}
 
-> The command [`dvc get`][cmdget] is like much streamlined and smart `wget`
+> The command [`dvc get`][cmdget] is like streamlined and smart `wget`
 > that can be used to retrieve artifacts from DVC projects hosted on Git
 > repositories. You don't even need an _initialized_ DVC repository to use
 > `get`
