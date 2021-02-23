@@ -9,7 +9,7 @@
 
 # instead of apt, use snap, it should be faster
 
-snap install --classic dvc
-
-# install bash completion for dvc
-dvc completion -s bash > /etc/bash_completion.d/dvc
+# snap install --classic dvc
+#
+# # install bash completion for dvc
+# dvc completion -s bash > /etc/bash_completion.d/dvc

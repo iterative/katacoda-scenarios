@@ -9,12 +9,21 @@ git config --global user.email "guest@example.com"
 git config --global user.name "Guest User"
 
 # wait for dvc and highlight to be installed
-clear
-:;: ===================================
-:;: Please wait until DVC is installed.
-:;: ===================================
-until hash dvc &>/dev/null; do sleep 1; done
+# clear
+# :;: ===================================
+# :;: Please wait until DVC is installed.
+# :;: ===================================
+# until hash dvc &>/dev/null; do sleep 1; done
 
+# We can just use snap to install in a user visible way. 
+
+echo "Let's install DVC for this session from snap"
+sleep 1
+
+snap install --classic dvc
+
+# install bash completion for dvc
+dvc completion -s bash > /etc/bash_completion.d/dvc
 
 # enable bash completion
 source /etc/bash_completion
