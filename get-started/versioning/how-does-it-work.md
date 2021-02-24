@@ -12,7 +12,8 @@ file.
 This field is used to keep track the changes in `data.xml`. Let's check whether
 the hash calculated by `md5sum` is identical with the hash calculated by DVC. 
 
-``` md5sum data/data.xml 
+```
+md5sum data/data.xml 
 
 grep 'md5' data/data.xml.dvc 
 ```{{execute}}

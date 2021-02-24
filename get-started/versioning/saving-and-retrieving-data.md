@@ -4,13 +4,16 @@ stored in remotes, we can use
 `dvc status --cloud`{{execute}}
 
 to compare files between the data stored on cache and the default remote.
-Without `-c, --cloud` option 
+
+Without the `-c, --cloud` option 
 
 `dvc status`{{execute}}
 
 checks whether workspace files are up to date with _local cache._
 
-As `dvc status --cloud` shows we have a missing file in `mystorage`.  We manage
+As `dvc status --cloud` shows we have a missing file in `mystorage`.  
+
+We manage
 data and model files in remotes with `dvc push` and `dvc pull`. These are used
 to save and retrieve DVC tracked files from local `.dvc/cache` to and from a
 data remote. 
@@ -45,9 +48,15 @@ Suppose we deleted `data.xml` from the workspace _and_ from the cache.
 
 `rm -f data/data.xml`{{execute}}
 
-Now we deleted all _local_ versions of `data.xml`. 
+We deleted all _local_ versions of `data.xml`. Neither `.dvc/cache` nor `data/` contains our data file.
 
-In order to retrieve data and model files from remotes we can use:
+`tree -a -I .git` 
+
+This is also reported by 
+
+`dvc status`{{execute}}
+
+In order to retrieve missing data and model files from remotes we can use:
 
 `dvc fetch`{{execute}}
 

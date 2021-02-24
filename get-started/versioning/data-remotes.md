@@ -4,6 +4,8 @@ allows to set up a central location to share such content safely.
 set up and versioned data and model files can be shared by uploading to and
 downloading from them. 
 
+[bcremote]: https://dvc.org/doc/user-guide/basic-concepts/remote
+
 To set up a data remote, you would typically use Amazon S3, Google Cloud, or
 another supported storage type like this:
 
