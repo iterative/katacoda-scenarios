@@ -17,7 +17,10 @@ git config --global user.name "Guest User"
 
 # We can just use snap to install in a user visible way. 
 
-echo "Let's install DVC for this session from snap"
+clear
+:;: ===================================
+:;: Let\'s install DVC for this session
+:;: ===================================
 sleep 1
 
 snap install --classic dvc
@@ -28,9 +31,14 @@ dvc completion -s bash > /etc/bash_completion.d/dvc
 # enable bash completion
 source /etc/bash_completion
 
-git clone https://github.com/iterative/example-get-started.git
-cd example-get-started/
-git checkout -b katacoda-gs-versioning
+
+clear
+:;: ===================================
+:;: Let\'s create a new DVC project 
+:;: ===================================
+git init versioning
+cd versioning
+dvc init
 
 # clear screen
 clear
