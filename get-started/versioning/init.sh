@@ -39,6 +39,8 @@ clear
 git init versioning
 cd versioning
 dvc init
+git add .
+git commit -m "Initial DVC files"
 
 # clear screen
 clear
