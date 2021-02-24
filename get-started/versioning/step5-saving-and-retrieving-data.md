@@ -1,5 +1,3 @@
-# Saving and retrieving data
-
 The command `dvc status` compares the data on the workspace with the data saved
 on the cache.
 

@@ -1,5 +1,3 @@
-# Switching between versions
-
 Yes, DVC is technically even not a version control system! `.dvc` files (and
 `dvc.lock`, but we'll get to that later) content defines data file versions. Git
 itself serves as the version control system. DVC in turn creates these `.dvc`

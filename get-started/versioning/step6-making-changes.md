@@ -1,5 +1,3 @@
-# Making changes
-
 Let's make the dataset smaller. It's not what would you usually do (usually we
 want more data), but since there are some RAM limitations to this online
 platform we have to do this to being able to run training later:

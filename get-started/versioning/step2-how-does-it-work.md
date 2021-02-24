@@ -1,5 +1,3 @@
-# How does it work?
-
 Let's take a look at inside the `.dvc` file to learn how it keeps track of our
 data file: 
 

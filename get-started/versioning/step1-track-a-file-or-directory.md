@@ -1,5 +1,3 @@
-# Track a file or directory
-
 Let's get a data file from the [Get
 Started](https://dvc.org/doc/start/data-and-model-versioning) example project:
 
