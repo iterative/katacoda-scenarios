@@ -1,4 +1,4 @@
-Technically DVC is not a version control system! 
+Technically speaking DVC is not a version control system.
 
 Although DVC can work without a VCS, history of `.dvc` files is better tracked
 with Git. Otherwise we may end up with files in the cache whose paths in the
