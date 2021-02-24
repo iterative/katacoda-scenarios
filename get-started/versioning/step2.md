@@ -16,10 +16,11 @@ the hash calculated by `md5sum` is identical with the hash calculated by DVC.
 
 ``` md5sum data/data.xml 
 
-grep 'md5' data/data.xml.dvc ```{{execute}}
+grep 'md5' data/data.xml.dvc 
+```{{execute}}
 
-DVC uses this `md5` field to actually address the file in its cache. The hash
-is actually a pointer to the content in cache. 
+DVC uses `md5` field to actually address the file in its cache. The hash
+is a pointer to the content in DVC cache. 
 
 If the content of `data.xml` is changed, its MD5 hash will change. DVC is able
 to detect the change by comparing the new MD5 hash to the MD5 hash kept in
@@ -36,7 +37,8 @@ the rest as a file name.
 When a data or model file's content changes, its address in the cache changes
 too. This allows to keep track history of large data files.
 
-> To save storage space and time when dealing with large files, DVC can use
-> `symlinks`, `hardlinks`, or `reflinks`, depending on the file system and DVC
-> settings. Read more in the user guide for [Large Dataset
+> The default setting for DVC is to copy content both in the cache and the
+> workspace. To save storage space and time when dealing with large files, DVC
+> can use `symlinks`, `hardlinks`, or `reflinks`, depending on the file system. 
+> Read more in the user guide for [Large Dataset
 > Optimization](https://dvc.org/doc/user-guide/large-dataset-optimization).
