@@ -41,15 +41,10 @@ set -o verbose
 :; git add params.yaml src/
 :; git commit -m "Add source files to the repository"
 
-### Prepare the virtual environment
-:; apt install --yes python3-venv
-:; python3 -m venv .env 
-:; echo ".env" >> .gitignore
-:; git add .gitignore
-:; git commit -m "ignored virtual environment"
-:; source .env/bin/activate
-
 ### Install requirements
+### Normally this should be done in a virtual environment
+### But here we're already in a container
+:; pip3 install wheel
 :; pip3 install -r src/requirements.txt
 
 ### Ready ###
