@@ -35,4 +35,21 @@ set -o verbose
 ### Push cached files to data storage
 :; dvc push -q
 
+### Unzip the code 
+:; unzip ../code.zip 
+:; rm ../code.zip
+:; git add params.yaml src/
+:; git commit -m "Add source files to the repository"
+
+### Prepare the virtual environment
+:; apt install --yes python3-venv
+:; python3 -m venv .env 
+:; echo ".env" >> .gitignore
+:; git add .gitignore
+:; git commit -m "ignored virtual environment"
+:; source .env/bin/activate
+
+### Install requirements
+:; pip3 install -r src/requirements.txt
+
 ### Ready ###

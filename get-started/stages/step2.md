@@ -3,13 +3,7 @@
 The script `src/prepare.py` splits the data into datasets for training
 and testing:
 
-```
-highlight src/prepare.py \
-    -O xterm256 | less -r
-```{{execute}}
-
-
-**Click on the terminal and press `q` to exit `less`.**
+`src/prepare.py`{{open}}
 
 Let's build a stage based on this script:
 

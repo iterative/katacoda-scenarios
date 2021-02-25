@@ -27,7 +27,8 @@
         "assets": {
             "host01": [
                 { "file": "prepare.sh", "target": "/usr/local/bin/", "chmod": "+x" },
-                { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" }
+                { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" },
+                { "file": "code.zip", "target": "/root"}
             ]
         }        
     },
