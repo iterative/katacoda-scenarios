@@ -8,7 +8,7 @@ pipelines for a basic machine learning project.
 [bcstage]: https://dvc.org/doc/user-guide/basic-concepts/stage
 
 We have a machine learning project already provided in
-`~/example-get-started`. We covered these steps in previous scenarios. DVC is
+`~/stages`. We covered these steps in previous scenarios. DVC is
 installed. Data is downloaded from
 `https://github.com/iterative/dataset-registry` and made smaller. A _local
 remote_ is created in `/tmp/data-storage` called `mystorage` and the data is
@@ -20,17 +20,30 @@ You can use the editor to browse the project.
 The script `src/prepare.py` splits the data into datasets for training
 and testing. You can click the button to open the file in the editor. 
 
-`src/prepare.py`{{open}}
+`stages/src/prepare.py`{{open}}
 
-We will build a stage based on this script.
-
-Now, let's run and see what happens when we run this script: 
+We will build a stage based on this script. Let's run and see what happens
+when we run the script:
 
 `python3 src/prepare.py data/data.xml`{{execute}}
 
-A stage is created using `dvc run` command. It gives a name to the stage with
-`-n`, lists dependencies with `-d` and outputs with `-o`. It contains a
-command to run the stage at the end.
+It splits the data into datasets for training
+and testing. You can see the contents of these files by clicking below: 
+
+`stages/data/prepared/train.tsv`{{open}}
+
+`stages/data/prepared/test.tsv`{{open}}
+
+Our goal in DVC is to automate such tasks and define relationships between them. 
+
+Let's delete the artifacts from previous step before producing them with DVC. 
+
+`rm -fr data/prepared`{{execute}}
+
+A stage is created using `dvc run` command. We give a name to the stage with
+`-n`, list dependencies with `-d` and outputs with `-o`. 
+
+It contains a command to run the stage at the end. This is the same command we used earlier. 
 
 ```
 dvc run \
@@ -42,6 +55,19 @@ dvc run \
         src/prepare.py \
         data/data.xml
 ```{{execute}}
+
+`dvc run` runs the command provided at the end. We created a stage named
+`prepare` that depends on `prepare.py` and `data.xml`. So if any one of these
+change DVC will run this stage to obtain `data/prepared` directory.
+
+Information about stages is stored in `dvc.yaml` file. These files are
+automatically created by DVC to check the change of data and code, and also
+define relationships between these.
+
+Let's take a look at `dvc.yaml` file to see what it contains: 
+
+`stages/dvc.yaml`{{open}}
+
 
 The output of `dvc run` is telling us that it is running the given
 python command. The output of this command is supposed to be on the
