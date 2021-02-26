@@ -47,4 +47,7 @@ set -o verbose
 :; pip3 install wheel
 :; pip3 install -r src/requirements.txt
 
+### Checking the DVC version
+:; dvc version
+
 ### Ready ###
