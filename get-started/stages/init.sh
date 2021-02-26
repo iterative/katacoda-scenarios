@@ -22,6 +22,6 @@ source /etc/bash_completion
 clear
 
 # auto-play preparation steps
-mkdir example-get-started/
-cd example-get-started/
+mkdir stages/
+cd stages/
 DELAY=0.5 play prepare.sh
