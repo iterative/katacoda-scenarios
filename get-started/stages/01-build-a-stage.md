@@ -1,11 +1,36 @@
 # Build a stage
 
+[Stages][bcstage] are the basic building blocks of pipelines in DVC. They
+define and perform an action, like data import or feature extraction and
+usually produce some output. In this scenario we will create stages and
+pipelines for a basic machine learning project.
+
+[bcstage]: https://dvc.org/doc/user-guide/basic-concepts/stage
+
+We have a machine learning project already provided in
+`~/example-get-started`. We covered these steps in previous scenarios. DVC is
+installed. Data is downloaded from
+`https://github.com/iterative/dataset-registry` and made smaller. A _local
+remote_ is created in `/tmp/data-storage` called `mystorage` and the data is
+pushed. Code and python requirements are also prepared and all changes are
+commit to Git.
+
+You can use the editor to browse the project. 
+
 The script `src/prepare.py` splits the data into datasets for training
-and testing:
+and testing. You can click the button to open the file in the editor. 
 
 `src/prepare.py`{{open}}
 
-Let's build a stage based on this script:
+We will build a stage based on this script.
+
+Now, let's run and see what happens when we run this script: 
+
+`python3 src/prepare.py data/data.xml`{{execute}}
+
+A stage is created using `dvc run` command. It gives a name to the stage with
+`-n`, lists dependencies with `-d` and outputs with `-o`. It contains a
+command to run the stage at the end.
 
 ```
 dvc run \
@@ -13,7 +38,7 @@ dvc run \
     -d src/prepare.py \
     -d data/data.xml \
     -o data/prepared \
-    python \
+    python3 \
         src/prepare.py \
         data/data.xml
 ```{{execute}}
