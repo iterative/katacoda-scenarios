@@ -1,5 +1,3 @@
-# Build a stage
-
 [Stages][bcstage] are the basic building blocks of pipelines in DVC. They
 define and perform an action, like data import or feature extraction and
 usually produce some output. In this scenario we will create stages and
@@ -22,28 +20,29 @@ and testing. You can click the button to open the file in the editor.
 
 `stages/src/prepare.py`{{open}}
 
-We will build a stage based on this script. Let's run and see what happens
+We will build a stage based on this script. Let's see what happens
 when we run the script:
 
 `python3 src/prepare.py data/data.xml`{{execute}}
 
 It splits the data into datasets for training
-and testing. You can see the contents of these files by clicking below: 
+and testing. We check the contents: 
 
-`stages/data/prepared/train.tsv`{{open}}
+`head data/prepared/train.tsv | highlight`{{execute}}
 
-`stages/data/prepared/test.tsv`{{open}}
+`head data/prepared/test.tsv | highlight`{{execute}}
 
 Our goal in DVC is to automate such tasks and define relationships between them. 
 
-Let's delete the artifacts from previous step before producing them with DVC. 
+We can delete the artifacts from previous step before reproducing them with DVC. 
 
 `rm -fr data/prepared`{{execute}}
 
 A stage is created using `dvc run` command. We give a name to the stage with
 `-n`, list dependencies with `-d` and outputs with `-o`. 
 
-It contains a command to run the stage at the end. This is the same command we used earlier. 
+It contains a command to run the stage at the end. This is the same
+`src/prepare.py` script we used earlier:
 
 ```
 dvc run \
@@ -58,56 +57,79 @@ dvc run \
 
 `dvc run` runs the command provided at the end. We created a stage named
 `prepare` that depends on `prepare.py` and `data.xml`. So if any one of these
-change DVC will run this stage to obtain `data/prepared` directory.
+change, DVC will run this stage to obtain `data/prepared` directory.
 
 Information about stages is stored in `dvc.yaml` file. These files are
 automatically created by DVC to check the change of data and code, and also
-define relationships between these.
+define relationships between data, code and stages.
 
 Let's take a look at `dvc.yaml` file to see what it contains: 
 
 `stages/dvc.yaml`{{open}}
 
+Basically it defines what we asked `dvc run` to do. It lists stages by name
+and defines `cmd:`, `deps:` and `outs:` for each of them.
 
-The output of `dvc run` is telling us that it is running the given
-python command. The output of this command is supposed to be on the
-directory `data/prepared`, as indicated by the option `-o`
-(output). So, after running the command, the output directory is added
-to `data/.gitignore` and is saved in `.dvc/cache/`. Finally, the
-information needed for rerunning this stage is saved in the `prepare`
-section of `dvc.yaml`, which is indicated by the option `-n`
-(stage name). The options `-d` indicate the dependencies of this stage.
-We will see later what are dependencies and how they are used by DVC.
+Along with `dvc.yaml`, there is another file created by `dvc run` that shows
+the hash values for dependencies and outputs.
 
-`git status -s`{{execute}}
+`stages/dvc.lock`{{open}}
 
-`git diff data/.gitignore`{{execute}}
+You can see that the structure of `dvc.lock` and `dvc.yaml` are similar.
+`dvc.lock` also has `prepare` to show the stage name and lists `cmd`, `deps`
+and `outs`. However it also lists MD5 hashes we saw when adding files to DVC.
 
-`tree -a data/`{{execute}}
+These hash values are used by DVC to track the change in dependencies for
+each stage. Usually `dvc.yaml` files are considered to be manually editable
+and `dvc.lock` files are not. Maintaining the hash values for each dependency
+should be the work of programs!
 
-Notice that `train.tsv` and `test.tsv` have been created on
-`data/prepared/`.
+Note that we didn't `dvc add src/prepare.py` and `dvc` wasn't tracking it
+before `dvc run.`
 
-`cat dvc.yaml`{{execute}}
+`dvc list --dvc-only --recursive .`{{execute}}
 
-The stage created in `dvc.yaml` by `dvc run` is similar to the `.dvc`
-file created by `dvc add`, but it also has the field `cmd:` for the
-command and the field `deps:` for dependencies.
+does not show `src/prepare.py` but we are able to track its changes using
+`dvc.lock` file.
 
-`tree .dvc/cache/`{{execute}}
-
-Notice how the MD5 hash of `data/prepared` output corresponds to
-the path of the cached directory.
-
-`cat .dvc/cache/*/*.dir`{{execute}}
+For `data.xml`, MD5 values in `dvc.lock` and `data/data.xml.dvc` are
+identical:
 
 ```
-cat .dvc/cache/*/*.dir \
-    | python -m json.tool \
-    | highlight -S json -O xterm256
+grep 'md5' data/data.xml.dvc
+grep -A 2 'data/data.xml' dvc.lock
 ```{{execute}}
 
-So, the cached directory entry contains a list of the paths and MD5
-hashes of the files that are inside the tracked directory, in JSON
-format, and these files themselves are also saved in the cache,
-named after their MD5 hashes.
+DVC stores the _outputs_ defined in `run` in the `cache` similar to other
+data. `data/prepared` directory is defined as an output in `prepare` stage
+and its MD5 hash is:
+
+`grep -A 2 'data/prepared' dvc.lock`{{execute}}
+
+and this points us to `.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir` file
+similar to other directories tracked by DVC. You can see the contents of this
+`.dir` file in VS Code.
+
+`.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir`{{open}}
+
+It's a JSON file that lists all individual elements of the directory with
+their hash values.
+
+`cat .dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir | jq`{{execute}}
+
+For example we can learn individual hash value of `train.tsv` as
+`fcebfd4c6f1645ac4987d39f1c5cf610` and check its content
+
+`.dvc/cache/fc/ebfd4c6f1645ac4987d39f1c5cf610`{{open}}. 
+
+Note also that `/prepared` is put in `.gitignore` to prevent output data
+files to be commit in git.
+
+You can review changes in the repository from Source Control tab of VS Code.
+
+Finally we are registering `dvc.yaml`, `dvc.lock` and `.gitignore` to Git and
+complete this step.
+
+`git add dvc.yaml dvc.lock .gitignore`{{execute}}
+
+`git commit -m "Configured prepare stage"`{{execute}}
