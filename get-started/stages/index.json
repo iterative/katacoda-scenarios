@@ -6,16 +6,36 @@
     "details": {
         "steps": [
             {
-                "title": "Build a stage",
-                "text": "01-build-a-stage.md"
+                "title": "What's a stage?",
+                "text": "01-whats-a-stage.md"
             },
             {
-                "title": "Build a stage by configuration file",
-                "text": "02-build-a-stage-using-configuration.md"
+                "title": "Manual data preparation",
+                "text": "02-manual-data-preparation.md"
+            },
+            {
+                "title": "Adding a stage",
+                "text": "03-adding-a-stage.md"
+            },
+            {
+                "title": "How DVC tracks stages?",
+                "text": "04-how-dvc-tracks-stages.md"
+            },
+            {
+                "title": "How directories are cached?",
+                "text": "05-how-directories-are-cached.md"
+            },
+            {
+                "title": "Add featurization stage",
+                "text": "06-add-featurization-stage.md"
+            },
+            {
+                "title": "Visualize the pipeline",
+                "text": "07-visualize-the-pipeline.md"
             },
             {
                 "title": "Reproduce a pipeline",
-                "text": "03-reproduce-a-pipeline.md"
+                "text": "08-reproduce-a-pipeline.md"
             }
         ],
         "intro": {
