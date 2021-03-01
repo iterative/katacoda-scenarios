@@ -28,7 +28,8 @@ Let's check the next stage's status:
 `dvc status featurize`{{execute}}
 
 For the `featurization` stage, however, DVC runs the script because the outputs
-are not there.
+are not there and the dependencies (as their MD5 hashes are missing from
+`dvc.lock`) is considered changed.
 
 `dvc repro featurize`{{execute}}
 

@@ -39,7 +39,7 @@ Our goal is to create a project that classifies the questions and assigns tags
 to them. This is a sample of Stack Overflow data. We use DVC to automate such
 tasks and provide fully reproducible data and pipeline repositories.
 
-# Ask DVC to run Data Preparation
+# Adding a stage to run data preparation
 
 We delete the artifacts before reproducing them with DVC.
 
