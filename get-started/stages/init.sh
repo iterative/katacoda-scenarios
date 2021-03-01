@@ -23,4 +23,4 @@ clear
 
 cd stages
 # auto-play preparation steps
-DELAY=0.5 play prepare.sh
+DELAY=0.1 play prepare.sh
