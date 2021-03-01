@@ -117,7 +117,7 @@ identical:
 
 ````
 grep 'md5' data/data.xml.dvc
-grep -A 2 'path: data/data.xml' dvc.lock
+grep -A 1 'path: data/data.xml' dvc.lock
 ```{{execute}}
 
 
@@ -127,7 +127,7 @@ DVC stores the _outputs_ defined in `run` in the `cache` similar to other
 data. `data/prepared` directory is defined as an output in `prepare` stage
 and its MD5 hash is:
 
-`grep -A 2 'path: data/prepared' dvc.lock`{{execute}}
+`grep -A 1 'path: data/prepared' dvc.lock`{{execute}}
 
 and this points us to `.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir` file
 similar to other directories tracked by DVC. You can see the contents of this
