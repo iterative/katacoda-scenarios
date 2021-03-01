@@ -1,7 +1,7 @@
 
 [Stages][bcstage] are the basic building blocks of pipelines in DVC. They define
-and perform an action, like data import or feature extraction and usually
-produce some output. In this scenario, we will create stages and pipelines for a
+and execute an action, like data import or feature extraction, and usually
+produce some output. In this scenario, we create stages and pipelines for a
 machine learning project.
 
 [bcstage]: https://dvc.org/doc/user-guide/basic-concepts/stage
@@ -32,19 +32,21 @@ contents:
 
 `head data/prepared/test.tsv`{{execute}}
 
-Our goal in DVC is to automate such tasks and define relationships between them.
+Our goal is to create a project that classifies the questions and assigns tags
+to them. This is a sample of Stack Overflow data. We use DVC to automate such
+tasks and provide fully reproducible data and pipeline repositories.
 
 We delete the artifacts before reproducing them with DVC.
 
 `rm -fr data/prepared`{{execute}}
 
-A stage is created using `dvc run` command. We give a name to the stage with
-`-n`, list dependencies with `-d` and outputs with `-o`.
+We create a stage using `dvc run` command. We give a name to the stage with
+`-n`, list dependencies with `-d` and outputs with `-o` options.
 
 It contains a command to run the stage at the end. This is the same
 `src/prepare.py` script we used earlier:
 
-````
+```
 dvc run \
     -n prepare \
     -d src/prepare.py \
@@ -60,9 +62,10 @@ dvc run \
 > whether dependencies or > outputs have _changed_ and does not read and write
 > these files.
 
-`dvc run` executes the command provided as the final argument. We created a
-stage named `prepare` that depends on `prepare.py` and `data.xml`. So if any
-one of these change, DVC will run this stage to obtain `data/prepared`
+By default `dvc run` executes the command provided as the final argument. (You
+can set `--no-exec` option to prevent it from running.) With the above command
+we created a stage named `prepare` that depends on `prepare.py` and `data.xml`.
+So if any one of these change, DVC will run this stage to obtain `data/prepared`
 directory.
 
 DVC stores stage configuration in `dvc.yaml` files. These files are
@@ -83,7 +86,7 @@ the hash values for dependencies and outputs.
 
 You can see that the structure of `dvc.lock` and `dvc.yaml` are similar.
 `dvc.lock` also has `prepare` to show the stage name and lists `cmd`, `deps`
-and `outs`. Additionally it lists MD5 hashes we remember from adding files to
+and `outs`. Additionally, it lists MD5 hashes we remember from adding files to
 DVC.
 
 DVC uses these hash values to track the change in dependencies.
@@ -92,7 +95,8 @@ Usually, `dvc.yaml` files are considered manually editable, and
 values for each dependency should be the work of programs!
 
 Note that we didn't `dvc add src/prepare.py`, and DVC wasn't tracking it
-before `dvc run.`
+before `dvc run.` We can add code dependencies to stages without checking in
+them first. 
 
 Listing DVC-tracked files with
 
@@ -142,7 +146,8 @@ You can review changes in the repository from the Source Control tab of VS Code.
 Finally we are registering `dvc.yaml`, `dvc.lock` and `.gitignore` to Git and
 complete this step.
 
-`git add dvc.yaml dvc.lock .gitignore`{{execute}}
-
-`git commit -m "Configured prepare stage"`{{execute}}
 ```
+git add dvc.yaml dvc.lock .gitignore
+
+git commit -m "Configured prepare stage"
+```{{execute}}
