@@ -1,3 +1,5 @@
+# Add featurization stage
+
 Our next step is to create a new stage by editing `dvc.yaml` file. Instead of
 using `dvc run`, we create a new stage by editing `dvc.yaml` and run it with
 DVC.
@@ -36,6 +38,8 @@ partitions it into the train and test sets and extracts features for the dataset
 
 [bcpipeline]: https://dvc.org/doc/user-guide/basic-concepts/pipeline
 
+# Visualize the pipeline
+
 We can visualize DVC pipelines using `dvc dag` command. Let's see what our pipeline is doing:
 
 `dvc dag`{{execute}}
@@ -54,4 +58,3 @@ git commit -m "another stage to the pipeline is added"
 ```{{execute}}
 
 In the next step, we'll see how to run these two stages together.
-

@@ -1,3 +1,4 @@
+# What's a stage?
 
 [Stages][bcstage] are the basic building blocks of pipelines in DVC. They define
 and execute an action, like data import or feature extraction, and usually
@@ -14,6 +15,8 @@ DVC repository is pushed. Code and python requirements are prepared, and all
 changes are committed to Git.
 
 You can use the VS Code editor to browse the project.
+
+# Manual Data Preparation 
 
 The script `src/prepare.py` splits the data into datasets for training and
 testing. You can click the button to open the file in the editor.
@@ -35,6 +38,8 @@ contents:
 Our goal is to create a project that classifies the questions and assigns tags
 to them. This is a sample of Stack Overflow data. We use DVC to automate such
 tasks and provide fully reproducible data and pipeline repositories.
+
+# Ask DVC to run Data Preparation
 
 We delete the artifacts before reproducing them with DVC.
 
@@ -67,6 +72,8 @@ can set `--no-exec` option to prevent it from running.) With the above command
 we created a stage named `prepare` that depends on `prepare.py` and `data.xml`.
 So if any one of these change, DVC will run this stage to obtain `data/prepared`
 directory.
+
+# How DVC tracks the stages?
 
 DVC stores stage configuration in `dvc.yaml` files. These files are
 automatically created by DVC to check the change in data and code, and also
@@ -109,18 +116,18 @@ For `data.xml`, MD5 values in `dvc.lock` and `data/data.xml.dvc` are
 identical:
 
 ````
-
 grep 'md5' data/data.xml.dvc
-
-grep -A 2 'data/data.xml' dvc.lock
-
+grep -A 2 'path: data/data.xml' dvc.lock
 ```{{execute}}
+
+
+# How directories are cached and tracked?
 
 DVC stores the _outputs_ defined in `run` in the `cache` similar to other
 data. `data/prepared` directory is defined as an output in `prepare` stage
 and its MD5 hash is:
 
-`grep -A 2 'data/prepared' dvc.lock`{{execute}}
+`grep -A 2 'path: data/prepared' dvc.lock`{{execute}}
 
 and this points us to `.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir` file
 similar to other directories tracked by DVC. You can see the contents of this
@@ -148,6 +155,7 @@ complete this step.
 
 ```
 git add dvc.yaml dvc.lock .gitignore
-
 git commit -m "Configured prepare stage"
 ```{{execute}}
+
+In the next step we add another stage by editing `dvc.yaml` file. 
