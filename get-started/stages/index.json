@@ -61,12 +61,8 @@
                     "target": "/root/stages"
                 },
                 {
-                    "file": "src/prepare.py",
-                    "target": "/root/stages/src/"
-                },
-                {
-                    "file": "src/featurize.py",
-                    "target": "/root/stages/src/"
+                    "file": "src/",
+                    "target": "/root/stages/"
                 }
             ]
         }
