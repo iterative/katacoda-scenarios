@@ -21,7 +21,7 @@ You can use the VS Code editor to browse the project.
 The script `src/prepare.py` splits the data into datasets for training and
 testing. You can click the button to open the file in the editor.
 
-`stages/src/prepare.py`{{open}}
+`src/prepare.py`{{open}}
 
 As a next step, we build a stage based on this script. Let's see what happens
 when we run the script:
@@ -81,7 +81,7 @@ define relationships between data, code, and stages.
 
 Let's take a look at `dvc.yaml` file to see what it contains:
 
-`stages/dvc.yaml`{{open}}
+`dvc.yaml`{{open}}
 
 It defines what we asked `dvc run` to do. It lists stages by name and defines
 `cmd`, `deps` and `outs` for each of them.
@@ -89,7 +89,7 @@ It defines what we asked `dvc run` to do. It lists stages by name and defines
 Along with `dvc.yaml`, there is another file created by `dvc run` that shows
 the hash values for dependencies and outputs.
 
-`stages/dvc.lock`{{open}}
+`dvc.lock`{{open}}
 
 You can see that the structure of `dvc.lock` and `dvc.yaml` are similar.
 `dvc.lock` also has `prepare` to show the stage name and lists `cmd`, `deps`

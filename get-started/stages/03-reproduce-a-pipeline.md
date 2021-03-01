@@ -1,29 +1,64 @@
 # Reproduce the outputs of the stage
 
-The command `dvc repro` is used to rerun the command of the stage and
-to reproduce its outputs:
+In a machine learning project, stages usually depend on more than one element
+and when one of these change, the part of the pipeline that depends on the
+updated element becomes invalid.
 
-`cat dvc.yaml`{{execute}}
+In the previous stage, we created a stage without actually running by editing
+`dvc.yaml`.
+
+We use `dvc repro` command to (re)run a stage and (re)produce its outputs.
+
+In the first step, we run the `prepare` stage by supplying it to `dvc run` and
+let's see what happens when we reproduce. First we check the status of the stage
+by `dvc status` command:
 
 `dvc status prepare`{{execute}}
 
+and rerun the stage:
+
 `dvc repro prepare`{{execute}}
 
-However, before running again the command of the stage, DVC checks
-whether the dependencies have changed. The dependencies usually
-include the inputs, the program that processes them, the configuration
-parameters, etc. If none of them has changed, then it is guaranteed
-that the outputs will be the same as before. So it makes no sense to
-run the command again, since we already have the outputs (and even
-have them saved in cache).
+As you can see, DVC didn't run `src/prepare.py` because the dependencies of the
+stage (`data/data.xml` and `src/prepare.py`) didn't change, and the outputs of the
+stage (`data/prepared/`) are already where expected.
 
-Our stage has as dependencies `src/prepare.py`, which has not changed,
-and `data/data.xml`, which is tracked by `data/data.xml.dvc`. So, in
-order to decide whether the outputs of the stage `prepare` need to be
-reproduced, DVC has to check `data/data.xml.dvc` as well.
+Let's check the next stage's status:
 
-In our case nothing has changed, so nothing needs to be reproduced.
-   
+`dvc status featurize`{{execute}}
+
+For the `featurization` stage, however, DVC runs the script because the outputs
+are not there.
+
+`dvc repro featurize`{{execute}}
+
+We can see the status of the whole pipeline using:
+
+`dvc status`{{execute}}
+
+The pipeline is fully run, outputs are fully in the cache and without any
+changes `dvc repro` won't rerun any part of it.
+
+`dvc repro`{{execute}}
+
+Suppose we decided to update our code for `src/prepare.py` by adding the
+following line to it.
+
+<pre class="file" data-filename="src/prepare.py" data-target="append">
+# THIS COMMENT CHANGES MD5 HASH OF THE FILE
+</pre>
+
+Now when we run the pipeline again, we see that `prepare` step is run again. 
+
+`dvc repro`{{execute}}
+
+But as the _content_ of files in `prepared/` directory didn't change because of
+the line we added, DVC doesn't run `featurize` again. DVC checks the actual
+content of outputs to see whether a stage has to be run or not. 
+
+In the next step we'll see how to clean artifacts and rerun everything. 
+
+
 Finally, let's save the current state of the project to Git:
 
 `git status -s`{{execute}}
