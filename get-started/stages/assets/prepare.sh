@@ -36,8 +36,8 @@ set -o verbose
 :; dvc push -q
 
 ### Unzip the code 
-:; unzip ../code.zip 
-:; rm ../code.zip
+# :; unzip ../code.zip 
+# :; rm ../code.zip
 :; git add params.yaml src/
 :; git commit -m "Add source files to the repository"
 

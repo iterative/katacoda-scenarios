@@ -1,5 +1,5 @@
 {
-    "title": "Stages",
+    "title": "Stages and Pipelines",
     "description": "Process data and generate outputs in a reproducible way.",
     "difficulty": "Beginner",
     "time": "10-15 min",
@@ -37,8 +37,12 @@
                     "chmod": "+x"
                 },
                 {
-                    "file": "code.zip",
-                    "target": "/root"
+                    "file": "src/",
+                    "target": "/root/stages"
+                },
+                {
+                    "file": "params.yaml",
+                    "target": "/root/stages"
                 }
             ]
         }
