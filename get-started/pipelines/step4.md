@@ -22,7 +22,7 @@ happens:
   and its outputs changed (in directory `data/prepared/`).
 
 - But `data/prepared` is a dependency of `featurize`, so this
-  stage was rerun as well and its outputs changed (in directory
+  stage was rerun as well and its outputs changed (in the directory
   `data/features/`).
 
 - Finally, directory `data/features` is a dependency of the stage

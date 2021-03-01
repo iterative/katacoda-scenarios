@@ -14,5 +14,5 @@ remote_ is created in `/tmp/data-storage` named `mystorage`, and the data in the
 DVC repository is pushed. Code and python requirements are prepared, and all
 changes are committed to Git.
 
-You can use the VS Code editor to browse the project.
+You can use the editor to browse the project.
 
