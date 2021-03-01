@@ -28,8 +28,8 @@ Let's check the next stage's status:
 `dvc status featurize`{{execute}}
 
 For the `featurization` stage, however, DVC runs the script because the outputs
-are not there and the dependencies (as their MD5 hashes are missing from
-`dvc.lock`) is considered changed.
+are not where they should be, and the dependencies (as their MD5 hashes are
+missing from `dvc.lock`) are considered changed.
 
 `dvc repro featurize`{{execute}}
 
@@ -37,7 +37,7 @@ We can see the status of the whole pipeline using:
 
 `dvc status`{{execute}}
 
-The pipeline is fully run, outputs are fully in the cache and without any
+The pipeline is fully run, outputs are all in the cache and without any
 changes `dvc repro` won't rerun any part of it.
 
 `dvc repro`{{execute}}
@@ -49,17 +49,17 @@ following line to it.
 # THIS COMMENT CHANGES MD5 HASH OF THE FILE
 </pre>
 
-Now when we run the pipeline again, we see that `prepare` step is run again. 
+Now when we run the pipeline again, we see that `prepare` script is run again. 
 
 `dvc repro`{{execute}}
 
-But as the _content_ of files in `prepared/` directory didn't change because of
-the line we added, DVC doesn't run `featurize` again. DVC checks the actual
-content of outputs to see whether a stage has to be run or not.
+But as the _content_ of files in `prepared/` directory didn't change, DVC
+doesn't run `featurize` again. DVC checks the actual content of outputs to see
+whether a stage has to be run or not.
 
 Congratulations! This completes this scenario. In the next scenario we'll add
-more stages and parameters to the pipeline we created here. We'll also measure
-and plot the performance of our work using DVC.
+more stages and parameters to the pipeline. We'll also measure and plot the
+performance of our work using DVC.
 
 As a last step, let's save the current state of the project to Git:
 
