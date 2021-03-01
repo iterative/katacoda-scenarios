@@ -21,7 +21,7 @@ You can use the VS Code editor to browse the project.
 The script `src/prepare.py` splits the data into datasets for training and
 testing. You can click the button to open the file in the editor.
 
-`src/prepare.py`{{open}}
+`stages/src/prepare.py`{{open}}
 
 As a next step, we build a stage based on this script. Let's see what happens
 when we run the script:
@@ -81,7 +81,7 @@ define relationships between data, code, and stages.
 
 Let's take a look at `dvc.yaml` file to see what it contains:
 
-`dvc.yaml`{{open}}
+`stages/dvc.yaml`{{open}}
 
 It defines what we asked `dvc run` to do. It lists stages by name and defines
 `cmd`, `deps` and `outs` for each of them.
@@ -89,7 +89,7 @@ It defines what we asked `dvc run` to do. It lists stages by name and defines
 Along with `dvc.yaml`, there is another file created by `dvc run` that shows
 the hash values for dependencies and outputs.
 
-`dvc.lock`{{open}}
+`stages/dvc.lock`{{open}}
 
 You can see that the structure of `dvc.lock` and `dvc.yaml` are similar.
 `dvc.lock` also has `prepare` to show the stage name and lists `cmd`, `deps`
@@ -133,7 +133,7 @@ and this points us to `.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir` file
 similar to other directories tracked by DVC. You can see the contents of this
 `.dir` file in VS Code.
 
-`.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir`{{open}}
+`stages/.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir`{{open}}
 
 It's a JSON file that lists all individual elements of the directory with
 their hash values.
@@ -143,7 +143,7 @@ their hash values.
 For example we can learn individual hash value of `train.tsv` as
 `fcebfd4c6f1645ac4987d39f1c5cf610` and check its content
 
-`.dvc/cache/fc/ebfd4c6f1645ac4987d39f1c5cf610`{{open}}.
+`stages/.dvc/cache/fc/ebfd4c6f1645ac4987d39f1c5cf610`{{open}}.
 
 Note also that DVC adds `/prepared` to `.gitignore` to prevent output data
 files to be committed in Git.
