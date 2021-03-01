@@ -55,23 +55,16 @@ Now when we run the pipeline again, we see that `prepare` step is run again.
 
 But as the _content_ of files in `prepared/` directory didn't change because of
 the line we added, DVC doesn't run `featurize` again. DVC checks the actual
-content of outputs to see whether a stage has to be run or not. 
+content of outputs to see whether a stage has to be run or not.
 
-In the next step we'll see how to clean artifacts and rerun everything. 
+Congratulations! This completes this scenario. In the next scenario we'll add
+more stages and parameters to the pipeline we created here. We'll also measure
+and plot the performance of our work using DVC.
 
-
-Finally, let's save the current state of the project to Git:
+As a last step, let's save the current state of the project to Git:
 
 `git status -s`{{execute}}
 
 `git add data/.gitignore dvc.yaml dvc.lock`{{execute}}
 
-`git commit -m "Create data preparation stage"`{{execute}}
-   
-It is also recommended to push the data files to the storage:
-   
-`dvc status -c`{{execute}}
-
-`dvc push`{{execute}}
-
-`dvc status -c`{{execute}}
+`git commit -m "Created featurization pipeline"`{{execute}}

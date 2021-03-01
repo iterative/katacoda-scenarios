@@ -20,7 +20,7 @@
         ],
         "intro": {
             "text": "intro.md",
-            "credits": "https://dvc.org/doc/get-started",
+            "credits": "https://dvc.org/doc/start/data-pipelines",
             "courseData": "install.sh",
             "code": "init.sh"
         },
@@ -48,8 +48,8 @@
         }
     },
     "environment": {
-        "uilayout": "vscode-terminal-split",
-        "uieditorpath": "/root/stages"
+        "uieditorpath": "/root/stages",
+        "uilayout": "vscode-terminal-split"
     },
     "backend": {
         "imageid": "ubuntu:2004"
