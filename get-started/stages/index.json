@@ -10,8 +10,12 @@
                 "text": "01-build-a-stage.md"
             },
             {
-                "title": "Reproduce a stage",
-                "text": "02-reproduce-a-stage.md"
+                "title": "Build a stage by configuration file",
+                "text": "02-build-a-stage-using-configuration.md"
+            },
+            {
+                "title": "Reproduce a pipeline",
+                "text": "03-reproduce-a-pipeline.md"
             }
         ],
         "intro": {
@@ -40,7 +44,8 @@
         }
     },
     "environment": {
-        "uilayout": "vscode-terminal-split"
+        "uilayout": "vscode-terminal-split",
+        "uieditorpath": "/root/stages"
     },
     "backend": {
         "imageid": "ubuntu:2004"
