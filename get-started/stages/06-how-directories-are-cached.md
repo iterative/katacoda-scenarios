@@ -1,14 +1,13 @@
-# How directories are cached and tracked?
+# How are directories cached and tracked?
 
-DVC stores the _outputs_ defined in `run` in the `cache` similar to other
-data. `data/prepared` directory is defined as an output in `prepare` stage
-and its MD5 hash is:
+By default, DVC stores the _outputs_ defined in `stage add` in the `cache`
+similar to other data. `data/prepared` directory is defined as an output in
+`prepare` stage, and the hash value is:
 
 `grep -A 1 'path: data/prepared' dvc.lock`{{execute}}
 
-and this points us to `.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir` file
-similar to other directories tracked by DVC. You can see the contents of this
-`.dir` file in VS Code.
+and this points us to `.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir` file.
+You can see the contents of this `.dir` file in VS Code:
 
 `stages/.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir`{{open}}
 
@@ -34,4 +33,3 @@ complete this step.
 git add dvc.yaml dvc.lock .gitignore
 git commit -m "Configured prepare stage"
 ```{{execute}}
-

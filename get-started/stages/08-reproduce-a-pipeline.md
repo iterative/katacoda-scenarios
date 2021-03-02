@@ -4,14 +4,21 @@ In a machine learning project, stages usually depend on more than one element
 and when one of these change, the part of the pipeline that depends on the
 updated element becomes invalid.
 
-In the previous stage, we created a stage without actually running by editing
-`dvc.yaml`.
+In the previous stage, we created a stage by editing `dvc.yaml`.
 
-We use `dvc repro` command to (re)run a stage and (re)produce its outputs.
+Now we are ready to execute the whole pipeline with a single command.
 
-In the first step, we run the `prepare` stage by supplying it to `dvc run` and
-let's see what happens when we reproduce. First we check the status of the stage
-by `dvc status` command:
+Note that we didn't update `dvc.lock` file when we update `dvc.yaml`. Currently,
+the lock file doesn't contain any information about the new stage.
+
+We have two options to run the whole pipeline. We saw the first one earlier,
+while running the `prepare` step. We can use `dvc exp run` to run the whole
+pipeline.
+
+The other option is `dvc repro` command to (re)run a stage and (re)produce its
+outputs. We will use `repro` in this step to run the pipeline. 
+
+First we check the status of the stage by `dvc status` command:
 
 `dvc status prepare`{{execute}}
 
@@ -27,7 +34,7 @@ Let's check the next stage's status:
 
 `dvc status featurize`{{execute}}
 
-For the `featurization` stage, however, DVC runs the script because the outputs
+For the _featurization_ stage, however, DVC runs the script because the outputs
 are not where they should be, and the dependencies (as their MD5 hashes are
 missing from `dvc.lock`) are considered changed.
 
@@ -56,15 +63,3 @@ Now when we run the pipeline again, we see that `prepare` script is run again.
 But as the _content_ of files in `prepared/` directory didn't change, DVC
 doesn't run `featurize` again. DVC checks the actual content of outputs to see
 whether a stage has to be run or not.
-
-Congratulations! This completes this scenario. In the next scenario we'll add
-more stages and parameters to the pipeline. We'll also measure and plot the
-performance of our work using DVC.
-
-As a last step, let's save the current state of the project to Git:
-
-`git status -s`{{execute}}
-
-`git add data/.gitignore dvc.yaml dvc.lock`{{execute}}
-
-`git commit -m "Created featurization pipeline"`{{execute}}
