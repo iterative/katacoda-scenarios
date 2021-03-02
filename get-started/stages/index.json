@@ -20,7 +20,7 @@
             {
                 "title": "Running a stage",
                 "text": "04-running-a-stage.md"
-            }
+            },
             {
                 "title": "How DVC tracks stages?",
                 "text": "05-how-dvc-tracks-stages.md"
