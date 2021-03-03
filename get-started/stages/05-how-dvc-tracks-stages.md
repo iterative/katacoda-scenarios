@@ -2,9 +2,9 @@
 
 DVC stores stage configuration in `dvc.yaml` files. These files are
 automatically created by DVC to check the change in data and code, and also
-define relationships between the data, code, and stages.
+define relationships between the data, code, parameters, and stages.
 
-Let's take a look at `dvc.yaml` file to see what it contains:
+Let's take a look at `dvc.yaml` file to see the content:
 
 `stages/dvc.yaml`{{open}}
 
