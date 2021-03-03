@@ -2,43 +2,43 @@
     "title": "Stages and Pipelines",
     "description": "Process data and generate outputs in a reproducible way.",
     "difficulty": "Beginner",
-    "time": "10-15 min",
+    "time": "15-25 min",
     "details": {
         "steps": [
             {
-                "title": "What's a stage?",
+                "title": "Step 1",
                 "text": "01-whats-a-stage.md"
             },
             {
-                "title": "Manual data preparation",
+                "title": "Step 2",
                 "text": "02-manual-data-preparation.md"
             },
             {
-                "title": "Adding a stage",
+                "title": "Step 3",
                 "text": "03-adding-a-stage.md"
             },
             {
-                "title": "Running a stage",
+                "title": "Step 4",
                 "text": "04-running-a-stage.md"
             },
             {
-                "title": "How DVC tracks stages?",
+                "title": "Step 5",
                 "text": "05-how-dvc-tracks-stages.md"
             },
             {
-                "title": "How directories are cached?",
+                "title": "Step 6",
                 "text": "06-how-directories-are-cached.md"
             },
             {
-                "title": "Add featurization stage",
+                "title": "Step 7",
                 "text": "07-add-featurization-stage.md"
             },
             {
-                "title": "Reproduce a pipeline",
+                "title": "Step 8",
                 "text": "08-reproduce-a-pipeline.md"
             },
             {
-                "title": "Visualize the pipeline",
+                "title": "Step 9",
                 "text": "09-visualize-the-pipeline.md"
             },
             {
