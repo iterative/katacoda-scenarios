@@ -7,16 +7,13 @@ similar to other data. `data/prepared` directory is defined as an output in
 `grep -A 1 'path: data/prepared' dvc.lock`{{execute}}
 
 and this points us to `.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir` file.
-You can see the contents of this `.dir` file in VS Code:
-
-`stages/.dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir`{{open}}
 
 It's a JSON file that lists all individual elements of the directory with
 their hash values.
 
 `cat .dvc/cache/f1/b1d214c4cc7a3efdb200410227b975.dir | jq`{{execute}}
 
-For example we can learn individual hash value of `train.tsv` as
+For example we see that the individual hash value of `train.tsv` as
 `fcebfd4c6f1645ac4987d39f1c5cf610` and check its content
 
 `stages/.dvc/cache/fc/ebfd4c6f1645ac4987d39f1c5cf610`{{open}}.
