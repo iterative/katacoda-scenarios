@@ -28,16 +28,6 @@ set -o verbose
 :; git add data/.gitignore data/data.xml.dvc
 :; git commit -m "Add raw data to project"
 
-### Setup a data storage
-:; dvc remote add --default mystorage /tmp/data-storage
-:; git commit .dvc/config -m "Configure data storage"
-
-### Push cached files to data storage
-:; dvc push -q
-
-### Unzip the code 
-# :; unzip ../code.zip 
-# :; rm ../code.zip
 :; git add params.yaml src/
 :; git commit -m "Add source files to the repository"
 
