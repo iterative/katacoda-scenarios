@@ -1,11 +1,8 @@
 # Add evaluation stage
 
-Evaluation is done by `src/evaluate.py`:
+The evaluation script is `src/evaluate.py`:
 
-```
-highlight src/evaluate.py \
-    -O xterm256 | less -r
-```{{execute}}
+`pipelines/src/evaluate.py`{{open}}
 
 Let's add an evaluation stage to the pipeline:
 

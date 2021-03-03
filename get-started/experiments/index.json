@@ -1,5 +1,5 @@
 {
-    "title": "Experiments and Metrics",
+    "title": "Experiments",
     "description": "Try different approaches or solutions and compare their results.",
     "difficulty": "Beginner",
     "time": "10-15 min",
@@ -26,8 +26,16 @@
         },
         "assets": {
             "host01": [
-                { "file": "prepare.sh", "target": "/usr/local/bin/", "chmod": "+x" },
-                { "file": "play", "target": "/usr/local/bin/", "chmod": "+x" }
+                {
+                    "file": "prepare.sh",
+                    "target": "/usr/local/bin/",
+                    "chmod": "+x"
+                },
+                {
+                    "file": "play",
+                    "target": "/usr/local/bin/",
+                    "chmod": "+x"
+                }
             ]
         }
     },

@@ -19,17 +19,12 @@
         },
         {
             "course_id": "stages",
-            "title": "Stages",
+            "title": "Stages and Pipelines",
             "description": "Process data and generate outputs in a reproducible way."
         },
         {
-            "course_id": "pipelines",
-            "title": "Pipelines",
-            "description": "Connect stages by outputs and dependencies, to create a dependency graph (or a data pipeline)."
-        },
-        {
             "course_id": "experiments",
-            "title": "Experiments and Metrics",
+            "title": "Experiments",
             "description": "Try different approaches or solutions and compare their results."
         }
     ]
