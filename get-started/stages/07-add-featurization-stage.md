@@ -39,3 +39,7 @@ dataset.
 
 [bcpipeline]: https://dvc.org/doc/user-guide/basic-concepts/pipeline
 
+```
+git add dvc.yaml dvc.lock data/.gitignore
+git commit -m "Configured prepare stage"
+```{{execute}}

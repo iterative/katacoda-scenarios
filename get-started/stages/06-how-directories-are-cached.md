@@ -27,6 +27,6 @@ Finally we are registering `dvc.yaml`, `dvc.lock` and `.gitignore` to Git and
 complete this step.
 
 ```
-git add dvc.yaml dvc.lock .gitignore
+git add dvc.yaml dvc.lock data/.gitignore
 git commit -m "Configured prepare stage"
 ```{{execute}}

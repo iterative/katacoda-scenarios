@@ -41,4 +41,3 @@ identical:
 grep 'md5' data/data.xml.dvc
 grep -A 1 'path: data/data.xml' dvc.lock
 ```{{execute}}
-

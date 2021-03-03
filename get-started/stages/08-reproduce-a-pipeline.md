@@ -6,7 +6,7 @@ updated element becomes invalid.
 
 In the previous stage, we created a stage by editing `dvc.yaml`.
 
-Now we are ready to execute the whole pipeline with a single command.
+Now we are ready to execute the pipeline with a single command.
 
 Note that we didn't update `dvc.lock` file when we update `dvc.yaml`. Currently,
 the lock file doesn't contain any information about the new stage.
@@ -26,9 +26,10 @@ and rerun the stage:
 
 `dvc repro prepare`{{execute}}
 
-As you can see, DVC didn't run `src/prepare.py` because the dependencies of the
+DVC didn't run `src/prepare.py` because the dependencies of the
 stage (`data/data.xml` and `src/prepare.py`) didn't change, and the outputs of the
-stage (`data/prepared/`) are already where expected.
+stage (`data/prepared/`) are already where expected. Unlike `dvc exp run`, `dvc
+repro` doesn't report an error in subsequent runs.
 
 Let's check the next stage's status:
 

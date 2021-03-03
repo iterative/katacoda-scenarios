@@ -28,7 +28,11 @@ If you like, you can convert this output to an image (or PS, PDF) file by
 
 and convert the `.dot` file to PNG using: 
 
-`dvc dag --dot | dot -Tpng pipeline.png `{{execute}}
+`dvc dag --dot | dot -Tpng -o pipeline.png `{{execute}}
+
+Now we can view the pipeline in an image format by clicking the link below: 
+
+`stages/pipeline.png`{{open}}
 
 Let's commit the changes in this step to Git.
 
