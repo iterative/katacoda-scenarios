@@ -46,17 +46,21 @@ Note the second list shows `data/data.xml.dvc` as a stage that outputs
 a stage as well. 
 
 As we said above, `dvc stage add` doesn't immediately run the program supplied.
-In order to run a stage, DVC provides `dvc exp run` command.<sup>3</sup> In the
-next step we'll run the stage we defined. 
+In order to run a stage, DVC provides another command. In the next step we'll
+run the stage we defined. 
+
+We add and commit files changed in this step:
+
+```
+git add data/.gitignore dvc.yaml 
+git commit -m "added prepare stage"
+```{{execute}}
 
 ## Notes
 
-<sup>1</sup>: Previously, in DVC 1.x, we used `dvc run` to add new stages and running
+<sup>1</sup> Previously, in DVC 1.x, we used `dvc run` to add new stages and running
 them. This command is still available but deprecated, and will be removed in a
 future version. 
 
-<sup>2</sup>: Stages added by `dvc run` are (by default) run immediately. This is an
+<sup>2</sup> Stages added by `dvc run` are (by default) run immediately. This is an
 important difference between DVC 2.0 and DVC 1.x.
-
-<sup>3</sup>: `dvc exp` is a new command introduced in DVC 2.0. It has much more
-capabilities than just running the stages. We'll cover it in a later scenario.
