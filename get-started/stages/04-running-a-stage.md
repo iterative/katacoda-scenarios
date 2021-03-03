@@ -1,9 +1,10 @@
 # Running a stage
 
-There are basically two options when it comes to run a stage in DVC 2.0. The
-first is running a stage as a part of `dvc experiment`. The command `dvc exp
-run` can be used to run the stages we defined by `dvc stage add`. We'll see the
-second option later in this scenario. 
+There are basically two options when it comes to run a stage in DVC 2.0.
+
+The first is running a stage as a part of `dvc experiment`. The command `dvc
+exp run` can be used to run the stages we defined by `dvc stage add`. We'll see
+the second option later in this scenario.
 
 In order to run a single stage found in the current directory, we provide the
 name to `dvc exp run` like:
@@ -28,8 +29,11 @@ you can use `--force` option:
 
 `dvc exp run --force prepare`{{execute}}
 
-`dvc exp run` has much more capabilities, like running a set of chained
-dependencies
+[`dvc exp run`][cmdexprun] has many more capabilities, like running a set of chained
+dependencies, running a set of stages selected by globs or running experiments
+in parallel. Please see the [reference][cmdexprun] for further information.
+
+[cmdexprun]: https://dvc.org/doc/command-reference/exp/run
 
 `dvc exp` is the _experiment management_ command introduced in DVC 2.0 and we'll
 delve into it in another scenario.
