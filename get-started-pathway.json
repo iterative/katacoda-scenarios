@@ -23,9 +23,9 @@
             "description": "Process data and generate outputs in a reproducible way."
         },
         {
-            "course_id": "experiments",
-            "title": "Experiments",
-            "description": "Try different approaches or solutions and compare their results."
+            "course_id": "params-metrics-plots",
+            "title": "Params, Metrics, Plots",
+            "description": "Use parameters in stages and compare their results in metrics and plots"
         }
     ]
 }
