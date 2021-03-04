@@ -8,9 +8,10 @@ code changes.
 The programs that run these stages already have parameter definitions in them.
 
 `project/src/prepare.py`{{open}}
+
 `project/src/featurization.py`{{open}}
 
-Specifically we can see that `params.yaml` is loaded in these files:
+Specifically, we can see that `params.yaml` is loaded in these files:
 
 `grep 'params.yaml' src/prepare.py src/featurization.py`{{execute}}
 
