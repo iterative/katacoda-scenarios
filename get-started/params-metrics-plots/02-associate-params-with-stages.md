@@ -35,10 +35,10 @@ Diffing `dvc.lock`, you can see how the parameter values are tracked:
 
 `git diff dvc.lock`{{execute}}
 
-Note that, we didn't specify parameters values in `dvc.yaml`. DVC retrieved them
-from `params.yaml` and begin tracking. 
+Note that we didn't specify parameter values in `dvc.yaml`. DVC retrieved them
+from `params.yaml` and begin tracking in `dvc.lock`.
 
-As a last step we add and commit the changes in the repository.
+As a last step, we add and commit the changes in the repository.
 
 ```
 git add dvc.yaml dvc.lock
