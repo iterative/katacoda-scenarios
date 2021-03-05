@@ -34,6 +34,9 @@ set -o verbose
 :; git add *
 :; git commit -m "Beginning of the params-metrics-plots scenario"
 
+### Starting web server to show plots
+:; nohup python3 -m http.server -d /root/project/ 80 &> /dev/null &
+
 ### Checking the DVC version
 :; dvc version
 
