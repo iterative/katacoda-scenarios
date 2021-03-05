@@ -1,9 +1,9 @@
 # Add evaluation stage
 
-After adding the parameters to the pipeline, we want to see the effects these
-parameters have in performance of the model. 
+After adding the parameters to the pipeline, we want to see the effects of these
+parameters in performance.
 
-In order to evaluate the resulting model's performance, we use: 
+In order to evaluate the resulting model's performance, we use:
 
 `project/src/evaluate.py`{{open}}
 
@@ -17,12 +17,14 @@ dvc stage add \
     -d data/features \
     --metrics-no-cache scores.json \
     --plots-no-cache prc.json \
-    python \
+    --plots-no-cache roc.json \
+    python3 \
         src/evaluate.py \
         model.pkl \
         data/features \
         scores.json \
-        prc.json
+        prc.json \
+        roc.json
 ```{{execute}}
 
 Note the `--metrics-no-cache` argument used in `dvc stage add`. This defines
@@ -51,7 +53,7 @@ We can see the generated metric file:
 Let's get another snapshot of the project by committing changes to
 Git:
 
-`git add dvc.yaml dvc.lock scores.json prc.json`{{execute}}
+`git add dvc.yaml dvc.lock scores.json prc.json roc.json`{{execute}}
 
 `git commit -m "Create evaluation stage"`{{execute}}
 

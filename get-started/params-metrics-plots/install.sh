@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # install highlight
-apt install --yes highlight
+apt update
+apt install --yes highlight graphviz
 
 # install dvc
 pip3 install --ignore-installed PyYAML

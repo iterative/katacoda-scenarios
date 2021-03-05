@@ -18,7 +18,7 @@ params:
     - prepare.seed
 </pre>
 
-For featurization, we have two other variables: 
+For featurization, we have two other parameters: 
 
 
 <pre class="file" data-filename="project/dvc.yaml" data-target="insert" data-marker="# FEATURIZE PARAMS">
@@ -35,10 +35,12 @@ Diffing `dvc.lock`, you can see how the parameter values are tracked:
 
 `git diff dvc.lock`{{execute}}
 
+(You can quit from diff by pressing `q`)
+
 Note that we didn't specify parameter values in `dvc.yaml`. DVC retrieved them
 from `params.yaml` and begin tracking in `dvc.lock`.
 
-As a last step, we add and commit the changes in the repository.
+As the last step, we add and commit the changes to the repository.
 
 ```
 git add dvc.yaml dvc.lock
