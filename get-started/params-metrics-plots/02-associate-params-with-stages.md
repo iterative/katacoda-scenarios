@@ -14,8 +14,8 @@ params in
 
 <pre class="file" data-filename="project/dvc.yaml" data-target="insert" data-marker="# PREPARE PARAMS">
 params:
-    - split
-    - seed
+    - prepare.split
+    - prepare.seed
 </pre>
 
 For featurization, we have two other variables: 
@@ -23,8 +23,8 @@ For featurization, we have two other variables:
 
 <pre class="file" data-filename="project/dvc.yaml" data-target="insert" data-marker="# FEATURIZE PARAMS">
 params:
-    - max_features
-    - ngrams
+    - featurize.max_features
+    - featurize.ngrams
 </pre>
 
 Let's run the pipeline again and see the effects of these changes on `dvc.lock`:
@@ -43,4 +43,4 @@ As a last step we add and commit the changes in the repository.
 ```
 git add dvc.yaml dvc.lock
 git commit -m "Added parameters to pipeline"
-```
+```{{execute}}
