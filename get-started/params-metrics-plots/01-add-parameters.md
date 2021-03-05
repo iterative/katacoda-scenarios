@@ -31,3 +31,14 @@ or Python files and run the affected stages.
 By default, DVC uses a file named `params.yaml` to track parameters. (What a
 coincidence!) However, these parameters should be referenced in `dvc.yaml` to
 associate them with the stages.
+
+Let's begin by reproducing the pipeline without parameters as a baseline:
+
+`dvc repro`{{execute}}
+
+and commit changes to Git:
+
+```
+git add data/.gitignore dvc.yaml data/prepared/ dvc.lock
+git commit -m "baseline experiment without parameters"
+```{{execute}}
