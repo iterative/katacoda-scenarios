@@ -42,11 +42,19 @@ metrics to compare pipeline runs. `evaluate.py` writes precision, recall and
 thresholds in an array to plots file. In a later step we'll generate a plot
 showing the change in performance w.r.t. parameters. 
 
-Now let's run the pipeline to generate first metrics and plots files. 
+Let's get a diagram of the pipeline:
+
+`dvc dag --dot | dot -Tpng -o ../pipeline.png`{{execute}}
+
+and see it using VS Code:
+
+`pipeline.png`{{open}}
+
+Now run the pipeline to generate metrics and plots files. 
 
 `dvc repro`{{execute}}
 
-We can see the generated metric file: 
+We can see the generated metrics file: 
 
 `project/scores.json`{{open}}
 

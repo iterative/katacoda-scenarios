@@ -1,7 +1,7 @@
 # Compare experiments across the tags
 
-In this step we'll update `params.yaml` file by increasing the maximum number of
-features from `500` to `1500` and `ngrams` to 2. We'll observe the change in AUC
+In this step, we'll update `params.yaml` file by increasing the maximum number of
+features from `500` to `1500` and `ngrams` to 2. We'll observe the change in metrics
 afterwards.
 
 Now open `params.yaml` in the editor: 
@@ -14,7 +14,7 @@ Now click on the next button to update `max_features` value.
 max_features: 1500
 </pre>
 
-and the next button to update `ngrams` value:
+and also update `ngrams` value:
 
 <pre class="file" data-filename="project/params.yaml" data-target="insert" data-marker="ngrams: 1">
 ngrams: 2

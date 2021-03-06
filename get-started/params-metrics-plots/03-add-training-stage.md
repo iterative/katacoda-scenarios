@@ -32,15 +32,6 @@ dvc stage add \
   python3 src/train.py data/features model.pkl
 ```{{execute}}
 
-
-Now let's get a diagram of the pipeline:
-
-`dvc dag --dot | dot -Tpng -o ../pipeline.png`{{execute}}
-
-and see it using VS Code:
-
-`pipeline.png`{{open}}
-
 Now let's run the whole pipeline to obtain the classification model,
 `model.pkl`.
 

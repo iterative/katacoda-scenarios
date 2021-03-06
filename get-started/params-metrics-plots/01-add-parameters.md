@@ -24,7 +24,7 @@ Let's now check the content of `params.yaml` using the link below:
 `project/params.yaml`{{open}}
 
 In this scenario, we'll update the pipeline to see the effects of changes in
-these variables. DVC has _first class support_ for parameters used in
+these variables. DVC has _first-class support_ for parameters used in
 experimentation. It can track the parameter changes defined in YAML, JSON, TOML,
 or Python files and run the affected stages.
 
