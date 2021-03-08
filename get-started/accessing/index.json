@@ -7,27 +7,27 @@
         "steps": [
             {
                 "title": "Step 1",
-                "text": "step1.md"
+                "text": "01-download.md"
             },
             {
                 "title": "Step 2",
-                "text": "step2.md"
+                "text": "02-how-does-it-work.md"
             },
             {
                 "title": "Step 3",
-                "text": "step3.md"
+                "text": "03-discovering-files.md"
             },
             {
                 "title": "Step 4",
-                "text": "step4.md"
+                "text": "04-python-api.md"
             },
             {
                 "title": "Step 5",
-                "text": "step5.md"
+                "text": "05-reusing-data-or-models.md"
             },
             {
                 "title": "Step 6",
-                "text": "step6.md"
+                "text": "06-data-model-and-artifact.md"
             }
         ],
         "intro": {
@@ -38,7 +38,11 @@
         },
         "assets": {
             "host01": [
-                { "file": "process.py", "target": "/root", "chmod": "+x" }
+                {
+                    "file": "process.py",
+                    "target": "/root",
+                    "chmod": "+x"
+                }
             ]
         }
     },
