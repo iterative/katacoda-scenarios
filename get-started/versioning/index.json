@@ -7,27 +7,27 @@
         "steps": [
             {
                 "title": "Track a file or directory",
-                "text": "track-a-file-or-directory.md"
+                "text": "01-track-a-file-or-directory.md"
             },
             {
                 "title": "How does it work?",
-                "text": "how-does-it-work.md"
+                "text": "02-how-does-it-work.md"
             },
             {
                 "title": "Data remotes",
-                "text": "data-remotes.md"
+                "text": "03-data-remotes.md"
             },
             {
                 "title": "Saving and retrieving data",
-                "text": "saving-and-retrieving-data.md"
+                "text": "04-saving-and-retrieving-data.md"
             },
             {
                 "title": "Making changes",
-                "text": "making-changes.md"
+                "text": "05-making-changes.md"
             },
             {
                 "title": "Switching between versions",
-                "text": "switching-between-versions.md"
+                "text": "06-switching-between-versions.md"
             }
         ],
         "intro": {
