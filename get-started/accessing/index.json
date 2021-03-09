@@ -47,7 +47,8 @@
         }
     },
     "environment": {
-        "uilayout": "terminal"
+        "uieditorpath": "/root/project",
+        "uilayout": "vscode-terminal-split"
     },
     "backend": {
         "imageid": "ubuntu:2004"
