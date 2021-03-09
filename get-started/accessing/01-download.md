@@ -11,9 +11,9 @@ dvc get \
 `md5sum data.xml`{{execute}}
 
 `dvc get` automated this by reading `https://remote.dvc.org/dataset-registry`
-from the
+from 
 [.dvc/config](https://github.com/iterative/dataset-registry/blob/master/.dvc/config)
-and `a3/04afb96060aad90176268345e10355` path from the
+and `a3/04afb96060aad90176268345e10355` path from
 [get-started/data.xml.dvc](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc).
 
 Just for fun, let's try to download it with `wget`:
@@ -36,5 +36,7 @@ a [_data/model registry_][data-registries].
 
 By the way, we didn't initialize DVC in the current directory yet. `dvc get`
 doesn't need an initialized project. 
+
+Let's initialize DVC now. 
 
 `dvc init`{{execute}}

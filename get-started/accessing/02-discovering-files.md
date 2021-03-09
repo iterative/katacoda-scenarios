@@ -18,4 +18,3 @@ dvc list \
 
 Again, the only difference is that we pass Git URL. Same interface as with
 `dvc get`. Now, you can see the `data.xml` file. As well as regular Git files.
-
