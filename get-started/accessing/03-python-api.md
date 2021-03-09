@@ -1,32 +1,32 @@
 # Python API
 
-Alternatively to the command line `dvc get`, we can also access any DVC-tracked
-artifact "natively" from Python code with
-[`dvc.api`](https://dvc.org/doc/api-reference):
+Besides using DVC commands in the command line, we can also access any
+DVC-tracked artifact "natively" from Python with 
+[the API](https://dvc.org/doc/api-reference):
 
-`cat process.py| highlight -S python -O xterm256`{{execute}}
+`process.py`{{open}}
 
-> We need to install DVC as a Python library to import if from Python code:
-
-`pip3 install --user dvc`{{execute}}
+The script downloads the data like `dvc get` and counts the number of lines in it: 
 
 `python3 process.py`{{execute}}
 
-Yes, the interface is similar to the one we've seen already - Git repo URL,
-path, etc. And internally it works similar - reads Git repo to get data storage
-URL, get file path in it, etc. So, what are the differences then? Let's name a
-few important one:
+The interface of [`dvc.api.open`][apiopen] is similar to the one we've
+seen already. It receives Git repo URL and path as arguments, and works
+the same way. There are also a few important differences:
+
+[apiopen]: https://dvc.org/doc/api-reference/open
 
 - **It's Python "native"**, we don't have to combine CLI scripts with Python
   code to process data or deploy a model.
 
-- **It doesn't consume space for a file on the file system** - it reads data
-  directly into memory, yay! If you want to process a large dataset or deploy a
-  huge model you don't have to keep it on the disk.
+- **It doesn't consume space for a file on the file system** - `open()` doesn't
+  consume space in the file system - it loads the data into the memory as
+  needed.  If you want to process a large dataset or deploy a huge model you
+  don't have to keep it on the disk.
 
 - **It reads data lazily** - it doesn't allocate a huge array internally to hold
-  the data, instead it streams it from the remote storage. Means, you can
+  the data, instead it streams it from the remote storage. This means you can
   process a huge dataset with a very low memory footprint.
 
 - **It unifies storage access** - it doesn't matter if actual data is stored on
-  S3, or Google Cloud, or SSH - interface is the same.
+  S3, or Google Cloud, or SSH - the interface is the same.
