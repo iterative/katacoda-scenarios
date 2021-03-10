@@ -1,6 +1,6 @@
 # Download
 
-We can download any file in a DVC repository:
+We can download any file from a DVC repository:
 
 ```
 dvc get \
