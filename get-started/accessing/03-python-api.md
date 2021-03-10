@@ -2,13 +2,15 @@
 
 Besides using DVC commands in the command line, we can also access any
 DVC-tracked artifact "natively" from Python with 
-[the API](https://dvc.org/doc/api-reference):
+[the API](https://dvc.org/doc/api-reference). Please click the below link to open the Python script:
 
 `process.py`{{open}}
 
 The script downloads the data like `dvc get` and counts the number of lines in it: 
 
-`python3 process.py`{{execute}}
+`python3 ~/process.py`{{execute}}
+
+Note that the script doesn't download the data to a file before counting the lines. 
 
 The interface of [`dvc.api.open`][apiopen] is similar to the one we've
 seen already. It receives Git repo URL and path as arguments, and works

@@ -11,6 +11,7 @@ A DVC repository and the `dvc import` command are enough to export data and mode
 reuse them, track upstream changes, etc. Let's give it a try:
 
 ```
+mkdir data
 dvc import \
   https://github.com/iterative/dataset-registry \
   get-started/data.xml -o data/data.xml
@@ -19,7 +20,7 @@ dvc import \
 `dvc import` command creates `data/data.xml.dvc` to track the dependency. You
 can view this file in the editor: 
 
-`data/data.xml.dvc`{{open}}
+`project/data/data.xml.dvc`{{open}}
 
 The `url` and `rev_lock` subfields under `repo` are used to save the origin and
 the version of the dependency, respectively:
