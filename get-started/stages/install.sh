@@ -12,4 +12,4 @@ wget -O /etc/bash_completion.d/dvc \
     https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash
 
 # this is about a bug in index.json
-rm -f /root/stages/play /root/stages/prepare.sh /root/stages/example-flow.png
+rm -f /root/project/play /root/project/prepare.sh /root/project/example-flow.png

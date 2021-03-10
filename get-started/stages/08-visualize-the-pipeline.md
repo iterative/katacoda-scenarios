@@ -32,7 +32,7 @@ and convert the `.dot` file to PNG using:
 
 Now we can view the pipeline in an image format by clicking the link below: 
 
-`stages/pipeline.png`{{open}}
+`project/pipeline.png`{{open}}
 
 Let's commit the changes in this step to Git.
 

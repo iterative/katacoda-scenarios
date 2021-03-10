@@ -7,43 +7,39 @@
         "steps": [
             {
                 "title": "Step 1",
-                "text": "01-whats-a-stage.md"
+                "text": "01-manual-data-preparation.md"
             },
             {
                 "title": "Step 2",
-                "text": "02-manual-data-preparation.md"
+                "text": "02-adding-a-stage.md"
             },
             {
                 "title": "Step 3",
-                "text": "03-adding-a-stage.md"
+                "text": "03-running-a-stage.md"
             },
             {
                 "title": "Step 4",
-                "text": "04-running-a-stage.md"
+                "text": "04-how-dvc-tracks-stages.md"
             },
             {
                 "title": "Step 5",
-                "text": "05-how-dvc-tracks-stages.md"
+                "text": "05-how-directories-are-cached.md"
             },
             {
                 "title": "Step 6",
-                "text": "06-how-directories-are-cached.md"
+                "text": "06-add-featurization-stage.md"
             },
             {
                 "title": "Step 7",
-                "text": "07-add-featurization-stage.md"
+                "text": "07-reproduce-a-pipeline.md"
             },
             {
                 "title": "Step 8",
-                "text": "08-reproduce-a-pipeline.md"
-            },
-            {
-                "title": "Step 9",
-                "text": "09-visualize-the-pipeline.md"
+                "text": "08-visualize-the-pipeline.md"
             },
             {
                 "title": "Congratulations!",
-                "text": "10-ending.md"
+                "text": "09-ending.md"
             }
         ],
         "intro": {
@@ -66,17 +62,17 @@
                 },
                 {
                     "file": "params.yaml",
-                    "target": "/root/stages"
+                    "target": "/root/project"
                 },
                 {
                     "file": "src/",
-                    "target": "/root/stages/"
+                    "target": "/root/project/"
                 }
             ]
         }
     },
     "environment": {
-        "uieditorpath": "/root/stages",
+        "uieditorpath": "/root/project",
         "uilayout": "vscode-terminal-split"
     },
     "backend": {
