@@ -1,7 +1,6 @@
 # Manual Data Preparation 
 
-The script `src/prepare.py` splits the data into train and test sets. You can
-click the link below to open the preparation script in the editor.
+The script `src/prepare.py` splits the data into train and test sets. (Click links to open in the editor)
 
 `project/src/prepare.py`{{open}}
 
@@ -11,14 +10,7 @@ We first run this script without DVC to see what happens:
 
 It splits the data into train and test sets. We check the contents:
 
-`head data/prepared/train.tsv`{{execute}}
-
-`head data/prepared/test.tsv`{{execute}}
-
-Our goal is to create a project that classifies the questions and assigns tags
-to them. In a world _without_ DVC tasks like data preparation, training,
-testing, evaluation, etc. are run manually, and this is prone to errors all we
-know from working with too many moving parts.  
+`ls -l data/prepared`{{execute}}
 
 We use DVC to automate the tasks required to build a classifier and provide a
 fully reproducible pipeline.

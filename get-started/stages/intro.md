@@ -8,6 +8,7 @@ This process is reflected in DVC with a [data pipeline][bcpipeline]. In this
 scenario, we begin to build pipelines using stage definitions and connect them
 together.
 
+
 [bcpipeline]: https://dvc.org/doc/user-guide/basic-concepts/pipeline
 
 [Stages][bcstage] are the basic building blocks of pipelines in DVC. They define
@@ -16,9 +17,12 @@ produce some output.
 
 [bcstage]: https://dvc.org/doc/user-guide/basic-concepts/stage
 
-We have a machine learning project already provided in `~/project`. We provided
-source files in `~/project/src/`, downloaded data to `data/data.xml`, and made
-it smaller. You can review these steps in more detail in [Data and Model
+In this scenario, our goal is to create a project that classifies the
+questions and assigns tags to them. In a world _without_ DVC, tasks like
+data preparation, training, testing, evaluation are run manually, and this
+is prone to errors caused by too many moving parts. We provided the source
+files in `~/project/src/`, downloaded data to `data/data.xml`, and made it
+smaller. You can review these steps in more detail in [Data and Model
 Versioning][v] and [Accessing Data and Models][a] scenarios.
 
 [v]: https://katacoda.com/dvc/courses/get-started/versioning
