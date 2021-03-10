@@ -66,17 +66,17 @@
                 },
                 {
                     "file": "params.yaml",
-                    "target": "/root/stages"
+                    "target": "/root/project"
                 },
                 {
                     "file": "src/",
-                    "target": "/root/stages/"
+                    "target": "/root/project/"
                 }
             ]
         }
     },
     "environment": {
-        "uieditorpath": "/root/stages",
+        "uieditorpath": "/root/project",
         "uilayout": "vscode-terminal-split"
     },
     "backend": {

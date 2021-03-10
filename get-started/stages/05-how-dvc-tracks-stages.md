@@ -6,7 +6,7 @@ define relationships between the data, code, parameters, and stages.
 
 Let's take a look at `dvc.yaml` file to see the content:
 
-`stages/dvc.yaml`{{open}}
+`project/dvc.yaml`{{open}}
 
 It contains what we supplied to `dvc stage add`. It lists stages by name and defines
 `cmd`, `deps` and `outs` for each of them.

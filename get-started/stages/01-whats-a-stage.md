@@ -7,7 +7,7 @@ machine learning project.
 
 [bcstage]: https://dvc.org/doc/user-guide/basic-concepts/stage
 
-We have a machine learning project already provided in `~/stages`. We covered
+We have a machine learning project already provided in `~/project`. We covered
 these steps in previous scenarios. DVC is installed. Data is downloaded from
 `https://github.com/iterative/dataset-registry` and made smaller. A _local
 remote_ is created in `/tmp/data-storage` named `mystorage`, and the data in the
