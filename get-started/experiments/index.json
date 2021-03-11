@@ -47,10 +47,6 @@
                     "file": "play",
                     "target": "/usr/local/bin/",
                     "chmod": "+x"
-                },
-                {
-                    "file": "project.zip",
-                    "target": "/root/"
                 }
             ]
         }
