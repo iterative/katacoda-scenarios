@@ -21,6 +21,5 @@ source /etc/bash_completion
 # clear screen
 clear
 
-cd project
 # auto-play preparation steps
 DELAY=0 play prepare.sh

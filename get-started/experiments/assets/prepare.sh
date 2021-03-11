@@ -11,6 +11,8 @@ curl "$PROJECT_DOWNLOAD_URL" project.zip
 unzip -o project.zip 
 rm -f project.zip
 
+cd project
+
 ### Starting web server to show plots
 :; nohup python3 -m http.server -d /root/project/ 80 &> /dev/null &
 
