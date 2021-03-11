@@ -3,6 +3,14 @@
 
 set -o verbose
 
+### Download the project data and code
+
+PROJECT_DOWNLOAD_URL="http://one.emresult.com/~iex/project-experiments.zip"
+
+curl "$PROJECT_DOWNLOAD_URL" project.zip
+unzip -o project.zip 
+rm -f project.zip
+
 ### Starting web server to show plots
 :; nohup python3 -m http.server -d /root/project/ 80 &> /dev/null &
 

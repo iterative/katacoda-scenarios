@@ -8,12 +8,6 @@ trap 'echo -ne "\033[00m"' DEBUG
 git config --global user.email "guest@example.com"
 git config --global user.name "Guest User"
 
-PROJECT_DOWNLOAD_URL="http://one.emresult.com/~iex/project-experiments.zip"
-
-curl "$PROJECT_DOWNLOAD_URL" project.zip
-unzip -o project.zip 
-rm -f project.zip
-
 # wait for dvc and highlight to be installed
 clear
 :;: ===================================
