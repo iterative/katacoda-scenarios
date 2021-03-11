@@ -6,6 +6,9 @@ increase, however, it becomes unfeasible to keep track of the changes through
 Git commits. Because of this DVC introduced a new way of running and comparing
 experiments in repositories, without checking in them to Git.
 
+[scparams]:
+https://katacoda.com/dvc/courses/get-started/params-metrics-plots
+
 All commands we'll see in this scenario are used as subcommands of `dvc exp`.
 Let's see the help text first: 
 
