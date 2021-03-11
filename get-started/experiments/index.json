@@ -49,23 +49,15 @@
                     "chmod": "+x"
                 },
                 {
-                    "file": "params.yaml",
-                    "target": "/root/project"
-                },
-                {
-                    "file": "dvc.yaml",
-                    "target": "/root/project"
-                },
-                {
-                    "file": "src/",
-                    "target": "/root/project/"
+                    "file": "project.zip",
+                    "target": "/root/"
                 }
             ]
         }
     },
     "environment": {
         "uieditorpath": "/root/project",
-        "uilayout": "vscode-terminal-split"
+        "uilayout": "editor-terminal"
     },
     "backend": {
         "imageid": "ubuntu:2004"

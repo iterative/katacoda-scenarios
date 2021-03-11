@@ -6,11 +6,11 @@ apt install --yes highlight graphviz
 
 # install dvc
 pip3 install --ignore-installed PyYAML
-pip3 install --pre dvc
+pip3 install dvc
 
-# install bash completion for dvc
-wget -O /etc/bash_completion.d/dvc \
-    https://raw.githubusercontent.com/iterative/dvc/master/scripts/completion/dvc.bash
+dvc completion > /etc/bash_completion.d/dvc
+
+unzip project.zip
 
 # this is about a bug in index.json
 rm -f /root/project/play /root/project/prepare.sh /root/project/example-flow.png
