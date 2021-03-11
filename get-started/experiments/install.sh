@@ -10,7 +10,7 @@ pip3 install dvc
 
 dvc completion > /etc/bash_completion.d/dvc
 
-unzip project.zip
+unzip -o project.zip
 
-# this is about a bug in index.json
+# this is to fix a bug in index.json
 rm -f /root/project/play /root/project/prepare.sh /root/project/example-flow.png

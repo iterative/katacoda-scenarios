@@ -41,5 +41,6 @@ As the last step, we add and commit the changes to the repository.
 
 ```
 git add dvc.yaml dvc.lock
+
 git commit -m "Added parameters to pipeline"
 ```{{execute}}
