@@ -15,13 +15,12 @@ flag:
 dvc exp run --queue -S featurize.max_features=500 -S train.min_split=8
 dvc exp run --queue -S featurize.max_features=1000 -S train.min_split=16
 dvc exp run --queue -S featurize.max_features=1500 -S train.min_split=32
-dvc exp run --queue -S featurize.max_features=500 -S train.min_split=2 -S train.n_est=100
-dvc exp run --queue -S featurize.max_features=500  -S train.min_split=8 -S train.n_est=100
-dvc exp run --queue -S featurize.max_features=500  -S train.min_split=64 -S train.n_est=100
+dvc exp run --queue -S featurize.max_features=1500 -S train.n_est=20
+dvc exp run --queue -S featurize.max_features=1500 -S train.n_est=60
+dvc exp run --queue -S featurize.max_features=1500 -S train.n_est=100
 ```{{execute}}
 
-Next, run all queued experiments using `--run-all` (and in parallel with
-`--jobs`):
+Next, run all queued experiments using `--run-all`:
 
-`dvc exp run --run-all --jobs 2`{{execute}}
+`dvc exp run --run-all`{{execute}}
 
