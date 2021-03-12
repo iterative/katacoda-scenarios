@@ -17,7 +17,10 @@ The first command we'll use is `dvc exp run`. It's like `dvc repro` with added
 features for experiments, like changing the hyperparameters with command line
 options: 
 
-`dvc exp run --set-param featurize.max_features=2000`{{execute}}
+```
+dvc exp run --set-param featurize.max_features=1500 \
+            -S featurize.n_grams=2
+```{{execute}}
 
 The `--set-param` (or `-S`) flag sets the values for parameters as a shortcut
 to editing `params.yaml`.
