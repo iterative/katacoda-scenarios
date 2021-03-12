@@ -16,7 +16,7 @@ their hash values.
 For example we see that the individual hash value of `train.tsv` as
 `fcebfd4c6f1645ac4987d39f1c5cf610` and check its content
 
-`project/.dvc/cache/fc/ebfd4c6f1645ac4987d39f1c5cf610`{{open}}.
+`.dvc/cache/fc/ebfd4c6f1645ac4987d39f1c5cf610`{{open}}.
 
 Note also that DVC adds `/prepared` to `.gitignore` to prevent output data
 files to be committed in Git.

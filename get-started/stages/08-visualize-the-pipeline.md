@@ -30,9 +30,10 @@ and convert the `.dot` file to PNG using:
 
 `dvc dag --dot | dot -Tpng -o pipeline.png `{{execute}}
 
-Now we can view the pipeline in an image format by clicking the link below: 
+Now we can view the pipeline [here][pipeline].
 
-`project/pipeline.png`{{open}}
+[pipeline]:
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/pipeline.png
 
 Let's commit the changes in this step to Git.
 
