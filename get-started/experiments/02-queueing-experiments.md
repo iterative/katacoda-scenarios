@@ -19,7 +19,7 @@ dvc exp run --queue -n exp-4 -S train.n_est=200
 ```{{execute}}
 
 The `-n` option is used to label the experiments. If it's not specified,
-DVC provides a name. We provide for ease of reference here. 
+DVC provides a name. We set the names for easier reference here. 
 
 Next, run all queued experiments using `--run-all`:
 

@@ -10,5 +10,6 @@ exp apply` and committed.
 For more information about experiment management, you can [read the section in
 the user guide](https://dvc.org/doc/user-guide/experiment-management). 
 
-This completes Getting Started section. Thank you for joining us. 
+This completes Getting Started course for DVC on Katacoda. Thank you for
+joining us. 
 
