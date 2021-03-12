@@ -11,10 +11,11 @@ Let's setup experiments with different hyperparameters. We can define all the
 combinations we want to try without executing anything, by using the `--queue`
 flag:
 
-
 ```
-dvc exp run --queue -S train.min_split=8
-dvc exp run --queue -S train.min_split=64
+dvc exp run --queue -S featurize.max_features=500 -S train.min_split=8
+dvc exp run --queue -S featurize.max_features=1000 -S train.min_split=16
+dvc exp run --queue -S featurize.max_features=1500 -S train.min_split=32
+dvc exp run --queue -S featurize.max_features=2000 -S train.min_split=64
 dvc exp run --queue -S train.min_split=2 -S train.n_est=100
 dvc exp run --queue -S train.min_split=8 -S train.n_est=100
 dvc exp run --queue -S train.min_split=64 -S train.n_est=100
