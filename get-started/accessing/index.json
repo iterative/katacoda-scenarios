@@ -36,7 +36,7 @@
             "host01": [
                 {
                     "file": "process.py",
-                    "target": "/root",
+                    "target": "/root/project",
                     "chmod": "+x"
                 }
             ]
