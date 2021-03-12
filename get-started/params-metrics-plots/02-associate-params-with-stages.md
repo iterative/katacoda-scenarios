@@ -30,9 +30,7 @@ Run the pipeline again and see the effects of these changes on `dvc.lock`:
 
 Diffing `dvc.lock`, you can see how the parameter values are tracked:
 
-`git diff dvc.lock`{{execute}}
-
-(You can quit from diff by pressing `q`)
+`git --no-pager diff dvc.lock`{{execute}}
 
 Note that we didn't specify parameter values in `dvc.yaml`. DVC retrieved them
 from `params.yaml` and begin tracking in `dvc.lock`.
