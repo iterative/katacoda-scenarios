@@ -48,8 +48,7 @@ Let's get a diagram of the pipeline:
 
 and see it [here][pipeline].
 
-[pipeline]: 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/pipeline.png
+[pipeline]: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/pipeline.png
 
 Now run the pipeline to generate metrics and plots files. 
 
