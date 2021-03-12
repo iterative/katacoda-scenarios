@@ -19,7 +19,7 @@ options:
 
 ```
 dvc exp run --set-param featurize.max_features=1500 \
-            -S featurize.n_grams=2
+            -S featurize.ngrams=2
 ```{{execute}}
 
 The `--set-param` (or `-S`) flag sets the values for parameters as a shortcut
