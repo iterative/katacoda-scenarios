@@ -3,8 +3,8 @@
 In the [parameters and metrics scenario][scparams], we learned how to tune
 pipelines and compare their performance. However, when the number of parameters
 increases, it becomes unfeasible to keep track of the changes through Git
-commits. Because of this DVC introduced a new way of running and comparing
-experiments in repositories, without checking in them to Git.
+commits. In version 2.0, DVC introduced a new way of running and comparing
+experiments in repositories without checking in them to Git.
 
 [scparams]: https://katacoda.com/dvc/courses/get-started/params-metrics-plots
 
@@ -32,5 +32,3 @@ Check that the `featurize.max_features` value has been updated in `params.yaml`:
 We can compare the experiment results with:
 
 `dvc exp diff`{{execute}}
-
-

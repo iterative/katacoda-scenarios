@@ -10,8 +10,5 @@ dvc exp show --no-timestamp \
              --no-pager
 ```{{execute}}
 
-Although the differences in metrics are miniscule due to the small size of
+Although the differences in metrics are minuscule due to the small size of
 the data set, `exp-2` is a bit better in terms of `avg_prec`.
-
-
-

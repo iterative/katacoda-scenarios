@@ -1,7 +1,7 @@
 ## Persisting experiments
 
-Now that we know the best parameters, let's keep that experiment and ignore the
-rest.
+Now that we know the best parameters, let's keep that experiment and
+ignore the rest.
 
 `dvc exp apply` rolls back the workspace to the specified experiment:
 
