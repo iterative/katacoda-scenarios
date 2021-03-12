@@ -13,7 +13,8 @@ experiments since the last commit, but don't worry. The experiments remain
 cached and can be shown or applied. For example, use `-n` to show
 experiments from the previous _n_ commits:
 
-``` dvc exp show -n 2 --no-timestamp \
+```
+dvc exp show -n 2 --no-timestamp \
       --include-params train.n_est,train.min_split
 ```{{execute}}
 
@@ -22,9 +23,9 @@ Eventually, old experiments may clutter the experiments table.
 `dvc exp gc` removes all references to old experiments:
 
 ```
-dvc exp gc --workspace
+dvc exp gc  --workspace
 dvc exp show -n 2 --no-timestamp \
-                    --include-params train.n_est,train.min_split
+                  --include-params train.n_est,train.min_split
 ```{{execute}}
 
 > [`dvc exp gc`][dvcexpgc] only removes references to the experiments, not the cached

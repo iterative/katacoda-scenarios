@@ -5,7 +5,7 @@ rest.
 
 `dvc exp apply` rolls back the workspace to the specified experiment:
 
-`dvc exp apply exp-ed009`{{execute}}
+`dvc exp apply exp-2`{{execute}}
 
 `dvc exp apply` is similar to [`dvc checkout`][dvccheckout], but it works with experiments. DVC
 tracks everything in the pipeline for each experiment (parameters, metrics,
@@ -21,7 +21,7 @@ regular pipeline by committing it in our Git branch:
 
 ```
 git add dvc.lock params.yaml prc.json roc.json scores.json
-git commit -m "Preserve best ROC experiment"
+git commit -m "Preserve best Avg. Prec. experiment"
 ```{{execute}}
 
 > [`dvc push`][dvcpush] only uploads persistent experiments that have been
