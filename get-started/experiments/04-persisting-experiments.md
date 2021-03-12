@@ -13,7 +13,7 @@ dependencies, and outputs) and can later retrieve it as needed.
 
 Check that `scores.json` reflects the metrics in the table above:
 
-`project/scores.json`{{open}}
+`scores.json`{{open}}
 
 Once an experiment has been applied to the workspace, it is no different from
 reproducing the result without `dvc exp run`. Let's make it persistent in our
@@ -21,7 +21,7 @@ regular pipeline by committing it in our Git branch:
 
 ```
 git add dvc.lock params.yaml prc.json roc.json scores.json
-git commit -a -m "Preserve best ROC experiment"
+git commit -m "Preserve best ROC experiment"
 ```{{execute}}
 
 > [`dvc push`][dvcpush] only uploads persistent experiments that have been

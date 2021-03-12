@@ -12,12 +12,13 @@ combinations we want to try without executing anything, by using the `--queue`
 flag:
 
 ```
-dvc exp run --queue -S featurize.max_features=500 -S train.min_split=8
-dvc exp run --queue -S featurize.max_features=1500 -S train.min_split=32
-dvc exp run --queue -S featurize.max_features=1500 -S train.n_est=20
-dvc exp run --queue -S featurize.max_features=1500 -S train.n_est=60
-dvc exp run --queue -S featurize.max_features=1500 -S train.n_est=100
+dvc exp run --queue -n exp-1 -S train.min_split=8 -S train.n_est=100
+dvc exp run --queue -n exp-2 -S train.min_split=32 -S train.n_est=50
+dvc exp run --queue -n exp-3 -S train.min_split=64 -S train.n_est=100
 ```{{execute}}
+
+The `-n` options is used to label the experiments. If it's not specified,
+DVC provides a name. 
 
 Next, run all queued experiments using `--run-all`:
 
