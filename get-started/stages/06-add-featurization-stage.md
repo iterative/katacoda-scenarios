@@ -23,7 +23,7 @@ Now please click the below text to append the stage configuration to the file.
 <pre class="file" data-filename="project/dvc.yaml" data-target="append">
   featurize:
     cmd: >-
-      python3 src/featurization.py data/prepared data/features
+        python3 src/featurization.py data/prepared data/features
     deps:
       - src/featurization.py
       - data/prepared
