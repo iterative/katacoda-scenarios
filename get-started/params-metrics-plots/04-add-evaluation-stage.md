@@ -63,7 +63,7 @@ Git:
 
 `git add dvc.yaml dvc.lock scores.json prc.json roc.json`{{execute}}
 
-`git commit -m "Create evaluation stage"`{{execute}}
+`git commit -m "Created evaluation stage"`{{execute}}
 
 Let's also assign a Git tag. It will serve as a checkpoint for us to
 compare this approach with other experiments in the future, or if we
