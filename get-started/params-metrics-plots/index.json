@@ -61,7 +61,7 @@
                     "target": "/root/project"
                 },
                 {
-                    "file": "src/",
+                    "file": "src",
                     "target": "/root/project/"
                 }
             ]
