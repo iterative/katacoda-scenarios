@@ -13,7 +13,6 @@ flag:
 
 ```
 dvc exp run --queue -S featurize.max_features=500 -S train.min_split=8
-dvc exp run --queue -S featurize.max_features=1000 -S train.min_split=16
 dvc exp run --queue -S featurize.max_features=1500 -S train.min_split=32
 dvc exp run --queue -S featurize.max_features=1500 -S train.n_est=20
 dvc exp run --queue -S featurize.max_features=1500 -S train.n_est=60
