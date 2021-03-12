@@ -5,7 +5,7 @@ experiments table:
 
 ```
 dvc exp show --no-timestamp \
-               --include-params train.n_est,train.min_split
+               --include-params featurize.max_features,train.n_est,train.min_split
 ```{{execute}}
 
 Where did all the experiments go? By default, `dvc exp show` only shows
@@ -13,9 +13,8 @@ experiments since the last commit, but don't worry. The experiments remain
 <abbr>cached</abbr> and can be shown or applied. For example, use `-n` to show
 experiments from the previous _n_ commits:
 
-```
-dvc exp show -n 2 --no-timestamp \
-                  --include-params train.n_est,train.min_split
+``` dvc exp show -n 2 --no-timestamp \
+      --include-params featurize.max_features,train.n_est,train.min_split
 ```{{execute}}
 
 Eventually, old experiments may clutter the experiments table.
