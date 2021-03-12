@@ -6,7 +6,7 @@ To compare all of these experiments, we need more than `dvc exp diff`:
 
 ```
 dvc exp show --no-timestamp \
-               --include-params featurize.max_features,train.n_est,train.min_split
+               --include-params train.n_est,train.min_split
 ```{{execute}}
 
 Each experiment is given an arbitrary name by default (although we can specify
