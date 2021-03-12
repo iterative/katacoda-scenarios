@@ -37,6 +37,9 @@ set -o verbose
 :; pip3 install wheel
 :; pip3 install -r src/requirements.txt
 
+### Starting web server to show images
+:; nohup python3 -m http.server -d /root/project/ 80 &> /dev/null &
+
 ### Checking the DVC version
 :; dvc version
 

@@ -6,11 +6,11 @@ factor in stages. Parameters have their own block `params` in `dvc.yaml`.
 You can view `dvc.yaml` by clicking the link below. (Please do not change
 anything as we'll edit it automatically.)
 
-`project/dvc.yaml`{{open}}
+`dvc.yaml`{{open}}
 
 Now we'll add the following section in place of the `# PREPARE PARAMS` comment:
 
-<pre class="file" data-filename="project/dvc.yaml" data-target="insert" data-marker="# PREPARE PARAMS">
+<pre class="file" data-filename="dvc.yaml" data-target="insert" data-marker="# PREPARE PARAMS">
 params:
     - prepare.split
     - prepare.seed
@@ -18,7 +18,7 @@ params:
 
 For featurization, we have two other parameters: 
 
-<pre class="file" data-filename="project/dvc.yaml" data-target="insert" data-marker="# FEATURIZE PARAMS">
+<pre class="file" data-filename="dvc.yaml" data-target="insert" data-marker="# FEATURIZE PARAMS">
 params:
     - featurize.max_features
     - featurize.ngrams
@@ -30,9 +30,7 @@ Run the pipeline again and see the effects of these changes on `dvc.lock`:
 
 Diffing `dvc.lock`, you can see how the parameter values are tracked:
 
-`git diff dvc.lock`{{execute}}
-
-(You can quit from diff by pressing `q`)
+`git --no-pager diff dvc.lock`{{execute}}
 
 Note that we didn't specify parameter values in `dvc.yaml`. DVC retrieved them
 from `params.yaml` and begin tracking in `dvc.lock`.

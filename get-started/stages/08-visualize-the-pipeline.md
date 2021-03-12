@@ -10,11 +10,11 @@ There is another command to visualize DVC pipelines. With `dvc dag` it's
 possible to get an ASCII diagram of the stage dependencies. Let's see what our
 pipeline is doing:
 
-`dvc dag`{{execute}}
+`dvc dag --no-pager`{{execute}}
 
 Instead of stage names, we can also get the outputs of each stage.
 
-`dvc dag --outs`{{execute}}
+`dvc dag --no-pager --outs`{{execute}}
 
 When we need to convert this graph into a graphical one, DVC aids us by
 providing a `.dot` file in GraphViz format: 
@@ -30,9 +30,9 @@ and convert the `.dot` file to PNG using:
 
 `dvc dag --dot | dot -Tpng -o pipeline.png `{{execute}}
 
-Now we can view the pipeline in an image format by clicking the link below: 
+Now we can view the pipeline [here][pipeline].
 
-`project/pipeline.png`{{open}}
+[pipeline]: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/pipeline.png
 
 Let's commit the changes in this step to Git.
 

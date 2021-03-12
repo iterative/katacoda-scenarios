@@ -61,7 +61,7 @@
                     "target": "/root/project"
                 },
                 {
-                    "file": "src/",
+                    "file": "src",
                     "target": "/root/project/"
                 }
             ]
@@ -69,7 +69,7 @@
     },
     "environment": {
         "uieditorpath": "/root/project",
-        "uilayout": "vscode-terminal-split"
+        "uilayout": "editor-terminal"
     },
     "backend": {
         "imageid": "ubuntu:2004"

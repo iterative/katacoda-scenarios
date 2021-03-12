@@ -36,7 +36,7 @@
             "host01": [
                 {
                     "file": "process.py",
-                    "target": "/root",
+                    "target": "/root/project",
                     "chmod": "+x"
                 }
             ]
@@ -44,7 +44,7 @@
     },
     "environment": {
         "uieditorpath": "/root/project",
-        "uilayout": "vscode-terminal-split"
+        "uilayout": "editor-terminal"
     },
     "backend": {
         "imageid": "ubuntu:2004"

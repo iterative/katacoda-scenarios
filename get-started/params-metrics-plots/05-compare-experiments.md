@@ -6,7 +6,7 @@ afterwards.
 
 Now open `params.yaml` in the editor: 
 
-`project/params.yaml`{{open}}
+`params.yaml`{{open}}
 
 Now click on the next button to update `max_features` value.
 
