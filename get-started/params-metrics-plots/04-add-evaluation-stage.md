@@ -5,7 +5,7 @@ parameters in performance.
 
 In order to evaluate the resulting model's performance, we use:
 
-`project/src/evaluate.py`{{open}}
+`src/evaluate.py`{{open}}
 
 We add this as another stage to the pipeline:
 
@@ -46,9 +46,10 @@ Let's get a diagram of the pipeline:
 
 `dvc dag --dot | dot -Tpng -o ../pipeline.png`{{execute}}
 
-and see it using VS Code:
+and see it [here][pipeline].
 
-`pipeline.png`{{open}}
+[pipeline]: 
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/pipeline.png
 
 Now run the pipeline to generate metrics and plots files. 
 
@@ -56,7 +57,7 @@ Now run the pipeline to generate metrics and plots files.
 
 We can see the generated metrics file: 
 
-`project/scores.json`{{open}}
+`scores.json`{{open}}
 
 Let's get another snapshot of the project by committing changes to
 Git:
