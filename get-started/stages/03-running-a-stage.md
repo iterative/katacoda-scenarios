@@ -12,12 +12,7 @@ stage has changed, this command runs the stage.
 It doesn't run the stage because no dependencies have changed, no outputs are
 missing and no parameters to the experiment have changed. 
 
-If you want to run the stage even if no dependencies or parameters have changed,
-you can use `--force` option:
-
-`dvc repro --force prepare`{{execute}}
-
-Note that as you don't have any other stages currently, you can:  
+Note that as you don't have any other stages currently, you can:
 
 `dvc repro`{{execute}}
 
