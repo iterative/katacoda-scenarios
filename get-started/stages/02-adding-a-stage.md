@@ -1,7 +1,8 @@
 # Adding a stage to run data preparation
 
-We manage stages in DVC by `dvc stage`. It has two subcommands `add` and `list`,
-for adding new stages and listing the existing.<sup>1</sup>
+We manage stages in DVC by `dvc stage`. It has two subcommands
+`add` and `list`, for adding new stages and listing
+them.<sup>1</sup>
 
 We don't have any stages now. We'll add one by `dvc stage add`. A stage requires
 a name (`-n`), one or more dependencies (`-d`), one or more outputs (`-o`) and a
