@@ -18,7 +18,7 @@ attributes found in `dvc.yaml`, it lists the hash values to track the changes.
 Usually, `dvc.yaml` files are considered manually editable, and
 `dvc.lock` files are for DVC's consumption. 
 
-> ℹ️  We didn't `dvc add src/prepare.py`, and DVC wasn't tracking it
+> 🦉 We didn't `dvc add src/prepare.py`, and DVC wasn't tracking it
 > before `dvc stage add`. We can add code dependencies to stages without
 > checking in them first. 
 
