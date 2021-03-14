@@ -1,23 +1,19 @@
 # Running a stage
 
-We define stages to run them by
+We run particular stages by supplying their name to `dvc repro`. 
 
 `dvc repro prepare`{{execute}}
 
-If the stage outputs are not where they should be, or the dependencies of the
-stage has changed, this command runs the stage.
+It runs the stage if dependencies of a stage has changed or outputs are absent.
 
 `dvc repro prepare`{{execute}}
 
-It doesn't run the stage because no dependencies have changed, no outputs are
-missing and no parameters to the experiment have changed. 
+The second command doesn't run the stage because no dependencies have changed,
+no outputs are missing and no other conditions have been modified.
 
-Note that as you don't have any other stages currently, you can:
+It's possible to run the whole pipeline with a single:
 
 `dvc repro`{{execute}}
-
-to reproduce the stage. The command runs the whole pipeline and that pipeline
-has a single stage. 
 
 In the next step, let's see how DVC tracks stage information in files and how
 can we define new stages by editing them.
