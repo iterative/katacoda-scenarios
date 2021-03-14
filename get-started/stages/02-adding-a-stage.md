@@ -8,6 +8,8 @@ We 'll add a stage by [`dvc stage add`][stageadd]. A stage requires a name
 (`-n`) and a command, like `python3 src/prepare.py data/data.xml` at the end.
 It usually has dependencies (`-d`), and outputs (`-o`) also.
 
+[stageadd]: https://dvc.org/doc/command-reference/stage/add
+
 Command supplied to the stage definition does not run immediately.<sup>2</sup>
 
 ```
