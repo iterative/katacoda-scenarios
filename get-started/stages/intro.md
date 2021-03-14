@@ -17,13 +17,18 @@ produce some output.
 
 [bcstage]: https://dvc.org/doc/user-guide/basic-concepts/stage
 
-In this scenario, our goal is to create a project that classifies the
-questions and assigns tags to them. In a world _without_ DVC, tasks like
-data preparation, training, testing, evaluation are run manually, and this
-is prone to errors caused by too many moving parts. We provided the source
-files in `~/project/src/`, downloaded data to `data/data.xml`, and made it
-smaller. You can review these steps in more detail in [Data and Model
-Versioning][v] and [Accessing Data and Models][a] scenarios.
+In this scenario, our goal is to create a project that
+classifies the questions and assigns tags to them. Tasks like
+data preparation, training, testing, evaluation are run
+manually, and this is prone to errors caused by too many moving
+parts. Pipelines provide a reproducible way to organize these
+tasks. 
+
+In this scenario, we provide the source files in
+`~/project/src/`, downloaded data to `data/data.xml`, and made
+it smaller. You can review these steps in more detail in [Data
+and Model Versioning][v] and [Accessing Data and Models][a]
+scenarios.
 
 [v]: https://katacoda.com/dvc/courses/get-started/versioning
 [a]: https://katacoda.com/dvc/courses/get-started/accessing
