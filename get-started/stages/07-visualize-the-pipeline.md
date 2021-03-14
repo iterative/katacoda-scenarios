@@ -10,23 +10,18 @@ There is another command to visualize DVC pipelines. With `dvc dag` it's
 possible to get an ASCII diagram of the stage dependencies. Let's see what our
 pipeline is doing:
 
-`dvc dag --no-pager`{{execute}}
+`DVC_PAGER=cat dvc dag`{{execute}}
 
 Instead of stage names, we can also get the outputs of each stage.
 
-`dvc dag --no-pager --outs`{{execute}}
+`DVC_PAGER=cat dvc dag --outs`{{execute}}
 
-When we need to convert this graph into a graphical one, DVC aids us by
-providing a `.dot` file in GraphViz format: 
-
-`dvc dag --dot`{{execute}}
-
-If you like, you can convert this output to an image (or PS, PDF) file by
-[GraphViz][graphviz]. You can install GraphViz via: 
+DVC also provides `.dot` output in GraphViz format. If you like, you can
+convert this output to an image (or PS, PDF), first installing
+[GraphViz][graphviz].
 
 `apt update & apt install -y graphviz`{{execute}}
 
-and convert the `.dot` file to PNG using: 
 
 `dvc dag --dot | dot -Tpng -o pipeline.png `{{execute}}
 
