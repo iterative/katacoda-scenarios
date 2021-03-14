@@ -20,10 +20,10 @@ DVC also provides `.dot` output in GraphViz format. If you like, you can
 convert this output to an image (or PS, PDF), first installing
 [GraphViz][graphviz].
 
-`apt update & apt install -y graphviz`{{execute}}
-
-
-`dvc dag --dot | dot -Tpng -o pipeline.png `{{execute}}
+```
+apt update & apt install -y graphviz
+dvc dag --dot | dot -Tpng -o ../pipeline.png 
+```{{execute}}
 
 Now we can view the pipeline [here][pipeline].
 
@@ -32,7 +32,7 @@ Now we can view the pipeline [here][pipeline].
 Let's commit the changes in this step to Git.
 
 ```
-git add dvc.yaml 
+git add dvc.yaml data/.gitignore dvc.lock src/prepare.py
 
 git commit -m "another stage to the pipeline is added"
 ```{{execute}}
