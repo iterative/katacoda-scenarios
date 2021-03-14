@@ -5,7 +5,7 @@ apt install --yes highlight
 
 # install dvc
 pip3 install --ignore-installed PyYAML
-pip3 install --pre dvc
+pip3 install dvc
 
 # install bash completion for dvc
 wget -O /etc/bash_completion.d/dvc \

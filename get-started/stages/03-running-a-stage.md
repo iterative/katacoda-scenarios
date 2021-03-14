@@ -1,42 +1,21 @@
 # Running a stage
 
-There are basically two options when it comes to run a stage in DVC 2.0.
+We run particular stages by supplying their name to `dvc repro`. 
 
-The first is running a stage as a part of `dvc experiment`. The command `dvc
-exp run` can be used to run the stages we defined by `dvc stage add`. We'll see
-the second option later in this scenario.
+`dvc repro prepare`{{execute}}
 
-In order to run a single stage found in the current directory, we provide the
-name to `dvc exp run` like:
+It runs the stage if the dependencies of a stage have changed or the
+outputs are absent.
 
-`dvc exp run prepare`{{execute}}
+`dvc repro prepare`{{execute}}
 
-If the stage outputs are not where they should be, or the dependencies of the
-stage has changed, this command runs the stage.
+The command doesn't run the second time as no dependencies have been
+modified, no outputs are missing, and no other conditions have been
+changed.
 
-Note that it provides an auto-generated experiment name for the run. This
-experiment name is deterministic and depends on various factors that make up a
-stage unique. If none of these change, the _experiment_ we run will not be
-repeated by default. 
+It's possible to run the whole pipeline in a single command:
 
-`dvc exp run prepare`{{execute}}
-
-The command reports an error because no dependencies have changed, no outputs
-are missing and no params to the experiment have changed. 
-
-If you want to run the stage even if no dependencies or parameters have changed,
-you can use `--force` option:
-
-`dvc exp run --force prepare`{{execute}}
-
-[`dvc exp run`][cmdexprun] has many more capabilities, like running a set of chained
-dependencies, running a set of stages selected by globs or running experiments
-in parallel. Please see the [reference][cmdexprun] for further information.
-
-[cmdexprun]: https://dvc.org/doc/command-reference/exp/run
-
-`dvc exp` is the _experiment management_ command introduced in DVC 2.0 and we'll
-delve into it in another scenario.
+`dvc repro`{{execute}}
 
 In the next step, let's see how DVC tracks stage information in files and how
-can we define new stages by editing them.
+we can define new stages by editing them.
