@@ -23,23 +23,19 @@
             },
             {
                 "title": "Step 5",
-                "text": "05-how-directories-are-cached.md"
+                "text": "05-add-featurization-stage.md"
             },
             {
                 "title": "Step 6",
-                "text": "06-add-featurization-stage.md"
+                "text": "06-reproduce-a-pipeline.md"
             },
             {
                 "title": "Step 7",
-                "text": "07-reproduce-a-pipeline.md"
-            },
-            {
-                "title": "Step 8",
-                "text": "08-visualize-the-pipeline.md"
+                "text": "07-visualize-the-pipeline.md"
             },
             {
                 "title": "Congratulations!",
-                "text": "09-ending.md"
+                "text": "08-ending.md"
             }
         ],
         "intro": {
