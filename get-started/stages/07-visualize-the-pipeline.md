@@ -33,8 +33,7 @@ Let's commit the changes in this step to Git.
 
 ```
 git add dvc.yaml data/.gitignore dvc.lock src/prepare.py
-
-git commit -m "another stage to the pipeline is added"
+git commit -m "Added featurize stage"
 ```{{execute}}
 
 In the next step, we'll see how to run these two stages together.
