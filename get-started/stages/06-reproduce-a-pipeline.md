@@ -40,5 +40,4 @@ Now when we run the pipeline again, we see that `prepare` script is run.
 `dvc repro`{{execute}}
 
 But as the _content_ of files in `prepared/` directory didn't change, DVC
-doesn't run `featurize`. DVC checks the actual content of outputs to see
-whether a stage has to be run or not.
+doesn't run `featurize`. 
