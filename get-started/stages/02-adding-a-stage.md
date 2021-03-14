@@ -4,13 +4,11 @@ We manage stages in DVC by `dvc stage`. It has two subcommands
 `add` and `list`, for adding new stages and listing
 them.<sup>1</sup>
 
-We don't have any stages now. We'll add one by `dvc stage add`. A stage requires
-a name (`-n`), one or more dependencies (`-d`), one or more outputs (`-o`) and a
-command, like `python3 src/prepare.py data/data.xml` we used in the previous
-step. 
+We 'll add a stage by [`dvc stage add`][stageadd]. A stage requires a name
+(`-n`) and a command, like `python3 src/prepare.py data/data.xml` at the end.
+It usually has dependencies (`-d`), and outputs (`-o`) also.
 
 Command supplied to the stage definition does not run immediately.<sup>2</sup>
-At first we simply define a stage like:
 
 ```
 dvc stage add \
