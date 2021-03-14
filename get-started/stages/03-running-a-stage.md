@@ -8,10 +8,11 @@ It runs the stage if dependencies of a stage has changed or outputs are absent.
 
 `dvc repro prepare`{{execute}}
 
-The second command doesn't run the stage because no dependencies have changed,
-no outputs are missing and no other conditions have been modified.
+The command doesn't run the second time, because no dependencies have
+changed, no outputs are missing and no other conditions have been
+modified.
 
-It's possible to run the whole pipeline with a single:
+It's possible to run the whole pipeline in a single command:
 
 `dvc repro`{{execute}}
 
