@@ -1,18 +1,18 @@
 # Visualize the pipeline
 
-As we learned earlier, we can list the stages with 
+As you learned earlier, you can list the stages with:
 
 `dvc stage list`{{execute}}
 
-This command lists the names and outputs of each stage. 
+This command lists the names and outputs of each stage.
 
-There is another command to visualize DVC pipelines. With `dvc dag` it's
-possible to get an ASCII diagram of the stage dependencies. Let's see what our
-pipeline is doing:
+There is another command to visualize DVC pipelines. With `dvc dag`, it's
+possible to get an ASCII diagram of the stage dependencies. Let's see what
+our pipeline is doing:
 
 `DVC_PAGER=cat dvc dag`{{execute}}
 
-Instead of stage names, we can also get the outputs of each stage.
+Instead of the stage names, we can also get the outputs of each stage.
 
 `DVC_PAGER=cat dvc dag --outs`{{execute}}
 
