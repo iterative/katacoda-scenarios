@@ -2,8 +2,9 @@
 
 Now we are ready to execute the pipeline with a single command.
 
-> Note that we didn't update `dvc.lock` file when we update `dvc.yaml`.
-> Currently, the lock file doesn't contain any information about the new stage.
+> 🦉 Note that we didn't update `dvc.lock` file when we updated
+> `dvc.yaml`. Currently, the lock file doesn't contain any information
+> about the new stage.
 
 Let's check the status of the pipeline first:
 
@@ -13,15 +14,15 @@ Now, run the pipeline with a single command:
 
 `dvc repro`{{execute}}
 
-DVC doesn't run the `prepare` stage as it's dependencies didn't change and
-outputs are already where they should be. For the _featurization_ stage,
-however, DVC runs the script.
+DVC doesn't run the `prepare` stage as its dependencies didn't change, and
+outputs are already where they should be. For the _featurization_ stage
+DVC runs the script.
 
 Let's see the status of the whole pipeline using:
 
 `dvc status`{{execute}}
 
-The pipeline is fully run, outputs are all in the cache and without any
+The pipeline is fully run, the outputs are all in the cache, and without
 changes `dvc repro` won't rerun any part of it.
 
 `dvc repro`{{execute}}
@@ -35,9 +36,9 @@ following line to it.
 # THIS COMMENT CHANGES MD5 HASH OF THE FILE
 </pre>
 
-Now when we run the pipeline again, we see that `prepare` script is run. 
+This time, we see that `prepare` is run.
 
 `dvc repro`{{execute}}
 
 But as the _content_ of files in `prepared/` directory didn't change, DVC
-doesn't run `featurize`. 
+doesn't run `featurize`.

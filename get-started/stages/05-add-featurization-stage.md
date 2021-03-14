@@ -2,7 +2,7 @@
 
 This time, we'll add a stage by editing `dvc.yaml` instead of `dvc stage add`.
 
-_Featurization_ step is run by `src/featurization.py`. 
+_Featurization_ step is run by `src/featurization.py`.
 
 `src/featurization.py`{{open}}
 
