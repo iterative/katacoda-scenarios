@@ -22,31 +22,27 @@ dvc stage add \
 ```{{execute}}
 
 This definition adds a stage named `prepare`, which depends on the program file
-`src/prepare.py` and the data file `data/data.xml`. The stage should produce
+`src/prepare.py` and the data file `data/data.xml`. The stage produces
 `data/prepared` directory. 
 
-> Note that reading from data dependencies and writing to outputs are
+> ⚠️  Reading from the dependencies and writing to the outputs are
 > responsibilities of the command supplied to `dvc stage add`. DVC cannot
-> guarantee that the outputs will be produced by the command. 
+> guarantee that the outputs will be produced/changed by the command, it only
+> checks whether these outputs have changed. 
 
-In order to check the stages in a project, we can use: 
+In order to see the stages in a project, you can use: 
 
 `dvc stage list`{{execute}}
 
-and see stage names and outputs listed. By default `dvc stage list` lists the
-stages defined in `dvc.yaml`, in the current directory. When you want to change
-the scope you can add `--all` or `--recursive` as options, and list stages in
-other `*/dvc.yaml` as well. 
+By default `dvc stage list` lists the stages defined in `dvc.yaml` found in the
+current directory. When you want to change the scope you can add `--all` or
+`--recursive` as options, and list stages in other `*/dvc.yaml` as well. 
 
 `dvc stage list --all`{{execute}}
 
 Note the second list shows `data/data.xml.dvc` as a stage that outputs
-`data.xml`. From the point of view of DVC, a data file tracked by `.dvc` file is
-a stage as well. 
-
-As we said above, `dvc stage add` doesn't immediately run the program supplied.
-In order to run a stage, DVC provides another command. In the next step we'll
-run the stage we defined. 
+`data.xml`. From the point of view of DVC, a data file tracked by `.dvc` is
+a stage that can be a dependency of other stages. 
 
 We add and commit files changed in this step:
 
