@@ -27,7 +27,7 @@ This definition adds a stage named `prepare`, which depends on the program file
 `src/prepare.py` and the data file `data/data.xml`. The stage produces
 `data/prepared` directory. 
 
-> ⚠️  Reading from the dependencies and writing to the outputs are
+> 💡 Reading from the dependencies and writing to the outputs are
 > responsibilities of the command supplied to `dvc stage add`. DVC cannot
 > guarantee that the outputs will be produced/changed by the command, it only
 > checks whether these outputs have changed. 
