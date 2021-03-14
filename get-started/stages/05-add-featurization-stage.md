@@ -8,11 +8,11 @@ _Featurization_ step is run by `src/featurization.py`.
 
 We name the stage `featurize`. It has two dependencies: one is the code file,
 and the other is the `prepared` data we got from the previous stage. It
-produces the features ready for training as an output.
+produces the features ready for the training as an output.
 
 `dvc.yaml`{{open}}
 
-Please click the below text to append the stage configuration to the file.
+Please click the below text to append the stage configuration.
 
 <pre class="file" data-filename="project/dvc.yaml" data-target="append">
   featurize:
@@ -25,9 +25,9 @@ Please click the below text to append the stage configuration to the file.
       - data/features
 </pre>
 
-We created a [pipeline][bcpipeline] that receives the raw data in `data.xml`,
-partitions it into the train and test sets and extracts features for the
-dataset.
+We created a two-stage pipeline [pipeline][bcpipeline] that receives the
+raw data in `data.xml`, partitions it into the train and test sets, and
+extracts features for the dataset.
 
 [bcpipeline]: https://dvc.org/doc/user-guide/basic-concepts/pipeline
 
