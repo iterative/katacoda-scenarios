@@ -32,7 +32,7 @@ This definition adds a stage named `prepare`, which depends on the program file
 > guarantee that the outputs will be produced/changed by the command, it only
 > checks whether these outputs have changed. 
 
-In order to see the stages in a project, you can use: 
+See the stages in the project:
 
 `dvc stage list`{{execute}}
 
