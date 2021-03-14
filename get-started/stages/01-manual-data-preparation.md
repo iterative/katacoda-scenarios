@@ -9,10 +9,10 @@ We first run this script without DVC to see what happens:
 
 `python3 src/prepare.py data/data.xml`{{execute}}
 
-It splits the data into train and test sets.
+Let's see the output:
 
 `ls -l data/prepared`{{execute}}
 
-Let's delete the artifacts before reproducing them with DVC.
+We delete the artifacts before reproducing them with DVC.
 
 `rm -fr data/prepared`{{execute}}
