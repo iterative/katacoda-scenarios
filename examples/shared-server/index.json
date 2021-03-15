@@ -25,10 +25,7 @@
         }
     },
     "environment": {
-        "uilayout": "terminal",
-        "terminals": [{"name": "User 2",
-            "target": "host02"}
-        ]
+        "uilayout": "terminal"
     },
     "backend": {
         "imageid": "ubuntu:2004"
