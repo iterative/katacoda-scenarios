@@ -1,22 +1,16 @@
 # Create users and projects
 
 1. Create a couple of users and a group:
-
-   `useradd -m -s /bin/bash user1`{{execute}}
-   
-   `useradd -m -s /bin/bash user2`{{execute}}
-   
-   `ls -l /home/`{{execute}}
-   
-   `ls -al /home/user1/`{{execute}}
-   
-   `ls -al /home/user2/`{{execute}}
-
-   `addgroup team`{{execute}}
-   
-   `adduser user1 team`{{execute}}
-
-   `adduser user2 team`{{execute}}
+   ```
+   useradd -m -s /bin/bash user1
+   useradd -m -s /bin/bash user2
+   ls -l /home/
+   ls -al /home/user1/
+   ls -al /home/user2/
+   addgroup team
+   adduser user1 team
+   adduser user2 team
+   ```{{execute}}
 
 2. Create a Git project on the `$DATA` directory:
 
