@@ -1,0 +1,18 @@
+stages:
+  prepare:
+    cmd: python3 src/prepare.py data/data.xml
+    # PREPARE PARAMS
+    deps:
+    - data/data.xml
+    - src/prepare.py
+    outs:
+    - data/prepared
+  featurize:
+    cmd: >-
+      python3 src/featurization.py data/prepared data/features
+    # FEATURIZE PARAMS
+    deps:
+      - src/featurization.py
+      - data/prepared
+    outs:
+      - data/features
