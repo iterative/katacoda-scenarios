@@ -1,0 +1,77 @@
+{
+    "title": "Params, Metrics, and Plots",
+    "description": "Use parameters in stages and compare their results in metrics and plots",
+    "difficulty": "Beginner",
+    "time": "10-15 min",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1",
+                "text": "01-add-parameters.md"
+            },
+            {
+                "title": "Step 2",
+                "text": "02-associate-params-with-stages.md"
+            },
+            {
+                "title": "Step 3",
+                "text": "03-add-training-stage.md"
+            },
+            {
+                "title": "Step 4",
+                "text": "04-add-evaluation-stage.md"
+            },
+            {
+                "title": "Step 5",
+                "text": "05-compare-experiments.md"
+            },
+            {
+                "title": "Step 6",
+                "text": "06-plot-results.md"
+            },
+            {
+                "title": "Step 7",
+                "text": "07-congrats.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "credits": "https://dvc.org/doc/start/metrics-parameters-plots",
+            "courseData": "install.sh",
+            "code": "init.sh"
+        },
+        "assets": {
+            "host01": [
+                {
+                    "file": "prepare.sh",
+                    "target": "/usr/local/bin/",
+                    "chmod": "+x"
+                },
+                {
+                    "file": "play",
+                    "target": "/usr/local/bin/",
+                    "chmod": "+x"
+                },
+                {
+                    "file": "params.yaml",
+                    "target": "/root/project"
+                },
+                {
+                    "file": "dvc.yaml",
+                    "target": "/root/project"
+                },
+                {
+                    "file": "src",
+                    "target": "/root/project/"
+                }
+            ]
+        }
+    },
+    "environment": {
+        "uieditorpath": "/root/project",
+        "uilayout": "editor-terminal"
+    },
+    "backend": {
+        "imageid": "ubuntu:2004"
+    }
+}

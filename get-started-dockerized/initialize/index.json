@@ -1,0 +1,33 @@
+{
+    "title": "Initialize",
+    "description": "Install DVC, create a Git project, and initialize DVC.",
+    "difficulty": "Beginner",
+    "time": "10-15 min",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3",
+                "text": "step3.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "credits": "https://dvc.org/doc/start",
+            "code": "init.sh"
+        }
+    },
+    "environment": {
+        "uilayout": "terminal"
+    },
+    "backend": {
+        "imageid": "ubuntu:2004"
+    }
+}
