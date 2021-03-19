@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -it emresult/dvc-base
+# docker run -it emresult/dvc-base
