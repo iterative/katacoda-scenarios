@@ -1,3 +1,3 @@
 #!/bin/bash
 
-# docker run -it emresult/dvc-base
+# We containerized all requirements, nothing to install
