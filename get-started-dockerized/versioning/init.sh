@@ -5,5 +5,10 @@
 # trap 'echo -ne "\033[00m"' DEBUG
 
 docker volume create project
-docker run -it --name dvcversioning -v project:/root/project emresult/dvc-gs-versioning
+
+if [ -e /root/project ] ; then 
+    rm -rf /root/project
+fi
 ln -s /var/lib/docker/volumes/project/_data /root/project
+
+docker run -it --name dvcversioning -v project:/root/project emresult/dvc-gs-versioning
