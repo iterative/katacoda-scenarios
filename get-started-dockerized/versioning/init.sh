@@ -4,6 +4,13 @@
 # PS1='\[\033[01;34m\]\w\[\033[00m\]$ \[\033[01;32m\]'
 # trap 'echo -ne "\033[00m"' DEBUG
 
+echo "###########################################"
+echo "## INSTALLING CONTAINER FOR THE SCENARIO ##"
+echo "## $ docker run -it dvcorg/gs-versioning ##"
+echo "###########################################"
+
+set -o verbose
+
 docker volume create project
 
 if [ -e /root/project ] ; then 
