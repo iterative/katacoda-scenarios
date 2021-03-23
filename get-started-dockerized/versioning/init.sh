@@ -8,7 +8,6 @@ clear
 
 :;: ###########################################
 :;:    INSTALLING CONTAINER FOR THE SCENARIO   
-:;:    $ docker run -it `echo $CONTAINER`             
 :;: ###########################################
 until [ -f /tmp/docker-ready ] ; do echo -n "." ; sleep 1 ; done
 
