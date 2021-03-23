@@ -42,6 +42,6 @@
         "uieditorpath": "/root/project"
     },
     "backend": {
-        "imageid": "python:3.6"
+        "imageid": "python:3.8"
     }
 }
