@@ -3,32 +3,32 @@
   "description": "A step-by-step introduction to DVC by building a simple NLP project from scratch.",
   "courses": [
     {
-      "course_id": "initialize",
+      "course_id": "01-initialize",
       "title": "Initialize",
       "description": "Learn how to install DVC and initialize a project."
     },
     {
-      "course_id": "versioning",
+      "course_id": "02-versioning",
       "title": "Data and Model Versioning",
       "description": "Learn how to start versioning large files, ML models, datasets, etc. and share them with Git and DVC."
     },
     {
-      "course_id": "accessing",
+      "course_id": "03-accessing",
       "title": "Accessing Data and Models",
       "description": "Learn how to reuse data from any DVC repository, from terminal or Python code."
     },
     {
-      "course_id": "stages",
+      "course_id": "04-stages",
       "title": "Stages and Pipelines",
       "description": "Process data with a chain of stages, and reach reproducible results."
     },
     {
-      "course_id": "params-metrics-plots",
+      "course_id": "05-params-metrics-plots",
       "title": "Params, Metrics, Plots",
       "description": "Use parameters in your pipelines and compare their results using metrics and plots"
     },
     {
-      "course_id": "experiments",
+      "course_id": "06-experiments",
       "title": "Experiments",
       "description": "Use experimentation features of DVC 2.0 for quick iteration"
     }
