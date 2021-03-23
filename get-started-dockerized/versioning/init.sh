@@ -9,8 +9,6 @@ echo "## INSTALLING CONTAINER FOR THE SCENARIO ##"
 echo "## $ docker run -it dvcorg/gs-versioning ##"
 echo "###########################################"
 
-set -o verbose
-
 docker volume create project
 
 if [ -e /root/project ] ; then 
