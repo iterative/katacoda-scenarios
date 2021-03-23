@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# We containerized all requirements, nothing to install
+export CONTAINER=emresult/dvc-gs-versioning 
 
 docker volume create project
 
@@ -9,8 +9,8 @@ if [ -e /root/project ] ; then
 fi
 ln -s /var/lib/docker/volumes/project/_data /root/project
 
-docker pull emresult/dvc-gs-versioning
+docker pull $CONTAINER
 
-docker run -d -it --name dvc -v project:/root/project emresult/dvc-gs-versioning
+docker run -d -it --name dvc -v project:/root/project $CONTAINER
 
 touch /tmp/docker-ready
