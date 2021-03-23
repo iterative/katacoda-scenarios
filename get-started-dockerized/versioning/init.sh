@@ -1,10 +1,10 @@
 #!/bin/bash
 
-set +v
+set +vx
 
 # prompt
 PS1='\[\033[01;34m\]\w\[\033[00m\]$ \[\033[01;32m\]'
-# trap 'echo -ne "\033[00m"' DEBUG
+trap 'echo -ne "\033[00m"' DEBUG
 
 echo "###########################################"
 echo "## INSTALLING CONTAINER FOR THE SCENARIO ##"
