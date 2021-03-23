@@ -6,10 +6,10 @@ trap 'echo -ne "\033[00m"' DEBUG
 
 clear 
 
-:;: "###########################################"
-:;: "   INSTALLING CONTAINER FOR THE SCENARIO   "
-:;: "   $ docker run -it $CONTAINER             "
-:;: "###########################################"
+:;: ###########################################
+:;:    INSTALLING CONTAINER FOR THE SCENARIO   
+:;:    $ docker run -it $CONTAINER             
+:;: ###########################################
 until [ -f /tmp/docker-ready ] ; do echo -n "." ; sleep 1 ; done
 
 clear
