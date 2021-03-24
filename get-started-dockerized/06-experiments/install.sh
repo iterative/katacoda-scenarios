@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="emresult/dvc-gs-experiments"
+export CONTAINER="emresult/katacoda-gs-experiments"
 
 docker volume create project
 

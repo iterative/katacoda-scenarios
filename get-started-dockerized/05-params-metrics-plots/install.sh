@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="emresult/dvc-gs-params"
+export CONTAINER="emresult/katacoda-gs-params"
 
 docker volume create project
 
