@@ -31,15 +31,6 @@
             "credits": "https://dvc.org/doc/start/data-and-model-access",
             "courseData": "install.sh",
             "code": "init.sh"
-        },
-        "assets": {
-            "host01": [
-                {
-                    "file": "process.py",
-                    "target": "/root/project",
-                    "chmod": "+x"
-                }
-            ]
         }
     },
     "environment": {
