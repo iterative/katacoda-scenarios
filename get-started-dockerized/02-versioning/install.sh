@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="emresult/dvc-gs-versioning"
+export CONTAINER="emresult/katacoda-gs-versioning"
 
 docker volume create project
 
