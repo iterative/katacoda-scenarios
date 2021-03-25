@@ -8,7 +8,7 @@ DVC-tracked artifact "natively" from Python with
 
 The script downloads the data like `dvc get` and counts the number of lines in it: 
 
-`python3 process.py`{{execute}}
+`python3 /root/process.py`{{execute}}
 
 Note that the script doesn't download the data to a file before counting the lines. 
 
