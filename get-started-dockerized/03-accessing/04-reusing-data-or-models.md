@@ -20,7 +20,7 @@ dvc import \
 `dvc import` command creates `data/data.xml.dvc` to track the dependency. You
 can view this file in the editor: 
 
-`data/data.xml.dvc`{{open}}
+`example-get-started/data/data.xml.dvc`{{open}}
 
 The `url` and `rev_lock` subfields under `repo` are used to save the origin and
 the version of the dependency, respectively:
