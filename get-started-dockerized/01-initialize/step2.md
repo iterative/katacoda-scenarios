@@ -1,11 +1,11 @@
 # Install DVC
 
-`snap install --classic dvc`{{execute}}
+`pip install "dvc[all]"`{{execute}}
 
 `dvc version`{{execute}}
 
-> DVC provides other ways to install it - `pip`, `conda`, self-contained
-> packages. Please, refer to the [install](https://dvc.org/doc/install) page.
+> DVC provides other ways to install it - `apt`, `conda`, `brew`, `snap`...
+> Please refer to the [install](https://dvc.org/doc/install) page.
 
 **Optional:** Install bash completion for `dvc`:
 
