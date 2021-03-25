@@ -31,10 +31,19 @@
             "credits": "https://dvc.org/doc/start/data-and-model-access",
             "courseData": "install.sh",
             "code": "init.sh"
+        },
+        "assets": {
+            "host01": [
+                {
+                    "file": "dummy.txt",
+                    "target": "/root/example-get-started/dummy.txt"
+                }
+            ]
         }
+
     },
     "environment": {
-        "uieditorpath": "/var/lib/docker/volumes/example-get-started/_data/",
+        "uieditorpath": "/root/example-get-started",
         "uilayout": "editor-terminal"
     },
     "backend": {
