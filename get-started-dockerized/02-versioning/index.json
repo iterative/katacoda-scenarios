@@ -39,7 +39,7 @@
     },
     "environment": {
         "uilayout": "editor-terminal",
-        "uieditorpath": "/root/project"
+        "uieditorpath": "/root/example-get-started"
     },
     "backend": {
         "imageid": "ubuntu:2004"

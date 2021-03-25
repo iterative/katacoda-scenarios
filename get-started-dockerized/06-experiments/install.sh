@@ -2,13 +2,13 @@
 
 export CONTAINER="emresult/katacoda-gs-experiments"
 
-docker volume create project
+docker volume create example-get-started
 
-if [ -e /root/project ] ; then 
-    rm -rf /root/project
+if [ -e /root/example-get-started ] ; then 
+    rm -rf /root/example-get-started
 fi
-ln -s /var/lib/docker/volumes/project/_data /root/project
+ln -s /var/lib/docker/volumes/example-get-started/_data /root/example-get-started
 
-docker run -d -it --name dvc -v project:/root/project "$CONTAINER"
+docker run -d -it --name dvc -v example-get-started:/root/example-get-started "$CONTAINER"
 
 touch /tmp/docker-ready
