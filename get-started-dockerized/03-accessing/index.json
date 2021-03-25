@@ -34,7 +34,7 @@
         }
     },
     "environment": {
-        "uieditorpath": "/root/project",
+        "uieditorpath": "/root/example-get-started",
         "uilayout": "editor-terminal"
     },
     "backend": {

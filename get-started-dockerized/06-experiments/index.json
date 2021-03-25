@@ -35,24 +35,10 @@
             "credits": "https://dvc.org/doc/start/experiments",
             "courseData": "install.sh",
             "code": "init.sh"
-        },
-        "assets": {
-            "host01": [
-                {
-                    "file": "prepare.sh",
-                    "target": "/usr/local/bin/",
-                    "chmod": "+x"
-                },
-                {
-                    "file": "play",
-                    "target": "/usr/local/bin/",
-                    "chmod": "+x"
-                }
-            ]
         }
     },
     "environment": {
-        "uieditorpath": "/root/project",
+        "uieditorpath": "/root/example-get-started",
         "uilayout": "editor-terminal"
     },
     "backend": {
