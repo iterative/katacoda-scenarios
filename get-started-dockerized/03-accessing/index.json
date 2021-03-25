@@ -34,7 +34,7 @@
         }
     },
     "environment": {
-        "uieditorpath": "/root/example-get-started",
+        "uieditorpath": "/var/lib/docker/volumes/example-get-started/_data/",
         "uilayout": "editor-terminal"
     },
     "backend": {
