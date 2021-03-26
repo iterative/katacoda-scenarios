@@ -3,7 +3,7 @@
 The script `src/prepare.py` splits the data into train and test
 sets. 
 
-`src/prepare.py`{{open}}
+`example-get-started/src/prepare.py`{{open}}
 
 We first run this script without DVC to see what happens:
 
