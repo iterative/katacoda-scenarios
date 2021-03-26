@@ -12,7 +12,7 @@ depends on the featurization stage's output. As you may have already seen in
 `params.yaml` file, the stage also has 3 parameters, `seed`, `n_est` and
 `min_split`. These are used to populate the global variables in `train.py`.
 
-`src/train.py`{{open}}
+`example-get-started/src/train.py`{{open}}
 
 We use `-p / --params` option of `dvc stage add` to associate parameters in
 `params.yaml` to a stage. When you need to use a custom filename other than

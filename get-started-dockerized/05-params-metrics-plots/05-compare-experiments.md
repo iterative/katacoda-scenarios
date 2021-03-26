@@ -6,7 +6,7 @@ afterwards.
 
 Now open `params.yaml` in the editor: 
 
-`params.yaml`{{open}}
+`example-get-started/params.yaml`{{open}}
 
 Now click on the next button to update `max_features` value.
 
