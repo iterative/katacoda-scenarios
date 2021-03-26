@@ -4,13 +4,13 @@ This time, we'll add a stage by editing `dvc.yaml` instead of `dvc stage add`.
 
 _Featurization_ step is run by `src/featurization.py`.
 
-`src/featurization.py`{{open}}
+`example-get-started/src/featurization.py`{{open}}
 
 We name the stage `featurize`. It has two dependencies: one is the code file,
 and the other is the `prepared` data we got from the previous stage. It
 produces the features ready for the training as an output.
 
-`dvc.yaml`{{open}}
+`example-get-started/dvc.yaml`{{open}}
 
 Please click the below text to append the stage configuration.
 
