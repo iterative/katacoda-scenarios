@@ -3,7 +3,7 @@
 DVC stores stage configuration in `dvc.yaml` files. These files are
 automatically created by DVC to store various attributes of stages. 
 
-`dvc.yaml`{{open}}
+`example-get-started/dvc.yaml`{{open}}
 
 It lists stages by name and defines `cmd`, `deps`, and `outs` for each of
 them.
@@ -11,7 +11,7 @@ them.
 There is another file, `dvc.lock`, to track the changes in dependencies
 and outputs.
 
-`dvc.lock`{{open}}
+`example-get-started/dvc.lock`{{open}}
 
 The structure of `dvc.lock` and `dvc.yaml` are similar. Along with the
 attributes found in `dvc.yaml`, it lists the hash values to track the changes. 

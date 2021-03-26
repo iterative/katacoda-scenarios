@@ -30,7 +30,7 @@ changes `dvc repro` won't rerun any part of it.
 Suppose we decided to update our code for `src/prepare.py` by adding the
 following line to it.
 
-`src/prepare.py`{{open}}
+`example-get-started/src/prepare.py`{{open}}
 
 <pre class="file" data-filename="src/prepare.py" data-target="append">
 # THIS COMMENT CHANGES MD5 HASH OF THE FILE
