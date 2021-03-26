@@ -21,7 +21,7 @@ convert this output to an image (or PS, PDF), first installing
 [GraphViz][graphviz].
 
 ```
-apt update & apt install -y graphviz
+apt update -y & apt install -y graphviz
 dvc dag --dot | dot -Tpng -o ../pipeline.png 
 ```{{execute}}
 
