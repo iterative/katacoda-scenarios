@@ -6,7 +6,7 @@ factor in stages. Parameters have their own block `params` in `dvc.yaml`.
 You can view `dvc.yaml` by clicking the link below. (Please do not change
 anything as we'll edit it automatically.)
 
-`dvc.yaml`{{open}}
+`example-get-started/dvc.yaml`{{open}}
 
 Now we'll add the following section in place of the `# PREPARE PARAMS` comment:
 

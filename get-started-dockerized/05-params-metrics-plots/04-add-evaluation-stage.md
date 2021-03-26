@@ -5,7 +5,7 @@ parameters in performance.
 
 In order to evaluate the resulting model's performance, we use:
 
-`src/evaluate.py`{{open}}
+`example-get-started/src/evaluate.py`{{open}}
 
 We add this as another stage to the pipeline:
 
@@ -56,7 +56,7 @@ Now run the pipeline to generate metrics and plots files.
 
 We can see the generated metrics file: 
 
-`scores.json`{{open}}
+`example-get-started/scores.json`{{open}}
 
 Let's get another snapshot of the project by committing changes to
 Git:

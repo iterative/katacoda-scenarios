@@ -7,9 +7,9 @@ code changes.
 
 The programs that run these stages already have parameter definitions in them.
 
-`src/prepare.py`{{open}}
+`example-get-started/src/prepare.py`{{open}}
 
-`src/featurization.py`{{open}}
+`example-get-started/src/featurization.py`{{open}}
 
 Specifically, we can see that `params.yaml` is loaded in these files:
 
@@ -21,7 +21,7 @@ and the values are used to populate global variables:
 
 Let's now check the content of `params.yaml` using the link below:
 
-`params.yaml`{{open}}
+`example-get-started/params.yaml`{{open}}
 
 In this scenario, we'll update the pipeline to see the effects of changes in
 these variables. DVC has _first-class support_ for parameters used in
