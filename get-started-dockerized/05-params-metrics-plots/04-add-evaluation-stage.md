@@ -42,7 +42,9 @@ metrics to compare pipeline runs. `evaluate.py` writes precision, recall and
 thresholds in an array to plots file. In a later step we'll generate a plot
 showing the change in performance w.r.t. parameters. 
 
-Let's get a diagram of the pipeline:
+Let's get a diagram of the pipeline by first installating GraphViz:
+
+`apt update -y && apt install -y graphviz`{{execute}}
 
 `dvc dag --dot | dot -Tpng -o ../pipeline.png`{{execute}}
 

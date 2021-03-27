@@ -23,7 +23,7 @@ Let's produce the plots for the current parameters with
 
 You can view `plots.html` file you have generated here:
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/project/plots.html
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/example-get-started/plots.html
 
 DVC can also generate plots to show the change across commits. 
 
@@ -32,5 +32,5 @@ DVC can also generate plots to show the change across commits.
 This shows the effect of the updated parameters across commits. The generated file is
 the same and can be viewed at the same URL. 
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/project/plots.html
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/example-get-started/plots.html
 
