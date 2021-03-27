@@ -22,6 +22,9 @@ convert this output to an image (or PS, PDF), first installing
 
 ```
 apt update -y & apt install -y graphviz
+```{{execute}}
+
+```
 dvc dag --dot | dot -Tpng -o ../pipeline.png 
 ```{{execute}}
 
