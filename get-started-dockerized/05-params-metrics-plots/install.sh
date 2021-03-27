@@ -9,6 +9,6 @@ if [ -e /root/example-get-started ] ; then
 fi
 ln -s /var/lib/docker/volumes/example-get-started/_data /root/example-get-started
 
-docker run -d -it --name dvc -v example-get-started:/root/example-get-started "$CONTAINER"
+docker run -d -it --name dvc -v example-get-started:/root/example-get-started -p 80:80 "$CONTAINER"
 
 touch /tmp/docker-ready
