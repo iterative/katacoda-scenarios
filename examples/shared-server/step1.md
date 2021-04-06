@@ -10,15 +10,11 @@ skip the steps 1-3.
 1. Create an image file big enough to hold the data and all the
    caches:
 
-   `cd /var/local/`{{execute}}
-   
-   `df -h /`{{execute}}
-   
-   `fallocate -l 20G data.img`{{execute}}
-   
-   `ls -lh`{{execute}}
-
-   `df -h /`{{execute}}
+   ```
+   cd /var/local/
+   fallocate -l 20G data.img
+   df -h /
+   ```{{execute}}
    
 2. Format it as an XFS filesystem with _reflink_ enabled, and mount it:
 
@@ -27,25 +23,18 @@ skip the steps 1-3.
        -m reflink=1 \
        -L data \
        data.img
+   mkdir data
+   mount -o loop data.img data
    ```{{execute}}
 
-   `mkdir data`{{execute}}
    
-   `ls -lh`{{execute}}
-   
-   `mount -o loop data.img data`{{execute}}
-   
-3. Make sure that it is mounted automatically on reboot:
+3. (Optional) Make sure that it is mounted automatically on reboot:
 
    ```
    cat <<EOF >> /etc/fstab
    /var/local/data.img  /var/local/data  auto  loop  0 0
    EOF
-   ```{{execute}}
-   
-   `cat /etc/fstab | grep data`{{execute}}
-   
-   `mount -a`{{execute}}
+   ```
 
 4. Declare the environment variable DATA that contains the path to the
    data directory:
@@ -53,11 +42,9 @@ skip the steps 1-3.
    ```
    echo 'export DATA=/var/local/data' \
        >> ~/.bashrc
+   source ~/.bashrc
+   echo $DATA
    ```{{execute}}
-   
-   `source ~/.bashrc`{{execute}}
-   
-   `echo $DATA`{{execute}}
    
    Declare it for all the new users as well:
 
