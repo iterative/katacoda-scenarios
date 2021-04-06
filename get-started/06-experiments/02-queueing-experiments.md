@@ -5,7 +5,7 @@ for the `train` stage, which trains a [random forest classifier][rfc].
 
 [rfc]: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
 
-`params.yaml`{{open}}
+`example-get-started/params.yaml`{{open}}
 
 Let's setup experiments with different hyperparameters. We can define all the
 combinations we want to try without executing anything, by using the `--queue`
