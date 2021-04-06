@@ -13,7 +13,7 @@ dependencies, and outputs) and can later retrieve it as needed.
 
 Check that `scores.json` reflects the metrics in the table above:
 
-`scores.json`{{open}}
+`example-get-started/scores.json`{{open}}
 
 Once an experiment has been applied to the workspace, it is no different from
 reproducing the result without `dvc exp run`. Let's make it persistent in our
