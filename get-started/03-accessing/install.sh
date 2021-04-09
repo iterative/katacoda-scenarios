@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="emresult/katacoda-gs-accessing"
+export CONTAINER="dvcorg/doc-katacoda:start-accessing"
 
 docker volume create example-get-started
 

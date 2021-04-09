@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="emresult/katacoda-gs-params"
+export CONTAINER="dvcorg/doc-katacoda:start-params"
 
 docker volume create example-get-started
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="emresult/katacoda-gs-stages"
+export CONTAINER="dvcorg/doc-katacoda:start-stages"
 
 docker volume create example-get-started
 
