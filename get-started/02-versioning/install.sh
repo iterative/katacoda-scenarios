@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="emresult/katacoda-gs-versioning"
+export CONTAINER="dvcorg/doc-katacoda:start-versioning"
 
 docker volume create example-get-started
 

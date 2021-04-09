@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="emresult/katacoda-gs-experiments"
+export CONTAINER="dvcorg/doc-katacoda:start-experiments"
 
 docker volume create example-get-started
 
