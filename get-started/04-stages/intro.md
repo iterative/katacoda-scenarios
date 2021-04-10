@@ -11,9 +11,9 @@ together.
 
 [bcpipeline]: https://dvc.org/doc/user-guide/basic-concepts/pipeline
 
-[Stages][bcstage] are the basic building blocks of pipelines in DVC. They define
-and execute an action, like data import or feature extraction, and usually
-produce some output. 
+[Stages][bcstage] are the basic building blocks of the pipelines in DVC. They
+define and execute an action, like data import or feature extraction, and
+usually produce some output. 
 
 [bcstage]: https://dvc.org/doc/user-guide/basic-concepts/stage
 
@@ -24,13 +24,9 @@ manually, and this is prone to errors caused by too many moving
 parts. Pipelines provide a reproducible way to organize these
 tasks. 
 
-In this scenario, we provide the source files in
-`~/project/src/`, downloaded data to `data/data.xml`, and made
-it smaller. You can review these steps in more detail in [Data
-and Model Versioning][v] and [Accessing Data and Models][a]
-scenarios.
+If you prefer to run locally, you can also supply the commands in this scenario
+in a container: 
 
-[v]: https://katacoda.com/dvc/courses/get-started/versioning
-[a]: https://katacoda.com/dvc/courses/get-started/accessing
-
-You can use the editor to browse the project.
+```
+docker run -it dvcorg/doc-katacoda:start-stages
+```{{copy}}

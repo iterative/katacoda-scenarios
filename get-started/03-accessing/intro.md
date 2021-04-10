@@ -16,3 +16,10 @@ Let's learn how any DVC tracked ML model, dataset or file can be accessed:
 * From CLI with `dvc get`
 * From Python API with `dvc.api.open`
 * From another repository with `dvc import`
+
+If you prefer to run locally, you can also supply the commands in this scenario
+in a container: 
+
+```
+docker run -it dvcorg/doc-katacoda:start-accessing
+```{{copy}}
