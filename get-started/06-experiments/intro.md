@@ -8,3 +8,9 @@ You can discard experiments once they're no longer needed.
 > 📖 See [Experiment Management](https://dvc.org/doc/user-guide/experiment-management) for more
 > information on DVC's approach.
 
+If you prefer to run locally, you can also supply the commands in this scenario
+in a container: 
+
+```
+docker run -it dvcorg/doc-katacoda:start-experiments
+```{{copy}}
