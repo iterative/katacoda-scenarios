@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONTAINER="dvcorg/doc-katacoda:start-experiments"
+export CONTAINER="emresult/get-started-mnist"
 
 docker volume create example-get-started
 
