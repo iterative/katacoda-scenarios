@@ -1,9 +1,7 @@
 ## Queueing experiments
 
-We have been tuning the `featurize` stage so far, but there are also parameters
-for the `train` stage, which trains a [random forest classifier][rfc].
-
-[rfc]: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+For the MLP version of the project, we have two parameters that change the
+number of hidden units and the activation function. 
 
 `example-get-started/params.yaml`{{open}}
 
@@ -12,10 +10,10 @@ combinations we want to try without executing anything, by using the `--queue`
 flag:
 
 ```
-dvc exp run --queue -n exp-1 -S train.n_est=50
-dvc exp run --queue -n exp-2 -S train.n_est=100
-dvc exp run --queue -n exp-3 -S train.n_est=150
-dvc exp run --queue -n exp-4 -S train.n_est=200
+dvc exp run --queue -n exp-1 -S model.mlp.units=8
+dvc exp run --queue -n exp-2 -S model.mlp.units=16
+dvc exp run --queue -n exp-3 -S model.mlp.units=32
+dvc exp run --queue -n exp-4 -S model.mlp.units=64
 ```{{execute}}
 
 The `-n` option is used to label the experiments. If it's not specified,

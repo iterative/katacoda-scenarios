@@ -15,17 +15,16 @@ see the help text first:
 
 The first command we'll use is `dvc exp run`. It's like `dvc repro` with added
 features for experiments, like changing the hyperparameters with command line
-options: 
+options:
 
 ```
-dvc exp run --set-param featurize.max_features=1500 \
-            -S featurize.ngrams=2
+dvc exp run --set-param model.name=mlp
 ```{{execute}}
 
 The `--set-param` (or `-S`) flag sets the values for parameters as a shortcut
 to editing `params.yaml`.
 
-Check that the `featurize.max_features` value has been updated in `params.yaml`:
+Note that `model.name` parameter has been updated in `params.yaml`:
 
 `git diff params.yaml`{{execute}}
 

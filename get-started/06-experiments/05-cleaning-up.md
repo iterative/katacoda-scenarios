@@ -5,7 +5,7 @@ experiments table:
 
 ```
 dvc exp show --no-timestamp \
-             --include-params train.n_est \
+             --include-params model.mlp.units \
              --no-pager
 ```{{execute}}
 
@@ -16,7 +16,7 @@ experiments from the previous _n_ commits:
 
 ``` 
 dvc exp show -n 2 --no-timestamp \
-                  --include-params train.n_est \
+                  --include-params model.mlp.units \
                   --no-pager
 ```{{execute}}
 
@@ -27,7 +27,7 @@ Eventually, old experiments may clutter the experiments table.
 ``` 
 dvc exp gc  --workspace 
 dvc exp show -n 2 --no-timestamp \
-                  --include-params train.n_est \ 
+                  --include-params model.mlp.units \ 
                   --no-pager
 ```{{execute}}
 

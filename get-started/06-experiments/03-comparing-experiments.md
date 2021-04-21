@@ -6,7 +6,7 @@ To compare all of these experiments, we need more than `dvc exp diff`:
 
 ```
 dvc exp show --no-timestamp \
-             --include-params train.n_est \
+             --include-params model.mlp.units \
              --no-pager
 ```{{execute}}
 
