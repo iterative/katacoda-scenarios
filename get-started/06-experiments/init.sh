@@ -6,11 +6,12 @@ trap 'echo -ne "\033[00m"' DEBUG
 
 clear 
 
-:;: ###########################################
-:;:    INSTALLING CONTAINER FOR THE SCENARIO   
-:;: ###########################################
-until [ -f /tmp/docker-ready ] ; do echo -n "." ; sleep 1 ; done
-
-clear
-
-docker attach dvc
+# :;: ###########################################
+# :;:    INSTALLING CONTAINER FOR THE SCENARIO   
+# :;: ###########################################
+# until [ -f /tmp/docker-ready ] ; do echo -n "." ; sleep 1 ; done
+#
+# clear
+#
+# docker attach dvc
+docker run -it emresult/get-started-mnist
