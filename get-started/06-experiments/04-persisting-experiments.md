@@ -5,7 +5,7 @@ ignore the rest.
 
 `dvc exp apply` rolls back the workspace to the specified experiment:
 
-`dvc exp apply exp-2`{{execute}}
+`dvc exp apply exp-4`{{execute}}
 
 `dvc exp apply` is similar to [`dvc checkout`][dvccheckout], but it works with experiments. DVC
 tracks everything in the pipeline for each experiment (parameters, metrics,
