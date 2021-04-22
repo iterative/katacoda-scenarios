@@ -10,5 +10,5 @@ dvc exp show --no-timestamp \
              --no-pager
 ```{{execute}}
 
-Although the differences in metrics are minuscule due to the small size of
-the data set, `exp-2` is a bit better in terms of `avg_prec`.
+As we have the most hidden units in MLP for `exp-4`, it has the highest
+`categorical_accuracy`. 
