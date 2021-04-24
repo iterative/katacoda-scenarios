@@ -5,22 +5,22 @@ ignore the rest.
 
 `dvc exp apply` rolls back the workspace to the specified experiment:
 
-`dvc exp apply exp-2`{{execute}}
+`dvc exp apply exp-4`{{execute}}
 
 `dvc exp apply` is similar to [`dvc checkout`][dvccheckout], but it works with experiments. DVC
 tracks everything in the pipeline for each experiment (parameters, metrics,
 dependencies, and outputs) and can later retrieve it as needed.
 
-Check that `scores.json` reflects the metrics in the table above:
+Check that `metrics.json` reflects the metrics in the table above:
 
-`example-get-started/scores.json`{{open}}
+`example-get-started/metrics.json`{{open}}
 
 Once an experiment has been applied to the workspace, it is no different from
 reproducing the result without `dvc exp run`. Let's make it persistent in our
 regular pipeline by committing it in our Git branch:
 
 ```
-git add dvc.lock params.yaml prc.json roc.json scores.json
+git add dvc.lock params.yaml metrics.json train.log.csv
 git commit -m "Preserve best Avg. Prec. experiment"
 ```{{execute}}
 
