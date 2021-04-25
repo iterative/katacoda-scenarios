@@ -6,7 +6,7 @@ version of the data that corresponds to this version of the code.  The
 corresponding version of the data is recorded on `.dvc` files (which
 are tracked with Git).
 
-<img url="/dvc/courses/tutorials/versioning/assets/versioning.png" />
+![Versioning Diagram](./assets/versioning.png)
 
 1. Suppose that we want to bring to the current workspace the version
    `v1.0` of the dataset. We can do it like this:
