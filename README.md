@@ -11,3 +11,7 @@ Visit https://www.katacoda.com/docs to learn more about creating Katacoda
 scenarios.
 
 For examples, visit https://github.com/katacoda/scenario-example
+
+### Docker images
+
+To update Docker images: https://github.com/iterative/dvc-doc-containers
